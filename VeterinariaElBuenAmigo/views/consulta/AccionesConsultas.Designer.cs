@@ -35,9 +35,18 @@ namespace VeterinariaElBuenAmigo.views.consulta
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMin = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.campos_comentarios = new System.Windows.Forms.Label();
+            this.campos_control = new System.Windows.Forms.Label();
+            this.campos_peso = new System.Windows.Forms.Label();
+            this.campos_temperatura = new System.Windows.Forms.Label();
+            this.campos_padecimineto = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_Editar = new FontAwesome.Sharp.IconButton();
             this.btn_Eliminar = new FontAwesome.Sharp.IconButton();
@@ -56,20 +65,11 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.label3 = new System.Windows.Forms.Label();
             this.tbl_CitasAnteriores = new Guna.UI.WinForms.GunaDataGridView();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.gunaVScrollBar1 = new Guna.UI.WinForms.GunaVScrollBar();
             this.Nombre_Paciente = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.btnMin = new FontAwesome.Sharp.IconButton();
-            this.campos_padecimineto = new System.Windows.Forms.Label();
-            this.campos_temperatura = new System.Windows.Forms.Label();
-            this.campos_peso = new System.Windows.Forms.Label();
-            this.campos_control = new System.Windows.Forms.Label();
-            this.campos_comentarios = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,10 +78,10 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbl_CitasAnteriores)).BeginInit();
             this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -92,6 +92,24 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(100, 46);
             this.panel1.TabIndex = 0;
+            // 
+            // btnMin
+            // 
+            this.btnMin.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMin.FlatAppearance.BorderSize = 0;
+            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMin.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.btnMin.IconColor = System.Drawing.Color.White;
+            this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMin.IconSize = 32;
+            this.btnMin.Location = new System.Drawing.Point(23, 0);
+            this.btnMin.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(48, 46);
+            this.btnMin.TabIndex = 12;
+            this.btnMin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMin.UseVisualStyleBackColor = true;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
             // 
             // btnClose
             // 
@@ -153,10 +171,103 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(26, 72);
+            this.panel2.Location = new System.Drawing.Point(26, 70);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(939, 423);
+            this.panel2.Size = new System.Drawing.Size(939, 518);
             this.panel2.TabIndex = 17;
+            // 
+            // campos_comentarios
+            // 
+            this.campos_comentarios.AutoSize = true;
+            this.campos_comentarios.ForeColor = System.Drawing.Color.Brown;
+            this.campos_comentarios.Location = new System.Drawing.Point(123, 814);
+            this.campos_comentarios.Name = "campos_comentarios";
+            this.campos_comentarios.Size = new System.Drawing.Size(279, 24);
+            this.campos_comentarios.TabIndex = 34;
+            this.campos_comentarios.Text = "No puede dejar Campos Vacíos";
+            // 
+            // campos_control
+            // 
+            this.campos_control.AutoSize = true;
+            this.campos_control.ForeColor = System.Drawing.Color.Brown;
+            this.campos_control.Location = new System.Drawing.Point(123, 647);
+            this.campos_control.Name = "campos_control";
+            this.campos_control.Size = new System.Drawing.Size(279, 24);
+            this.campos_control.TabIndex = 33;
+            this.campos_control.Text = "No puede dejar Campos Vacíos";
+            // 
+            // campos_peso
+            // 
+            this.campos_peso.AutoSize = true;
+            this.campos_peso.ForeColor = System.Drawing.Color.Brown;
+            this.campos_peso.Location = new System.Drawing.Point(123, 531);
+            this.campos_peso.Name = "campos_peso";
+            this.campos_peso.Size = new System.Drawing.Size(279, 24);
+            this.campos_peso.TabIndex = 32;
+            this.campos_peso.Text = "No puede dejar Campos Vacíos";
+            // 
+            // campos_temperatura
+            // 
+            this.campos_temperatura.AutoSize = true;
+            this.campos_temperatura.ForeColor = System.Drawing.Color.Brown;
+            this.campos_temperatura.Location = new System.Drawing.Point(123, 421);
+            this.campos_temperatura.Name = "campos_temperatura";
+            this.campos_temperatura.Size = new System.Drawing.Size(279, 24);
+            this.campos_temperatura.TabIndex = 31;
+            this.campos_temperatura.Text = "No puede dejar Campos Vacíos";
+            // 
+            // campos_padecimineto
+            // 
+            this.campos_padecimineto.AutoSize = true;
+            this.campos_padecimineto.ForeColor = System.Drawing.Color.Brown;
+            this.campos_padecimineto.Location = new System.Drawing.Point(123, 307);
+            this.campos_padecimineto.Name = "campos_padecimineto";
+            this.campos_padecimineto.Size = new System.Drawing.Size(279, 24);
+            this.campos_padecimineto.TabIndex = 30;
+            this.campos_padecimineto.Text = "No puede dejar Campos Vacíos";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.iconButton3);
+            this.panel5.Controls.Add(this.iconButton4);
+            this.panel5.Location = new System.Drawing.Point(268, 488);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(52, 40);
+            this.panel5.TabIndex = 29;
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.iconButton3.FlatAppearance.BorderSize = 0;
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
+            this.iconButton3.IconColor = System.Drawing.Color.White;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 32;
+            this.iconButton3.Location = new System.Drawing.Point(0, 18);
+            this.iconButton3.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(52, 22);
+            this.iconButton3.TabIndex = 1;
+            this.iconButton3.UseVisualStyleBackColor = true;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
+            // iconButton4
+            // 
+            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton4.FlatAppearance.BorderSize = 0;
+            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.ChevronUp;
+            this.iconButton4.IconColor = System.Drawing.Color.White;
+            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton4.IconSize = 32;
+            this.iconButton4.Location = new System.Drawing.Point(0, 0);
+            this.iconButton4.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Size = new System.Drawing.Size(52, 22);
+            this.iconButton4.TabIndex = 0;
+            this.iconButton4.UseVisualStyleBackColor = true;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // panel3
             // 
@@ -219,7 +330,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.btn_Guardar.ForeColor = System.Drawing.Color.White;
             this.btn_Guardar.Image = null;
             this.btn_Guardar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Guardar.Location = new System.Drawing.Point(386, 970);
+            this.btn_Guardar.Location = new System.Drawing.Point(383, 970);
             this.btn_Guardar.Name = "btn_Guardar";
             this.btn_Guardar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.btn_Guardar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -452,11 +563,12 @@ namespace VeterinariaElBuenAmigo.views.consulta
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.tbl_CitasAnteriores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.tbl_CitasAnteriores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tbl_CitasAnteriores.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.tbl_CitasAnteriores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.tbl_CitasAnteriores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbl_CitasAnteriores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.tbl_CitasAnteriores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.tbl_CitasAnteriores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -465,7 +577,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.tbl_CitasAnteriores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.tbl_CitasAnteriores.ColumnHeadersHeight = 35;
+            this.tbl_CitasAnteriores.ColumnHeadersHeight = 45;
             this.tbl_CitasAnteriores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.tbl_CitasAnteriores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -483,10 +595,10 @@ namespace VeterinariaElBuenAmigo.views.consulta
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.tbl_CitasAnteriores.DefaultCellStyle = dataGridViewCellStyle3;
             this.tbl_CitasAnteriores.EnableHeadersVisualStyles = false;
-            this.tbl_CitasAnteriores.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.tbl_CitasAnteriores.GridColor = System.Drawing.Color.White;
             this.tbl_CitasAnteriores.Location = new System.Drawing.Point(17, 39);
-            this.tbl_CitasAnteriores.MaximumSize = new System.Drawing.Size(890, 150);
-            this.tbl_CitasAnteriores.MinimumSize = new System.Drawing.Size(890, 150);
+            this.tbl_CitasAnteriores.MaximumSize = new System.Drawing.Size(890, 180);
+            this.tbl_CitasAnteriores.MinimumSize = new System.Drawing.Size(890, 180);
             this.tbl_CitasAnteriores.Name = "tbl_CitasAnteriores";
             this.tbl_CitasAnteriores.ReadOnly = true;
             this.tbl_CitasAnteriores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -509,7 +621,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.tbl_CitasAnteriores.RowTemplate.Height = 35;
             this.tbl_CitasAnteriores.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbl_CitasAnteriores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tbl_CitasAnteriores.Size = new System.Drawing.Size(890, 150);
+            this.tbl_CitasAnteriores.Size = new System.Drawing.Size(890, 180);
             this.tbl_CitasAnteriores.TabIndex = 15;
             this.tbl_CitasAnteriores.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.tbl_CitasAnteriores.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
@@ -518,13 +630,13 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.tbl_CitasAnteriores.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.tbl_CitasAnteriores.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.White;
             this.tbl_CitasAnteriores.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.tbl_CitasAnteriores.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.tbl_CitasAnteriores.ThemeStyle.GridColor = System.Drawing.Color.White;
             this.tbl_CitasAnteriores.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.tbl_CitasAnteriores.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.tbl_CitasAnteriores.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.tbl_CitasAnteriores.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbl_CitasAnteriores.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.tbl_CitasAnteriores.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.tbl_CitasAnteriores.ThemeStyle.HeaderStyle.Height = 35;
+            this.tbl_CitasAnteriores.ThemeStyle.HeaderStyle.Height = 45;
             this.tbl_CitasAnteriores.ThemeStyle.ReadOnly = true;
             this.tbl_CitasAnteriores.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.tbl_CitasAnteriores.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -544,32 +656,6 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.label2.TabIndex = 0;
             this.label2.Text = "Consultas Anteriones";
             // 
-            // gunaVScrollBar1
-            // 
-            this.gunaVScrollBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaVScrollBar1.LargeChange = 10;
-            this.gunaVScrollBar1.Location = new System.Drawing.Point(971, 70);
-            this.gunaVScrollBar1.Maximum = 100;
-            this.gunaVScrollBar1.Name = "gunaVScrollBar1";
-            this.gunaVScrollBar1.ScrollIdleColor = System.Drawing.Color.Teal;
-            this.gunaVScrollBar1.Size = new System.Drawing.Size(16, 424);
-            this.gunaVScrollBar1.TabIndex = 18;
-            this.gunaVScrollBar1.ThumbColor = System.Drawing.Color.LightBlue;
-            this.gunaVScrollBar1.ThumbHoverColor = System.Drawing.Color.LightBlue;
-            this.gunaVScrollBar1.ThumbPressedColor = System.Drawing.Color.LightBlue;
-            // 
-            // Nombre_Paciente
-            // 
-            this.Nombre_Paciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nombre_Paciente.ForeColor = System.Drawing.Color.White;
-            this.Nombre_Paciente.Location = new System.Drawing.Point(483, 9);
-            this.Nombre_Paciente.Name = "Nombre_Paciente";
-            this.Nombre_Paciente.Size = new System.Drawing.Size(134, 38);
-            this.Nombre_Paciente.TabIndex = 19;
-            this.Nombre_Paciente.Text = "Paciente";
-            this.Nombre_Paciente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.iconButton2);
@@ -578,23 +664,6 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(52, 40);
             this.panel4.TabIndex = 28;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ChevronUp;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 32;
-            this.iconButton1.Location = new System.Drawing.Point(0, 0);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(52, 22);
-            this.iconButton1.TabIndex = 0;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // iconButton2
             // 
@@ -613,169 +682,102 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.iconButton2.UseVisualStyleBackColor = true;
             this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
-            // panel5
+            // iconButton1
             // 
-            this.panel5.Controls.Add(this.iconButton3);
-            this.panel5.Controls.Add(this.iconButton4);
-            this.panel5.Location = new System.Drawing.Point(268, 488);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(52, 40);
-            this.panel5.TabIndex = 29;
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ChevronUp;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 32;
+            this.iconButton1.Location = new System.Drawing.Point(0, 0);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(52, 22);
+            this.iconButton1.TabIndex = 0;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // iconButton3
+            // gunaVScrollBar1
             // 
-            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
-            this.iconButton3.IconColor = System.Drawing.Color.White;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 32;
-            this.iconButton3.Location = new System.Drawing.Point(0, 18);
-            this.iconButton3.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(52, 22);
-            this.iconButton3.TabIndex = 1;
-            this.iconButton3.UseVisualStyleBackColor = true;
-            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            this.gunaVScrollBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaVScrollBar1.LargeChange = 10;
+            this.gunaVScrollBar1.Location = new System.Drawing.Point(971, 70);
+            this.gunaVScrollBar1.Maximum = 100;
+            this.gunaVScrollBar1.Name = "gunaVScrollBar1";
+            this.gunaVScrollBar1.ScrollIdleColor = System.Drawing.Color.Teal;
+            this.gunaVScrollBar1.Size = new System.Drawing.Size(16, 474);
+            this.gunaVScrollBar1.TabIndex = 18;
+            this.gunaVScrollBar1.ThumbColor = System.Drawing.Color.LightBlue;
+            this.gunaVScrollBar1.ThumbHoverColor = System.Drawing.Color.LightBlue;
+            this.gunaVScrollBar1.ThumbPressedColor = System.Drawing.Color.LightBlue;
             // 
-            // iconButton4
+            // Nombre_Paciente
             // 
-            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton4.FlatAppearance.BorderSize = 0;
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.ChevronUp;
-            this.iconButton4.IconColor = System.Drawing.Color.White;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 32;
-            this.iconButton4.Location = new System.Drawing.Point(0, 0);
-            this.iconButton4.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(52, 22);
-            this.iconButton4.TabIndex = 0;
-            this.iconButton4.UseVisualStyleBackColor = true;
-            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
-            // 
-            // btnMin
-            // 
-            this.btnMin.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMin.FlatAppearance.BorderSize = 0;
-            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMin.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.btnMin.IconColor = System.Drawing.Color.White;
-            this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMin.IconSize = 32;
-            this.btnMin.Location = new System.Drawing.Point(23, 0);
-            this.btnMin.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(48, 46);
-            this.btnMin.TabIndex = 12;
-            this.btnMin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMin.UseVisualStyleBackColor = true;
-            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
-            // 
-            // campos_padecimineto
-            // 
-            this.campos_padecimineto.AutoSize = true;
-            this.campos_padecimineto.ForeColor = System.Drawing.Color.Brown;
-            this.campos_padecimineto.Location = new System.Drawing.Point(123, 307);
-            this.campos_padecimineto.Name = "campos_padecimineto";
-            this.campos_padecimineto.Size = new System.Drawing.Size(279, 24);
-            this.campos_padecimineto.TabIndex = 30;
-            this.campos_padecimineto.Text = "No puede dejar Campos Vacíos";
-            // 
-            // campos_temperatura
-            // 
-            this.campos_temperatura.AutoSize = true;
-            this.campos_temperatura.ForeColor = System.Drawing.Color.Brown;
-            this.campos_temperatura.Location = new System.Drawing.Point(123, 421);
-            this.campos_temperatura.Name = "campos_temperatura";
-            this.campos_temperatura.Size = new System.Drawing.Size(279, 24);
-            this.campos_temperatura.TabIndex = 31;
-            this.campos_temperatura.Text = "No puede dejar Campos Vacíos";
-            // 
-            // campos_peso
-            // 
-            this.campos_peso.AutoSize = true;
-            this.campos_peso.ForeColor = System.Drawing.Color.Brown;
-            this.campos_peso.Location = new System.Drawing.Point(123, 531);
-            this.campos_peso.Name = "campos_peso";
-            this.campos_peso.Size = new System.Drawing.Size(279, 24);
-            this.campos_peso.TabIndex = 32;
-            this.campos_peso.Text = "No puede dejar Campos Vacíos";
-            // 
-            // campos_control
-            // 
-            this.campos_control.AutoSize = true;
-            this.campos_control.ForeColor = System.Drawing.Color.Brown;
-            this.campos_control.Location = new System.Drawing.Point(123, 647);
-            this.campos_control.Name = "campos_control";
-            this.campos_control.Size = new System.Drawing.Size(279, 24);
-            this.campos_control.TabIndex = 33;
-            this.campos_control.Text = "No puede dejar Campos Vacíos";
-            // 
-            // campos_comentarios
-            // 
-            this.campos_comentarios.AutoSize = true;
-            this.campos_comentarios.ForeColor = System.Drawing.Color.Brown;
-            this.campos_comentarios.Location = new System.Drawing.Point(123, 814);
-            this.campos_comentarios.Name = "campos_comentarios";
-            this.campos_comentarios.Size = new System.Drawing.Size(279, 24);
-            this.campos_comentarios.TabIndex = 34;
-            this.campos_comentarios.Text = "No puede dejar Campos Vacíos";
+            this.Nombre_Paciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nombre_Paciente.ForeColor = System.Drawing.Color.White;
+            this.Nombre_Paciente.Location = new System.Drawing.Point(483, 9);
+            this.Nombre_Paciente.Name = "Nombre_Paciente";
+            this.Nombre_Paciente.Size = new System.Drawing.Size(134, 38);
+            this.Nombre_Paciente.TabIndex = 19;
+            this.Nombre_Paciente.Text = "Paciente";
+            this.Nombre_Paciente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Column1
             // 
-            this.Column1.FillWeight = 45F;
+            this.Column1.FillWeight = 42.0355F;
             this.Column1.HeaderText = "Id";
+            this.Column1.MinimumWidth = 10;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 45;
             // 
             // Column4
             // 
-            this.Column4.FillWeight = 130F;
+            this.Column4.FillWeight = 118.9928F;
             this.Column4.HeaderText = "Padecimiento";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 130;
             // 
             // Column5
             // 
+            this.Column5.FillWeight = 61.8076F;
             this.Column5.HeaderText = "Temperatura";
+            this.Column5.MinimumWidth = 20;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
             // Column6
             // 
-            this.Column6.FillWeight = 75F;
+            this.Column6.FillWeight = 70.05076F;
             this.Column6.HeaderText = "Peso";
+            this.Column6.MinimumWidth = 20;
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
-            this.Column6.Width = 75;
             // 
             // Column8
             // 
-            this.Column8.FillWeight = 150F;
+            this.Column8.FillWeight = 70.76027F;
             this.Column8.HeaderText = "Control de Celo";
+            this.Column8.MinimumWidth = 29;
             this.Column8.Name = "Column8";
             this.Column8.ReadOnly = true;
-            this.Column8.Width = 150;
             // 
             // Column7
             // 
-            this.Column7.FillWeight = 125F;
+            this.Column7.FillWeight = 236.3531F;
             this.Column7.HeaderText = "Comentarios";
+            this.Column7.MinimumWidth = 80;
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
-            this.Column7.Width = 250;
             // 
             // AccionesConsultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.ClientSize = new System.Drawing.Size(1000, 550);
+            this.ClientSize = new System.Drawing.Size(1000, 600);
             this.ControlBox = false;
             this.Controls.Add(this.Nombre_Paciente);
             this.Controls.Add(this.gunaVScrollBar1);
@@ -790,10 +792,10 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tbl_CitasAnteriores)).EndInit();
             this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

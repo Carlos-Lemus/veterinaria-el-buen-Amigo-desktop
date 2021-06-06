@@ -24,11 +24,12 @@ namespace VeterinariaElBuenAmigo.views.consulta
         {
             Guna.UI.Lib.ScrollBar.PanelScrollHelper Scroll;
             consultaDao = new ConsultaDAO();
-           
 
+         
             InitializeComponent();
 
             ActualizarTabla();
+
 
 
 
@@ -80,7 +81,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
 
         private void btn_Editar_Click(object sender, EventArgs e)
         {
-            ActualizarTabla();
+            
         }
 
         private void btn_Eliminar_Click(object sender, EventArgs e)
@@ -91,24 +92,21 @@ namespace VeterinariaElBuenAmigo.views.consulta
         private void ActualizarTabla()
         {
 
-            if (tbl_CitasAnteriores.RowCount > 0)
-            {
                 tbl_CitasAnteriores.Rows.Clear();
                 tbl_CitasAnteriores.Refresh();
                
-                consultaDao.InsertarConsulta(new Consulta(0,"tos","38.21","56.40",1,"algo","salu3"));
+             
                 lista = consultaDao.getListConsulta();
 
                 foreach (Consulta consulta in lista)
                 {
-                    tbl_CitasAnteriores.Rows.Add(consulta.IdConsulta, consulta.Padecimineto, consulta.Temperatura,
-                        consulta.Peso, consulta.ControldeCelo, consulta.Comentarios);
-                    MessageBox.Show(consulta.IdConsulta.ToString());
+                    tbl_CitasAnteriores.Rows.Add(consulta.IdConsulta, consulta.Padecimineto, consulta.Temperatura+ " °C",
+                        consulta.Peso+" Lbs", consulta.ControldeCelo, consulta.Comentarios);
+                    
                 }
-
-            }
+            tbl_CitasAnteriores.Refresh();
         }
-
+       
         private void iconButton1_Click(object sender, EventArgs e)
         {
             /*
