@@ -31,6 +31,8 @@ namespace VeterinariaElBuenAmigo.views.propietarios
         {
             this.components = new System.ComponentModel.Container();
             this.panelTop = new Guna.UI.WinForms.GunaPanel();
+            this.btnMin = new FontAwesome.Sharp.IconButton();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.windowDragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.btnAdd = new Guna.UI.WinForms.GunaButton();
             this.txtNombre = new Guna.UI.WinForms.GunaTextBox();
@@ -47,8 +49,6 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.lblErrorDireccion = new System.Windows.Forms.Label();
             this.lblErrorNombre = new System.Windows.Forms.Label();
             this.windowResize = new Guna.UI.WinForms.GunaResize(this.components);
-            this.btnMin = new FontAwesome.Sharp.IconButton();
-            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,6 +62,43 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(550, 30);
             this.panelTop.TabIndex = 2;
+            // 
+            // btnMin
+            // 
+            this.btnMin.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMin.FlatAppearance.BorderSize = 0;
+            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMin.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
+            this.btnMin.IconColor = System.Drawing.Color.White;
+            this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnMin.IconSize = 32;
+            this.btnMin.Location = new System.Drawing.Point(470, 0);
+            this.btnMin.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(40, 30);
+            this.btnMin.TabIndex = 11;
+            this.btnMin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnMin.UseVisualStyleBackColor = true;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
+            this.btnClose.IconColor = System.Drawing.Color.White;
+            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClose.IconSize = 32;
+            this.btnClose.Location = new System.Drawing.Point(510, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(40, 30);
+            this.btnClose.TabIndex = 4;
+            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // windowDragControl
             // 
@@ -169,6 +206,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.txtTelefono.Radius = 4;
             this.txtTelefono.Size = new System.Drawing.Size(400, 35);
             this.txtTelefono.TabIndex = 13;
+            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // label2
             // 
@@ -305,43 +343,6 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             // windowResize
             // 
             this.windowResize.TargetForm = this;
-            // 
-            // btnMin
-            // 
-            this.btnMin.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMin.FlatAppearance.BorderSize = 0;
-            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMin.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.btnMin.IconColor = System.Drawing.Color.White;
-            this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMin.IconSize = 32;
-            this.btnMin.Location = new System.Drawing.Point(470, 0);
-            this.btnMin.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(40, 30);
-            this.btnMin.TabIndex = 11;
-            this.btnMin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMin.UseVisualStyleBackColor = true;
-            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.btnClose.IconColor = System.Drawing.Color.White;
-            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnClose.IconSize = 32;
-            this.btnClose.Location = new System.Drawing.Point(510, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(40, 30);
-            this.btnClose.TabIndex = 4;
-            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // FormPropietarioActions
             // 
