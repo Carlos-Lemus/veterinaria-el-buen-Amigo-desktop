@@ -8,6 +8,7 @@ namespace VeterinariaElBuenAmigo.database
 {
     public class DAO
     {
+        //Tabla Clientes
         protected const string TABLE_CLIENTE = "clientes";
         protected const string IDCLIENTE = "idCliente";
         protected const string NOMBRECLIENTE = "nombreCliente";

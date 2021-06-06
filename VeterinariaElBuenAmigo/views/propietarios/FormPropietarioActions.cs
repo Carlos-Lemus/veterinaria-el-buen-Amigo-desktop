@@ -20,11 +20,11 @@ namespace VeterinariaElBuenAmigo.views.propietarios
 
         Cliente cliente;
 
-        public FormPropietarioActions(bool isEdit, ClienteDAO clienteDao, Cliente cliente)
+        public FormPropietarioActions(bool isEdit, ClienteDAO clienteDao, Cliente cliente = null)
         {
             InitializeComponent();
 
-            position = new Point(Location.X, Location.Y);
+            position = new Point();
             
             this.clienteDao = clienteDao;
 
@@ -119,5 +119,11 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             return true;
         }
 
+        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar)) {
+                e.Handled = true;
+            } 
+        }
     }
 }
