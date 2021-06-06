@@ -76,7 +76,10 @@
     <Compile Include="database\ClienteDAO.cs" />
     <Compile Include="database\Conexion.cs" />
     <Compile Include="database\DAO.cs" />
+    <Compile Include="database\PacienteDAO.cs" />
     <Compile Include="models\Cliente.cs" />
+    <Compile Include="models\Paciente.cs" />
+    <Compile Include="models\templateClientePaciente.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -111,6 +114,12 @@
     </Compile>
     <Compile Include="views\FormHistorial.Designer.cs">
       <DependentUpon>FormHistorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\pacientes\FormGuardarMascota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\pacientes\FormGuardarMascota.Designer.cs">
+      <DependentUpon>FormGuardarMascota.cs</DependentUpon>
     </Compile>
     <Compile Include="views\pacientes\FormPacientes.cs">
       <SubType>Form</SubType>
@@ -158,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\inventario\FormInventario.resx">
       <DependentUpon>FormInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\pacientes\FormGuardarMascota.resx">
+      <DependentUpon>FormGuardarMascota.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\pacientes\FormPacientes.resx">
       <DependentUpon>FormPacientes.cs</DependentUpon>
