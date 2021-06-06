@@ -147,17 +147,12 @@ namespace VeterinariaElBuenAmigo.database
                             CREATE TABLE consultas(
                                 idConsulta INTEGER PRIMARY KEY AUTOINCREMENT, 
                                 padecimiento VARCHAR(150),
-                                temperatura INTEGER,
-                                peso INTEGER,
+                                temperatura TEXT,
+                                peso TEXT,
                                 idPaciente INTEGER,
                                 controlCelo VARCHAR(50),
-                                comentarios TEXT,
-                                FOREIGN KEY (idPaciente) REFERENCES pacientes(idPaciente)
-                                ON DELETE CASCADE
-                                ON UPDATE CASCADE);
-
+                                comentarios TEXT);
                             ";
-
 
                     command.CommandText = sql;
                     command.Connection = conn;
@@ -172,7 +167,9 @@ namespace VeterinariaElBuenAmigo.database
             {
                 MessageBox.Show(exception.Message, "Error Create DataBase", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
+            /*FOREIGN KEY (idPaciente) REFERENCES pacientes(idPaciente) 
+            ON DELETE CASCADE
+            ON UPDATE CASCADE*/
         }
     }
 }

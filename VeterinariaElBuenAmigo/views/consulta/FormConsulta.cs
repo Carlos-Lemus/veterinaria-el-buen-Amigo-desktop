@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VeterinariaElBuenAmigo.views.consulta;
 
 namespace VeterinariaElBuenAmigo.views
 {
@@ -15,6 +16,13 @@ namespace VeterinariaElBuenAmigo.views
         public FormConsulta()
         {
             InitializeComponent();
+        }
+
+        private void btn_Acciones_Click(object sender, EventArgs e)
+        {
+            Form f = new AccionesConsultas();
+            //f.ShowDialog(this);
+            f.ShowDialog();
         }
     }
 }
