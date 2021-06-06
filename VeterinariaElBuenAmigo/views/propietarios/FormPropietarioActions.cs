@@ -16,13 +16,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
     {
         private ClienteDAO clienteDao;
 
-        private int posicionFormX;
-        private int posicionFormY;
-        private int WindowWidth;
-        private int WindowHeight;
-
         private Point position;
-        private Size size;
 
         Cliente cliente;
 
@@ -31,8 +25,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             InitializeComponent();
 
             position = new Point(Location.X, Location.Y);
-            size = new Size(Size.Width, Size.Height);
-
+            
             this.clienteDao = clienteDao;
 
             btnEdit.Visible = false;
@@ -58,39 +51,6 @@ namespace VeterinariaElBuenAmigo.views.propietarios
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btnMax_Click(object sender, EventArgs e)
-        {
-            // obtengo la posicion de la ventana previo a maximizar la ventana
-            posicionFormX = Location.X;
-            posicionFormY = Location.Y;
-
-            // obtengo la tamaño de la ventana previo a maximizar la ventana
-            WindowWidth = Size.Width;
-            WindowHeight = Size.Height;
-
-            Size = Screen.PrimaryScreen.WorkingArea.Size;
-            Location = Screen.PrimaryScreen.WorkingArea.Location;
-            btnMax.Visible = false;
-            btnRestore.Visible = true;
-        }
-
-        private void btnRestore_Click(object sender, EventArgs e)
-        {
-            size.Width = WindowWidth;
-            size.Height = WindowHeight;
-            Size = size;
-
-            // devulvo a la ventana a la posicion previo a maximizar la ventana
-
-            position.X = posicionFormX;
-            position.Y = posicionFormY;
-
-            Location = position;
-
-            btnMax.Visible = true;
-            btnRestore.Visible = false;
         }
 
         private void btnMin_Click(object sender, EventArgs e)

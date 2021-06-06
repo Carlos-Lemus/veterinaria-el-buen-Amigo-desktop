@@ -30,6 +30,16 @@ namespace VeterinariaElBuenAmigo.views.propietarios
         {
             InitializeComponent();
 
+            Guna.UI.Lib.ScrollBar.PanelScrollHelper Scroll;
+            Scroll = new Guna.UI.Lib.ScrollBar.PanelScrollHelper(panelContenido, gunaVScrollBar1, true);
+            Scroll.UpdateScrollBar();
+
+            this.dgvMascotas.Rows.Add(1, 2, 3, 4, 5);
+            this.dgvMascotas.Rows.Add(1, 2, 3, 4, 5);
+            this.dgvMascotas.Rows.Add(1, 2, 3, 4, 5);
+            this.dgvMascotas.Rows.Add(1, 2, 3, 4, 5);
+            this.dgvMascotas.Rows.Add(1, 2, 3, 4, 5);
+
             position = new Point(Location.X, Location.Y);
             size = new Size(Size.Width, Size.Height);
 
