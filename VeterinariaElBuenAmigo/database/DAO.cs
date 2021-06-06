@@ -15,6 +15,10 @@ namespace VeterinariaElBuenAmigo.database
         protected const string DIRECCION = "direccion";
         protected const string CORREO = "correo";
 
-
+        protected const string TABLE_CITA = "citas";
+        protected const string IDCITA = "idCita";
+        protected const string FECHA_CITA = "fecha_cita";
+        protected const string IDPACIENTE = "idPaciente";
+        protected const string MOTIVO = "motivo";
     }
 }
