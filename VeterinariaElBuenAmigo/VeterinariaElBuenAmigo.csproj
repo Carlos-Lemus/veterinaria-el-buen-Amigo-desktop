@@ -132,6 +132,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="views\propietarios\FormPropietarioActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\propietarios\FormPropietarioActions.Designer.cs">
+      <DependentUpon>FormPropietarioActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\propietarios\FormPropietarioInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\propietarios\FormPropietarioInfo.Designer.cs">
+      <DependentUpon>FormPropietarioInfo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="views\citas\FormCitas.resx">
       <DependentUpon>FormCitas.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +172,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\propietarios\FormPropietarioActions.resx">
+      <DependentUpon>FormPropietarioActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\propietarios\FormPropietarioInfo.resx">
+      <DependentUpon>FormPropietarioInfo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
