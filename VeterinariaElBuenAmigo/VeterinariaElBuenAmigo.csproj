@@ -73,22 +73,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="database\CitaDAO.cs" />
     <Compile Include="database\ClienteDAO.cs" />
     <Compile Include="database\Conexion.cs" />
     <Compile Include="database\DAO.cs" />
-    <Compile Include="models\Cita.cs" />
     <Compile Include="models\Cliente.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="views\citas\FormAddCitas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="views\citas\FormAddCitas.Designer.cs">
-      <DependentUpon>FormAddCitas.cs</DependentUpon>
     </Compile>
     <Compile Include="views\FormConfiguracion.cs">
       <SubType>Form</SubType>
@@ -140,9 +132,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="views\citas\FormAddCitas.resx">
-      <DependentUpon>FormAddCitas.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="views\propietarios\FormPropietarioActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\propietarios\FormPropietarioActions.Designer.cs">
+      <DependentUpon>FormPropietarioActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\propietarios\FormPropietarioInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\propietarios\FormPropietarioInfo.Designer.cs">
+      <DependentUpon>FormPropietarioInfo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="views\citas\FormCitas.resx">
       <DependentUpon>FormCitas.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +172,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\propietarios\FormPropietarioActions.resx">
+      <DependentUpon>FormPropietarioActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\propietarios\FormPropietarioInfo.resx">
+      <DependentUpon>FormPropietarioInfo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
