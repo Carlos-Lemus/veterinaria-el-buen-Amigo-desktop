@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace VeterinariaElBuenAmigo.models
 {
-    class Cita
+    public class Cita
     {
         private int idCita;
         private String fecha_cita;
