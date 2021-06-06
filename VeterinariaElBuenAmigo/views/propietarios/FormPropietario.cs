@@ -22,11 +22,11 @@ namespace VeterinariaElBuenAmigo.views
             InitializeComponent();
 
             clienteDao = new ClienteDAO();
-
-            // clienteDao.insert(new Cliente(0, "Pedro Torres", "Que te importa", 12345678, "example@gmail.com"));
-            // clienteDao.insert(new Cliente(0, "Pedro Torres", "Que te importa", 12345678, "example@gmail.com"));
-            // clienteDao.insert(new Cliente(0, "Pedro Torres", "Que te importa", 12345678, "example@gmail.com"));
-
+            /*
+            clienteDao.insert(new Cliente(0, "Pedro Torres", "Que te importa", 12345678, "example@gmail.com"));
+            clienteDao.insert(new Cliente(0, "Pedro Torres", "Que te importa", 12345678, "example@gmail.com"));
+            clienteDao.insert(new Cliente(0, "Pedro Torres", "Que te importa", 12345678, "example@gmail.com"));
+            */
             lista = clienteDao.getList();
             
             foreach(Cliente cliente in lista)
