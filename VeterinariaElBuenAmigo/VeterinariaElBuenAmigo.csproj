@@ -85,7 +85,9 @@
     <Compile Include="database\DAO.cs" />
     <Compile Include="database\PacienteDAO.cs" />
     <Compile Include="models\Cliente.cs" />
+    <Compile Include="models\Especie.cs" />
     <Compile Include="models\Paciente.cs" />
+    <Compile Include="models\Raza.cs" />
     <Compile Include="models\templateClientePaciente.cs" />
     <Compile Include="models\Consulta.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -132,7 +134,7 @@
     <Compile Include="views\pacientes\FormGuardarMascota.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\pacientes\FormGuardarMascota.Designer.cs">
+    <Compile Include="views\pacientes\FormGuardarMascota.designer.cs">
       <DependentUpon>FormGuardarMascota.cs</DependentUpon>
     </Compile>
     <Compile Include="views\pacientes\FormPacientes.cs">

@@ -14,7 +14,9 @@ namespace VeterinariaElBuenAmigo.database
         private SQLiteConnection conn;
 
         // LISTA PARA ALMACENAR LOS PACIENTES
-        private List<Paciente> lista; 
+        private List<Paciente> lista;
+        private List<Especie> listaEspecies;
+        private List<Raza> listaRazas;
 
         // LISTA PARA ALMACENAR LOS DATOS RELACIONADOS ENTRE PACIENTES Y CLIENTES
         private List<templateClientePaciente> listaTemplateCP;
@@ -22,7 +24,48 @@ namespace VeterinariaElBuenAmigo.database
         public PacienteDAO()
         {
             lista = new List<Paciente>();            
+            listaEspecies = new List<Especie>();
+            listaRazas = new List<Raza>();
             listaTemplateCP = new List<templateClientePaciente>();
+        }
+
+        public bool insert(Paciente paciente)
+        {
+            try
+            {
+                conn = Conexion.Conn;
+
+                conn.Open();
+
+                using (SQLiteCommand command = new SQLiteCommand())
+                {
+                    string sql = $"INSERT INTO {TABLE_PACIENTE} ({IDPACIENTE}, {NOMBREPACIENTE}, {IDCLIENTE}, {IDESPECIE}, {IDRAZA}, {FECHA_NACIMIENTO}, {GENERO}, {COLOR}, {CARACTERISTICAS_ESPECIALES}) ";
+                    sql += $"VALUES(NULL, @{NOMBREPACIENTE}, @{IDCLIENTE}, @{IDESPECIE}, @{IDRAZA}, @{FECHA_NACIMIENTO}, @{GENERO}, @{COLOR}, @{CARACTERISTICAS_ESPECIALES});";
+
+                    command.CommandText = sql;
+                    command.Connection = Conexion.Conn;
+                    command.Parameters.AddWithValue($"@{NOMBREPACIENTE}", paciente.nombrePaciente);
+                    command.Parameters.AddWithValue($"@{IDCLIENTE}", paciente.idCliente);
+                    command.Parameters.AddWithValue($"@{IDESPECIE}", paciente.idEspecie);
+                    command.Parameters.AddWithValue($"@{IDRAZA}", paciente.idRaza);
+                    command.Parameters.AddWithValue($"@{FECHA_NACIMIENTO}", paciente.fechaNacimiento);
+                    command.Parameters.AddWithValue($"@{GENERO}", paciente.genero);
+                    command.Parameters.AddWithValue($"@{COLOR}", paciente.color);
+                    command.Parameters.AddWithValue($"@{CARACTERISTICAS_ESPECIALES}", paciente.caracteristicasEspeciales);
+                    command.ExecuteNonQuery();
+
+                    conn.Close();
+
+                    return true;
+
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return false;
+            }
         }
 
 
@@ -81,6 +124,105 @@ namespace VeterinariaElBuenAmigo.database
             }
 
             return lista;
+        }
+
+        public List<Especie> getListEspecie()
+        {
+
+            try
+            {
+                conn = Conexion.Conn;
+
+                conn.Open();
+
+                using (SQLiteCommand command = new SQLiteCommand())
+                {
+                    string sql = $"SELECT * FROM {TABLE_ESPECIE}";
+                    command.CommandText = sql;
+                    command.Connection = Conexion.Conn;
+
+                    using (SQLiteDataReader result = command.ExecuteReader())
+                    {
+                        if (listaEspecies.Count > 0)
+                        {
+                            listaEspecies.Clear();
+                        }
+
+                        if (result.HasRows)
+                        {
+                            while (result.Read())
+                            {
+                                Especie especie = new Especie();
+
+                                especie.idEspecie = Convert.ToInt32(result[IDESPECIE].ToString());
+                                especie.nombreEspecie = result[NOMBRE_ESPECIE].ToString();                                
+
+                                listaEspecies.Add(especie);
+                            }
+                        }
+                    }
+
+                }
+
+                conn.Close();
+
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return listaEspecies;
+        }
+
+        public List<Raza> getListRazas()
+        {
+
+            try
+            {
+                conn = Conexion.Conn;
+
+                conn.Open();
+
+                using (SQLiteCommand command = new SQLiteCommand())
+                {
+                    string sql = $"SELECT * FROM {TABLE_RAZA}";
+                    command.CommandText = sql;
+                    command.Connection = Conexion.Conn;
+
+                    using (SQLiteDataReader result = command.ExecuteReader())
+                    {
+                        if (listaRazas.Count > 0)
+                        {
+                            listaRazas.Clear();
+                        }
+
+                        if (result.HasRows)
+                        {
+                            while (result.Read())
+                            {
+                                Raza raza = new Raza();
+
+                                raza.idRaza = Convert.ToInt32(result[IDRAZA].ToString());
+                                raza.nombreRaza = result[NOMBRE_RAZA].ToString();
+                                raza.descripcion = result[RAZA_DESCRIPCION].ToString();
+
+                                listaRazas.Add(raza);
+                            }
+                        }
+                    }
+
+                }
+
+                conn.Close();
+
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return listaRazas;
         }
 
         // FUNCION QUE DEVUELVE EL ARREGLO CON LA RELACION DE CLIENTES Y PACIENTES (INNER JOIN)
