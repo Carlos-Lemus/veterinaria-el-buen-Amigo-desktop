@@ -30,7 +30,7 @@ namespace VeterinariaElBuenAmigo.views
         {
             this.Parent.Parent.Visible = false;
 
-            using (FormPropietarioActions formPropietarioActions = new FormPropietarioActions(false, clienteDao, null)) {
+            using (FormPropietarioActions formPropietarioActions = new FormPropietarioActions(false, clienteDao)) {
 
                 formPropietarioActions.ShowDialog();
             }
