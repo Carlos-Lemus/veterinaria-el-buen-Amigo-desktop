@@ -118,11 +118,6 @@ namespace VeterinariaElBuenAmigo.views.citas
             return true;
         }
 
-        private void btnClose_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void mascotas_collection_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectMascota.Text = mascotas_collection.SelectedValue.ToString();
