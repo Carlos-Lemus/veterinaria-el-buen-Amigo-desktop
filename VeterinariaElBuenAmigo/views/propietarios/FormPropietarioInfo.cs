@@ -16,6 +16,8 @@ namespace VeterinariaElBuenAmigo.views.propietarios
     public partial class FormPropietarioInfo : Form
     {
         private ClienteDAO clienteDao;
+        private PacienteDAO pacienteDao;
+        private List<Paciente> lista;
 
         private int posicionFormX;
         private int posicionFormY;
@@ -31,15 +33,13 @@ namespace VeterinariaElBuenAmigo.views.propietarios
         {
             InitializeComponent();
 
+            pacienteDao = new PacienteDAO();
+
             Guna.UI.Lib.ScrollBar.PanelScrollHelper Scroll;
             Scroll = new Guna.UI.Lib.ScrollBar.PanelScrollHelper(panelContenido, gunaVScrollBar1, true);
             Scroll.UpdateScrollBar();
 
-            this.dgvMascotas.Rows.Add(1, 2, 3, 4, 5);
-            this.dgvMascotas.Rows.Add(1, 2, 3, 4, 5);
-            this.dgvMascotas.Rows.Add(1, 2, 3, 4, 5);
-            this.dgvMascotas.Rows.Add(1, 2, 3, 4, 5);
-            this.dgvMascotas.Rows.Add(1, 2, 3, 4, 5);
+            cargarMascotas();
 
             position = new Point(Location.X, Location.Y);
             size = new Size(Size.Width, Size.Height);
@@ -107,6 +107,22 @@ namespace VeterinariaElBuenAmigo.views.propietarios
 
                 formPropietarioActions.ShowDialog();
             }            
+        }
+
+        private void cargarMascotas()
+        {
+            if (dgvMascotas.RowCount > 0)
+            {
+                dgvMascotas.Rows.Clear();
+                lista.Clear();
+            }
+
+            lista = pacienteDao.getList();
+
+            foreach (Paciente paciente in lista)
+            {
+                dgvMascotas.Rows.Add(paciente.idPaciente, paciente.nombrePaciente, paciente.idRaza, paciente.idEspecie, paciente.genero);
+            }
         }
     }
 }

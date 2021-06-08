@@ -28,34 +28,34 @@ namespace VeterinariaElBuenAmigo.views
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            this.Parent.Parent.Visible = false;
+        using (FormPropietarioActions formPropietarioActions = new FormPropietarioActions(false, clienteDao)) {
 
-            using (FormPropietarioActions formPropietarioActions = new FormPropietarioActions(false, clienteDao)) {
-
-                formPropietarioActions.ShowDialog();
-            }
+            formPropietarioActions.ShowDialog();
+        }
 
             cargarPropietarios();
-            this.Parent.Parent.Visible = true;
 
         }
 
         private void dgvPropietarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            lblPropietarios.Text = "Index: " + e.RowIndex;
-            string id = dgvPropietarios.Rows[e.RowIndex].Cells[0].Value.ToString();
-            string nombreCompleto = dgvPropietarios.Rows[e.RowIndex].Cells[1].Value.ToString();
-            string direccion = dgvPropietarios.Rows[e.RowIndex].Cells[2].Value.ToString();
-            string telefono = dgvPropietarios.Rows[e.RowIndex].Cells[3].Value.ToString();
-            string correo = dgvPropietarios.Rows[e.RowIndex].Cells[4].Value.ToString();
-
-            using (FormPropietarioInfo formPropietarioInfo = new FormPropietarioInfo(clienteDao, id, nombreCompleto, direccion, telefono, correo))
+            
+            if(e.RowIndex != -1)
             {
+                string id = dgvPropietarios.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string nombreCompleto = dgvPropietarios.Rows[e.RowIndex].Cells[1].Value.ToString();
+                string direccion = dgvPropietarios.Rows[e.RowIndex].Cells[2].Value.ToString();
+                string telefono = dgvPropietarios.Rows[e.RowIndex].Cells[3].Value.ToString();
+                string correo = dgvPropietarios.Rows[e.RowIndex].Cells[4].Value.ToString();
 
-                formPropietarioInfo.ShowDialog();
+                using (FormPropietarioInfo formPropietarioInfo = new FormPropietarioInfo(clienteDao, id, nombreCompleto, direccion, telefono, correo))
+                {
+
+                    formPropietarioInfo.ShowDialog();
+                }
+
+                cargarPropietarios();
             }
-
-            cargarPropietarios();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -68,8 +68,7 @@ namespace VeterinariaElBuenAmigo.views
 
                 if (dialogQuestion == DialogResult.Yes)
                 {
-                    MessageBox.Show(rows.Count.ToString());
-                    
+                   
                     for(int i = 0; i < rows.Count; i++ )
                     {
                         DataGridViewRow row = rows[i];

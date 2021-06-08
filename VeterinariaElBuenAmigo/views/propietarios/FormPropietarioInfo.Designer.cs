@@ -190,7 +190,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.btnAdd.ImageSize = new System.Drawing.Size(20, 20);
             this.btnAdd.Location = new System.Drawing.Point(12, 51);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
+            this.btnAdd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.btnAdd.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnAdd.OnHoverForeColor = System.Drawing.Color.White;
             this.btnAdd.OnHoverImage = null;
@@ -272,7 +272,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.dgvMascotas.RowHeadersWidth = 51;
             this.dgvMascotas.RowTemplate.Height = 40;
             this.dgvMascotas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMascotas.Size = new System.Drawing.Size(747, 248);
+            this.dgvMascotas.Size = new System.Drawing.Size(809, 248);
             this.dgvMascotas.TabIndex = 41;
             this.dgvMascotas.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Teal;
             this.dgvMascotas.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
@@ -343,7 +343,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(8, 6);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(387, 30);
+            this.label4.Size = new System.Drawing.Size(353, 30);
             this.label4.TabIndex = 28;
             this.label4.Text = "Mascotas del propietario";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -435,7 +435,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.lblTelefono.Location = new System.Drawing.Point(225, 561);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTelefono.Size = new System.Drawing.Size(513, 28);
+            this.lblTelefono.Size = new System.Drawing.Size(479, 28);
             this.lblTelefono.TabIndex = 23;
             this.lblTelefono.Text = "Telefono ";
             this.lblTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -459,7 +459,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.lblId.ForeColor = System.Drawing.Color.White;
             this.lblId.Location = new System.Drawing.Point(225, 402);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(513, 28);
+            this.lblId.Size = new System.Drawing.Size(479, 28);
             this.lblId.TabIndex = 32;
             this.lblId.Text = "Id propietario";
             this.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -472,7 +472,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.lblCorreo.ForeColor = System.Drawing.Color.White;
             this.lblCorreo.Location = new System.Drawing.Point(225, 613);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(513, 28);
+            this.lblCorreo.Size = new System.Drawing.Size(479, 28);
             this.lblCorreo.TabIndex = 24;
             this.lblCorreo.Text = "Correo ";
             this.lblCorreo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -488,6 +488,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPropietarioInfo";
+            this.ShowInTaskbar = false;
             this.Text = "FormPropietarioInfo";
             this.panelTop.ResumeLayout(false);
             this.panelContenido.ResumeLayout(false);

@@ -28,15 +28,12 @@ namespace VeterinariaElBuenAmigo.views
 
         private void btnAddCita_Click(object sender, EventArgs e)
         {
-            this.Parent.Parent.Visible = false;
-
             using (FormCitaActions formCitasActions = new FormCitaActions(false, citaDao))
             {
                 formCitasActions.ShowDialog();
             }
 
             cargarCitas();
-            this.Parent.Parent.Visible = true;
         }
 
         private void cargarCitas()
@@ -71,13 +68,6 @@ namespace VeterinariaElBuenAmigo.views
             lblCitasDelDia.Text = " Citas del Dia: " + countCitasDelDia;
         }
 
-
-
-        private void dvgCitasProgramadas_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-
-        }
-
         //Escucha el clic en las celdas la tabala Citas Programadas
         private void dvgCitasProgramadas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -90,10 +80,9 @@ namespace VeterinariaElBuenAmigo.views
 
                 using (FormCitaActions formCitaActions = new FormCitaActions(true, citaDao, new Cita(idCita, fechaCita, idPaciente, motivo)))
                 {
-                    this.Visible = false;
                     formCitaActions.ShowDialog();
                 }
-                this.Visible = true;
+                
             }
 
             if (this.dvgCitasProgramadas.Columns[e.ColumnIndex].Name == "Eliminar")

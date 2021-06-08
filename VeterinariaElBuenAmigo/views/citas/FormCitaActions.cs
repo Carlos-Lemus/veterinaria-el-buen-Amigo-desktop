@@ -108,10 +108,5 @@ namespace VeterinariaElBuenAmigo.views.citas
             }
             return true;
         }
-
-        private void btnClose_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

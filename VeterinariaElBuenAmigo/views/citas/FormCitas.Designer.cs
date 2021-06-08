@@ -36,22 +36,27 @@ namespace VeterinariaElBuenAmigo.views
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAddCita = new Guna.UI.WinForms.GunaButton();
-            this.dvgCitasProgramadas = new Guna.UI.WinForms.GunaDataGridView();
-            this.lblCitasProgramadas = new System.Windows.Forms.Label();
             this.lblCitasDelDia = new System.Windows.Forms.Label();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.lblCitasProgramadas = new System.Windows.Forms.Label();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.dvgCitasProgramadas = new Guna.UI.WinForms.GunaDataGridView();
             this.dvgCitasDelDia = new Guna.UI.WinForms.GunaDataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dvgCitasProgramadas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgCitasDelDia)).BeginInit();
             this.SuspendLayout();
@@ -84,15 +89,74 @@ namespace VeterinariaElBuenAmigo.views
             this.btnAddCita.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnAddCita.Click += new System.EventHandler(this.btnAddCita_Click);
             // 
+            // lblCitasDelDia
+            // 
+            this.lblCitasDelDia.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblCitasDelDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCitasDelDia.Location = new System.Drawing.Point(0, 0);
+            this.lblCitasDelDia.Name = "lblCitasDelDia";
+            this.lblCitasDelDia.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblCitasDelDia.Size = new System.Drawing.Size(803, 35);
+            this.lblCitasDelDia.TabIndex = 9;
+            this.lblCitasDelDia.Text = "Citas del dia YY/mm/dd : N";
+            this.lblCitasDelDia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Width = 159;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "";
+            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Width = 133;
+            // 
+            // lblCitasProgramadas
+            // 
+            this.lblCitasProgramadas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblCitasProgramadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCitasProgramadas.Location = new System.Drawing.Point(0, 0);
+            this.lblCitasProgramadas.Name = "lblCitasProgramadas";
+            this.lblCitasProgramadas.Size = new System.Drawing.Size(803, 30);
+            this.lblCitasProgramadas.TabIndex = 6;
+            this.lblCitasProgramadas.Text = "Citas programadas: N";
+            this.lblCitasProgramadas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.splitContainer1.Location = new System.Drawing.Point(55, 97);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.dvgCitasProgramadas);
+            this.splitContainer1.Panel1.Controls.Add(this.lblCitasProgramadas);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.dvgCitasDelDia);
+            this.splitContainer1.Panel2.Controls.Add(this.lblCitasDelDia);
+            this.splitContainer1.Size = new System.Drawing.Size(803, 531);
+            this.splitContainer1.SplitterDistance = 201;
+            this.splitContainer1.SplitterWidth = 50;
+            this.splitContainer1.TabIndex = 13;
+            // 
             // dvgCitasProgramadas
             // 
             this.dvgCitasProgramadas.AllowUserToAddRows = false;
             this.dvgCitasProgramadas.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.dvgCitasProgramadas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dvgCitasProgramadas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dvgCitasProgramadas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dvgCitasProgramadas.BackgroundColor = System.Drawing.Color.White;
             this.dvgCitasProgramadas.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -122,17 +186,18 @@ namespace VeterinariaElBuenAmigo.views
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dvgCitasProgramadas.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dvgCitasProgramadas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dvgCitasProgramadas.EnableHeadersVisualStyles = false;
             this.dvgCitasProgramadas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.dvgCitasProgramadas.Location = new System.Drawing.Point(55, 127);
+            this.dvgCitasProgramadas.Location = new System.Drawing.Point(0, 30);
             this.dvgCitasProgramadas.Name = "dvgCitasProgramadas";
             this.dvgCitasProgramadas.ReadOnly = true;
             this.dvgCitasProgramadas.RowHeadersVisible = false;
             this.dvgCitasProgramadas.RowHeadersWidth = 51;
             this.dvgCitasProgramadas.RowTemplate.Height = 40;
             this.dvgCitasProgramadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgCitasProgramadas.Size = new System.Drawing.Size(825, 225);
-            this.dvgCitasProgramadas.TabIndex = 8;
+            this.dvgCitasProgramadas.Size = new System.Drawing.Size(803, 171);
+            this.dvgCitasProgramadas.TabIndex = 9;
             this.dvgCitasProgramadas.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dvgCitasProgramadas.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dvgCitasProgramadas.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -156,28 +221,6 @@ namespace VeterinariaElBuenAmigo.views
             this.dvgCitasProgramadas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
             this.dvgCitasProgramadas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.dvgCitasProgramadas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgCitasProgramadas_CellClick);
-            this.dvgCitasProgramadas.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dvgCitasProgramadas_CellPainting);
-            // 
-            // lblCitasProgramadas
-            // 
-            this.lblCitasProgramadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCitasProgramadas.Location = new System.Drawing.Point(51, 80);
-            this.lblCitasProgramadas.Name = "lblCitasProgramadas";
-            this.lblCitasProgramadas.Size = new System.Drawing.Size(265, 30);
-            this.lblCitasProgramadas.TabIndex = 6;
-            this.lblCitasProgramadas.Text = "Citas programadas: N";
-            this.lblCitasProgramadas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblCitasDelDia
-            // 
-            this.lblCitasDelDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCitasDelDia.Location = new System.Drawing.Point(51, 379);
-            this.lblCitasDelDia.Name = "lblCitasDelDia";
-            this.lblCitasDelDia.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCitasDelDia.Size = new System.Drawing.Size(265, 35);
-            this.lblCitasDelDia.TabIndex = 9;
-            this.lblCitasDelDia.Text = "Citas del dia YY/mm/dd : N";
-            this.lblCitasDelDia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dvgCitasDelDia
             // 
@@ -185,9 +228,6 @@ namespace VeterinariaElBuenAmigo.views
             this.dvgCitasDelDia.AllowUserToResizeRows = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             this.dvgCitasDelDia.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dvgCitasDelDia.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.dvgCitasDelDia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dvgCitasDelDia.BackgroundColor = System.Drawing.Color.White;
             this.dvgCitasDelDia.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -215,17 +255,18 @@ namespace VeterinariaElBuenAmigo.views
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dvgCitasDelDia.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dvgCitasDelDia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dvgCitasDelDia.EnableHeadersVisualStyles = false;
             this.dvgCitasDelDia.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.dvgCitasDelDia.Location = new System.Drawing.Point(55, 429);
+            this.dvgCitasDelDia.Location = new System.Drawing.Point(0, 35);
             this.dvgCitasDelDia.Name = "dvgCitasDelDia";
             this.dvgCitasDelDia.ReadOnly = true;
             this.dvgCitasDelDia.RowHeadersVisible = false;
             this.dvgCitasDelDia.RowHeadersWidth = 51;
             this.dvgCitasDelDia.RowTemplate.Height = 40;
             this.dvgCitasDelDia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgCitasDelDia.Size = new System.Drawing.Size(825, 225);
-            this.dvgCitasDelDia.TabIndex = 12;
+            this.dvgCitasDelDia.Size = new System.Drawing.Size(803, 245);
+            this.dvgCitasDelDia.TabIndex = 14;
             this.dvgCitasDelDia.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dvgCitasDelDia.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dvgCitasDelDia.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -280,24 +321,6 @@ namespace VeterinariaElBuenAmigo.views
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = global::VeterinariaElBuenAmigo.Properties.Resources.create_outline;
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn1.MinimumWidth = 6;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Width = 159;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.HeaderText = "";
-            this.dataGridViewImageColumn2.Image = global::VeterinariaElBuenAmigo.Properties.Resources.trash_outline;
-            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.Width = 133;
-            // 
             // Column1
             // 
             this.Column1.FillWeight = 30F;
@@ -333,7 +356,7 @@ namespace VeterinariaElBuenAmigo.views
             // 
             this.Editar.FillWeight = 30F;
             this.Editar.HeaderText = "";
-            this.Editar.Image = global::VeterinariaElBuenAmigo.Properties.Resources.create_outline;
+            this.Editar.Image = global::VeterinariaElBuenAmigo.Properties.Resources.edit;
             this.Editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Editar.MinimumWidth = 6;
             this.Editar.Name = "Editar";
@@ -343,7 +366,7 @@ namespace VeterinariaElBuenAmigo.views
             // 
             this.Eliminar.FillWeight = 30F;
             this.Eliminar.HeaderText = "";
-            this.Eliminar.Image = global::VeterinariaElBuenAmigo.Properties.Resources.trash_outline;
+            this.Eliminar.Image = global::VeterinariaElBuenAmigo.Properties.Resources.delete;
             this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Eliminar.MinimumWidth = 6;
             this.Eliminar.Name = "Eliminar";
@@ -355,14 +378,15 @@ namespace VeterinariaElBuenAmigo.views
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(930, 690);
-            this.Controls.Add(this.dvgCitasDelDia);
+            this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.btnAddCita);
-            this.Controls.Add(this.lblCitasDelDia);
-            this.Controls.Add(this.dvgCitasProgramadas);
-            this.Controls.Add(this.lblCitasProgramadas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormCitas";
             this.Text = "Form1";
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dvgCitasProgramadas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgCitasDelDia)).EndInit();
             this.ResumeLayout(false);
@@ -372,21 +396,22 @@ namespace VeterinariaElBuenAmigo.views
         #endregion
 
         private Guna.UI.WinForms.GunaButton btnAddCita;
-        private Guna.UI.WinForms.GunaDataGridView dvgCitasProgramadas;
-        private System.Windows.Forms.Label lblCitasProgramadas;
         private System.Windows.Forms.Label lblCitasDelDia;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.Label lblCitasProgramadas;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private Guna.UI.WinForms.GunaDataGridView dvgCitasProgramadas;
         private Guna.UI.WinForms.GunaDataGridView dvgCitasDelDia;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewImageColumn Editar;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
     }
 }
