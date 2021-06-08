@@ -109,5 +109,72 @@ namespace VeterinariaElBuenAmigo.database
 
         }
 
+        public bool update(Cliente cliente)
+        {
+            try
+            {
+                conn = Conexion.Conn;
+
+                conn.Open();
+
+                using (SQLiteCommand command = new SQLiteCommand())
+                {
+                    string sql = $"UPDATE {TABLE_CLIENTE} SET {NOMBRECLIENTE} = @{NOMBRECLIENTE}, {TELEFONO} = @{TELEFONO}, {DIRECCION} = @{DIRECCION}, {CORREO} = @{CORREO} ";
+                    sql += $"WHERE {IDCLIENTE} = @{IDCLIENTE};";
+
+                    command.CommandText = sql;
+                    command.Connection = Conexion.Conn;
+                    command.Parameters.AddWithValue($"@{IDCLIENTE}", cliente.IdCliente);
+                    command.Parameters.AddWithValue($"@{NOMBRECLIENTE}", cliente.NombreCliente);
+                    command.Parameters.AddWithValue($"@{TELEFONO}", cliente.Telefono);
+                    command.Parameters.AddWithValue($"@{DIRECCION}", cliente.Direccion);
+                    command.Parameters.AddWithValue($"@{CORREO}", cliente.Correo);
+                    command.ExecuteNonQuery();
+
+                    conn.Close();
+
+                    return true;
+
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return false;
+            }
+        }
+
+        public bool delete(int id)
+        {
+            try
+            {
+                conn = Conexion.Conn;
+
+                conn.Open();
+
+                using (SQLiteCommand command = new SQLiteCommand())
+                {
+                    string sql = $"DELETE FROM {TABLE_CLIENTE} WHERE {IDCLIENTE} = @{IDCLIENTE};";
+
+                    command.CommandText = sql;
+                    command.Connection = Conexion.Conn;
+                    command.Parameters.AddWithValue($"@{IDCLIENTE}", id);
+                    command.ExecuteNonQuery();
+
+                    conn.Close();
+
+                    return true;
+
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return false;
+            }
+        }
+
     }
 }

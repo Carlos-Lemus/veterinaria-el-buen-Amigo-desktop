@@ -33,11 +33,11 @@ namespace VeterinariaElBuenAmigo.views
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblPropietarios = new System.Windows.Forms.Label();
-            this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
+            this.txtSearch = new Guna.UI.WinForms.GunaTextBox();
             this.dgvPropietarios = new Guna.UI.WinForms.GunaDataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
+            this.btnSearch = new Guna.UI.WinForms.GunaButton();
+            this.btnAdd = new Guna.UI.WinForms.GunaButton();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,22 +56,22 @@ namespace VeterinariaElBuenAmigo.views
             this.lblPropietarios.Text = "Numeros de propietarios: N";
             this.lblPropietarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // gunaTextBox1
+            // txtSearch
             // 
-            this.gunaTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTextBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
-            this.gunaTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox1.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.gunaTextBox1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.gunaTextBox1.Location = new System.Drawing.Point(138, 99);
-            this.gunaTextBox1.Name = "gunaTextBox1";
-            this.gunaTextBox1.PasswordChar = '\0';
-            this.gunaTextBox1.Radius = 4;
-            this.gunaTextBox1.Size = new System.Drawing.Size(282, 35);
-            this.gunaTextBox1.TabIndex = 1;
+            this.txtSearch.BackColor = System.Drawing.Color.Transparent;
+            this.txtSearch.BaseColor = System.Drawing.Color.White;
+            this.txtSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtSearch.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.txtSearch.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtSearch.Location = new System.Drawing.Point(138, 99);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.Radius = 4;
+            this.txtSearch.Size = new System.Drawing.Size(282, 35);
+            this.txtSearch.TabIndex = 1;
             // 
             // dgvPropietarios
             // 
@@ -142,6 +142,7 @@ namespace VeterinariaElBuenAmigo.views
             this.dgvPropietarios.ThemeStyle.RowsStyle.Height = 40;
             this.dgvPropietarios.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
             this.dgvPropietarios.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.dgvPropietarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPropietarios_CellDoubleClick);
             // 
             // label1
             // 
@@ -153,59 +154,60 @@ namespace VeterinariaElBuenAmigo.views
             this.label1.Text = "Nombre";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // gunaButton1
+            // btnSearch
             // 
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.gunaButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaButton1.Image = null;
-            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(440, 99);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Radius = 5;
-            this.gunaButton1.Size = new System.Drawing.Size(103, 35);
-            this.gunaButton1.TabIndex = 4;
-            this.gunaButton1.Text = "Buscar";
-            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnSearch.AnimationHoverSpeed = 0.07F;
+            this.btnSearch.AnimationSpeed = 0.03F;
+            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.btnSearch.BorderColor = System.Drawing.Color.Black;
+            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSearch.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnSearch.FocusedColor = System.Drawing.Color.Empty;
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Image = null;
+            this.btnSearch.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnSearch.Location = new System.Drawing.Point(440, 99);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
+            this.btnSearch.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnSearch.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnSearch.OnHoverImage = null;
+            this.btnSearch.OnPressedColor = System.Drawing.Color.Black;
+            this.btnSearch.Radius = 5;
+            this.btnSearch.Size = new System.Drawing.Size(103, 35);
+            this.btnSearch.TabIndex = 4;
+            this.btnSearch.Text = "Buscar";
+            this.btnSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // gunaButton2
+            // btnAdd
             // 
-            this.gunaButton2.AnimationHoverSpeed = 0.07F;
-            this.gunaButton2.AnimationSpeed = 0.03F;
-            this.gunaButton2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton2.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.gunaButton2.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaButton2.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton2.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.gunaButton2.ForeColor = System.Drawing.Color.White;
-            this.gunaButton2.Image = null;
-            this.gunaButton2.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton2.Location = new System.Drawing.Point(49, 152);
-            this.gunaButton2.Name = "gunaButton2";
-            this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
-            this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton2.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton2.OnHoverImage = null;
-            this.gunaButton2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton2.Radius = 5;
-            this.gunaButton2.Size = new System.Drawing.Size(178, 35);
-            this.gunaButton2.TabIndex = 5;
-            this.gunaButton2.Text = "Agregar Propietario";
-            this.gunaButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAdd.AnimationHoverSpeed = 0.07F;
+            this.btnAdd.AnimationSpeed = 0.03F;
+            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.btnAdd.BorderColor = System.Drawing.Color.Black;
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnAdd.FocusedColor = System.Drawing.Color.Empty;
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Image = null;
+            this.btnAdd.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnAdd.Location = new System.Drawing.Point(49, 152);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
+            this.btnAdd.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnAdd.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnAdd.OnHoverImage = null;
+            this.btnAdd.OnPressedColor = System.Drawing.Color.Black;
+            this.btnAdd.Radius = 5;
+            this.btnAdd.Size = new System.Drawing.Size(178, 35);
+            this.btnAdd.TabIndex = 5;
+            this.btnAdd.Text = "Agregar Propietario";
+            this.btnAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // Column1
             // 
@@ -217,7 +219,7 @@ namespace VeterinariaElBuenAmigo.views
             // Column2
             // 
             this.Column2.FillWeight = 145F;
-            this.Column2.HeaderText = "Nombre";
+            this.Column2.HeaderText = "Nombre y Apellido";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
@@ -246,11 +248,11 @@ namespace VeterinariaElBuenAmigo.views
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(930, 690);
-            this.Controls.Add(this.gunaButton2);
-            this.Controls.Add(this.gunaButton1);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvPropietarios);
-            this.Controls.Add(this.gunaTextBox1);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblPropietarios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPropietario";
@@ -263,11 +265,11 @@ namespace VeterinariaElBuenAmigo.views
         #endregion
 
         private System.Windows.Forms.Label lblPropietarios;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox1;
+        private Guna.UI.WinForms.GunaTextBox txtSearch;
         private Guna.UI.WinForms.GunaDataGridView dgvPropietarios;
         private System.Windows.Forms.Label label1;
-        private Guna.UI.WinForms.GunaButton gunaButton1;
-        private Guna.UI.WinForms.GunaButton gunaButton2;
+        private Guna.UI.WinForms.GunaButton btnSearch;
+        private Guna.UI.WinForms.GunaButton btnAdd;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

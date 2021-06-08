@@ -63,6 +63,16 @@ namespace VeterinariaElBuenAmigo.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap create_outline {
+            get {
+                object obj = ResourceManager.GetObject("create-outline", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_menu {
             get {
                 object obj = ResourceManager.GetObject("logo_menu", resourceCulture);
@@ -76,6 +86,16 @@ namespace VeterinariaElBuenAmigo.Properties {
         internal static System.Drawing.Bitmap logo_menu2 {
             get {
                 object obj = ResourceManager.GetObject("logo_menu2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trash_outline {
+            get {
+                object obj = ResourceManager.GetObject("trash-outline", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -18,7 +18,7 @@ namespace VeterinariaElBuenAmigo.models
 
         }
 
-        public Cita(int idCita, string fecha_cita, int idPaciente, string motivo)
+        public Cita(int idCita, String fecha_cita, int idPaciente, string motivo)
         {
             this.idCita = idCita;
             this.fecha_cita = fecha_cita;
@@ -38,7 +38,7 @@ namespace VeterinariaElBuenAmigo.models
             }
         }
 
-        public string Fecha_cita
+        public String Fecha_cita
         {
             get
             {
@@ -75,3 +75,4 @@ namespace VeterinariaElBuenAmigo.models
         }
     }
 }
+

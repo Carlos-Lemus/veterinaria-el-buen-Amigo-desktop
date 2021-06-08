@@ -49,6 +49,8 @@
       <HintPath>..\..\..\..\Downloads\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -62,6 +64,7 @@
       <HintPath>..\packages\System.Data.SQLite.Linq.1.0.114.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
     </Reference>
     <Reference Include="System.Management" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -71,24 +74,40 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="database\CitaDAO.cs" />
+    <Compile Include="database\ConsultaDAO.cs" />
     <Compile Include="database\ClienteDAO.cs" />
     <Compile Include="database\Conexion.cs" />
     <Compile Include="database\DAO.cs" />
     <Compile Include="models\Cita.cs" />
+    <Compile Include="database\PacienteDAO.cs" />
     <Compile Include="models\Cliente.cs" />
+    <Compile Include="models\Especie.cs" />
+    <Compile Include="models\Paciente.cs" />
+    <Compile Include="models\Raza.cs" />
+    <Compile Include="models\templateClientePaciente.cs" />
+    <Compile Include="models\Consulta.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="views\citas\FormAddCitas.cs">
+    <Compile Include="views\citas\FormCitaActions.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\citas\FormAddCitas.Designer.cs">
-      <DependentUpon>FormAddCitas.cs</DependentUpon>
+    <Compile Include="views\citas\FormCitaActions.Designer.cs">
+      <DependentUpon>FormCitaActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\consulta\AccionesConsultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\consulta\AccionesConsultas.Designer.cs">
+      <DependentUpon>AccionesConsultas.cs</DependentUpon>
     </Compile>
     <Compile Include="views\FormConfiguracion.cs">
       <SubType>Form</SubType>
@@ -120,6 +139,12 @@
     <Compile Include="views\FormHistorial.Designer.cs">
       <DependentUpon>FormHistorial.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\pacientes\FormGuardarMascota.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\pacientes\FormGuardarMascota.designer.cs">
+      <DependentUpon>FormGuardarMascota.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\pacientes\FormPacientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,11 +165,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="views\citas\FormAddCitas.resx">
-      <DependentUpon>FormAddCitas.cs</DependentUpon>
+    <Compile Include="views\propietarios\FormPropietarioActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\propietarios\FormPropietarioActions.Designer.cs">
+      <DependentUpon>FormPropietarioActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\propietarios\FormPropietarioInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\propietarios\FormPropietarioInfo.Designer.cs">
+      <DependentUpon>FormPropietarioInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="views\citas\FormCitaActions.resx">
+      <DependentUpon>FormCitaActions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\citas\FormCitas.resx">
       <DependentUpon>FormCitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\consulta\AccionesConsultas.resx">
+      <DependentUpon>AccionesConsultas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\FormConfiguracion.resx">
       <DependentUpon>FormConfiguracion.cs</DependentUpon>
@@ -157,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\inventario\FormInventario.resx">
       <DependentUpon>FormInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\pacientes\FormGuardarMascota.resx">
+      <DependentUpon>FormGuardarMascota.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\pacientes\FormPacientes.resx">
       <DependentUpon>FormPacientes.cs</DependentUpon>
@@ -172,6 +215,12 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\propietarios\FormPropietarioActions.resx">
+      <DependentUpon>FormPropietarioActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\propietarios\FormPropietarioInfo.resx">
+      <DependentUpon>FormPropietarioInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -186,12 +235,17 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\logo_menu.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo_menu2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\create-outline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-outline.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
