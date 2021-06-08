@@ -8,7 +8,7 @@ namespace VeterinariaElBuenAmigo.database
 {
     public class DAO
     {
-        //Tabla Clientes
+        //CLIENTES
         protected const string TABLE_CLIENTE = "clientes";
         protected const string IDCLIENTE = "idCliente";
         protected const string NOMBRECLIENTE = "nombreCliente";
@@ -16,15 +16,33 @@ namespace VeterinariaElBuenAmigo.database
         protected const string DIRECCION = "direccion";
         protected const string CORREO = "correo";
 
-        //Tabla Citas
+        //CITAS
         protected const string TABLE_CITA = "citas";
         protected const string IDCITA = "idCita";
-        protected const string FECHA_CITA = "fecha_cita";
-        protected const string IDPACIENTE = "idPaciente";
+        protected const string FECHA_CITA = "fecha_cita";      
         protected const string MOTIVO = "motivo";
 
+        //PACIENTES
+        protected const string TABLE_PACIENTE = "pacientes";
+        protected const string IDPACIENTE = "idPaciente";
+        protected const string NOMBREPACIENTE = "nombrePaciente";
+        protected const string FECHA_NACIMIENTO = "fechaNacimiento";
+        protected const string GENERO = "genero";
+        protected const string COLOR = "color";
+        protected const string CARACTERISTICAS_ESPECIALES = "caracteristicas_especiales";
 
-        //Tabla Consulta
+        //RAZAS
+        protected const string TABLE_RAZA = "razas";
+        protected const string IDRAZA = "idRaza";
+        protected const string NOMBRE_RAZA = "nombreRaza";
+        protected const string RAZA_DESCRIPCION = "descripcion";
+
+        //ESPECIES
+        protected const string TABLE_ESPECIE = "especies";
+        protected const string IDESPECIE = "idEspecie";
+        protected const string NOMBRE_ESPECIE = "nombreEspecie";
+
+        //CONSULTAS
         protected const string TABLA_CONSULTA = "consultas";
         protected const string IDCONSULTA = "idConsulta";
         protected const string PADECIMIENTO = "padecimiento";

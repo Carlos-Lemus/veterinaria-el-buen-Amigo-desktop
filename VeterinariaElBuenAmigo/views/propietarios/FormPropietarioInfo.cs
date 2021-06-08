@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using VeterinariaElBuenAmigo.database;
 using VeterinariaElBuenAmigo.models;
+using VeterinariaElBuenAmigo.views.pacientes;
 
 namespace VeterinariaElBuenAmigo.views.propietarios
 {
@@ -123,6 +124,17 @@ namespace VeterinariaElBuenAmigo.views.propietarios
 
                 this.Close();
             }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            //this.Parent.Parent.Visible = false;
+
+            using (FormGuardarMascota formPropietarioActions = new FormGuardarMascota(false, this.id))
+            {
+
+                formPropietarioActions.ShowDialog();
+            }            
         }
     }
 }
