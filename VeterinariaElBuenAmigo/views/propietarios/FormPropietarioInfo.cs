@@ -130,12 +130,11 @@ namespace VeterinariaElBuenAmigo.views.propietarios
         {
             //this.Parent.Parent.Visible = false;
 
-            using (FormGuardarMascota formPropietarioActions = new FormGuardarMascota(this.id))
+            using (FormGuardarMascota formPropietarioActions = new FormGuardarMascota(false, this.id))
             {
 
                 formPropietarioActions.ShowDialog();
-            }
-            
+            }            
         }
     }
 }

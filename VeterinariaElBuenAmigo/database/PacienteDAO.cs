@@ -68,6 +68,128 @@ namespace VeterinariaElBuenAmigo.database
             }
         }
 
+        public bool update(Paciente paciente)
+        {
+            try
+            {
+                conn = Conexion.Conn;
+
+                conn.Open();
+
+                using (SQLiteCommand command = new SQLiteCommand())
+                {
+                    string sql = $"UPDATE {TABLE_PACIENTE} SET {NOMBREPACIENTE} = @{NOMBREPACIENTE}, {IDESPECIE} = @{IDESPECIE}, {IDRAZA} = @{IDRAZA}, {GENERO} = @{GENERO}, {COLOR} = @{COLOR}, {FECHA_NACIMIENTO} = @{FECHA_NACIMIENTO},{CARACTERISTICAS_ESPECIALES} = @{CARACTERISTICAS_ESPECIALES} ";
+                    sql += $"WHERE {IDPACIENTE} = @{IDPACIENTE};";
+
+                    command.CommandText = sql;
+                    command.Connection = Conexion.Conn;
+                    command.Parameters.AddWithValue($"@{NOMBREPACIENTE}", paciente.nombrePaciente);
+                    command.Parameters.AddWithValue($"@{IDESPECIE}", paciente.idEspecie);
+                    command.Parameters.AddWithValue($"@{IDRAZA}", paciente.idRaza);
+                    command.Parameters.AddWithValue($"@{GENERO}", paciente.genero);
+                    command.Parameters.AddWithValue($"@{COLOR}", paciente.color);
+                    command.Parameters.AddWithValue($"@{FECHA_NACIMIENTO}", paciente.fechaNacimiento);
+                    command.Parameters.AddWithValue($"@{CARACTERISTICAS_ESPECIALES}", paciente.caracteristicasEspeciales);
+                    command.Parameters.AddWithValue($"@{IDPACIENTE}", paciente.idPaciente);
+                    command.ExecuteNonQuery();
+
+                    conn.Close();
+
+                    return true;
+
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return false;
+            }
+        }
+
+        public bool delete(int idMascota)
+        {
+            try
+            {
+                conn = Conexion.Conn;
+
+                conn.Open();
+
+                using (SQLiteCommand command = new SQLiteCommand())
+                {
+                    string sql = $"DELETE FROM {TABLE_PACIENTE} WHERE {IDPACIENTE} = @{IDPACIENTE};";
+
+                    command.CommandText = sql;
+                    command.Connection = Conexion.Conn;
+                    command.Parameters.AddWithValue($"@{IDPACIENTE}", idMascota);
+                    command.ExecuteNonQuery();
+
+                    conn.Close();
+
+                    return true;
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return false;
+            }
+        }
+
+        public Paciente searchPaciente(int idPaciente)
+        {
+            Paciente p = new Paciente();
+            try
+            {
+                conn = Conexion.Conn;
+
+                conn.Open();
+
+                using (SQLiteCommand command = new SQLiteCommand())
+                {
+                    string sql = $"SELECT * FROM {TABLE_PACIENTE} WHERE {IDPACIENTE} = {idPaciente}";
+                    command.CommandText = sql;
+                    command.Connection = Conexion.Conn;
+
+                    using (SQLiteDataReader result = command.ExecuteReader())
+                    {
+                        if (listaRazas.Count > 0)
+                        {
+                            listaRazas.Clear();
+                        }
+
+                        if (result.HasRows)
+                        {
+                            while (result.Read())
+                            {
+                                p.idPaciente = Convert.ToInt32(result[IDPACIENTE].ToString());
+                                p.nombrePaciente = result[NOMBREPACIENTE].ToString();
+                                p.fechaNacimiento = result[FECHA_NACIMIENTO].ToString();
+                                p.genero = result[GENERO].ToString();
+                                p.color = result[COLOR].ToString();
+                                p.caracteristicasEspeciales = result[CARACTERISTICAS_ESPECIALES].ToString();
+                                p.idCliente = Convert.ToInt32(result[IDCLIENTE].ToString());
+                                p.idRaza = Convert.ToInt32(result[IDRAZA].ToString());
+                                p.idEspecie = Convert.ToInt32(result[IDESPECIE].ToString());
+                            }
+                        }
+                    }
+
+                }
+
+                conn.Close();
+
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return p;
+        }
+
+
 
         // FUNCION QUE DEVUELVE TODOS LOS PACIENTES 
         public List<Paciente> getList()

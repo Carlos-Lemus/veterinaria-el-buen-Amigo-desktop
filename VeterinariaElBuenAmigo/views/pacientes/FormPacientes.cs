@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using VeterinariaElBuenAmigo.database;
 using VeterinariaElBuenAmigo.models;
+using VeterinariaElBuenAmigo.views.pacientes;
 
 namespace VeterinariaElBuenAmigo.views
 {
@@ -27,19 +28,16 @@ namespace VeterinariaElBuenAmigo.views
 
         private void dgvMascotas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*lblPacientes.Text = "Index: " + e.RowIndex;
+            lblPacientes.Text = "Index: " + e.RowIndex;
             string id = dgvMascotas.Rows[e.RowIndex].Cells[0].Value.ToString();
-            string nombre = dgvMascotas.Rows[e.RowIndex].Cells[1].Value.ToString();
-            string direccion = dgvMascotas.Rows[e.RowIndex].Cells[2].Value.ToString();
-            string telefono = dgvMascotas.Rows[e.RowIndex].Cells[3].Value.ToString();*/
 
-            /*using (FormPropietarioInfo formPropietarioInfo = new FormPropietarioInfo(clienteDao, id, nombreCompleto, direccion, telefono, correo))
+            using (FormGuardarMascota formPropietarioInfo = new FormGuardarMascota(true, Int32.Parse(id)))
             {
 
                 formPropietarioInfo.ShowDialog();
-            }*/
+            }
 
-            //cargarDatos();
+            cargarDatosCP();
         }
 
         //CARGA ALGUNOS DATOS DE LA TABLA PACIENTES
