@@ -32,17 +32,24 @@ namespace VeterinariaElBuenAmigo.views
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPropietario));
             this.lblPropietarios = new System.Windows.Forms.Label();
             this.txtSearch = new Guna.UI.WinForms.GunaTextBox();
             this.dgvPropietarios = new Guna.UI.WinForms.GunaDataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSearch = new Guna.UI.WinForms.GunaButton();
             this.btnAdd = new Guna.UI.WinForms.GunaButton();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnDelete = new Guna.UI.WinForms.GunaButton();
+            this.ColumnSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ColumnEdit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropietarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,7 +108,9 @@ namespace VeterinariaElBuenAmigo.views
             this.Column2,
             this.Column3,
             this.Column4,
-            this.ColumnCorreo});
+            this.Column5,
+            this.ColumnEdit,
+            this.ColumnSelect});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 14F);
@@ -114,8 +123,9 @@ namespace VeterinariaElBuenAmigo.views
             this.dgvPropietarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.dgvPropietarios.Location = new System.Drawing.Point(49, 210);
             this.dgvPropietarios.Name = "dgvPropietarios";
-            this.dgvPropietarios.ReadOnly = true;
             this.dgvPropietarios.RowHeadersVisible = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvPropietarios.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPropietarios.RowTemplate.Height = 40;
             this.dgvPropietarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPropietarios.Size = new System.Drawing.Size(825, 413);
@@ -134,7 +144,7 @@ namespace VeterinariaElBuenAmigo.views
             this.dgvPropietarios.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvPropietarios.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvPropietarios.ThemeStyle.HeaderStyle.Height = 40;
-            this.dgvPropietarios.ThemeStyle.ReadOnly = true;
+            this.dgvPropietarios.ThemeStyle.ReadOnly = false;
             this.dgvPropietarios.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvPropietarios.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvPropietarios.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 14F);
@@ -142,6 +152,7 @@ namespace VeterinariaElBuenAmigo.views
             this.dgvPropietarios.ThemeStyle.RowsStyle.Height = 40;
             this.dgvPropietarios.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
             this.dgvPropietarios.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.dgvPropietarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPropietarios_CellClick);
             this.dgvPropietarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPropietarios_CellDoubleClick);
             // 
             // label1
@@ -209,38 +220,91 @@ namespace VeterinariaElBuenAmigo.views
             this.btnAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // Column1
+            // dataGridViewImageColumn1
             // 
-            this.Column1.FillWeight = 30F;
-            this.Column1.HeaderText = "Id";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImageColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewImageColumn1.Width = 114;
             // 
-            // Column2
+            // dataGridViewImageColumn2
             // 
-            this.Column2.FillWeight = 145F;
-            this.Column2.HeaderText = "Nombre y Apellido";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            this.dataGridViewImageColumn2.FillWeight = 25F;
+            this.dataGridViewImageColumn2.HeaderText = "";
+            this.dataGridViewImageColumn2.Image = global::VeterinariaElBuenAmigo.Properties.Resources.icon_edit;
+            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Width = 38;
             // 
-            // Column3
+            // btnDelete
             // 
-            this.Column3.FillWeight = 145F;
-            this.Column3.HeaderText = "Telefono";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.AnimationHoverSpeed = 0.07F;
+            this.btnDelete.AnimationSpeed = 0.03F;
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(82)))), ((int)(((byte)(83)))));
+            this.btnDelete.BorderColor = System.Drawing.Color.Black;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDelete.FocusedColor = System.Drawing.Color.Empty;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Image = global::VeterinariaElBuenAmigo.Properties.Resources.icon_delete;
+            this.btnDelete.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnDelete.Location = new System.Drawing.Point(743, 152);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
+            this.btnDelete.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnDelete.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnDelete.OnHoverImage = null;
+            this.btnDelete.OnPressedColor = System.Drawing.Color.Black;
+            this.btnDelete.Radius = 5;
+            this.btnDelete.Size = new System.Drawing.Size(131, 35);
+            this.btnDelete.TabIndex = 31;
+            this.btnDelete.Text = "Eliminar ";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // ColumnSelect
+            // 
+            this.ColumnSelect.FillWeight = 25F;
+            this.ColumnSelect.HeaderText = "";
+            this.ColumnSelect.Name = "ColumnSelect";
+            // 
+            // ColumnEdit
+            // 
+            this.ColumnEdit.FillWeight = 25F;
+            this.ColumnEdit.HeaderText = "";
+            this.ColumnEdit.Image = ((System.Drawing.Image)(resources.GetObject("ColumnEdit.Image")));
+            this.ColumnEdit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ColumnEdit.Name = "ColumnEdit";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Correo";
+            this.Column5.Name = "Column5";
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "Direccion";
+            this.Column4.HeaderText = "Telefono";
             this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
             // 
-            // ColumnCorreo
+            // Column3
             // 
-            this.ColumnCorreo.HeaderText = "Correo";
-            this.ColumnCorreo.Name = "ColumnCorreo";
-            this.ColumnCorreo.ReadOnly = true;
+            this.Column3.HeaderText = "Direccion";
+            this.Column3.Name = "Column3";
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 150F;
+            this.Column2.HeaderText = "Nombre y Apellido";
+            this.Column2.Name = "Column2";
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 50F;
+            this.Column1.HeaderText = "Id";
+            this.Column1.Name = "Column1";
             // 
             // FormPropietario
             // 
@@ -248,6 +312,7 @@ namespace VeterinariaElBuenAmigo.views
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(930, 690);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label1);
@@ -270,10 +335,15 @@ namespace VeterinariaElBuenAmigo.views
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaButton btnSearch;
         private Guna.UI.WinForms.GunaButton btnAdd;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private Guna.UI.WinForms.GunaButton btnDelete;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCorreo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewImageColumn ColumnEdit;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumnSelect;
     }
 }

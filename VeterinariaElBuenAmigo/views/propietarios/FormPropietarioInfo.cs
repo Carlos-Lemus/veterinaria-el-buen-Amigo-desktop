@@ -98,34 +98,6 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             WindowState = FormWindowState.Minimized;
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(lblId.Text);
-            string nombreCompleto = lblNombre.Text;
-            string direccion = lblDireccion.Text;
-            int telefono = Convert.ToInt32(lblTelefono.Text);
-            string correo = lblDireccion.Text;
-
-            using (FormPropietarioActions formPropietarioActions = new FormPropietarioActions(true, clienteDao, new Cliente(id, nombreCompleto, direccion, telefono, correo)))
-            {
-                this.Visible = false;
-                formPropietarioActions.ShowDialog();
-            }
-            this.Close();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogQuestion = MessageBox.Show("¿Estas seguro de que lo quieres eliminar?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (dialogQuestion == DialogResult.Yes)
-            {
-                clienteDao.delete(id);
-
-                this.Close();
-            }
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             //this.Parent.Parent.Visible = false;
