@@ -35,14 +35,14 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.btnEdit = new Guna.UI.WinForms.GunaButton();
             this.btnAdd = new Guna.UI.WinForms.GunaButton();
             this.lblErrorMotivo = new System.Windows.Forms.Label();
-            this.lblErrorPaciente = new System.Windows.Forms.Label();
             this.lblErrorFecha = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMotivo = new Guna.UI.WinForms.GunaTextBox();
-            this.txtPaciente = new Guna.UI.WinForms.GunaTextBox();
             this.gunaDateTimePickerCita = new Guna.UI.WinForms.GunaDateTimePicker();
+            this.mascotas_collection = new Guna.UI.WinForms.GunaComboBox();
+            this.selectMascota = new System.Windows.Forms.Label();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -170,19 +170,6 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.lblErrorMotivo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblErrorMotivo.Visible = false;
             // 
-            // lblErrorPaciente
-            // 
-            this.lblErrorPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErrorPaciente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(59)))), ((int)(((byte)(87)))));
-            this.lblErrorPaciente.Location = new System.Drawing.Point(87, 297);
-            this.lblErrorPaciente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblErrorPaciente.Name = "lblErrorPaciente";
-            this.lblErrorPaciente.Size = new System.Drawing.Size(539, 34);
-            this.lblErrorPaciente.TabIndex = 34;
-            this.lblErrorPaciente.Text = "Seleccione un paciente";
-            this.lblErrorPaciente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblErrorPaciente.Visible = false;
-            // 
             // lblErrorFecha
             // 
             this.lblErrorFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -251,29 +238,8 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.txtMotivo.Name = "txtMotivo";
             this.txtMotivo.PasswordChar = '\0';
             this.txtMotivo.Radius = 4;
-            this.txtMotivo.Size = new System.Drawing.Size(533, 116);
+            this.txtMotivo.Size = new System.Drawing.Size(544, 116);
             this.txtMotivo.TabIndex = 27;
-            // 
-            // txtPaciente
-            // 
-            this.txtPaciente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPaciente.BackColor = System.Drawing.Color.Transparent;
-            this.txtPaciente.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txtPaciente.BorderColor = System.Drawing.Color.White;
-            this.txtPaciente.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPaciente.FocusedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txtPaciente.FocusedBorderColor = System.Drawing.Color.White;
-            this.txtPaciente.FocusedForeColor = System.Drawing.Color.White;
-            this.txtPaciente.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtPaciente.ForeColor = System.Drawing.Color.White;
-            this.txtPaciente.Location = new System.Drawing.Point(92, 250);
-            this.txtPaciente.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPaciente.Name = "txtPaciente";
-            this.txtPaciente.PasswordChar = '\0';
-            this.txtPaciente.Radius = 4;
-            this.txtPaciente.Size = new System.Drawing.Size(533, 52);
-            this.txtPaciente.TabIndex = 26;
             // 
             // gunaDateTimePickerCita
             // 
@@ -297,21 +263,50 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.gunaDateTimePickerCita.Text = "domingo, 6 de junio de 2021";
             this.gunaDateTimePickerCita.Value = new System.DateTime(2021, 6, 6, 21, 35, 28, 392);
             // 
+            // mascotas_collection
+            // 
+            this.mascotas_collection.BackColor = System.Drawing.Color.Transparent;
+            this.mascotas_collection.BaseColor = System.Drawing.Color.White;
+            this.mascotas_collection.BorderColor = System.Drawing.Color.Silver;
+            this.mascotas_collection.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.mascotas_collection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.mascotas_collection.FocusedColor = System.Drawing.Color.Empty;
+            this.mascotas_collection.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.mascotas_collection.ForeColor = System.Drawing.Color.Black;
+            this.mascotas_collection.FormattingEnabled = true;
+            this.mascotas_collection.Location = new System.Drawing.Point(92, 264);
+            this.mascotas_collection.Name = "mascotas_collection";
+            this.mascotas_collection.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.mascotas_collection.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.mascotas_collection.Size = new System.Drawing.Size(544, 31);
+            this.mascotas_collection.TabIndex = 37;
+            this.mascotas_collection.SelectedIndexChanged += new System.EventHandler(this.mascotas_collection_SelectedIndexChanged);
+            // 
+            // selectMascota
+            // 
+            this.selectMascota.AutoSize = true;
+            this.selectMascota.Location = new System.Drawing.Point(491, 61);
+            this.selectMascota.Name = "selectMascota";
+            this.selectMascota.Size = new System.Drawing.Size(98, 17);
+            this.selectMascota.TabIndex = 38;
+            this.selectMascota.Text = "selectMascota";
+            this.selectMascota.Visible = false;
+            // 
             // FormCitaActions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.ClientSize = new System.Drawing.Size(733, 800);
+            this.Controls.Add(this.selectMascota);
+            this.Controls.Add(this.mascotas_collection);
             this.Controls.Add(this.gunaDateTimePickerCita);
             this.Controls.Add(this.lblErrorMotivo);
-            this.Controls.Add(this.lblErrorPaciente);
             this.Controls.Add(this.lblErrorFecha);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtMotivo);
-            this.Controls.Add(this.txtPaciente);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.panelTop);
@@ -322,6 +317,7 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.Text = "Formulario de Citas";
             this.panelTop.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -333,13 +329,13 @@ namespace VeterinariaElBuenAmigo.views.citas
         private Guna.UI.WinForms.GunaButton btnEdit;
         private Guna.UI.WinForms.GunaButton btnAdd;
         private System.Windows.Forms.Label lblErrorMotivo;
-        private System.Windows.Forms.Label lblErrorPaciente;
         private System.Windows.Forms.Label lblErrorFecha;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaTextBox txtMotivo;
-        private Guna.UI.WinForms.GunaTextBox txtPaciente;
         private Guna.UI.WinForms.GunaDateTimePicker gunaDateTimePickerCita;
+        private Guna.UI.WinForms.GunaComboBox mascotas_collection;
+        private System.Windows.Forms.Label selectMascota;
     }
 }
