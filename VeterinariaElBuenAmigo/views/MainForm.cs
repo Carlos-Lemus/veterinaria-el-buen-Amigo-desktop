@@ -34,8 +34,6 @@ namespace VeterinariaElBuenAmigo
             position = new Point(Location.X, Location.Y);
             size = new Size(Size.Width, Size.Height);
 
-            Size = Screen.PrimaryScreen.WorkingArea.Size;
-            Location = Screen.PrimaryScreen.WorkingArea.Location;
         }
 
         private void btnClose_Click(object sender, EventArgs e)

@@ -64,10 +64,10 @@ namespace VeterinariaElBuenAmigo.views
 
                     using (FormProductoAction formProductoAction = new FormProductoAction(true, false, productoDao, productoEdit))
                     {
-                        this.Visible = false;
                         formProductoAction.ShowDialog();
                     }
-                    this.Visible = true;
+
+                    cargarProductos();
                 }
 
                 if (this.dgvInventario.Columns[e.ColumnIndex].Name == "Eliminar")
@@ -77,6 +77,8 @@ namespace VeterinariaElBuenAmigo.views
                     if (dialogQuestion == DialogResult.Yes)
                     {
                         productoDao.eliminarProducto(idProducto);
+
+                        cargarProductos();
                     }
                 }
 
@@ -84,7 +86,7 @@ namespace VeterinariaElBuenAmigo.views
             {
                 //MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            cargarProductos();
+            
         }
 
         private void dgvInventario_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
