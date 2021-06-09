@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,41 +10,38 @@ using VeterinariaElBuenAmigo.models;
 
 namespace VeterinariaElBuenAmigo.database
 {
-    public class ClienteDAO : DAO
+    public class CitaDAO : DAO
     {
         private SQLiteConnection conn;
-        private List<Cliente> lista;
+        private List<Cita> listaCitas;
 
-        public ClienteDAO()
+        public CitaDAO()
         {
-            lista = new List<Cliente>();
+            listaCitas = new List<Cita>();
         }
 
-        public bool insert(Cliente cliente)
+        public bool ingresarCita(Cita cita)
         {
             try
             {
                 conn = Conexion.Conn;
-
                 conn.Open();
 
                 using (SQLiteCommand command = new SQLiteCommand())
                 {
-                    string sql = $"INSERT INTO {TABLE_CLIENTE} ({IDCLIENTE}, {NOMBRECLIENTE}, {TELEFONO}, {DIRECCION}, {CORREO}) ";
-                    sql += $"VALUES(NULL, @{NOMBRECLIENTE}, @{TELEFONO}, @{DIRECCION}, @{CORREO});";
-                    
+                    string sql = $"INSERT INTO {TABLE_CITA} ({IDCITA}, {FECHA_CITA}, {IDPACIENTE}, {MOTIVO}) ";
+                    sql += $"VALUES(NULL, @{FECHA_CITA}, @{IDPACIENTE}, @{MOTIVO});";
+
                     command.CommandText = sql;
                     command.Connection = Conexion.Conn;
-                    command.Parameters.AddWithValue($"@{NOMBRECLIENTE}", cliente.NombreCliente);
-                    command.Parameters.AddWithValue($"@{TELEFONO}", cliente.Telefono);
-                    command.Parameters.AddWithValue($"@{DIRECCION}", cliente.Direccion);
-                    command.Parameters.AddWithValue($"@{CORREO}", cliente.Correo);
+                    command.Parameters.AddWithValue($"@{FECHA_CITA}", cita.Fecha_cita);
+                    command.Parameters.AddWithValue($"@{IDPACIENTE}", cita.IdPaciente);
+                    command.Parameters.AddWithValue($"@{MOTIVO}", cita.Motivo);
                     command.ExecuteNonQuery();
 
                     conn.Close();
 
                     return true;
-
                 }
             }
             catch (Exception exception)
@@ -52,92 +50,82 @@ namespace VeterinariaElBuenAmigo.database
 
                 return false;
             }
-
-
         }
 
-        public List<Cliente> getList()
+        public List<Cita> getListaCitas()
         {
-
             try
             {
                 conn = Conexion.Conn;
-
                 conn.Open();
 
                 using (SQLiteCommand command = new SQLiteCommand())
                 {
-                    string sql = $"SELECT * FROM {TABLE_CLIENTE}";
+                    string sql = $"SELECT * FROM {TABLE_CITA}";
                     command.CommandText = sql;
                     command.Connection = Conexion.Conn;
 
                     using (SQLiteDataReader result = command.ExecuteReader())
                     {
-                        if (lista.Count > 0)
+                        
+                        
+                        if (listaCitas.Count > 0)
                         {
-                            lista.Clear();
+                            listaCitas.Clear();
                         }
 
                         if (result.HasRows)
                         {
+                            
                             while (result.Read())
                             {
-                                Cliente cliente = new Cliente();
+                                Cita cita = new Cita();
 
-                                cliente.IdCliente = Convert.ToInt32(result[IDCLIENTE].ToString());
-                                cliente.NombreCliente = result[NOMBRECLIENTE].ToString();
-                                cliente.Direccion = result[DIRECCION].ToString();
-                                cliente.Telefono = Convert.ToInt32(result[TELEFONO].ToString());
-                                cliente.Correo = result[CORREO].ToString();
+                                cita.IdCita = Convert.ToInt32(result[IDCITA].ToString());
+                                cita.Fecha_cita = result[FECHA_CITA].ToString();
+                                cita.IdPaciente = Convert.ToInt32(result[IDPACIENTE].ToString());
+                                cita.Motivo = result[MOTIVO].ToString();
 
-                                lista.Add(cliente);
+                                listaCitas.Add(cita);
                             }
                         }
                     }
-
                 }
-
                 conn.Close();
-
             }
             catch (Exception exception)
             {
                 MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            return lista;
-
+            return listaCitas;
         }
 
-        public bool update(Cliente cliente)
+        public bool editarCita(Cita cita)
         {
             try
             {
                 conn = Conexion.Conn;
-
                 conn.Open();
 
-                using (SQLiteCommand command = new SQLiteCommand())
+                using(SQLiteCommand command = new SQLiteCommand())
                 {
-                    string sql = $"UPDATE {TABLE_CLIENTE} SET {NOMBRECLIENTE} = @{NOMBRECLIENTE}, {TELEFONO} = @{TELEFONO}, {DIRECCION} = @{DIRECCION}, {CORREO} = @{CORREO} ";
-                    sql += $"WHERE {IDCLIENTE} = @{IDCLIENTE};";
+                    string sql = $"UPDATE {TABLE_CITA} SET {FECHA_CITA} = @{FECHA_CITA}, {IDPACIENTE} = @{IDPACIENTE}, {MOTIVO} = @{MOTIVO} ";
+                    sql += $"WHERE {IDCITA} = @{IDCITA};";
 
                     command.CommandText = sql;
                     command.Connection = Conexion.Conn;
-                    command.Parameters.AddWithValue($"@{IDCLIENTE}", cliente.IdCliente);
-                    command.Parameters.AddWithValue($"@{NOMBRECLIENTE}", cliente.NombreCliente);
-                    command.Parameters.AddWithValue($"@{TELEFONO}", cliente.Telefono);
-                    command.Parameters.AddWithValue($"@{DIRECCION}", cliente.Direccion);
-                    command.Parameters.AddWithValue($"@{CORREO}", cliente.Correo);
+                    command.Parameters.AddWithValue($"@{IDCITA}", cita.IdCita);
+                    command.Parameters.AddWithValue($"@{FECHA_CITA}", cita.Fecha_cita);
+                    command.Parameters.AddWithValue($"@{IDPACIENTE}", cita.IdPaciente);
+                    command.Parameters.AddWithValue($"@{MOTIVO}", cita.Motivo);
                     command.ExecuteNonQuery();
 
                     conn.Close();
 
                     return true;
-
                 }
-            }
-            catch (Exception exception)
+
+            }catch(Exception exception)
             {
                 MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -145,36 +133,31 @@ namespace VeterinariaElBuenAmigo.database
             }
         }
 
-        public bool delete(int id)
+        public bool eliminarCita(int idCita)
         {
             try
             {
                 conn = Conexion.Conn;
-
                 conn.Open();
 
-                using (SQLiteCommand command = new SQLiteCommand())
+                using(SQLiteCommand command = new SQLiteCommand())
                 {
-                    string sql = $"DELETE FROM {TABLE_CLIENTE} WHERE {IDCLIENTE} = @{IDCLIENTE};";
+                    string sql = $"DELETE FROM {TABLE_CITA} WHERE {IDCITA} = @{IDCITA};";
 
                     command.CommandText = sql;
                     command.Connection = Conexion.Conn;
-                    command.Parameters.AddWithValue($"@{IDCLIENTE}", id);
+                    command.Parameters.AddWithValue($"@{IDCITA}", idCita);
                     command.ExecuteNonQuery();
 
                     conn.Close();
 
                     return true;
-
                 }
-            }
-            catch (Exception exception)
+            }catch(Exception exception)
             {
                 MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                 return false;
             }
         }
-
     }
 }

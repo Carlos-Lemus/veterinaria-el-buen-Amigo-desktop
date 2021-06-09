@@ -29,12 +29,14 @@ namespace VeterinariaElBuenAmigo.views.consulta
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelTop = new System.Windows.Forms.Panel();
+            this.Nombre_Paciente = new System.Windows.Forms.Label();
             this.btnMin = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -64,19 +66,19 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.txt_Padecimineto = new Guna.UI.WinForms.GunaTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tbl_CitasAnteriores = new Guna.UI.WinForms.GunaDataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.gunaVScrollBar1 = new Guna.UI.WinForms.GunaVScrollBar();
-            this.Nombre_Paciente = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1.SuspendLayout();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.gunaVScrollBar1 = new Guna.UI.WinForms.GunaVScrollBar();
+            this.windowDragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.panelTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -84,14 +86,28 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelTop
             // 
-            this.panel1.Controls.Add(this.btnMin);
-            this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Location = new System.Drawing.Point(887, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(100, 46);
-            this.panel1.TabIndex = 0;
+            this.panelTop.Controls.Add(this.Nombre_Paciente);
+            this.panelTop.Controls.Add(this.btnMin);
+            this.panelTop.Controls.Add(this.btnClose);
+            this.panelTop.Controls.Add(this.label1);
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTop.Location = new System.Drawing.Point(0, 0);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.Size = new System.Drawing.Size(1000, 46);
+            this.panelTop.TabIndex = 0;
+            // 
+            // Nombre_Paciente
+            // 
+            this.Nombre_Paciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nombre_Paciente.ForeColor = System.Drawing.Color.White;
+            this.Nombre_Paciente.Location = new System.Drawing.Point(500, 8);
+            this.Nombre_Paciente.Name = "Nombre_Paciente";
+            this.Nombre_Paciente.Size = new System.Drawing.Size(134, 38);
+            this.Nombre_Paciente.TabIndex = 19;
+            this.Nombre_Paciente.Text = "Paciente";
+            this.Nombre_Paciente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnMin
             // 
@@ -102,7 +118,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.btnMin.IconColor = System.Drawing.Color.White;
             this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMin.IconSize = 32;
-            this.btnMin.Location = new System.Drawing.Point(23, 0);
+            this.btnMin.Location = new System.Drawing.Point(923, 0);
             this.btnMin.Margin = new System.Windows.Forms.Padding(0);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(48, 46);
@@ -121,7 +137,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.btnClose.IconColor = System.Drawing.Color.White;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 32;
-            this.btnClose.Location = new System.Drawing.Point(71, 0);
+            this.btnClose.Location = new System.Drawing.Point(971, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(29, 46);
@@ -134,7 +150,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(354, 9);
+            this.label1.Location = new System.Drawing.Point(371, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(134, 38);
             this.label1.TabIndex = 16;
@@ -646,6 +662,53 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.tbl_CitasAnteriores.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.tbl_CitasAnteriores.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 42.0355F;
+            this.Column1.HeaderText = "Id";
+            this.Column1.MinimumWidth = 10;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.FillWeight = 118.9928F;
+            this.Column4.HeaderText = "Padecimiento";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.FillWeight = 61.8076F;
+            this.Column5.HeaderText = "Temperatura";
+            this.Column5.MinimumWidth = 20;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.FillWeight = 70.05076F;
+            this.Column6.HeaderText = "Peso";
+            this.Column6.MinimumWidth = 20;
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.FillWeight = 70.76027F;
+            this.Column8.HeaderText = "Control de Celo";
+            this.Column8.MinimumWidth = 29;
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.FillWeight = 236.3531F;
+            this.Column7.HeaderText = "Comentarios";
+            this.Column7.MinimumWidth = 80;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -714,63 +777,9 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.gunaVScrollBar1.ThumbHoverColor = System.Drawing.Color.LightBlue;
             this.gunaVScrollBar1.ThumbPressedColor = System.Drawing.Color.LightBlue;
             // 
-            // Nombre_Paciente
+            // windowDragControl
             // 
-            this.Nombre_Paciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nombre_Paciente.ForeColor = System.Drawing.Color.White;
-            this.Nombre_Paciente.Location = new System.Drawing.Point(483, 9);
-            this.Nombre_Paciente.Name = "Nombre_Paciente";
-            this.Nombre_Paciente.Size = new System.Drawing.Size(134, 38);
-            this.Nombre_Paciente.TabIndex = 19;
-            this.Nombre_Paciente.Text = "Paciente";
-            this.Nombre_Paciente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 42.0355F;
-            this.Column1.HeaderText = "Id";
-            this.Column1.MinimumWidth = 10;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.FillWeight = 118.9928F;
-            this.Column4.HeaderText = "Padecimiento";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.FillWeight = 61.8076F;
-            this.Column5.HeaderText = "Temperatura";
-            this.Column5.MinimumWidth = 20;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.FillWeight = 70.05076F;
-            this.Column6.HeaderText = "Peso";
-            this.Column6.MinimumWidth = 20;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.FillWeight = 70.76027F;
-            this.Column8.HeaderText = "Control de Celo";
-            this.Column8.MinimumWidth = 29;
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.FillWeight = 236.3531F;
-            this.Column7.HeaderText = "Comentarios";
-            this.Column7.MinimumWidth = 80;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
+            this.windowDragControl.TargetControl = this.panelTop;
             // 
             // AccionesConsultas
             // 
@@ -779,17 +788,15 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
             this.ControlBox = false;
-            this.Controls.Add(this.Nombre_Paciente);
             this.Controls.Add(this.gunaVScrollBar1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AccionesConsultas";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AccionesConsultas";
-            this.panel1.ResumeLayout(false);
+            this.panelTop.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -802,7 +809,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelTop;
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
@@ -844,5 +851,6 @@ namespace VeterinariaElBuenAmigo.views.consulta
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private Guna.UI.WinForms.GunaDragControl windowDragControl;
     }
 }

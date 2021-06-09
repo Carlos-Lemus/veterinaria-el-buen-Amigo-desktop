@@ -87,7 +87,5 @@ namespace VeterinariaElBuenAmigo.models
                 this.correo = value;
             }
         }
-
-
     }
 }

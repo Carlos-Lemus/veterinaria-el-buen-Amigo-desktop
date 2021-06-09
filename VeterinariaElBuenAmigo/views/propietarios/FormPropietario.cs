@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using VeterinariaElBuenAmigo.database;
 using VeterinariaElBuenAmigo.models;
+using VeterinariaElBuenAmigo.views.propietarios;
 
 namespace VeterinariaElBuenAmigo.views
 {
@@ -22,18 +23,103 @@ namespace VeterinariaElBuenAmigo.views
             InitializeComponent();
 
             clienteDao = new ClienteDAO();
-            /*
-            clienteDao.insert(new Cliente(0, "Pedro Torres", "Que te importa", 12345678, "example@gmail.com"));
-            clienteDao.insert(new Cliente(0, "Pedro Torres", "Que te importa", 12345678, "example@gmail.com"));
-            clienteDao.insert(new Cliente(0, "Pedro Torres", "Que te importa", 12345678, "example@gmail.com"));
-            */
-            lista = clienteDao.getList();
-            
-            foreach(Cliente cliente in lista)
-            {
-                dgvPropietarios.Rows.Add(cliente.IdCliente, cliente.NombreCliente, cliente.Telefono, cliente.Direccion, cliente.Correo);
-            }
+            cargarPropietarios();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+        using (FormPropietarioActions formPropietarioActions = new FormPropietarioActions(false, clienteDao)) {
+
+            formPropietarioActions.ShowDialog();
+        }
+
+            cargarPropietarios();
 
         }
+
+        private void dgvPropietarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+            if(e.RowIndex != -1)
+            {
+                string id = dgvPropietarios.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string nombreCompleto = dgvPropietarios.Rows[e.RowIndex].Cells[1].Value.ToString();
+                string direccion = dgvPropietarios.Rows[e.RowIndex].Cells[2].Value.ToString();
+                string telefono = dgvPropietarios.Rows[e.RowIndex].Cells[3].Value.ToString();
+                string correo = dgvPropietarios.Rows[e.RowIndex].Cells[4].Value.ToString();
+
+                using (FormPropietarioInfo formPropietarioInfo = new FormPropietarioInfo(clienteDao, id, nombreCompleto, direccion, telefono, correo))
+                {
+
+                    formPropietarioInfo.ShowDialog();
+                }
+
+                cargarPropietarios();
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            List<DataGridViewRow> rows = dgvPropietarios.Rows.Cast<DataGridViewRow>().Where(p => Convert.ToBoolean(p.Cells["ColumnSelect"].Value) == true).ToList();
+
+            if (rows.Count > 0)
+            {
+                DialogResult dialogQuestion = MessageBox.Show("¿Estas seguro de que quieres eliminar los registros?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (dialogQuestion == DialogResult.Yes)
+                {
+                   
+                    for(int i = 0; i < rows.Count; i++ )
+                    {
+                        DataGridViewRow row = rows[i];
+
+                        clienteDao.delete(Convert.ToInt32(row.Cells[0].Value));
+
+                        cargarPropietarios();
+                    }
+
+                }
+            }
+        }
+
+        private void dgvPropietarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (dgvPropietarios.Columns[e.ColumnIndex].Name == "ColumnEdit")
+            {
+                int id = Convert.ToInt32(dgvPropietarios.Rows[e.RowIndex].Cells[0].Value);
+                string nombreCompleto = dgvPropietarios.Rows[e.RowIndex].Cells[1].Value.ToString();
+                string direccion = dgvPropietarios.Rows[e.RowIndex].Cells[2].Value.ToString();
+                int telefono = Convert.ToInt32(dgvPropietarios.Rows[e.RowIndex].Cells[3].Value);
+                string correo = dgvPropietarios.Rows[e.RowIndex].Cells[4].Value.ToString();
+
+                using (FormPropietarioActions formPropietarioActions = new FormPropietarioActions(true, clienteDao, new Cliente(id, nombreCompleto, direccion, telefono, correo)))
+                {
+                    formPropietarioActions.ShowDialog();
+
+                }
+
+            }
+        }
+            
+        private void cargarPropietarios()
+        {
+            if (dgvPropietarios.RowCount > 0)
+            {
+                dgvPropietarios.Rows.Clear();
+                lista.Clear();
+            }
+
+            lista = clienteDao.getList();
+
+
+            lblPropietarios.Text = "Numeros de propietarios: " + lista.Count;
+
+            foreach (Cliente cliente in lista)
+            {
+                dgvPropietarios.Rows.Add(cliente.IdCliente, cliente.NombreCliente, cliente.Direccion, cliente.Telefono, cliente.Correo);
+            }
+        }
+
     }
 }

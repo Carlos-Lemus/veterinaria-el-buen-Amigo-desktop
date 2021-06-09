@@ -33,6 +33,7 @@ namespace VeterinariaElBuenAmigo
 
             position = new Point(Location.X, Location.Y);
             size = new Size(Size.Width, Size.Height);
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)

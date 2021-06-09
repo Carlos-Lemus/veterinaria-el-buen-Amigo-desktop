@@ -142,10 +142,7 @@ namespace VeterinariaElBuenAmigo.database
                                 idCita INTEGER PRIMARY KEY AUTOINCREMENT, 
                                 fecha_cita VARCHAR(150),
                                 idPaciente INTEGER,
-                                motivo TEXT,
-                                FOREIGN KEY (idPaciente) REFERENCES pacientes(idPaciente)
-                                ON DELETE CASCADE
-                                ON UPDATE CASCADE);
+                                motivo TEXT);
 
                             CREATE TABLE consultas(
                                 idConsulta INTEGER PRIMARY KEY AUTOINCREMENT, 
@@ -173,6 +170,16 @@ namespace VeterinariaElBuenAmigo.database
             /*FOREIGN KEY (idPaciente) REFERENCES pacientes(idPaciente) 
             ON DELETE CASCADE
             ON UPDATE CASCADE*/
+
+
+            /* Citas
+             
+            FOREIGN KEY (idPaciente) REFERENCES pacientes(idPaciente)
+            ON DELETE CASCADE
+            ON UPDATE CASCADE)
+
+
+            */
         }
     }
 }
