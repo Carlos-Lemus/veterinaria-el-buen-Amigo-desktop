@@ -82,7 +82,9 @@ namespace VeterinariaElBuenAmigo.views
                 {
                     formCitaActions.ShowDialog();
                 }
-                
+
+                cargarCitas();
+
             }
 
             if (this.dvgCitasProgramadas.Columns[e.ColumnIndex].Name == "Eliminar")
@@ -92,10 +94,12 @@ namespace VeterinariaElBuenAmigo.views
                 if (dialogQuestion == DialogResult.Yes)
                 {
                     citaDao.eliminarCita(Convert.ToInt32(dvgCitasProgramadas.Rows[e.RowIndex].Cells[0].Value.ToString()));
+
+                    cargarCitas();
                 }
             }
 
-            cargarCitas();
+            
         }
     }
 }

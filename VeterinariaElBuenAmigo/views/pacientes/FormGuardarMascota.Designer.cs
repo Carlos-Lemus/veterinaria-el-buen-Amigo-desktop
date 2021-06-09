@@ -172,7 +172,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.fechaMascota.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.fechaMascota.ForeColor = System.Drawing.Color.White;
             this.fechaMascota.Location = new System.Drawing.Point(443, 189);
-            this.fechaMascota.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fechaMascota.Margin = new System.Windows.Forms.Padding(2);
             this.fechaMascota.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.fechaMascota.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.fechaMascota.Name = "fechaMascota";
@@ -256,7 +256,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             "Macho",
             "Hembra"});
             this.generMascota.Location = new System.Drawing.Point(136, 285);
-            this.generMascota.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.generMascota.Margin = new System.Windows.Forms.Padding(2);
             this.generMascota.Name = "generMascota";
             this.generMascota.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.generMascota.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -277,7 +277,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.especieMascota.ForeColor = System.Drawing.Color.White;
             this.especieMascota.FormattingEnabled = true;
             this.especieMascota.Location = new System.Drawing.Point(136, 388);
-            this.especieMascota.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.especieMascota.Margin = new System.Windows.Forms.Padding(2);
             this.especieMascota.Name = "especieMascota";
             this.especieMascota.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.especieMascota.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -299,6 +299,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.descripcionMascota.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.descripcionMascota.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.descripcionMascota.Location = new System.Drawing.Point(137, 491);
+            this.descripcionMascota.MultiLine = true;
             this.descripcionMascota.Name = "descripcionMascota";
             this.descripcionMascota.PasswordChar = '\0';
             this.descripcionMascota.Radius = 4;
@@ -500,7 +501,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.animales_razas.ForeColor = System.Drawing.Color.White;
             this.animales_razas.FormattingEnabled = true;
             this.animales_razas.Location = new System.Drawing.Point(443, 388);
-            this.animales_razas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.animales_razas.Margin = new System.Windows.Forms.Padding(2);
             this.animales_razas.Name = "animales_razas";
             this.animales_razas.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.animales_razas.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -551,7 +552,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.Controls.Add(this.txtNombreMascota);
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormGuardarMascota";
             this.Text = "FormGuardarMascota";
             this.panelTop.ResumeLayout(false);

@@ -229,6 +229,7 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.txtMotivo.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtMotivo.ForeColor = System.Drawing.Color.White;
             this.txtMotivo.Location = new System.Drawing.Point(69, 311);
+            this.txtMotivo.MultiLine = true;
             this.txtMotivo.Name = "txtMotivo";
             this.txtMotivo.PasswordChar = '\0';
             this.txtMotivo.Radius = 4;
@@ -245,7 +246,7 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.gunaDateTimePickerCita.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaDateTimePickerCita.ForeColor = System.Drawing.Color.Black;
             this.gunaDateTimePickerCita.Location = new System.Drawing.Point(69, 93);
-            this.gunaDateTimePickerCita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaDateTimePickerCita.Margin = new System.Windows.Forms.Padding(2);
             this.gunaDateTimePickerCita.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.gunaDateTimePickerCita.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.gunaDateTimePickerCita.Name = "gunaDateTimePickerCita";
@@ -270,7 +271,7 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.mascotas_collection.ForeColor = System.Drawing.Color.Black;
             this.mascotas_collection.FormattingEnabled = true;
             this.mascotas_collection.Location = new System.Drawing.Point(69, 214);
-            this.mascotas_collection.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mascotas_collection.Margin = new System.Windows.Forms.Padding(2);
             this.mascotas_collection.Name = "mascotas_collection";
             this.mascotas_collection.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.mascotas_collection.OnHoverItemForeColor = System.Drawing.Color.White;
