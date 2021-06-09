@@ -7,22 +7,74 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VeterinariaElBuenAmigo.database;
+using VeterinariaElBuenAmigo.models;
 using VeterinariaElBuenAmigo.views.consulta;
 
 namespace VeterinariaElBuenAmigo.views
 {
     public partial class FormConsulta : Form
     {
+        private ConsultaDAO consultaDao;
+      //  private List<Consulta> listaConsulta;
+
+        private PacienteDAO pacienteDao;
+        private List<Paciente> listaPaciente;
         public FormConsulta()
         {
+            consultaDao = new ConsultaDAO();
+            pacienteDao = new PacienteDAO(); 
+
             InitializeComponent();
+
+            cargarMascotas();
         }
 
         private void btn_Acciones_Click(object sender, EventArgs e)
         {
-            Form f = new AccionesConsultas();
-            //f.ShowDialog(this);
-            f.ShowDialog();
+            
+        }
+
+        private void tbl_Consulta_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.RowIndex != -1)
+            {
+                string id = tbl_Consulta.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string nombre = tbl_Consulta.Rows[e.RowIndex].Cells[1].Value.ToString();
+                /* string direccion = dgvPropietarios.Rows[e.RowIndex].Cells[2].Value.ToString();
+                 string telefono = dgvPropietarios.Rows[e.RowIndex].Cells[3].Value.ToString();
+                 string correo = dgvPropietarios.Rows[e.RowIndex].Cells[4].Value.ToString();*/
+
+                using (AccionesConsultas formAcciones = new AccionesConsultas(Convert.ToInt32(id), nombre))
+                {
+
+                    formAcciones.ShowDialog();
+                }
+
+                cargarMascotas();
+            }
+           
+        }
+
+        private void cargarMascotas()
+        {
+
+            String Especie = "", Nombre = "", Num = ""; 
+            tbl_Consulta.Rows.Clear();
+            tbl_Consulta.Refresh();
+
+            listaPaciente = pacienteDao.getList();
+         //   listaConsulta = consultaDao.getListConsulta();
+
+            foreach (Paciente paciente in listaPaciente)
+            {
+                Especie = consultaDao.EspecieporID(paciente.idEspecie);
+                Nombre = consultaDao.NombrePropietarioporID(paciente.idCliente);
+                Num = consultaDao.NumerodeConsultas(paciente.idPaciente);
+
+                tbl_Consulta.Rows.Add(paciente.idPaciente, paciente.nombrePaciente, Especie, Nombre, Num); 
+            }
         }
     }
 }
