@@ -94,18 +94,8 @@ namespace VeterinariaElBuenAmigo.views
                     this.Visible = true;
                     cargarProductos();
                 }
-
-                if (this.dgvInventario.Columns[e.ColumnIndex].Name == "Eliminar")
-                {
-                    DialogResult dialogQuestion = MessageBox.Show("¿Estas seguro de que quieres eliminar este producto?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                    if (dialogQuestion == DialogResult.Yes)
-                    {
-                        productoDao.eliminarProducto(idProducto);
-                    }
-                }
-
-            }catch(Exception exception)
+            }
+            catch (Exception exception)
             {
                 //MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
