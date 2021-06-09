@@ -60,7 +60,6 @@ namespace VeterinariaElBuenAmigo.views.propietarios
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
             string nombre = txtNombre.Text;
             string direccion = txtDireccion.Text;
             string telefono = txtTelefono.Text;

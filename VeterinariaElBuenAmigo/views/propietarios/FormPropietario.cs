@@ -84,20 +84,25 @@ namespace VeterinariaElBuenAmigo.views
 
         private void dgvPropietarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            if (dgvPropietarios.Columns[e.ColumnIndex].Name == "ColumnEdit")
+            try
             {
-                int id = Convert.ToInt32(dgvPropietarios.Rows[e.RowIndex].Cells[0].Value);
-                string nombreCompleto = dgvPropietarios.Rows[e.RowIndex].Cells[1].Value.ToString();
-                string direccion = dgvPropietarios.Rows[e.RowIndex].Cells[2].Value.ToString();
-                int telefono = Convert.ToInt32(dgvPropietarios.Rows[e.RowIndex].Cells[3].Value);
-                string correo = dgvPropietarios.Rows[e.RowIndex].Cells[4].Value.ToString();
-
-                using (FormPropietarioActions formPropietarioActions = new FormPropietarioActions(true, clienteDao, new Cliente(id, nombreCompleto, direccion, telefono, correo)))
+                if (dgvPropietarios.Columns[e.ColumnIndex].Name == "ColumnEdit")
                 {
-                    formPropietarioActions.ShowDialog();
+                    int id = Convert.ToInt32(dgvPropietarios.Rows[e.RowIndex].Cells[0].Value);
+                    string nombreCompleto = dgvPropietarios.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    string direccion = dgvPropietarios.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    int telefono = Convert.ToInt32(dgvPropietarios.Rows[e.RowIndex].Cells[3].Value);
+                    string correo = dgvPropietarios.Rows[e.RowIndex].Cells[4].Value.ToString();
 
+                    using (FormPropietarioActions formPropietarioActions = new FormPropietarioActions(true, clienteDao, new Cliente(id, nombreCompleto, direccion, telefono, correo)))
+                    {
+                        formPropietarioActions.ShowDialog();
+                        cargarPropietarios();
+                    }
                 }
+            }
+            catch(Exception exception)
+            {
 
             }
         }
