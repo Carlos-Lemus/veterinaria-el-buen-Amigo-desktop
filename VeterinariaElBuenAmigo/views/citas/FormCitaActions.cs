@@ -29,6 +29,7 @@ namespace VeterinariaElBuenAmigo.views.citas
             cargarPacientes();
 
             btnEdit.Visible = false;
+            gunaDateTimePickerCita.Value = DateTime.Now;
 
             if (isEdit)
             {

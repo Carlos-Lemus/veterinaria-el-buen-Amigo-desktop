@@ -52,6 +52,28 @@ namespace VeterinariaElBuenAmigo.views
             }
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            List<DataGridViewRow> rows = dgvInventario.Rows.Cast<DataGridViewRow>().Where(p => Convert.ToBoolean(p.Cells["Eliminar"].Value) == true).ToList();
+
+            if(rows.Count > 0)
+            {
+                DialogResult dialogQuestion = MessageBox.Show("¿Estas seguro de que quieres eliminar lo/s producto/s?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (dialogQuestion == DialogResult.Yes)
+                {
+
+                    for (int i = 0; i < rows.Count; i++)
+                    {
+                        DataGridViewRow row = rows[i];
+
+                        productoDao.eliminarProducto(Convert.ToInt32(row.Cells[0].Value));
+                        cargarProductos();
+                    }
+                }
+            }
+        }
+
         private void dgvInventario_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -66,27 +88,15 @@ namespace VeterinariaElBuenAmigo.views
                     {
                         formProductoAction.ShowDialog();
                     }
-
+                    cargarProductos();
+                    this.Visible = true;
                     cargarProductos();
                 }
-
-                if (this.dgvInventario.Columns[e.ColumnIndex].Name == "Eliminar")
-                {
-                    DialogResult dialogQuestion = MessageBox.Show("¿Estas seguro de que quieres eliminar este producto?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                    if (dialogQuestion == DialogResult.Yes)
-                    {
-                        productoDao.eliminarProducto(idProducto);
-
-                        cargarProductos();
-                    }
-                }
-
-            }catch(Exception exception)
+            }
+            catch (Exception exception)
             {
                 //MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
         }
 
         private void dgvInventario_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -104,7 +114,7 @@ namespace VeterinariaElBuenAmigo.views
                 cargarProductos();
                 this.Visible = true;
             }
-            catch(Exception exception)
+            catch (Exception exception)
             {
 
             }

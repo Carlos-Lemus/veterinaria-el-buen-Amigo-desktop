@@ -48,10 +48,10 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.txtMarcaProducto = new Guna.UI.WinForms.GunaTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lblErrorDescripcionProducto = new System.Windows.Forms.Label();
-            this.dtFechaAdquisicion = new Guna.UI.WinForms.GunaDateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.txtDescripcionProducto = new Guna.UI.WinForms.GunaTextBox();
             this.windowDragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.dtFechaAdquisicion = new Guna.UI.WinForms.GunaDateTimePicker();
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,8 +62,9 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.panelTop.Controls.Add(this.btnClose);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
+            this.panelTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(875, 30);
+            this.panelTop.Size = new System.Drawing.Size(1167, 37);
             this.panelTop.TabIndex = 4;
             // 
             // btnMin
@@ -75,10 +76,10 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.btnMin.IconColor = System.Drawing.Color.White;
             this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMin.IconSize = 32;
-            this.btnMin.Location = new System.Drawing.Point(795, 0);
+            this.btnMin.Location = new System.Drawing.Point(1061, 0);
             this.btnMin.Margin = new System.Windows.Forms.Padding(0);
             this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(40, 30);
+            this.btnMin.Size = new System.Drawing.Size(53, 37);
             this.btnMin.TabIndex = 11;
             this.btnMin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMin.UseVisualStyleBackColor = true;
@@ -94,10 +95,10 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.btnClose.IconColor = System.Drawing.Color.White;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 32;
-            this.btnClose.Location = new System.Drawing.Point(835, 0);
+            this.btnClose.Location = new System.Drawing.Point(1114, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(40, 30);
+            this.btnClose.Size = new System.Drawing.Size(53, 37);
             this.btnClose.TabIndex = 4;
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClose.UseVisualStyleBackColor = true;
@@ -119,7 +120,8 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.Image = null;
             this.btnEdit.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnEdit.Location = new System.Drawing.Point(188, 571);
+            this.btnEdit.Location = new System.Drawing.Point(251, 703);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.btnEdit.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -127,7 +129,7 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.btnEdit.OnHoverImage = null;
             this.btnEdit.OnPressedColor = System.Drawing.Color.Black;
             this.btnEdit.Radius = 5;
-            this.btnEdit.Size = new System.Drawing.Size(500, 35);
+            this.btnEdit.Size = new System.Drawing.Size(667, 43);
             this.btnEdit.TabIndex = 24;
             this.btnEdit.Text = "Editar";
             this.btnEdit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -149,7 +151,8 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = null;
             this.btnAdd.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAdd.Location = new System.Drawing.Point(188, 530);
+            this.btnAdd.Location = new System.Drawing.Point(251, 652);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.OnHoverBaseColor = System.Drawing.Color.Empty;
             this.btnAdd.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -157,7 +160,7 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.btnAdd.OnHoverImage = null;
             this.btnAdd.OnPressedColor = System.Drawing.Color.Black;
             this.btnAdd.Radius = 5;
-            this.btnAdd.Size = new System.Drawing.Size(500, 35);
+            this.btnAdd.Size = new System.Drawing.Size(667, 43);
             this.btnAdd.TabIndex = 23;
             this.btnAdd.Text = "Guardar";
             this.btnAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -167,9 +170,10 @@ namespace VeterinariaElBuenAmigo.views.inventario
             // 
             this.lblErrorNombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorNombreProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(59)))), ((int)(((byte)(87)))));
-            this.lblErrorNombreProducto.Location = new System.Drawing.Point(25, 123);
+            this.lblErrorNombreProducto.Location = new System.Drawing.Point(33, 151);
+            this.lblErrorNombreProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblErrorNombreProducto.Name = "lblErrorNombreProducto";
-            this.lblErrorNombreProducto.Size = new System.Drawing.Size(400, 28);
+            this.lblErrorNombreProducto.Size = new System.Drawing.Size(533, 34);
             this.lblErrorNombreProducto.TabIndex = 36;
             this.lblErrorNombreProducto.Text = "Ingrese el nombre del producto";
             this.lblErrorNombreProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -188,11 +192,12 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.txtNombreProducto.FocusedForeColor = System.Drawing.Color.White;
             this.txtNombreProducto.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtNombreProducto.ForeColor = System.Drawing.Color.White;
-            this.txtNombreProducto.Location = new System.Drawing.Point(25, 80);
+            this.txtNombreProducto.Location = new System.Drawing.Point(33, 98);
+            this.txtNombreProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.PasswordChar = '\0';
             this.txtNombreProducto.Radius = 4;
-            this.txtNombreProducto.Size = new System.Drawing.Size(400, 35);
+            this.txtNombreProducto.Size = new System.Drawing.Size(533, 52);
             this.txtNombreProducto.TabIndex = 35;
             // 
             // gnExistencias
@@ -205,11 +210,12 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.gnExistencias.ButtonForeColor = System.Drawing.Color.Black;
             this.gnExistencias.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.gnExistencias.ForeColor = System.Drawing.Color.Black;
-            this.gnExistencias.Location = new System.Drawing.Point(450, 80);
+            this.gnExistencias.Location = new System.Drawing.Point(600, 98);
+            this.gnExistencias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gnExistencias.Maximum = ((long)(9999999));
             this.gnExistencias.Minimum = ((long)(0));
             this.gnExistencias.Name = "gnExistencias";
-            this.gnExistencias.Size = new System.Drawing.Size(120, 30);
+            this.gnExistencias.Size = new System.Drawing.Size(160, 30);
             this.gnExistencias.TabIndex = 37;
             this.gnExistencias.Value = ((long)(0));
             // 
@@ -217,9 +223,10 @@ namespace VeterinariaElBuenAmigo.views.inventario
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(25, 50);
+            this.label1.Location = new System.Drawing.Point(33, 62);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(400, 28);
+            this.label1.Size = new System.Drawing.Size(533, 34);
             this.label1.TabIndex = 38;
             this.label1.Text = "Producto";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -228,9 +235,10 @@ namespace VeterinariaElBuenAmigo.views.inventario
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(450, 50);
+            this.label2.Location = new System.Drawing.Point(600, 62);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(400, 28);
+            this.label2.Size = new System.Drawing.Size(533, 34);
             this.label2.TabIndex = 39;
             this.label2.Text = "Existencias";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -239,9 +247,10 @@ namespace VeterinariaElBuenAmigo.views.inventario
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(25, 174);
+            this.label3.Location = new System.Drawing.Point(33, 214);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(400, 28);
+            this.label3.Size = new System.Drawing.Size(533, 34);
             this.label3.TabIndex = 42;
             this.label3.Text = "Tipo de producto";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -250,9 +259,10 @@ namespace VeterinariaElBuenAmigo.views.inventario
             // 
             this.lblErrorTipoProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorTipoProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(59)))), ((int)(((byte)(87)))));
-            this.lblErrorTipoProducto.Location = new System.Drawing.Point(25, 250);
+            this.lblErrorTipoProducto.Location = new System.Drawing.Point(33, 308);
+            this.lblErrorTipoProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblErrorTipoProducto.Name = "lblErrorTipoProducto";
-            this.lblErrorTipoProducto.Size = new System.Drawing.Size(400, 28);
+            this.lblErrorTipoProducto.Size = new System.Drawing.Size(533, 34);
             this.lblErrorTipoProducto.TabIndex = 41;
             this.lblErrorTipoProducto.Text = "Ingrese el tipo de producto";
             this.lblErrorTipoProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -271,20 +281,22 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.txtTipoProducto.FocusedForeColor = System.Drawing.Color.White;
             this.txtTipoProducto.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtTipoProducto.ForeColor = System.Drawing.Color.White;
-            this.txtTipoProducto.Location = new System.Drawing.Point(25, 205);
+            this.txtTipoProducto.Location = new System.Drawing.Point(33, 252);
+            this.txtTipoProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTipoProducto.Name = "txtTipoProducto";
             this.txtTipoProducto.PasswordChar = '\0';
             this.txtTipoProducto.Radius = 4;
-            this.txtTipoProducto.Size = new System.Drawing.Size(400, 35);
+            this.txtTipoProducto.Size = new System.Drawing.Size(533, 52);
             this.txtTipoProducto.TabIndex = 40;
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(450, 174);
+            this.label4.Location = new System.Drawing.Point(600, 214);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(400, 28);
+            this.label4.Size = new System.Drawing.Size(533, 34);
             this.label4.TabIndex = 45;
             this.label4.Text = "Marca";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -293,9 +305,10 @@ namespace VeterinariaElBuenAmigo.views.inventario
             // 
             this.lblErrorMarcaProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorMarcaProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(59)))), ((int)(((byte)(87)))));
-            this.lblErrorMarcaProducto.Location = new System.Drawing.Point(450, 250);
+            this.lblErrorMarcaProducto.Location = new System.Drawing.Point(600, 308);
+            this.lblErrorMarcaProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblErrorMarcaProducto.Name = "lblErrorMarcaProducto";
-            this.lblErrorMarcaProducto.Size = new System.Drawing.Size(400, 28);
+            this.lblErrorMarcaProducto.Size = new System.Drawing.Size(533, 34);
             this.lblErrorMarcaProducto.TabIndex = 44;
             this.lblErrorMarcaProducto.Text = "Ingrese la marca del producto";
             this.lblErrorMarcaProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -314,20 +327,22 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.txtMarcaProducto.FocusedForeColor = System.Drawing.Color.White;
             this.txtMarcaProducto.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtMarcaProducto.ForeColor = System.Drawing.Color.White;
-            this.txtMarcaProducto.Location = new System.Drawing.Point(450, 205);
+            this.txtMarcaProducto.Location = new System.Drawing.Point(600, 252);
+            this.txtMarcaProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMarcaProducto.Name = "txtMarcaProducto";
             this.txtMarcaProducto.PasswordChar = '\0';
             this.txtMarcaProducto.Radius = 4;
-            this.txtMarcaProducto.Size = new System.Drawing.Size(400, 35);
+            this.txtMarcaProducto.Size = new System.Drawing.Size(533, 52);
             this.txtMarcaProducto.TabIndex = 43;
             // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(25, 311);
+            this.label6.Location = new System.Drawing.Point(33, 383);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(400, 28);
+            this.label6.Size = new System.Drawing.Size(533, 34);
             this.label6.TabIndex = 48;
             this.label6.Text = "Descripcion";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -336,43 +351,23 @@ namespace VeterinariaElBuenAmigo.views.inventario
             // 
             this.lblErrorDescripcionProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorDescripcionProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(59)))), ((int)(((byte)(87)))));
-            this.lblErrorDescripcionProducto.Location = new System.Drawing.Point(25, 468);
+            this.lblErrorDescripcionProducto.Location = new System.Drawing.Point(33, 590);
+            this.lblErrorDescripcionProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblErrorDescripcionProducto.Name = "lblErrorDescripcionProducto";
-            this.lblErrorDescripcionProducto.Size = new System.Drawing.Size(400, 28);
+            this.lblErrorDescripcionProducto.Size = new System.Drawing.Size(533, 34);
             this.lblErrorDescripcionProducto.TabIndex = 47;
             this.lblErrorDescripcionProducto.Text = "Ingrese el nombre del producto";
             this.lblErrorDescripcionProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblErrorDescripcionProducto.Visible = false;
             // 
-            // dtFechaAdquisicion
-            // 
-            this.dtFechaAdquisicion.BaseColor = System.Drawing.Color.White;
-            this.dtFechaAdquisicion.BorderColor = System.Drawing.Color.Silver;
-            this.dtFechaAdquisicion.CustomFormat = null;
-            this.dtFechaAdquisicion.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dtFechaAdquisicion.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtFechaAdquisicion.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.dtFechaAdquisicion.ForeColor = System.Drawing.Color.Black;
-            this.dtFechaAdquisicion.Location = new System.Drawing.Point(450, 346);
-            this.dtFechaAdquisicion.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtFechaAdquisicion.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtFechaAdquisicion.Name = "dtFechaAdquisicion";
-            this.dtFechaAdquisicion.OnHoverBaseColor = System.Drawing.Color.White;
-            this.dtFechaAdquisicion.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtFechaAdquisicion.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtFechaAdquisicion.OnPressedColor = System.Drawing.Color.Black;
-            this.dtFechaAdquisicion.Size = new System.Drawing.Size(400, 35);
-            this.dtFechaAdquisicion.TabIndex = 49;
-            this.dtFechaAdquisicion.Text = "martes, 8 de junio de 2021";
-            this.dtFechaAdquisicion.Value = new System.DateTime(2021, 6, 8, 14, 4, 51, 604);
-            // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(450, 311);
+            this.label5.Location = new System.Drawing.Point(600, 383);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(400, 28);
+            this.label5.Size = new System.Drawing.Size(533, 34);
             this.label5.TabIndex = 51;
             this.label5.Text = "Fecha de Adquisicion";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -390,27 +385,53 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.txtDescripcionProducto.FocusedForeColor = System.Drawing.Color.White;
             this.txtDescripcionProducto.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtDescripcionProducto.ForeColor = System.Drawing.Color.White;
-            this.txtDescripcionProducto.Location = new System.Drawing.Point(25, 346);
+            this.txtDescripcionProducto.Location = new System.Drawing.Point(33, 426);
+            this.txtDescripcionProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDescripcionProducto.MultiLine = true;
             this.txtDescripcionProducto.Name = "txtDescripcionProducto";
             this.txtDescripcionProducto.PasswordChar = '\0';
             this.txtDescripcionProducto.Radius = 4;
-            this.txtDescripcionProducto.Size = new System.Drawing.Size(400, 115);
+            this.txtDescripcionProducto.Size = new System.Drawing.Size(533, 142);
             this.txtDescripcionProducto.TabIndex = 52;
             // 
             // windowDragControl
             // 
             this.windowDragControl.TargetControl = this.panelTop;
             // 
+            // dtFechaAdquisicion
+            // 
+            this.dtFechaAdquisicion.BackColor = System.Drawing.Color.Transparent;
+            this.dtFechaAdquisicion.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.dtFechaAdquisicion.BorderColor = System.Drawing.Color.White;
+            this.dtFechaAdquisicion.CustomFormat = null;
+            this.dtFechaAdquisicion.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtFechaAdquisicion.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtFechaAdquisicion.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.dtFechaAdquisicion.ForeColor = System.Drawing.Color.White;
+            this.dtFechaAdquisicion.Location = new System.Drawing.Point(600, 426);
+            this.dtFechaAdquisicion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtFechaAdquisicion.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtFechaAdquisicion.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtFechaAdquisicion.Name = "dtFechaAdquisicion";
+            this.dtFechaAdquisicion.OnHoverBaseColor = System.Drawing.Color.White;
+            this.dtFechaAdquisicion.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtFechaAdquisicion.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtFechaAdquisicion.OnPressedColor = System.Drawing.Color.Black;
+            this.dtFechaAdquisicion.Radius = 5;
+            this.dtFechaAdquisicion.Size = new System.Drawing.Size(533, 42);
+            this.dtFechaAdquisicion.TabIndex = 53;
+            this.dtFechaAdquisicion.Text = "lunes, 7 de junio de 2021";
+            this.dtFechaAdquisicion.Value = new System.DateTime(2021, 6, 7, 13, 4, 55, 439);
+            // 
             // FormProductoAction
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.ClientSize = new System.Drawing.Size(875, 654);
+            this.ClientSize = new System.Drawing.Size(1167, 805);
+            this.Controls.Add(this.dtFechaAdquisicion);
             this.Controls.Add(this.txtDescripcionProducto);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dtFechaAdquisicion);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblErrorDescripcionProducto);
             this.Controls.Add(this.label4);
@@ -428,6 +449,7 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormProductoAction";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormProductoAction";
@@ -456,9 +478,9 @@ namespace VeterinariaElBuenAmigo.views.inventario
         private Guna.UI.WinForms.GunaTextBox txtMarcaProducto;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblErrorDescripcionProducto;
-        private Guna.UI.WinForms.GunaDateTimePicker dtFechaAdquisicion;
         private System.Windows.Forms.Label label5;
         private Guna.UI.WinForms.GunaTextBox txtDescripcionProducto;
         private Guna.UI.WinForms.GunaDragControl windowDragControl;
+        private Guna.UI.WinForms.GunaDateTimePicker dtFechaAdquisicion;
     }
 }
