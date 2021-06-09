@@ -17,17 +17,26 @@ namespace VeterinariaElBuenAmigo.views.consulta
     public partial class AccionesConsultas : Form
     {
         private ConsultaDAO consultaDao;
-        private List<Consulta> lista;
+        private List<Consulta> listaConsulta;
 
+        private PacienteDAO pacienteDao;
+        private List<Paciente> listaPaciente; 
+        private int id, idConsulta_;
+        private string Nombre;
+        private bool isEdit; 
        
-        public AccionesConsultas()
+        public AccionesConsultas(int id, string Nombre)
         {
             Guna.UI.Lib.ScrollBar.PanelScrollHelper Scroll;
             consultaDao = new ConsultaDAO();
 
-         
+            this.id = id;
+            this.Nombre = Nombre;
+            this.isEdit = false; 
             InitializeComponent();
 
+
+            Nombre_Paciente.Text = Nombre; 
             ActualizarTabla();
 
 
@@ -66,10 +75,22 @@ namespace VeterinariaElBuenAmigo.views.consulta
             }
             else
             {
-               
-                consultaDao.InsertarConsulta(new Consulta(0,txt_Padecimineto.Text, String.Format("{0:0.00}", txt_Temperatura.Text) , String.Format("{0:0.00}", txt_Peso.Text),1, txt_controlCelo.Text,txt_Comentarios.Text));
+
+                if (isEdit)
+                {
+                  //  MessageBox.Show("bool: " + isEdit.ToString() + "idconsulta:" + idConsulta_.ToString());
+                    consultaDao.EditarConsulta(new Consulta(0, txt_Padecimineto.Text, String.Format("{0:0.00}", txt_Temperatura.Text), String.Format("{0:0.00}", txt_Peso.Text), this.id, txt_controlCelo.Text, txt_Comentarios.Text), this.idConsulta_);
+                    MessageBox.Show("Se ha cambiado la consulta correctamente", "Actualizado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   // this.isEdit = false; 
+                }
+                else
+                {
+                    consultaDao.InsertarConsulta(new Consulta(0, txt_Padecimineto.Text, String.Format("{0:0.00}", txt_Temperatura.Text), String.Format("{0:0.00}", txt_Peso.Text), this.id, txt_controlCelo.Text, txt_Comentarios.Text));
+                    MessageBox.Show("Se ha registrado la consulta correctamente", "Guardado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }               
                 ActualizarTabla();
-                MessageBox.Show("Se ha registrado la consulta correctamente", "Guardado!",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LimpiarText();
+               
                 
                 
                 //txt_Padecimineto.Text + "\n" + txt_Peso.Text + "\n" + txt_Temperatura.Text + "\n" + txt_controlCelo.Text + "\n" + txt_Comentarios.Text
@@ -79,34 +100,33 @@ namespace VeterinariaElBuenAmigo.views.consulta
             
         }
 
-        private void btn_Editar_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btn_Eliminar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ActualizarTabla()
         {
 
-                tbl_CitasAnteriores.Rows.Clear();
-                tbl_CitasAnteriores.Refresh();
+                tbl_ConsultasAnteriores.Rows.Clear();
+            tbl_ConsultasAnteriores.Refresh();
                
              
-                lista = consultaDao.getListConsulta();
+                listaConsulta = consultaDao.getListConsulta_porIDPaciente(this.id);
+                
 
-                foreach (Consulta consulta in lista)
+                foreach (Consulta consulta in listaConsulta)
                 {
-                    tbl_CitasAnteriores.Rows.Add(consulta.IdConsulta, consulta.Padecimineto, consulta.Temperatura+ " °C",
+                tbl_ConsultasAnteriores.Rows.Add(consulta.IdConsulta, consulta.Padecimineto, consulta.Temperatura+ " °C",
                         consulta.Peso+" Lbs", consulta.ControldeCelo, consulta.Comentarios);
                     
                 }
-            tbl_CitasAnteriores.Refresh();
+            tbl_ConsultasAnteriores.Refresh();
         }
        
+        private void LimpiarText()
+        {
+            txt_Padecimineto.Text = "";
+            txt_Peso.Text = "";
+            txt_Temperatura.Text = "";
+            txt_controlCelo.Text = "";
+            txt_Comentarios.Text = ""; 
+        }
         private void iconButton1_Click(object sender, EventArgs e)
         {
             /*
@@ -235,6 +255,56 @@ namespace VeterinariaElBuenAmigo.views.consulta
         private void txt_Comentarios_KeyPress(object sender, KeyPressEventArgs e)
         {
             campos_comentarios.Visible = false;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            List<DataGridViewRow> rows = tbl_ConsultasAnteriores.Rows.Cast<DataGridViewRow>().Where(p => Convert.ToBoolean(p.Cells["ColumnSelect"].Value) == true).ToList();
+
+            if (rows.Count > 0)
+            {
+                DialogResult dialogQuestion = MessageBox.Show("¿Estas seguro de que quieres eliminar los registros?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (dialogQuestion == DialogResult.Yes)
+                {
+
+                    for (int i = 0; i < rows.Count; i++)
+                    {
+                        DataGridViewRow row = rows[i];
+
+                        consultaDao.deleteConsulta(Convert.ToInt32(row.Cells[0].Value)); 
+
+                        ActualizarTabla();
+                    }
+
+                }
+            }
+        }
+
+        private void tbl_ConsultasAnteriores_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (tbl_ConsultasAnteriores.Columns[e.ColumnIndex].Name == "ColumnEdit")
+            {
+                int id = Convert.ToInt32(tbl_ConsultasAnteriores.Rows[e.RowIndex].Cells[0].Value);
+                string padecimineto = tbl_ConsultasAnteriores.Rows[e.RowIndex].Cells[1].Value.ToString();
+                string temperatura = tbl_ConsultasAnteriores.Rows[e.RowIndex].Cells[2].Value.ToString();
+                string peso = tbl_ConsultasAnteriores.Rows[e.RowIndex].Cells[3].Value.ToString();
+                string controlcelo = tbl_ConsultasAnteriores.Rows[e.RowIndex].Cells[4].Value.ToString();
+                string comentarios = tbl_ConsultasAnteriores.Rows[e.RowIndex].Cells[5].Value.ToString();
+
+                this.idConsulta_ = id; 
+                this.isEdit = true;
+
+                MessageBox.Show("Realice los cambios necesarios en los campos de texto", "Editando", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); 
+
+                txt_Padecimineto.Text = padecimineto;
+                txt_Peso.Text = peso;
+                txt_Temperatura.Text = temperatura;
+                txt_controlCelo.Text = controlcelo;
+                txt_Comentarios.Text = comentarios;     
+
+
+            }
         }
     }
     }

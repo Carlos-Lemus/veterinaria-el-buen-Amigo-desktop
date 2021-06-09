@@ -34,7 +34,6 @@ namespace VeterinariaElBuenAmigo.views.consulta
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelTop = new System.Windows.Forms.Panel();
             this.Nombre_Paciente = new System.Windows.Forms.Label();
             this.btnMin = new FontAwesome.Sharp.IconButton();
@@ -49,9 +48,6 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.panel5 = new System.Windows.Forms.Panel();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btn_Editar = new FontAwesome.Sharp.IconButton();
-            this.btn_Eliminar = new FontAwesome.Sharp.IconButton();
             this.btn_Guardar = new Guna.UI.WinForms.GunaButton();
             this.btn_Vitaminas = new Guna.UI.WinForms.GunaButton();
             this.btn_Vacunas = new Guna.UI.WinForms.GunaButton();
@@ -65,25 +61,27 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.label4 = new System.Windows.Forms.Label();
             this.txt_Padecimineto = new Guna.UI.WinForms.GunaTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.tbl_CitasAnteriores = new Guna.UI.WinForms.GunaDataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.gunaVScrollBar1 = new Guna.UI.WinForms.GunaVScrollBar();
             this.windowDragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.tbl_ConsultasAnteriores = new Guna.UI.WinForms.GunaDataGridView();
+            this.btnDelete = new Guna.UI.WinForms.GunaButton();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnEdit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ColumnSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panelTop.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbl_CitasAnteriores)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbl_ConsultasAnteriores)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTop
@@ -163,13 +161,14 @@ namespace VeterinariaElBuenAmigo.views.consulta
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.AutoScroll = true;
             this.panel2.AutoScrollMargin = new System.Drawing.Size(0, 100);
+            this.panel2.Controls.Add(this.btnDelete);
+            this.panel2.Controls.Add(this.tbl_ConsultasAnteriores);
             this.panel2.Controls.Add(this.campos_comentarios);
             this.panel2.Controls.Add(this.campos_control);
             this.panel2.Controls.Add(this.campos_peso);
             this.panel2.Controls.Add(this.campos_temperatura);
             this.panel2.Controls.Add(this.campos_padecimineto);
             this.panel2.Controls.Add(this.panel5);
-            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.btn_Guardar);
             this.panel2.Controls.Add(this.btn_Vitaminas);
             this.panel2.Controls.Add(this.btn_Vacunas);
@@ -183,7 +182,6 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.txt_Padecimineto);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.tbl_CitasAnteriores);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -196,7 +194,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.campos_comentarios.AutoSize = true;
             this.campos_comentarios.ForeColor = System.Drawing.Color.Brown;
-            this.campos_comentarios.Location = new System.Drawing.Point(123, 814);
+            this.campos_comentarios.Location = new System.Drawing.Point(129, 951);
             this.campos_comentarios.Name = "campos_comentarios";
             this.campos_comentarios.Size = new System.Drawing.Size(279, 24);
             this.campos_comentarios.TabIndex = 34;
@@ -206,7 +204,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.campos_control.AutoSize = true;
             this.campos_control.ForeColor = System.Drawing.Color.Brown;
-            this.campos_control.Location = new System.Drawing.Point(123, 647);
+            this.campos_control.Location = new System.Drawing.Point(129, 784);
             this.campos_control.Name = "campos_control";
             this.campos_control.Size = new System.Drawing.Size(279, 24);
             this.campos_control.TabIndex = 33;
@@ -216,7 +214,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.campos_peso.AutoSize = true;
             this.campos_peso.ForeColor = System.Drawing.Color.Brown;
-            this.campos_peso.Location = new System.Drawing.Point(123, 531);
+            this.campos_peso.Location = new System.Drawing.Point(129, 668);
             this.campos_peso.Name = "campos_peso";
             this.campos_peso.Size = new System.Drawing.Size(279, 24);
             this.campos_peso.TabIndex = 32;
@@ -226,7 +224,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.campos_temperatura.AutoSize = true;
             this.campos_temperatura.ForeColor = System.Drawing.Color.Brown;
-            this.campos_temperatura.Location = new System.Drawing.Point(123, 421);
+            this.campos_temperatura.Location = new System.Drawing.Point(129, 562);
             this.campos_temperatura.Name = "campos_temperatura";
             this.campos_temperatura.Size = new System.Drawing.Size(279, 24);
             this.campos_temperatura.TabIndex = 31;
@@ -236,7 +234,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.campos_padecimineto.AutoSize = true;
             this.campos_padecimineto.ForeColor = System.Drawing.Color.Brown;
-            this.campos_padecimineto.Location = new System.Drawing.Point(123, 307);
+            this.campos_padecimineto.Location = new System.Drawing.Point(129, 448);
             this.campos_padecimineto.Name = "campos_padecimineto";
             this.campos_padecimineto.Size = new System.Drawing.Size(279, 24);
             this.campos_padecimineto.TabIndex = 30;
@@ -246,7 +244,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.panel5.Controls.Add(this.iconButton3);
             this.panel5.Controls.Add(this.iconButton4);
-            this.panel5.Location = new System.Drawing.Point(268, 488);
+            this.panel5.Location = new System.Drawing.Point(274, 629);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(52, 40);
             this.panel5.TabIndex = 29;
@@ -285,53 +283,6 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.iconButton4.UseVisualStyleBackColor = true;
             this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btn_Editar);
-            this.panel3.Controls.Add(this.btn_Eliminar);
-            this.panel3.Location = new System.Drawing.Point(728, 958);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(94, 47);
-            this.panel3.TabIndex = 6;
-            // 
-            // btn_Editar
-            // 
-            this.btn_Editar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btn_Editar.FlatAppearance.BorderSize = 0;
-            this.btn_Editar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.btn_Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Editar.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.btn_Editar.IconColor = System.Drawing.Color.Yellow;
-            this.btn_Editar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Editar.IconSize = 40;
-            this.btn_Editar.Location = new System.Drawing.Point(0, 0);
-            this.btn_Editar.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Editar.Name = "btn_Editar";
-            this.btn_Editar.Size = new System.Drawing.Size(29, 47);
-            this.btn_Editar.TabIndex = 6;
-            this.btn_Editar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Editar.UseVisualStyleBackColor = true;
-            this.btn_Editar.Click += new System.EventHandler(this.btn_Editar_Click);
-            // 
-            // btn_Eliminar
-            // 
-            this.btn_Eliminar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btn_Eliminar.FlatAppearance.BorderSize = 0;
-            this.btn_Eliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.btn_Eliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Eliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
-            this.btn_Eliminar.IconColor = System.Drawing.Color.Red;
-            this.btn_Eliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_Eliminar.IconSize = 35;
-            this.btn_Eliminar.Location = new System.Drawing.Point(65, 0);
-            this.btn_Eliminar.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Eliminar.Name = "btn_Eliminar";
-            this.btn_Eliminar.Size = new System.Drawing.Size(29, 47);
-            this.btn_Eliminar.TabIndex = 5;
-            this.btn_Eliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_Eliminar.UseVisualStyleBackColor = true;
-            this.btn_Eliminar.Click += new System.EventHandler(this.btn_Eliminar_Click);
-            // 
             // btn_Guardar
             // 
             this.btn_Guardar.AnimationHoverSpeed = 0.07F;
@@ -346,7 +297,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.btn_Guardar.ForeColor = System.Drawing.Color.White;
             this.btn_Guardar.Image = null;
             this.btn_Guardar.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Guardar.Location = new System.Drawing.Point(383, 970);
+            this.btn_Guardar.Location = new System.Drawing.Point(217, 1082);
             this.btn_Guardar.Name = "btn_Guardar";
             this.btn_Guardar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.btn_Guardar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -354,7 +305,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.btn_Guardar.OnHoverImage = null;
             this.btn_Guardar.OnPressedColor = System.Drawing.Color.Black;
             this.btn_Guardar.Radius = 5;
-            this.btn_Guardar.Size = new System.Drawing.Size(160, 35);
+            this.btn_Guardar.Size = new System.Drawing.Size(566, 35);
             this.btn_Guardar.TabIndex = 27;
             this.btn_Guardar.Text = "Guardar Consulta";
             this.btn_Guardar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -374,7 +325,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.btn_Vitaminas.ForeColor = System.Drawing.Color.White;
             this.btn_Vitaminas.Image = null;
             this.btn_Vitaminas.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Vitaminas.Location = new System.Drawing.Point(334, 873);
+            this.btn_Vitaminas.Location = new System.Drawing.Point(522, 1013);
             this.btn_Vitaminas.Name = "btn_Vitaminas";
             this.btn_Vitaminas.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.btn_Vitaminas.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -382,7 +333,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.btn_Vitaminas.OnHoverImage = null;
             this.btn_Vitaminas.OnPressedColor = System.Drawing.Color.Black;
             this.btn_Vitaminas.Radius = 5;
-            this.btn_Vitaminas.Size = new System.Drawing.Size(178, 35);
+            this.btn_Vitaminas.Size = new System.Drawing.Size(261, 35);
             this.btn_Vitaminas.TabIndex = 26;
             this.btn_Vitaminas.Text = "Control de Vitaminas";
             this.btn_Vitaminas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -402,7 +353,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.btn_Vacunas.ForeColor = System.Drawing.Color.White;
             this.btn_Vacunas.Image = null;
             this.btn_Vacunas.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Vacunas.Location = new System.Drawing.Point(111, 873);
+            this.btn_Vacunas.Location = new System.Drawing.Point(217, 1013);
             this.btn_Vacunas.Name = "btn_Vacunas";
             this.btn_Vacunas.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.btn_Vacunas.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -410,7 +361,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.btn_Vacunas.OnHoverImage = null;
             this.btn_Vacunas.OnPressedColor = System.Drawing.Color.Black;
             this.btn_Vacunas.Radius = 5;
-            this.btn_Vacunas.Size = new System.Drawing.Size(166, 35);
+            this.btn_Vacunas.Size = new System.Drawing.Size(271, 35);
             this.btn_Vacunas.TabIndex = 20;
             this.btn_Vacunas.Text = "Control de Vacunas";
             this.btn_Vacunas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -427,7 +378,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.txt_Comentarios.FocusedForeColor = System.Drawing.Color.White;
             this.txt_Comentarios.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txt_Comentarios.ForeColor = System.Drawing.Color.White;
-            this.txt_Comentarios.Location = new System.Drawing.Point(111, 725);
+            this.txt_Comentarios.Location = new System.Drawing.Point(117, 862);
             this.txt_Comentarios.MultiLine = true;
             this.txt_Comentarios.Name = "txt_Comentarios";
             this.txt_Comentarios.PasswordChar = '\0';
@@ -441,7 +392,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(107, 685);
+            this.label7.Location = new System.Drawing.Point(113, 822);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(242, 24);
             this.label7.TabIndex = 24;
@@ -458,7 +409,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.txt_controlCelo.FocusedForeColor = System.Drawing.Color.White;
             this.txt_controlCelo.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txt_controlCelo.ForeColor = System.Drawing.Color.White;
-            this.txt_controlCelo.Location = new System.Drawing.Point(111, 609);
+            this.txt_controlCelo.Location = new System.Drawing.Point(117, 746);
             this.txt_controlCelo.Name = "txt_controlCelo";
             this.txt_controlCelo.PasswordChar = '\0';
             this.txt_controlCelo.Radius = 15;
@@ -471,7 +422,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(107, 572);
+            this.label6.Location = new System.Drawing.Point(113, 709);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(141, 24);
             this.label6.TabIndex = 22;
@@ -488,7 +439,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.txt_Peso.FocusedForeColor = System.Drawing.Color.White;
             this.txt_Peso.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txt_Peso.ForeColor = System.Drawing.Color.White;
-            this.txt_Peso.Location = new System.Drawing.Point(111, 489);
+            this.txt_Peso.Location = new System.Drawing.Point(117, 630);
             this.txt_Peso.Name = "txt_Peso";
             this.txt_Peso.PasswordChar = '\0';
             this.txt_Peso.Radius = 15;
@@ -501,7 +452,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(107, 452);
+            this.label5.Location = new System.Drawing.Point(113, 593);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 24);
             this.label5.TabIndex = 20;
@@ -518,7 +469,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.txt_Temperatura.FocusedForeColor = System.Drawing.Color.White;
             this.txt_Temperatura.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txt_Temperatura.ForeColor = System.Drawing.Color.White;
-            this.txt_Temperatura.Location = new System.Drawing.Point(111, 378);
+            this.txt_Temperatura.Location = new System.Drawing.Point(117, 519);
             this.txt_Temperatura.Name = "txt_Temperatura";
             this.txt_Temperatura.PasswordChar = '\0';
             this.txt_Temperatura.Radius = 15;
@@ -531,7 +482,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(107, 338);
+            this.label4.Location = new System.Drawing.Point(113, 479);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(118, 24);
             this.label4.TabIndex = 18;
@@ -548,7 +499,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.txt_Padecimineto.FocusedForeColor = System.Drawing.Color.White;
             this.txt_Padecimineto.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txt_Padecimineto.ForeColor = System.Drawing.Color.White;
-            this.txt_Padecimineto.Location = new System.Drawing.Point(111, 269);
+            this.txt_Padecimineto.Location = new System.Drawing.Point(117, 410);
             this.txt_Padecimineto.Name = "txt_Padecimineto";
             this.txt_Padecimineto.PasswordChar = '\0';
             this.txt_Padecimineto.Radius = 15;
@@ -561,153 +512,11 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(107, 231);
+            this.label3.Location = new System.Drawing.Point(113, 372);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 24);
             this.label3.TabIndex = 16;
             this.label3.Text = "Padecimiento";
-            // 
-            // tbl_CitasAnteriores
-            // 
-            this.tbl_CitasAnteriores.AllowUserToAddRows = false;
-            this.tbl_CitasAnteriores.AllowUserToResizeColumns = false;
-            this.tbl_CitasAnteriores.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.tbl_CitasAnteriores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.tbl_CitasAnteriores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tbl_CitasAnteriores.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.tbl_CitasAnteriores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.tbl_CitasAnteriores.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbl_CitasAnteriores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.tbl_CitasAnteriores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tbl_CitasAnteriores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.tbl_CitasAnteriores.ColumnHeadersHeight = 45;
-            this.tbl_CitasAnteriores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.tbl_CitasAnteriores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column8,
-            this.Column7});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tbl_CitasAnteriores.DefaultCellStyle = dataGridViewCellStyle3;
-            this.tbl_CitasAnteriores.EnableHeadersVisualStyles = false;
-            this.tbl_CitasAnteriores.GridColor = System.Drawing.Color.White;
-            this.tbl_CitasAnteriores.Location = new System.Drawing.Point(17, 39);
-            this.tbl_CitasAnteriores.MaximumSize = new System.Drawing.Size(890, 180);
-            this.tbl_CitasAnteriores.MinimumSize = new System.Drawing.Size(890, 180);
-            this.tbl_CitasAnteriores.Name = "tbl_CitasAnteriores";
-            this.tbl_CitasAnteriores.ReadOnly = true;
-            this.tbl_CitasAnteriores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tbl_CitasAnteriores.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.tbl_CitasAnteriores.RowHeadersVisible = false;
-            this.tbl_CitasAnteriores.RowHeadersWidth = 5;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            this.tbl_CitasAnteriores.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.tbl_CitasAnteriores.RowTemplate.Height = 35;
-            this.tbl_CitasAnteriores.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbl_CitasAnteriores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tbl_CitasAnteriores.Size = new System.Drawing.Size(890, 180);
-            this.tbl_CitasAnteriores.TabIndex = 15;
-            this.tbl_CitasAnteriores.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.tbl_CitasAnteriores.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.tbl_CitasAnteriores.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbl_CitasAnteriores.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.White;
-            this.tbl_CitasAnteriores.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.tbl_CitasAnteriores.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.tbl_CitasAnteriores.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.tbl_CitasAnteriores.ThemeStyle.GridColor = System.Drawing.Color.White;
-            this.tbl_CitasAnteriores.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.tbl_CitasAnteriores.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.tbl_CitasAnteriores.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbl_CitasAnteriores.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.tbl_CitasAnteriores.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.tbl_CitasAnteriores.ThemeStyle.HeaderStyle.Height = 45;
-            this.tbl_CitasAnteriores.ThemeStyle.ReadOnly = true;
-            this.tbl_CitasAnteriores.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.tbl_CitasAnteriores.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.tbl_CitasAnteriores.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbl_CitasAnteriores.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.White;
-            this.tbl_CitasAnteriores.ThemeStyle.RowsStyle.Height = 35;
-            this.tbl_CitasAnteriores.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.tbl_CitasAnteriores.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 42.0355F;
-            this.Column1.HeaderText = "Id";
-            this.Column1.MinimumWidth = 10;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.FillWeight = 118.9928F;
-            this.Column4.HeaderText = "Padecimiento";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.FillWeight = 61.8076F;
-            this.Column5.HeaderText = "Temperatura";
-            this.Column5.MinimumWidth = 20;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.FillWeight = 70.05076F;
-            this.Column6.HeaderText = "Peso";
-            this.Column6.MinimumWidth = 20;
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.FillWeight = 70.76027F;
-            this.Column8.HeaderText = "Control de Celo";
-            this.Column8.MinimumWidth = 29;
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.FillWeight = 236.3531F;
-            this.Column7.HeaderText = "Comentarios";
-            this.Column7.MinimumWidth = 80;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
             // 
             // label2
             // 
@@ -723,7 +532,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.panel4.Controls.Add(this.iconButton2);
             this.panel4.Controls.Add(this.iconButton1);
-            this.panel4.Location = new System.Drawing.Point(268, 378);
+            this.panel4.Location = new System.Drawing.Point(274, 519);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(52, 40);
             this.panel4.TabIndex = 28;
@@ -781,6 +590,167 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.windowDragControl.TargetControl = this.panelTop;
             // 
+            // tbl_ConsultasAnteriores
+            // 
+            this.tbl_ConsultasAnteriores.AllowUserToAddRows = false;
+            this.tbl_ConsultasAnteriores.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.tbl_ConsultasAnteriores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.tbl_ConsultasAnteriores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_ConsultasAnteriores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tbl_ConsultasAnteriores.BackgroundColor = System.Drawing.Color.White;
+            this.tbl_ConsultasAnteriores.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbl_ConsultasAnteriores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.tbl_ConsultasAnteriores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tbl_ConsultasAnteriores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.tbl_ConsultasAnteriores.ColumnHeadersHeight = 40;
+            this.tbl_ConsultasAnteriores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.ColumnEdit,
+            this.ColumnSelect});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tbl_ConsultasAnteriores.DefaultCellStyle = dataGridViewCellStyle3;
+            this.tbl_ConsultasAnteriores.EnableHeadersVisualStyles = false;
+            this.tbl_ConsultasAnteriores.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.tbl_ConsultasAnteriores.Location = new System.Drawing.Point(15, 53);
+            this.tbl_ConsultasAnteriores.MaximumSize = new System.Drawing.Size(899, 260);
+            this.tbl_ConsultasAnteriores.MinimumSize = new System.Drawing.Size(899, 260);
+            this.tbl_ConsultasAnteriores.Name = "tbl_ConsultasAnteriores";
+            this.tbl_ConsultasAnteriores.RowHeadersVisible = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.tbl_ConsultasAnteriores.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.tbl_ConsultasAnteriores.RowTemplate.Height = 40;
+            this.tbl_ConsultasAnteriores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tbl_ConsultasAnteriores.Size = new System.Drawing.Size(899, 260);
+            this.tbl_ConsultasAnteriores.TabIndex = 35;
+            this.tbl_ConsultasAnteriores.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.tbl_ConsultasAnteriores.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.tbl_ConsultasAnteriores.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.tbl_ConsultasAnteriores.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.tbl_ConsultasAnteriores.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.tbl_ConsultasAnteriores.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.tbl_ConsultasAnteriores.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.tbl_ConsultasAnteriores.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.tbl_ConsultasAnteriores.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.tbl_ConsultasAnteriores.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.tbl_ConsultasAnteriores.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbl_ConsultasAnteriores.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.tbl_ConsultasAnteriores.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.tbl_ConsultasAnteriores.ThemeStyle.HeaderStyle.Height = 40;
+            this.tbl_ConsultasAnteriores.ThemeStyle.ReadOnly = false;
+            this.tbl_ConsultasAnteriores.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.tbl_ConsultasAnteriores.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.tbl_ConsultasAnteriores.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbl_ConsultasAnteriores.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.tbl_ConsultasAnteriores.ThemeStyle.RowsStyle.Height = 40;
+            this.tbl_ConsultasAnteriores.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
+            this.tbl_ConsultasAnteriores.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.tbl_ConsultasAnteriores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbl_ConsultasAnteriores_CellClick);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.AnimationHoverSpeed = 0.07F;
+            this.btnDelete.AnimationSpeed = 0.03F;
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(82)))), ((int)(((byte)(83)))));
+            this.btnDelete.BorderColor = System.Drawing.Color.Black;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDelete.FocusedColor = System.Drawing.Color.Empty;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Image = global::VeterinariaElBuenAmigo.Properties.Resources.delete;
+            this.btnDelete.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnDelete.Location = new System.Drawing.Point(788, 12);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(117)))));
+            this.btnDelete.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnDelete.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnDelete.OnHoverImage = null;
+            this.btnDelete.OnPressedColor = System.Drawing.Color.Black;
+            this.btnDelete.Radius = 5;
+            this.btnDelete.Size = new System.Drawing.Size(131, 35);
+            this.btnDelete.TabIndex = 36;
+            this.btnDelete.Text = "Eliminar ";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 50F;
+            this.Column1.HeaderText = "Id";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.FillWeight = 150F;
+            this.Column2.HeaderText = "Padecimineto";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.FillWeight = 75F;
+            this.Column3.HeaderText = "Temperatura";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.FillWeight = 75F;
+            this.Column4.HeaderText = "Peso";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Control de Celo";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.FillWeight = 150F;
+            this.Column6.HeaderText = "Comentarios";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // ColumnEdit
+            // 
+            this.ColumnEdit.FillWeight = 25F;
+            this.ColumnEdit.HeaderText = "";
+            this.ColumnEdit.Image = global::VeterinariaElBuenAmigo.Properties.Resources.edit;
+            this.ColumnEdit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ColumnEdit.Name = "ColumnEdit";
+            this.ColumnEdit.ReadOnly = true;
+            // 
+            // ColumnSelect
+            // 
+            this.ColumnSelect.FillWeight = 25F;
+            this.ColumnSelect.HeaderText = "";
+            this.ColumnSelect.Name = "ColumnSelect";
+            // 
             // AccionesConsultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -800,9 +770,8 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel5.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tbl_CitasAnteriores)).EndInit();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tbl_ConsultasAnteriores)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -824,14 +793,10 @@ namespace VeterinariaElBuenAmigo.views.consulta
         private System.Windows.Forms.Label label5;
         private Guna.UI.WinForms.GunaTextBox txt_Temperatura;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel3;
-        private FontAwesome.Sharp.IconButton btn_Editar;
-        private FontAwesome.Sharp.IconButton btn_Eliminar;
         private Guna.UI.WinForms.GunaButton btn_Guardar;
         private Guna.UI.WinForms.GunaButton btn_Vitaminas;
         private Guna.UI.WinForms.GunaButton btn_Vacunas;
         private Guna.UI.WinForms.GunaVScrollBar gunaVScrollBar1;
-        private Guna.UI.WinForms.GunaDataGridView tbl_CitasAnteriores;
         private System.Windows.Forms.Label Nombre_Paciente;
         private System.Windows.Forms.Panel panel4;
         private FontAwesome.Sharp.IconButton iconButton2;
@@ -845,12 +810,16 @@ namespace VeterinariaElBuenAmigo.views.consulta
         private System.Windows.Forms.Label campos_padecimineto;
         private System.Windows.Forms.Label campos_comentarios;
         private System.Windows.Forms.Label campos_control;
+        private Guna.UI.WinForms.GunaDragControl windowDragControl;
+        private Guna.UI.WinForms.GunaDataGridView tbl_ConsultasAnteriores;
+        private Guna.UI.WinForms.GunaButton btnDelete;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private Guna.UI.WinForms.GunaDragControl windowDragControl;
+        private System.Windows.Forms.DataGridViewImageColumn ColumnEdit;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ColumnSelect;
     }
 }
