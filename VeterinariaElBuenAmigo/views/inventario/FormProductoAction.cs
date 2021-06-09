@@ -28,6 +28,7 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.isView = isView;
 
             btnEdit.Visible = false;
+            dtFechaAdquisicion.Value = DateTime.Now;
 
             if (isEdit)
             {

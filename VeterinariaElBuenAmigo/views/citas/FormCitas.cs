@@ -28,15 +28,12 @@ namespace VeterinariaElBuenAmigo.views
 
         private void btnAddCita_Click(object sender, EventArgs e)
         {
-            this.Parent.Parent.Visible = false;
-
             using (FormCitaActions formCitasActions = new FormCitaActions(false, citaDao))
             {
                 formCitasActions.ShowDialog();
             }
 
             cargarCitas();
-            this.Parent.Parent.Visible = true;
         }
 
         private void cargarCitas()
@@ -71,49 +68,49 @@ namespace VeterinariaElBuenAmigo.views
             lblCitasDelDia.Text = " Citas del Dia: " + countCitasDelDia;
         }
 
-
-
-        private void dvgCitasProgramadas_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-
-        }
-
         //Escucha el clic en las celdas la tabala Citas Programadas
         private void dvgCitasProgramadas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                int idCita = Convert.ToInt32(dvgCitasProgramadas.Rows[e.RowIndex].Cells[0].Value.ToString());
                 if (this.dvgCitasProgramadas.Columns[e.ColumnIndex].Name == "Editar")
                 {
+                    int idCita = Convert.ToInt32(dvgCitasProgramadas.Rows[e.RowIndex].Cells[0].Value.ToString());
                     int idPaciente = Convert.ToInt32(dvgCitasProgramadas.Rows[e.RowIndex].Cells[1].Value.ToString());
                     string fechaCita = dvgCitasProgramadas.Rows[e.RowIndex].Cells[2].Value.ToString();
                     string motivo = dvgCitasProgramadas.Rows[e.RowIndex].Cells[3].Value.ToString();
 
                     using (FormCitaActions formCitaActions = new FormCitaActions(true, citaDao, new Cita(idCita, fechaCita, idPaciente, motivo)))
                     {
-                        this.Visible = false;
                         formCitaActions.ShowDialog();
                     }
-                    this.Visible = true;
+                    cargarCitas();
                 }
+            }catch(Exception exception)
+            {
 
-                if (this.dvgCitasProgramadas.Columns[e.ColumnIndex].Name == "Eliminar")
+            }
+        }
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            List<DataGridViewRow> rows = dvgCitasProgramadas.Rows.Cast<DataGridViewRow>().Where(p => Convert.ToBoolean(p.Cells["Eliminar"].Value) == true).ToList();
+
+            if (rows.Count > 0)
+            {
+                DialogResult dialogQuestion = MessageBox.Show("¿Estas seguro de que quieres eliminar lo/s producto/s?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (dialogQuestion == DialogResult.Yes)
                 {
-                    DialogResult dialogQuestion = MessageBox.Show("¿Estas seguro de que quieres eliminar esta Cita?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                    if (dialogQuestion == DialogResult.Yes)
+                    for (int i = 0; i < rows.Count; i++)
                     {
-                        citaDao.eliminarCita(idCita);
+                        DataGridViewRow row = rows[i];
+
+                        citaDao.eliminarCita(Convert.ToInt32(row.Cells[0].Value));
+                        cargarCitas();
                     }
                 }
             }
-            catch(Exception exception)
-            {
-                //MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            cargarCitas();
         }
     }
 }

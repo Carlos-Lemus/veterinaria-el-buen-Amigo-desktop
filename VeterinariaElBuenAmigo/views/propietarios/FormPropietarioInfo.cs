@@ -16,6 +16,8 @@ namespace VeterinariaElBuenAmigo.views.propietarios
     public partial class FormPropietarioInfo : Form
     {
         private ClienteDAO clienteDao;
+        private PacienteDAO pacienteDao;
+        private List<Paciente> lista;
 
         private int posicionFormX;
         private int posicionFormY;
@@ -31,15 +33,13 @@ namespace VeterinariaElBuenAmigo.views.propietarios
         {
             InitializeComponent();
 
+            pacienteDao = new PacienteDAO();
+
             Guna.UI.Lib.ScrollBar.PanelScrollHelper Scroll;
             Scroll = new Guna.UI.Lib.ScrollBar.PanelScrollHelper(panelContenido, gunaVScrollBar1, true);
             Scroll.UpdateScrollBar();
 
-            this.dgvMascotas.Rows.Add(1, 2, 3, 4, 5);
-            this.dgvMascotas.Rows.Add(1, 2, 3, 4, 5);
-            this.dgvMascotas.Rows.Add(1, 2, 3, 4, 5);
-            this.dgvMascotas.Rows.Add(1, 2, 3, 4, 5);
-            this.dgvMascotas.Rows.Add(1, 2, 3, 4, 5);
+            cargarMascotas();
 
             position = new Point(Location.X, Location.Y);
             size = new Size(Size.Width, Size.Height);
@@ -98,34 +98,6 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             WindowState = FormWindowState.Minimized;
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(lblId.Text);
-            string nombreCompleto = lblNombre.Text;
-            string direccion = lblDireccion.Text;
-            int telefono = Convert.ToInt32(lblTelefono.Text);
-            string correo = lblDireccion.Text;
-
-            using (FormPropietarioActions formPropietarioActions = new FormPropietarioActions(true, clienteDao, new Cliente(id, nombreCompleto, direccion, telefono, correo)))
-            {
-                this.Visible = false;
-                formPropietarioActions.ShowDialog();
-            }
-            this.Close();
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogQuestion = MessageBox.Show("¿Estas seguro de que lo quieres eliminar?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (dialogQuestion == DialogResult.Yes)
-            {
-                clienteDao.delete(id);
-
-                this.Close();
-            }
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             //this.Parent.Parent.Visible = false;
@@ -135,6 +107,22 @@ namespace VeterinariaElBuenAmigo.views.propietarios
 
                 formPropietarioActions.ShowDialog();
             }            
+        }
+
+        private void cargarMascotas()
+        {
+            if (dgvMascotas.RowCount > 0)
+            {
+                dgvMascotas.Rows.Clear();
+                lista.Clear();
+            }
+
+            lista = pacienteDao.getList();
+
+            foreach (Paciente paciente in lista)
+            {
+                dgvMascotas.Rows.Add(paciente.idPaciente, paciente.nombrePaciente, paciente.idRaza, paciente.idEspecie, paciente.genero);
+            }
         }
     }
 }
