@@ -95,6 +95,7 @@ namespace VeterinariaElBuenAmigo.views
                         this.Visible = false;
                         formCitaActions.ShowDialog();
                     }
+                    cargarCitas();
                     this.Visible = true;
                 }
 
@@ -105,6 +106,7 @@ namespace VeterinariaElBuenAmigo.views
                     if (dialogQuestion == DialogResult.Yes)
                     {
                         citaDao.eliminarCita(idCita);
+                        cargarCitas();
                     }
                 }
             }
@@ -112,8 +114,6 @@ namespace VeterinariaElBuenAmigo.views
             {
                 //MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            cargarCitas();
         }
     }
 }
