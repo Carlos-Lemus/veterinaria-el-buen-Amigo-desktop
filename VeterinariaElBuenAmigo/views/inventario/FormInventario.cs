@@ -82,7 +82,6 @@ namespace VeterinariaElBuenAmigo.views
 
                 if (this.dgvInventario.Columns[e.ColumnIndex].Name == "Editar")
                 {
-                    MessageBox.Show(null, "Toca 2", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Producto productoEdit = productoDao.getProducto(idProducto);
 
                     using (FormProductoAction formProductoAction = new FormProductoAction(true, false, productoDao, productoEdit))
