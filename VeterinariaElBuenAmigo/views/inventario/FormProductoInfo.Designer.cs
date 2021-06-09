@@ -29,6 +29,7 @@ namespace VeterinariaElBuenAmigo.views.inventario
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelTop = new Guna.UI.WinForms.GunaPanel();
             this.btnMin = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
@@ -49,6 +50,7 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.btnOk = new Guna.UI.WinForms.GunaButton();
             this.btnEdit = new Guna.UI.WinForms.GunaButton();
             this.btnDlt = new Guna.UI.WinForms.GunaButton();
+            this.windowDragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -375,7 +377,7 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.btnEdit.FocusedColor = System.Drawing.Color.Empty;
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Image = global::VeterinariaElBuenAmigo.Properties.Resources.create_outline;
+            this.btnEdit.Image = global::VeterinariaElBuenAmigo.Properties.Resources.edit;
             this.btnEdit.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnEdit.ImageSize = new System.Drawing.Size(30, 30);
             this.btnEdit.Location = new System.Drawing.Point(179, 547);
@@ -405,7 +407,7 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.btnDlt.FocusedColor = System.Drawing.Color.Empty;
             this.btnDlt.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnDlt.ForeColor = System.Drawing.Color.White;
-            this.btnDlt.Image = global::VeterinariaElBuenAmigo.Properties.Resources.trash_outline;
+            this.btnDlt.Image = global::VeterinariaElBuenAmigo.Properties.Resources.delete;
             this.btnDlt.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnDlt.ImageSize = new System.Drawing.Size(30, 30);
             this.btnDlt.Location = new System.Drawing.Point(304, 547);
@@ -420,6 +422,10 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.btnDlt.TabIndex = 69;
             this.btnDlt.Text = "Eliminar";
             this.btnDlt.Click += new System.EventHandler(this.btnDlt_Click);
+            // 
+            // windowDragControl
+            // 
+            this.windowDragControl.TargetControl = this.panelTop;
             // 
             // FormProductoInfo
             // 
@@ -476,5 +482,6 @@ namespace VeterinariaElBuenAmigo.views.inventario
         private Guna.UI.WinForms.GunaButton btnOk;
         private Guna.UI.WinForms.GunaButton btnEdit;
         private Guna.UI.WinForms.GunaButton btnDlt;
+        private Guna.UI.WinForms.GunaDragControl windowDragControl;
     }
 }

@@ -208,7 +208,7 @@ namespace VeterinariaElBuenAmigo.views
             // 
             this.dataGridViewImageColumn1.FillWeight = 30F;
             this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = global::VeterinariaElBuenAmigo.Properties.Resources.create_outline;
+            this.dataGridViewImageColumn1.Image = global::VeterinariaElBuenAmigo.Properties.Resources.edit;
             this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Width = 31;
@@ -217,7 +217,7 @@ namespace VeterinariaElBuenAmigo.views
             // 
             this.dataGridViewImageColumn2.FillWeight = 30F;
             this.dataGridViewImageColumn2.HeaderText = "";
-            this.dataGridViewImageColumn2.Image = global::VeterinariaElBuenAmigo.Properties.Resources.trash_outline;
+            this.dataGridViewImageColumn2.Image = global::VeterinariaElBuenAmigo.Properties.Resources.delete;
             this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
             this.dataGridViewImageColumn2.Width = 32;
@@ -257,7 +257,7 @@ namespace VeterinariaElBuenAmigo.views
             // 
             this.Editar.FillWeight = 30F;
             this.Editar.HeaderText = "";
-            this.Editar.Image = global::VeterinariaElBuenAmigo.Properties.Resources.create_outline;
+            this.Editar.Image = global::VeterinariaElBuenAmigo.Properties.Resources.delete;
             this.Editar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Editar.Name = "Editar";
             this.Editar.ReadOnly = true;
@@ -266,7 +266,7 @@ namespace VeterinariaElBuenAmigo.views
             // 
             this.Eliminar.FillWeight = 30F;
             this.Eliminar.HeaderText = "";
-            this.Eliminar.Image = global::VeterinariaElBuenAmigo.Properties.Resources.trash_outline;
+            this.Eliminar.Image = global::VeterinariaElBuenAmigo.Properties.Resources.delete;
             this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.ReadOnly = true;

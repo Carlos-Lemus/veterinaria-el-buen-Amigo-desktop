@@ -29,6 +29,7 @@ namespace VeterinariaElBuenAmigo.views.inventario
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelTop = new Guna.UI.WinForms.GunaPanel();
             this.btnMin = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
@@ -50,6 +51,7 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.dtFechaAdquisicion = new Guna.UI.WinForms.GunaDateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.txtDescripcionProducto = new Guna.UI.WinForms.GunaTextBox();
+            this.windowDragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -396,6 +398,10 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.txtDescripcionProducto.Size = new System.Drawing.Size(400, 115);
             this.txtDescripcionProducto.TabIndex = 52;
             // 
+            // windowDragControl
+            // 
+            this.windowDragControl.TargetControl = this.panelTop;
+            // 
             // FormProductoAction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -453,5 +459,6 @@ namespace VeterinariaElBuenAmigo.views.inventario
         private Guna.UI.WinForms.GunaDateTimePicker dtFechaAdquisicion;
         private System.Windows.Forms.Label label5;
         private Guna.UI.WinForms.GunaTextBox txtDescripcionProducto;
+        private Guna.UI.WinForms.GunaDragControl windowDragControl;
     }
 }
