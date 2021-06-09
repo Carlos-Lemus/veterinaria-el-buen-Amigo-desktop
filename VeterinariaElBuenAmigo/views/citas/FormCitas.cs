@@ -81,29 +81,36 @@ namespace VeterinariaElBuenAmigo.views
         //Escucha el clic en las celdas la tabala Citas Programadas
         private void dvgCitasProgramadas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(this.dvgCitasProgramadas.Columns[e.ColumnIndex].Name == "Editar")
+            try
             {
                 int idCita = Convert.ToInt32(dvgCitasProgramadas.Rows[e.RowIndex].Cells[0].Value.ToString());
-                int idPaciente = Convert.ToInt32(dvgCitasProgramadas.Rows[e.RowIndex].Cells[1].Value.ToString());
-                string fechaCita = dvgCitasProgramadas.Rows[e.RowIndex].Cells[2].Value.ToString();
-                string motivo = dvgCitasProgramadas.Rows[e.RowIndex].Cells[3].Value.ToString();
-
-                using (FormCitaActions formCitaActions = new FormCitaActions(true, citaDao, new Cita(idCita, fechaCita, idPaciente, motivo)))
+                if (this.dvgCitasProgramadas.Columns[e.ColumnIndex].Name == "Editar")
                 {
-                    this.Visible = false;
-                    formCitaActions.ShowDialog();
+                    int idPaciente = Convert.ToInt32(dvgCitasProgramadas.Rows[e.RowIndex].Cells[1].Value.ToString());
+                    string fechaCita = dvgCitasProgramadas.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    string motivo = dvgCitasProgramadas.Rows[e.RowIndex].Cells[3].Value.ToString();
+
+                    using (FormCitaActions formCitaActions = new FormCitaActions(true, citaDao, new Cita(idCita, fechaCita, idPaciente, motivo)))
+                    {
+                        this.Visible = false;
+                        formCitaActions.ShowDialog();
+                    }
+                    this.Visible = true;
                 }
-                this.Visible = true;
+
+                if (this.dvgCitasProgramadas.Columns[e.ColumnIndex].Name == "Eliminar")
+                {
+                    DialogResult dialogQuestion = MessageBox.Show("¿Estas seguro de que quieres eliminar esta Cita?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (dialogQuestion == DialogResult.Yes)
+                    {
+                        citaDao.eliminarCita(idCita);
+                    }
+                }
             }
-
-            if (this.dvgCitasProgramadas.Columns[e.ColumnIndex].Name == "Eliminar")
+            catch(Exception exception)
             {
-                DialogResult dialogQuestion = MessageBox.Show("¿Estas seguro de que quieres eliminar esta Cita?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (dialogQuestion == DialogResult.Yes)
-                {
-                    citaDao.eliminarCita(Convert.ToInt32(dvgCitasProgramadas.Rows[e.RowIndex].Cells[0].Value.ToString()));
-                }
+                //MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             cargarCitas();
