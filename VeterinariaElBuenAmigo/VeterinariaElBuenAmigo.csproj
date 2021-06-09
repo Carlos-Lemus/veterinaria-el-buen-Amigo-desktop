@@ -84,11 +84,13 @@
     <Compile Include="database\ClienteDAO.cs" />
     <Compile Include="database\Conexion.cs" />
     <Compile Include="database\DAO.cs" />
+    <Compile Include="database\ProductosDAO.cs" />
     <Compile Include="models\Cita.cs" />
     <Compile Include="database\PacienteDAO.cs" />
     <Compile Include="models\Cliente.cs" />
     <Compile Include="models\Especie.cs" />
     <Compile Include="models\Paciente.cs" />
+    <Compile Include="models\Producto.cs" />
     <Compile Include="models\Raza.cs" />
     <Compile Include="models\templateClientePaciente.cs" />
     <Compile Include="models\Consulta.cs" />
@@ -138,6 +140,18 @@
     </Compile>
     <Compile Include="views\FormHistorial.Designer.cs">
       <DependentUpon>FormHistorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\inventario\FormProductoAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\inventario\FormProductoAction.Designer.cs">
+      <DependentUpon>FormProductoAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\inventario\FormProductoInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\inventario\FormProductoInfo.Designer.cs">
+      <DependentUpon>FormProductoInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="views\pacientes\FormGuardarMascota.cs">
       <SubType>Form</SubType>
@@ -197,6 +211,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\inventario\FormInventario.resx">
       <DependentUpon>FormInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\inventario\FormProductoAction.resx">
+      <DependentUpon>FormProductoAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\inventario\FormProductoInfo.resx">
+      <DependentUpon>FormProductoInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\pacientes\FormGuardarMascota.resx">
       <DependentUpon>FormGuardarMascota.cs</DependentUpon>
