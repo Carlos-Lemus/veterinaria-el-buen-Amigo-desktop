@@ -32,7 +32,6 @@ namespace VeterinariaElBuenAmigo.views
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.btn_Acciones = new Guna.UI.WinForms.GunaButton();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.label2 = new System.Windows.Forms.Label();
             this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
@@ -45,34 +44,6 @@ namespace VeterinariaElBuenAmigo.views
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tbl_Consulta)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_Acciones
-            // 
-            this.btn_Acciones.AnimationHoverSpeed = 0.07F;
-            this.btn_Acciones.AnimationSpeed = 0.03F;
-            this.btn_Acciones.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Acciones.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.btn_Acciones.BorderColor = System.Drawing.Color.Black;
-            this.btn_Acciones.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Acciones.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_Acciones.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Acciones.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_Acciones.ForeColor = System.Drawing.Color.White;
-            this.btn_Acciones.Image = null;
-            this.btn_Acciones.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Acciones.Location = new System.Drawing.Point(44, 35);
-            this.btn_Acciones.Name = "btn_Acciones";
-            this.btn_Acciones.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
-            this.btn_Acciones.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_Acciones.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_Acciones.OnHoverImage = null;
-            this.btn_Acciones.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Acciones.Radius = 5;
-            this.btn_Acciones.Size = new System.Drawing.Size(148, 35);
-            this.btn_Acciones.TabIndex = 19;
-            this.btn_Acciones.Text = "Abrir Acciones";
-            this.btn_Acciones.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_Acciones.Click += new System.EventHandler(this.btn_Acciones_Click);
             // 
             // gunaButton1
             // 
@@ -88,7 +59,8 @@ namespace VeterinariaElBuenAmigo.views
             this.gunaButton1.ForeColor = System.Drawing.Color.White;
             this.gunaButton1.Image = null;
             this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(521, 85);
+            this.gunaButton1.Location = new System.Drawing.Point(695, 105);
+            this.gunaButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaButton1.Name = "gunaButton1";
             this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -96,7 +68,7 @@ namespace VeterinariaElBuenAmigo.views
             this.gunaButton1.OnHoverImage = null;
             this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
             this.gunaButton1.Radius = 5;
-            this.gunaButton1.Size = new System.Drawing.Size(103, 35);
+            this.gunaButton1.Size = new System.Drawing.Size(137, 43);
             this.gunaButton1.TabIndex = 18;
             this.gunaButton1.Text = "Buscar";
             this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -104,9 +76,10 @@ namespace VeterinariaElBuenAmigo.views
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 85);
+            this.label2.Location = new System.Drawing.Point(53, 105);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 35);
+            this.label2.Size = new System.Drawing.Size(115, 43);
             this.label2.TabIndex = 17;
             this.label2.Text = "Nombre";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -121,19 +94,21 @@ namespace VeterinariaElBuenAmigo.views
             this.gunaTextBox1.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.gunaTextBox1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.gunaTextBox1.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.gunaTextBox1.Location = new System.Drawing.Point(132, 85);
+            this.gunaTextBox1.Location = new System.Drawing.Point(176, 105);
+            this.gunaTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gunaTextBox1.Name = "gunaTextBox1";
             this.gunaTextBox1.PasswordChar = '\0';
             this.gunaTextBox1.Radius = 4;
-            this.gunaTextBox1.Size = new System.Drawing.Size(383, 35);
+            this.gunaTextBox1.Size = new System.Drawing.Size(511, 52);
             this.gunaTextBox1.TabIndex = 16;
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, 137);
+            this.label1.Location = new System.Drawing.Point(53, 169);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(425, 35);
+            this.label1.Size = new System.Drawing.Size(567, 43);
             this.label1.TabIndex = 15;
             this.label1.Text = "Seleccionar Mascota para realizar una consulta";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -177,13 +152,15 @@ namespace VeterinariaElBuenAmigo.views
             this.tbl_Consulta.DefaultCellStyle = dataGridViewCellStyle3;
             this.tbl_Consulta.EnableHeadersVisualStyles = false;
             this.tbl_Consulta.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.tbl_Consulta.Location = new System.Drawing.Point(44, 175);
+            this.tbl_Consulta.Location = new System.Drawing.Point(59, 215);
+            this.tbl_Consulta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbl_Consulta.Name = "tbl_Consulta";
             this.tbl_Consulta.ReadOnly = true;
             this.tbl_Consulta.RowHeadersVisible = false;
+            this.tbl_Consulta.RowHeadersWidth = 51;
             this.tbl_Consulta.RowTemplate.Height = 40;
             this.tbl_Consulta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tbl_Consulta.Size = new System.Drawing.Size(786, 451);
+            this.tbl_Consulta.Size = new System.Drawing.Size(1048, 555);
             this.tbl_Consulta.TabIndex = 14;
             this.tbl_Consulta.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.tbl_Consulta.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -213,6 +190,7 @@ namespace VeterinariaElBuenAmigo.views
             // 
             this.Column1.FillWeight = 30F;
             this.Column1.HeaderText = "Id";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
@@ -220,6 +198,7 @@ namespace VeterinariaElBuenAmigo.views
             // 
             this.Column2.FillWeight = 145F;
             this.Column2.HeaderText = "Nombre";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
@@ -227,34 +206,37 @@ namespace VeterinariaElBuenAmigo.views
             // 
             this.Column3.FillWeight = 145F;
             this.Column3.HeaderText = "Especie";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Propietario";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
             // Column5
             // 
             this.Column5.HeaderText = "N de Consultas Previas";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
             // FormConsulta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(930, 690);
-            this.Controls.Add(this.btn_Acciones);
+            this.ClientSize = new System.Drawing.Size(1240, 849);
             this.Controls.Add(this.gunaButton1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.gunaTextBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbl_Consulta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormConsulta";
             this.Text = "FormConsulta";
             ((System.ComponentModel.ISupportInitialize)(this.tbl_Consulta)).EndInit();
@@ -263,8 +245,6 @@ namespace VeterinariaElBuenAmigo.views
         }
 
         #endregion
-
-        private Guna.UI.WinForms.GunaButton btn_Acciones;
         private Guna.UI.WinForms.GunaButton gunaButton1;
         private System.Windows.Forms.Label label2;
         private Guna.UI.WinForms.GunaTextBox gunaTextBox1;
