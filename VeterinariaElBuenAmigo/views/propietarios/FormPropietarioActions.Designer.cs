@@ -96,7 +96,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(53, 37);
-            this.btnClose.TabIndex = 4;
+            this.btnClose.TabIndex = 20;
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -124,14 +124,14 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.btnAdd.Location = new System.Drawing.Point(93, 679);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
+            this.btnAdd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.btnAdd.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnAdd.OnHoverForeColor = System.Drawing.Color.White;
             this.btnAdd.OnHoverImage = null;
             this.btnAdd.OnPressedColor = System.Drawing.Color.Black;
             this.btnAdd.Radius = 5;
             this.btnAdd.Size = new System.Drawing.Size(533, 43);
-            this.btnAdd.TabIndex = 6;
+            this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "Guardar";
             this.btnAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -155,7 +155,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.txtNombre.PasswordChar = '\0';
             this.txtNombre.Radius = 4;
             this.txtNombre.Size = new System.Drawing.Size(533, 52);
-            this.txtNombre.TabIndex = 5;
+            this.txtNombre.TabIndex = 1;
             // 
             // label1
             // 
@@ -190,7 +190,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.txtDireccion.PasswordChar = '\0';
             this.txtDireccion.Radius = 4;
             this.txtDireccion.Size = new System.Drawing.Size(533, 52);
-            this.txtDireccion.TabIndex = 11;
+            this.txtDireccion.TabIndex = 2;
             // 
             // txtTelefono
             // 
@@ -211,7 +211,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.txtTelefono.PasswordChar = '\0';
             this.txtTelefono.Radius = 4;
             this.txtTelefono.Size = new System.Drawing.Size(533, 52);
-            this.txtTelefono.TabIndex = 13;
+            this.txtTelefono.TabIndex = 3;
             this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // label2
@@ -282,7 +282,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.txtCorreo.PasswordChar = '\0';
             this.txtCorreo.Radius = 4;
             this.txtCorreo.Size = new System.Drawing.Size(533, 52);
-            this.txtCorreo.TabIndex = 18;
+            this.txtCorreo.TabIndex = 4;
             // 
             // btnEdit
             // 

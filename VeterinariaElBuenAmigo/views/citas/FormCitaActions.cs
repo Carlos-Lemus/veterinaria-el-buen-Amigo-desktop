@@ -17,7 +17,8 @@ namespace VeterinariaElBuenAmigo.views.citas
         private CitaDAO citaDao;
         private Point position;
         private PacienteDAO pacienteDao;
-        Cita cita;
+        private Cita cita;
+        private List<Paciente> listaPacientes;
 
         public FormCitaActions(bool isEdit, CitaDAO citaDao, Cita cita = null)
         {
@@ -98,9 +99,15 @@ namespace VeterinariaElBuenAmigo.views.citas
 
         private void cargarPacientes()
         {
-            List<Paciente> r = new List<Paciente>();
-            r = pacienteDao.getList();
-            mascotas_collection.DataSource = r;
+            if(mascotas_collection.Items.Count > 0)
+            {
+                mascotas_collection.Items.Clear();
+                listaPacientes.Clear();
+            }
+
+            listaPacientes = pacienteDao.getList();
+
+            mascotas_collection.DataSource = listaPacientes;
             mascotas_collection.DisplayMember = "nombrePaciente";
             mascotas_collection.ValueMember = "idPaciente";
         }

@@ -367,7 +367,7 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.btnOk.Location = new System.Drawing.Point(33, 673);
             this.btnOk.Margin = new System.Windows.Forms.Padding(4);
             this.btnOk.Name = "btnOk";
-            this.btnOk.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
+            this.btnOk.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.btnOk.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnOk.OnHoverForeColor = System.Drawing.Color.White;
             this.btnOk.OnHoverImage = null;

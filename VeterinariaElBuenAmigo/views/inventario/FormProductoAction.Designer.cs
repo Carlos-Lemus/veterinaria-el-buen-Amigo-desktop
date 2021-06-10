@@ -62,7 +62,7 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.panelTop.Controls.Add(this.btnClose);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
-            this.panelTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelTop.Margin = new System.Windows.Forms.Padding(4);
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(1167, 37);
             this.panelTop.TabIndex = 4;
@@ -121,7 +121,7 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.btnEdit.Image = null;
             this.btnEdit.ImageSize = new System.Drawing.Size(20, 20);
             this.btnEdit.Location = new System.Drawing.Point(251, 703);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.btnEdit.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -152,9 +152,9 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.btnAdd.Image = null;
             this.btnAdd.ImageSize = new System.Drawing.Size(20, 20);
             this.btnAdd.Location = new System.Drawing.Point(251, 652);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.OnHoverBaseColor = System.Drawing.Color.Empty;
+            this.btnAdd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.btnAdd.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnAdd.OnHoverForeColor = System.Drawing.Color.White;
             this.btnAdd.OnHoverImage = null;
@@ -193,12 +193,12 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.txtNombreProducto.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtNombreProducto.ForeColor = System.Drawing.Color.White;
             this.txtNombreProducto.Location = new System.Drawing.Point(33, 98);
-            this.txtNombreProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreProducto.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.PasswordChar = '\0';
             this.txtNombreProducto.Radius = 4;
             this.txtNombreProducto.Size = new System.Drawing.Size(533, 52);
-            this.txtNombreProducto.TabIndex = 35;
+            this.txtNombreProducto.TabIndex = 1;
             // 
             // gnExistencias
             // 
@@ -211,7 +211,7 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.gnExistencias.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.gnExistencias.ForeColor = System.Drawing.Color.Black;
             this.gnExistencias.Location = new System.Drawing.Point(600, 98);
-            this.gnExistencias.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gnExistencias.Margin = new System.Windows.Forms.Padding(4);
             this.gnExistencias.Maximum = ((long)(9999999));
             this.gnExistencias.Minimum = ((long)(0));
             this.gnExistencias.Name = "gnExistencias";
@@ -282,12 +282,12 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.txtTipoProducto.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtTipoProducto.ForeColor = System.Drawing.Color.White;
             this.txtTipoProducto.Location = new System.Drawing.Point(33, 252);
-            this.txtTipoProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTipoProducto.Margin = new System.Windows.Forms.Padding(4);
             this.txtTipoProducto.Name = "txtTipoProducto";
             this.txtTipoProducto.PasswordChar = '\0';
             this.txtTipoProducto.Radius = 4;
             this.txtTipoProducto.Size = new System.Drawing.Size(533, 52);
-            this.txtTipoProducto.TabIndex = 40;
+            this.txtTipoProducto.TabIndex = 2;
             // 
             // label4
             // 
@@ -328,12 +328,12 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.txtMarcaProducto.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtMarcaProducto.ForeColor = System.Drawing.Color.White;
             this.txtMarcaProducto.Location = new System.Drawing.Point(600, 252);
-            this.txtMarcaProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMarcaProducto.Margin = new System.Windows.Forms.Padding(4);
             this.txtMarcaProducto.Name = "txtMarcaProducto";
             this.txtMarcaProducto.PasswordChar = '\0';
             this.txtMarcaProducto.Radius = 4;
             this.txtMarcaProducto.Size = new System.Drawing.Size(533, 52);
-            this.txtMarcaProducto.TabIndex = 43;
+            this.txtMarcaProducto.TabIndex = 3;
             // 
             // label6
             // 
@@ -386,13 +386,13 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.txtDescripcionProducto.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtDescripcionProducto.ForeColor = System.Drawing.Color.White;
             this.txtDescripcionProducto.Location = new System.Drawing.Point(33, 426);
-            this.txtDescripcionProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDescripcionProducto.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcionProducto.MultiLine = true;
             this.txtDescripcionProducto.Name = "txtDescripcionProducto";
             this.txtDescripcionProducto.PasswordChar = '\0';
             this.txtDescripcionProducto.Radius = 4;
             this.txtDescripcionProducto.Size = new System.Drawing.Size(533, 142);
-            this.txtDescripcionProducto.TabIndex = 52;
+            this.txtDescripcionProducto.TabIndex = 4;
             // 
             // windowDragControl
             // 
@@ -419,7 +419,7 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.dtFechaAdquisicion.OnPressedColor = System.Drawing.Color.Black;
             this.dtFechaAdquisicion.Radius = 5;
             this.dtFechaAdquisicion.Size = new System.Drawing.Size(533, 42);
-            this.dtFechaAdquisicion.TabIndex = 53;
+            this.dtFechaAdquisicion.TabIndex = 5;
             this.dtFechaAdquisicion.Text = "lunes, 7 de junio de 2021";
             this.dtFechaAdquisicion.Value = new System.DateTime(2021, 6, 7, 13, 4, 55, 439);
             // 
@@ -449,7 +449,7 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormProductoAction";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormProductoAction";
