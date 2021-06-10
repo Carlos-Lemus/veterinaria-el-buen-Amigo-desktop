@@ -239,7 +239,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             using (RecetasForm formRecetas = new RecetasForm(this.Nombre, this.id, 1))
             {
 
-                formRecetas.ShowDialog();
+                formRecetas.ShowDialog();              
             }
         }
 

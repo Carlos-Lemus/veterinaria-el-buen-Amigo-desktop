@@ -205,6 +205,12 @@
     <Compile Include="views\propietarios\FormPropietarioInfo.Designer.cs">
       <DependentUpon>FormPropietarioInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\VentanaInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\VentanaInicial.Designer.cs">
+      <DependentUpon>VentanaInicial.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="views\citas\FormCitaActions.resx">
       <DependentUpon>FormCitaActions.cs</DependentUpon>
     </EmbeddedResource>
@@ -261,6 +267,9 @@
     <EmbeddedResource Include="views\propietarios\FormPropietarioInfo.resx">
       <DependentUpon>FormPropietarioInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\VentanaInicial.resx">
+      <DependentUpon>VentanaInicial.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -295,6 +304,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon-edit-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recurso 3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
