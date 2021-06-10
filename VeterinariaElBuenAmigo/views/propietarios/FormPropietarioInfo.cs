@@ -98,7 +98,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
 
         private void cargarMascotas()
         {
-            List<Paciente> lista = new List<Paciente>();
+            List<templateClientePaciente> lista = new List<templateClientePaciente>();
             if (dgvMascotas1.RowCount > 0)
             {
                 dgvMascotas1.Rows.Clear();
@@ -107,9 +107,9 @@ namespace VeterinariaElBuenAmigo.views.propietarios
 
             lista = pacienteDao.getListMascotasDePropietario(this.id);
 
-            foreach (Paciente paciente in lista)
+            foreach (templateClientePaciente consulta in lista)
             {
-                dgvMascotas1.Rows.Add(paciente.idPaciente, paciente.nombrePaciente, paciente.idRaza, paciente.idEspecie, paciente.genero);
+                dgvMascotas1.Rows.Add(consulta.idPaciente, consulta.nombrePaciente, consulta.nombreRaza, consulta.nombreEspecie, consulta.genero);
             }
         }
 
