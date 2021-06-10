@@ -117,6 +117,8 @@ namespace VeterinariaElBuenAmigo.database
 
                 conn.Open();
 
+                deleteCitas(idMascota);
+
                 using (SQLiteCommand command = new SQLiteCommand())
                 {
                     string sql = $"DELETE FROM {TABLE_PACIENTE} WHERE {IDPACIENTE} = @{IDPACIENTE};";
@@ -136,6 +138,28 @@ namespace VeterinariaElBuenAmigo.database
                 MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return false;
+            }
+        }
+
+        private void deleteCitas(int idMascota)
+        {
+            try
+            {
+
+                using (SQLiteCommand command = new SQLiteCommand())
+                {
+                    string sql = $"DELETE FROM {TABLE_CITA} WHERE {IDPACIENTE} = @{IDPACIENTE};";
+
+                    command.CommandText = sql;
+                    command.Connection = Conexion.Conn;
+                    command.Parameters.AddWithValue($"@{IDPACIENTE}", idMascota);
+                    command.ExecuteNonQuery();
+
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

@@ -46,6 +46,7 @@ namespace VeterinariaElBuenAmigo.views
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.editarColumna = new System.Windows.Forms.DataGridViewImageColumn();
             this.ColumnSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.btnDelete = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMascotas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -276,12 +277,42 @@ namespace VeterinariaElBuenAmigo.views
             this.ColumnSelect.MinimumWidth = 6;
             this.ColumnSelect.Name = "ColumnSelect";
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.AnimationHoverSpeed = 0.07F;
+            this.btnDelete.AnimationSpeed = 0.03F;
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(82)))), ((int)(((byte)(83)))));
+            this.btnDelete.BorderColor = System.Drawing.Color.Black;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDelete.FocusedColor = System.Drawing.Color.Empty;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Image = global::VeterinariaElBuenAmigo.Properties.Resources.delete;
+            this.btnDelete.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnDelete.Location = new System.Drawing.Point(992, 224);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(117)))));
+            this.btnDelete.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnDelete.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnDelete.OnHoverImage = null;
+            this.btnDelete.OnPressedColor = System.Drawing.Color.Black;
+            this.btnDelete.Radius = 5;
+            this.btnDelete.Size = new System.Drawing.Size(175, 43);
+            this.btnDelete.TabIndex = 32;
+            this.btnDelete.Text = "Eliminar ";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // FormPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1240, 849);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dgvMascotas);
             this.Controls.Add(this.btnAgregarMascota);
             this.Controls.Add(this.btnBuscarPaciente);
@@ -312,5 +343,6 @@ namespace VeterinariaElBuenAmigo.views
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewImageColumn editarColumna;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ColumnSelect;
+        private Guna.UI.WinForms.GunaButton btnDelete;
     }
 }

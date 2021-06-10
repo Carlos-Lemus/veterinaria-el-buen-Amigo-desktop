@@ -95,5 +95,29 @@ namespace VeterinariaElBuenAmigo.views
 
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            List<DataGridViewRow> rows = dgvMascotas.Rows.Cast<DataGridViewRow>().Where(p => Convert.ToBoolean(p.Cells["ColumnSelect"].Value) == true).ToList();
+
+            if (rows.Count > 0)
+            {
+                DialogResult dialogQuestion = MessageBox.Show("¿Estas seguro de que quieres eliminar los registros?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (dialogQuestion == DialogResult.Yes)
+                {
+
+                    for (int i = 0; i < rows.Count; i++)
+                    {
+                        DataGridViewRow row = rows[i];
+
+                        pacienteDao.delete(Convert.ToInt32(row.Cells[0].Value));
+
+                        cargarDatosCP();
+                    }
+
+                }
+            }
+        }
     }
 }
