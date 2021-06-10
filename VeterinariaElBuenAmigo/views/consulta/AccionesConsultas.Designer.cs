@@ -119,7 +119,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(35, 86);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1252, 638);
             this.panel2.TabIndex = 17;
@@ -139,7 +139,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.gunaButton1.Image = null;
             this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaButton1.Location = new System.Drawing.Point(50, 70);
-            this.gunaButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaButton1.Margin = new System.Windows.Forms.Padding(4);
             this.gunaButton1.Name = "gunaButton1";
             this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -169,7 +169,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.btnDelete.Image = global::VeterinariaElBuenAmigo.Properties.Resources.delete;
             this.btnDelete.ImageSize = new System.Drawing.Size(20, 20);
             this.btnDelete.Location = new System.Drawing.Point(1017, 70);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(117)))));
             this.btnDelete.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -225,7 +225,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.tbl_ConsultasAnteriores.EnableHeadersVisualStyles = false;
             this.tbl_ConsultasAnteriores.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
             this.tbl_ConsultasAnteriores.Location = new System.Drawing.Point(20, 130);
-            this.tbl_ConsultasAnteriores.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbl_ConsultasAnteriores.Margin = new System.Windows.Forms.Padding(4);
             this.tbl_ConsultasAnteriores.MaximumSize = new System.Drawing.Size(1199, 320);
             this.tbl_ConsultasAnteriores.MinimumSize = new System.Drawing.Size(1199, 320);
             this.tbl_ConsultasAnteriores.Name = "tbl_ConsultasAnteriores";
@@ -385,7 +385,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.panel5.Controls.Add(this.iconButton3);
             this.panel5.Controls.Add(this.iconButton4);
             this.panel5.Location = new System.Drawing.Point(983, 697);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(69, 49);
             this.panel5.TabIndex = 29;
@@ -439,7 +439,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.btn_Guardar.Image = null;
             this.btn_Guardar.ImageSize = new System.Drawing.Size(20, 20);
             this.btn_Guardar.Location = new System.Drawing.Point(149, 1121);
-            this.btn_Guardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Guardar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Guardar.Name = "btn_Guardar";
             this.btn_Guardar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.btn_Guardar.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -468,7 +468,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.btn_Vitaminas.Image = null;
             this.btn_Vitaminas.ImageSize = new System.Drawing.Size(20, 20);
             this.btn_Vitaminas.Location = new System.Drawing.Point(610, 1121);
-            this.btn_Vitaminas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Vitaminas.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Vitaminas.Name = "btn_Vitaminas";
             this.btn_Vitaminas.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.btn_Vitaminas.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -497,7 +497,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.btn_Vacunas.Image = null;
             this.btn_Vacunas.ImageSize = new System.Drawing.Size(20, 20);
             this.btn_Vacunas.Location = new System.Drawing.Point(835, 1121);
-            this.btn_Vacunas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Vacunas.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Vacunas.Name = "btn_Vacunas";
             this.btn_Vacunas.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.btn_Vacunas.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -523,7 +523,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.txt_Comentarios.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txt_Comentarios.ForeColor = System.Drawing.Color.White;
             this.txt_Comentarios.Location = new System.Drawing.Point(149, 864);
-            this.txt_Comentarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Comentarios.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Comentarios.MultiLine = true;
             this.txt_Comentarios.Name = "txt_Comentarios";
             this.txt_Comentarios.PasswordChar = '\0';
@@ -556,7 +556,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.txt_controlCelo.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txt_controlCelo.ForeColor = System.Drawing.Color.White;
             this.txt_controlCelo.Location = new System.Drawing.Point(149, 694);
-            this.txt_controlCelo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_controlCelo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_controlCelo.Name = "txt_controlCelo";
             this.txt_controlCelo.PasswordChar = '\0';
             this.txt_controlCelo.Radius = 15;
@@ -588,7 +588,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.txt_Peso.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txt_Peso.ForeColor = System.Drawing.Color.White;
             this.txt_Peso.Location = new System.Drawing.Point(702, 694);
-            this.txt_Peso.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Peso.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Peso.Name = "txt_Peso";
             this.txt_Peso.PasswordChar = '\0';
             this.txt_Peso.Radius = 15;
@@ -620,7 +620,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.txt_Temperatura.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txt_Temperatura.ForeColor = System.Drawing.Color.White;
             this.txt_Temperatura.Location = new System.Drawing.Point(701, 526);
-            this.txt_Temperatura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Temperatura.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Temperatura.Name = "txt_Temperatura";
             this.txt_Temperatura.PasswordChar = '\0';
             this.txt_Temperatura.Radius = 15;
@@ -652,7 +652,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.txt_Padecimineto.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txt_Padecimineto.ForeColor = System.Drawing.Color.White;
             this.txt_Padecimineto.Location = new System.Drawing.Point(148, 528);
-            this.txt_Padecimineto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_Padecimineto.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Padecimineto.Name = "txt_Padecimineto";
             this.txt_Padecimineto.PasswordChar = '\0';
             this.txt_Padecimineto.Radius = 15;
@@ -689,7 +689,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.panel4.Controls.Add(this.iconButton2);
             this.panel4.Controls.Add(this.iconButton1);
             this.panel4.Location = new System.Drawing.Point(982, 531);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(69, 49);
             this.panel4.TabIndex = 28;
@@ -734,7 +734,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaVScrollBar1.LargeChange = 10;
             this.gunaVScrollBar1.Location = new System.Drawing.Point(1295, 86);
-            this.gunaVScrollBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gunaVScrollBar1.Margin = new System.Windows.Forms.Padding(4);
             this.gunaVScrollBar1.Maximum = 100;
             this.gunaVScrollBar1.Name = "gunaVScrollBar1";
             this.gunaVScrollBar1.ScrollIdleColor = System.Drawing.Color.Teal;
@@ -756,7 +756,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.panelTop.Controls.Add(this.label1);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
-            this.panelTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelTop.Margin = new System.Windows.Forms.Padding(4);
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(1333, 57);
             this.panelTop.TabIndex = 0;
@@ -855,7 +855,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AccionesConsultas";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
