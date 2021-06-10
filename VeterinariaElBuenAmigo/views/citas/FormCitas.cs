@@ -32,7 +32,6 @@ namespace VeterinariaElBuenAmigo.views
             {
                 formCitasActions.ShowDialog();
             }
-
             cargarCitas();
         }
 
