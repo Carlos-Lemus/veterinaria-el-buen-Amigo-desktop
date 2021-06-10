@@ -159,7 +159,7 @@ namespace VeterinariaElBuenAmigo.views
             this.btn_Ingresar.ImageSize = new System.Drawing.Size(20, 20);
             this.btn_Ingresar.Location = new System.Drawing.Point(216, 491);
             this.btn_Ingresar.Name = "btn_Ingresar";
-            this.btn_Ingresar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
+            this.btn_Ingresar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.btn_Ingresar.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_Ingresar.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Ingresar.OnHoverImage = null;

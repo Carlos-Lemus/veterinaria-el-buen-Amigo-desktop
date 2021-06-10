@@ -17,8 +17,8 @@ namespace VeterinariaElBuenAmigo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
-            //Application.Run(new VentanaInicial());
+            //Application.Run(new MainForm());
+            Application.Run(new VentanaInicial());
         }
     }
 }

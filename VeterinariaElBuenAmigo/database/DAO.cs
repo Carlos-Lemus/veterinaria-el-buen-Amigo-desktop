@@ -73,5 +73,9 @@ namespace VeterinariaElBuenAmigo.database
         protected const string DOSIS = "dosis";
         protected const string REFUERZO = "refuerzo";
 
+        // LOGIN
+        protected const string TABLE_LOGIN = "login";
+        protected const string IDPASSWORD = "idPassword";
+        protected const string PASSWORD = "password";
     }
 }

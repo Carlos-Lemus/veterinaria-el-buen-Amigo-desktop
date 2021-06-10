@@ -17,6 +17,7 @@ namespace VeterinariaElBuenAmigo.views
     {
         private List<Raza> listaRazas;
         private List<Especie> listaEspecies;
+        private LoginDAO loginDAO;
 
         private RazaDAO razaDAO;
         private EspecieDAO especieDAO;
@@ -27,6 +28,7 @@ namespace VeterinariaElBuenAmigo.views
 
             razaDAO = new RazaDAO();
             especieDAO = new EspecieDAO();
+            loginDAO = new LoginDAO();
 
             cargarRazas();
             cargarEspecies();
@@ -187,5 +189,31 @@ namespace VeterinariaElBuenAmigo.views
             }
         }
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            
+            if(string.IsNullOrEmpty(txtChangeKey.Text))
+            {
+                MessageBox.Show("La clave no puede estar vacia", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                return;
+            }
+
+            DialogResult dialogQuestion = MessageBox.Show("¿Estas seguro de cambiar la clave de acceso?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dialogQuestion == DialogResult.Yes)
+            {
+
+                Login login = loginDAO.getLogin();
+
+                login.password = txtChangeKey.Text;
+
+                loginDAO.update(login);
+
+                txtChangeKey.Text = "";
+
+            }
+
+        }
     }
 }

@@ -37,28 +37,28 @@ namespace VeterinariaElBuenAmigo.views
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dvgRazas = new Guna.UI.WinForms.GunaDataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dvgEspecies = new Guna.UI.WinForms.GunaDataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnSelectEspecie = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtSearch = new Guna.UI.WinForms.GunaTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnAdd = new Guna.UI.WinForms.GunaButton();
-            this.gunaSeparator1 = new Guna.UI.WinForms.GunaSeparator();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnDeleteDelete = new Guna.UI.WinForms.GunaButton();
-            this.btnAddRaza = new Guna.UI.WinForms.GunaButton();
-            this.btnDeleteEspecie = new Guna.UI.WinForms.GunaButton();
-            this.btnAddEspecie = new Guna.UI.WinForms.GunaButton();
-            this.ColumnEditEspecie = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnEditRaza = new System.Windows.Forms.DataGridViewImageColumn();
             this.ColumnSelectRaza = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dvgEspecies = new Guna.UI.WinForms.GunaDataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnEditEspecie = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ColumnSelectEspecie = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtChangeKey = new Guna.UI.WinForms.GunaTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnAdd = new Guna.UI.WinForms.GunaButton();
+            this.gunaSeparator1 = new Guna.UI.WinForms.GunaSeparator();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.btnDeleteDelete = new Guna.UI.WinForms.GunaButton();
+            this.btnAddRaza = new Guna.UI.WinForms.GunaButton();
+            this.btnDeleteEspecie = new Guna.UI.WinForms.GunaButton();
+            this.btnAddEspecie = new Guna.UI.WinForms.GunaButton();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -162,6 +162,38 @@ namespace VeterinariaElBuenAmigo.views
             this.dvgRazas.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.dvgRazas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgRazas_CellClick);
             // 
+            // Column1
+            // 
+            this.Column1.FillWeight = 30F;
+            this.Column1.HeaderText = "Id";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Nombre de la raza";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // ColumnEditRaza
+            // 
+            this.ColumnEditRaza.FillWeight = 25F;
+            this.ColumnEditRaza.HeaderText = "";
+            this.ColumnEditRaza.Image = global::VeterinariaElBuenAmigo.Properties.Resources.edit;
+            this.ColumnEditRaza.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ColumnEditRaza.MinimumWidth = 6;
+            this.ColumnEditRaza.Name = "ColumnEditRaza";
+            this.ColumnEditRaza.ReadOnly = true;
+            // 
+            // ColumnSelectRaza
+            // 
+            this.ColumnSelectRaza.FillWeight = 25F;
+            this.ColumnSelectRaza.HeaderText = "";
+            this.ColumnSelectRaza.MinimumWidth = 6;
+            this.ColumnSelectRaza.Name = "ColumnSelectRaza";
+            // 
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -256,6 +288,16 @@ namespace VeterinariaElBuenAmigo.views
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
+            // ColumnEditEspecie
+            // 
+            this.ColumnEditEspecie.FillWeight = 25F;
+            this.ColumnEditEspecie.HeaderText = "";
+            this.ColumnEditEspecie.Image = global::VeterinariaElBuenAmigo.Properties.Resources.edit;
+            this.ColumnEditEspecie.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ColumnEditEspecie.MinimumWidth = 6;
+            this.ColumnEditEspecie.Name = "ColumnEditEspecie";
+            this.ColumnEditEspecie.ReadOnly = true;
+            // 
             // ColumnSelectEspecie
             // 
             this.ColumnSelectEspecie.FillWeight = 25F;
@@ -275,24 +317,24 @@ namespace VeterinariaElBuenAmigo.views
             this.label3.Text = "Listas de especies";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtSearch
+            // txtChangeKey
             // 
-            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtChangeKey.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearch.BackColor = System.Drawing.Color.Transparent;
-            this.txtSearch.BaseColor = System.Drawing.Color.White;
-            this.txtSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtSearch.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txtSearch.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtSearch.Location = new System.Drawing.Point(334, 65);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.Radius = 4;
-            this.txtSearch.Size = new System.Drawing.Size(282, 42);
-            this.txtSearch.TabIndex = 16;
+            this.txtChangeKey.BackColor = System.Drawing.Color.Transparent;
+            this.txtChangeKey.BaseColor = System.Drawing.Color.White;
+            this.txtChangeKey.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
+            this.txtChangeKey.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtChangeKey.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtChangeKey.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.txtChangeKey.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtChangeKey.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtChangeKey.Location = new System.Drawing.Point(334, 65);
+            this.txtChangeKey.Name = "txtChangeKey";
+            this.txtChangeKey.PasswordChar = '\0';
+            this.txtChangeKey.Radius = 4;
+            this.txtChangeKey.Size = new System.Drawing.Size(282, 42);
+            this.txtChangeKey.TabIndex = 16;
             // 
             // label1
             // 
@@ -324,7 +366,7 @@ namespace VeterinariaElBuenAmigo.views
             this.btnAdd.ImageSize = new System.Drawing.Size(20, 20);
             this.btnAdd.Location = new System.Drawing.Point(334, 125);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
+            this.btnAdd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.btnAdd.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnAdd.OnHoverForeColor = System.Drawing.Color.White;
             this.btnAdd.OnHoverImage = null;
@@ -334,6 +376,7 @@ namespace VeterinariaElBuenAmigo.views
             this.btnAdd.TabIndex = 22;
             this.btnAdd.Text = "Guardar";
             this.btnAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // gunaSeparator1
             // 
@@ -364,28 +407,6 @@ namespace VeterinariaElBuenAmigo.views
             this.splitContainer2.SplitterDistance = 205;
             this.splitContainer2.SplitterWidth = 30;
             this.splitContainer2.TabIndex = 24;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.FillWeight = 25F;
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = global::VeterinariaElBuenAmigo.Properties.Resources.edit;
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn1.MinimumWidth = 6;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Width = 82;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.FillWeight = 25F;
-            this.dataGridViewImageColumn2.HeaderText = "";
-            this.dataGridViewImageColumn2.Image = global::VeterinariaElBuenAmigo.Properties.Resources.edit;
-            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn2.MinimumWidth = 6;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.ReadOnly = true;
-            this.dataGridViewImageColumn2.Width = 82;
             // 
             // btnDeleteDelete
             // 
@@ -503,47 +524,27 @@ namespace VeterinariaElBuenAmigo.views
             this.btnAddEspecie.Text = "Agregar Especie";
             this.btnAddEspecie.Click += new System.EventHandler(this.btnAddEspecie_Click);
             // 
-            // ColumnEditEspecie
+            // dataGridViewImageColumn1
             // 
-            this.ColumnEditEspecie.FillWeight = 25F;
-            this.ColumnEditEspecie.HeaderText = "";
-            this.ColumnEditEspecie.Image = global::VeterinariaElBuenAmigo.Properties.Resources.edit;
-            this.ColumnEditEspecie.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.ColumnEditEspecie.MinimumWidth = 6;
-            this.ColumnEditEspecie.Name = "ColumnEditEspecie";
-            this.ColumnEditEspecie.ReadOnly = true;
+            this.dataGridViewImageColumn1.FillWeight = 25F;
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::VeterinariaElBuenAmigo.Properties.Resources.edit;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Width = 82;
             // 
-            // Column1
+            // dataGridViewImageColumn2
             // 
-            this.Column1.FillWeight = 30F;
-            this.Column1.HeaderText = "Id";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Nombre de la raza";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // ColumnEditRaza
-            // 
-            this.ColumnEditRaza.FillWeight = 25F;
-            this.ColumnEditRaza.HeaderText = "";
-            this.ColumnEditRaza.Image = global::VeterinariaElBuenAmigo.Properties.Resources.edit;
-            this.ColumnEditRaza.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.ColumnEditRaza.MinimumWidth = 6;
-            this.ColumnEditRaza.Name = "ColumnEditRaza";
-            this.ColumnEditRaza.ReadOnly = true;
-            // 
-            // ColumnSelectRaza
-            // 
-            this.ColumnSelectRaza.FillWeight = 25F;
-            this.ColumnSelectRaza.HeaderText = "";
-            this.ColumnSelectRaza.MinimumWidth = 6;
-            this.ColumnSelectRaza.Name = "ColumnSelectRaza";
+            this.dataGridViewImageColumn2.FillWeight = 25F;
+            this.dataGridViewImageColumn2.HeaderText = "";
+            this.dataGridViewImageColumn2.Image = global::VeterinariaElBuenAmigo.Properties.Resources.edit;
+            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn2.MinimumWidth = 6;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.ReadOnly = true;
+            this.dataGridViewImageColumn2.Width = 82;
             // 
             // FormConfiguracion
             // 
@@ -554,7 +555,7 @@ namespace VeterinariaElBuenAmigo.views
             this.Controls.Add(this.splitContainer2);
             this.Controls.Add(this.gunaSeparator1);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.txtChangeKey);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.splitContainer1);
             this.ForeColor = System.Drawing.Color.Black;
@@ -582,7 +583,7 @@ namespace VeterinariaElBuenAmigo.views
         private System.Windows.Forms.Label label2;
         private Guna.UI.WinForms.GunaDataGridView dvgEspecies;
         private System.Windows.Forms.Label label3;
-        private Guna.UI.WinForms.GunaTextBox txtSearch;
+        private Guna.UI.WinForms.GunaTextBox txtChangeKey;
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaButton btnAdd;
         private Guna.UI.WinForms.GunaSeparator gunaSeparator1;

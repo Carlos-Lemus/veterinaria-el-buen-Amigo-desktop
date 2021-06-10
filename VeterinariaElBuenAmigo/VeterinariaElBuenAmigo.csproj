@@ -88,6 +88,7 @@
     <Compile Include="database\Conexion.cs" />
     <Compile Include="database\DAO.cs" />
     <Compile Include="database\EspecieDAO.cs" />
+    <Compile Include="database\LoginDAO.cs" />
     <Compile Include="database\ProductosDAO.cs" />
     <Compile Include="database\RazaDAO.cs" />
     <Compile Include="database\RecetasDAO.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="database\PacienteDAO.cs" />
     <Compile Include="models\Cliente.cs" />
     <Compile Include="models\Especie.cs" />
+    <Compile Include="models\Login.cs" />
     <Compile Include="models\Paciente.cs" />
     <Compile Include="models\Producto.cs" />
     <Compile Include="models\Raza.cs" />

@@ -14,11 +14,15 @@ namespace VeterinariaElBuenAmigo.views
     public partial class VentanaInicial : Form 
     {
        
-        private string clave; 
+        private string clave;
+        private LoginDAO loginDAO;
         public VentanaInicial()
         {
            
             InitializeComponent();
+
+            loginDAO = new LoginDAO();
+            clave = loginDAO.getLogin().password;
         }
 
         private void btn_Guardar_Click(object sender, EventArgs e)
@@ -30,7 +34,7 @@ namespace VeterinariaElBuenAmigo.views
             else
             {
 
-                if (txt_Clave.Text.Equals("a")) //Aqui comprueba la clave
+                if (txt_Clave.Text == clave) //Aqui comprueba la clave
                 {
                     using (MainForm main = new MainForm())
                     {
