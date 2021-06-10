@@ -9,20 +9,22 @@ namespace VeterinariaElBuenAmigo.models
     public class Cita
     {
         private int idCita;
-        private String fecha_cita;
+        private string fecha_cita;
         private int idPaciente;
-        private String motivo;
+        private string nombrePaciente;
+        private string motivo;
 
         public Cita()
         {
 
         }
 
-        public Cita(int idCita, String fecha_cita, int idPaciente, string motivo)
+        public Cita(int idCita, string fecha_cita, int idPaciente, string nombrePaciente, string motivo)
         {
             this.idCita = idCita;
             this.fecha_cita = fecha_cita;
             this.idPaciente = idPaciente;
+            this.nombrePaciente = nombrePaciente;
             this.motivo = motivo;
         }
 
@@ -38,7 +40,7 @@ namespace VeterinariaElBuenAmigo.models
             }
         }
 
-        public String Fecha_cita
+        public string Fecha_cita
         {
             get
             {
@@ -59,6 +61,18 @@ namespace VeterinariaElBuenAmigo.models
             set
             {
                 this.idPaciente = value;
+            }
+        }
+
+        public string NombrePaciente
+        {
+            get
+            {
+                return this.nombrePaciente;
+            }
+            set
+            {
+                this.NombrePaciente = value;
             }
         }
 
