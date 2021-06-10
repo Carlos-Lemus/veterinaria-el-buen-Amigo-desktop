@@ -42,7 +42,6 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.label1 = new System.Windows.Forms.Label();
             this.txtMotivo = new Guna.UI.WinForms.GunaTextBox();
             this.mascotas_collection = new Guna.UI.WinForms.GunaComboBox();
-            this.selectMascota = new System.Windows.Forms.Label();
             this.windowDragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.gunaDateTimePickerCita = new Guna.UI.WinForms.GunaDateTimePicker();
             this.panelTop.SuspendLayout();
@@ -147,7 +146,7 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.btnAdd.Location = new System.Drawing.Point(92, 658);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.OnHoverBaseColor = System.Drawing.Color.Empty;
+            this.btnAdd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.btnAdd.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnAdd.OnHoverForeColor = System.Drawing.Color.White;
             this.btnAdd.OnHoverImage = null;
@@ -248,31 +247,22 @@ namespace VeterinariaElBuenAmigo.views.citas
             // mascotas_collection
             // 
             this.mascotas_collection.BackColor = System.Drawing.Color.Transparent;
-            this.mascotas_collection.BaseColor = System.Drawing.Color.White;
-            this.mascotas_collection.BorderColor = System.Drawing.Color.Silver;
+            this.mascotas_collection.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.mascotas_collection.BorderColor = System.Drawing.Color.White;
             this.mascotas_collection.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.mascotas_collection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.mascotas_collection.FocusedColor = System.Drawing.Color.Empty;
-            this.mascotas_collection.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.mascotas_collection.ForeColor = System.Drawing.Color.Black;
+            this.mascotas_collection.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.mascotas_collection.ForeColor = System.Drawing.Color.White;
             this.mascotas_collection.FormattingEnabled = true;
             this.mascotas_collection.Location = new System.Drawing.Point(92, 263);
             this.mascotas_collection.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mascotas_collection.Name = "mascotas_collection";
             this.mascotas_collection.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.mascotas_collection.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.mascotas_collection.Size = new System.Drawing.Size(544, 31);
+            this.mascotas_collection.Radius = 5;
+            this.mascotas_collection.Size = new System.Drawing.Size(544, 40);
             this.mascotas_collection.TabIndex = 37;
-            this.mascotas_collection.SelectedIndexChanged += new System.EventHandler(this.mascotas_collection_SelectedIndexChanged);
-            // 
-            // selectMascota
-            // 
-            this.selectMascota.AutoSize = true;
-            this.selectMascota.Location = new System.Drawing.Point(491, 62);
-            this.selectMascota.Name = "selectMascota";
-            this.selectMascota.Size = new System.Drawing.Size(98, 17);
-            this.selectMascota.TabIndex = 38;
-            this.selectMascota.Text = "selectMascota";
             // 
             // windowDragControl
             // 
@@ -310,7 +300,6 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.ClientSize = new System.Drawing.Size(733, 800);
             this.Controls.Add(this.gunaDateTimePickerCita);
-            this.Controls.Add(this.selectMascota);
             this.Controls.Add(this.mascotas_collection);
             this.Controls.Add(this.lblErrorMotivo);
             this.Controls.Add(this.lblErrorFecha);
@@ -328,7 +317,6 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.Text = "Formulario de Citas";
             this.panelTop.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -346,7 +334,6 @@ namespace VeterinariaElBuenAmigo.views.citas
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaTextBox txtMotivo;
         private Guna.UI.WinForms.GunaComboBox mascotas_collection;
-        private System.Windows.Forms.Label selectMascota;
         private Guna.UI.WinForms.GunaDragControl windowDragControl;
         private Guna.UI.WinForms.GunaDateTimePicker gunaDateTimePickerCita;
     }

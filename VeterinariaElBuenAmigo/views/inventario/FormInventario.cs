@@ -28,7 +28,6 @@ namespace VeterinariaElBuenAmigo.views
 
         private void btnAddProducto_Click(object sender, EventArgs e)
         {
-            this.Parent.Parent.Visible = false;
             using(FormProductoAction formProductoAction = new FormProductoAction(false, false, productoDao))
             {
                 formProductoAction.ShowDialog();
@@ -90,7 +89,6 @@ namespace VeterinariaElBuenAmigo.views
                     }
                     cargarProductos();
                     this.Visible = true;
-                    cargarProductos();
                 }
             }
             catch (Exception exception)
