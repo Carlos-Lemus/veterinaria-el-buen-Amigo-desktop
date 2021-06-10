@@ -84,7 +84,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Margin = new System.Windows.Forms.Padding(4);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1942, 37);
+            this.panelTop.Size = new System.Drawing.Size(1940, 37);
             this.panelTop.TabIndex = 3;
             // 
             // btnMin
@@ -96,7 +96,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.btnMin.IconColor = System.Drawing.Color.White;
             this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMin.IconSize = 32;
-            this.btnMin.Location = new System.Drawing.Point(1836, 0);
+            this.btnMin.Location = new System.Drawing.Point(1834, 0);
             this.btnMin.Margin = new System.Windows.Forms.Padding(0);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(53, 37);
@@ -115,7 +115,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.btnClose.IconColor = System.Drawing.Color.White;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 32;
-            this.btnClose.Location = new System.Drawing.Point(1889, 0);
+            this.btnClose.Location = new System.Drawing.Point(1887, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(53, 37);
@@ -280,7 +280,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.generMascota.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.generMascota.OnHoverItemForeColor = System.Drawing.Color.White;
             this.generMascota.Radius = 5;
-            this.generMascota.Size = new System.Drawing.Size(367, 40);
+            this.generMascota.Size = new System.Drawing.Size(367, 33);
             this.generMascota.TabIndex = 34;
             this.generMascota.SelectedIndexChanged += new System.EventHandler(this.generMascota_SelectedIndexChanged);
             // 
@@ -301,7 +301,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.especieMascota.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.especieMascota.OnHoverItemForeColor = System.Drawing.Color.White;
             this.especieMascota.Radius = 5;
-            this.especieMascota.Size = new System.Drawing.Size(367, 40);
+            this.especieMascota.Size = new System.Drawing.Size(367, 33);
             this.especieMascota.TabIndex = 35;
             this.especieMascota.SelectedIndexChanged += new System.EventHandler(this.especieMascota_SelectedIndexChanged);
             // 
@@ -374,7 +374,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.idEspe.AutoSize = true;
             this.idEspe.Location = new System.Drawing.Point(292, 41);
             this.idEspe.Name = "idEspe";
-            this.idEspe.Size = new System.Drawing.Size(46, 17);
+            this.idEspe.Size = new System.Drawing.Size(45, 16);
             this.idEspe.TabIndex = 42;
             this.idEspe.Text = "label9";
             // 
@@ -404,7 +404,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.gener.AutoSize = true;
             this.gener.Location = new System.Drawing.Point(1211, 41);
             this.gener.Name = "gener";
-            this.gener.Size = new System.Drawing.Size(46, 17);
+            this.gener.Size = new System.Drawing.Size(45, 16);
             this.gener.TabIndex = 45;
             this.gener.Text = "label9";
             // 
@@ -413,7 +413,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.idclienteActivo.AutoSize = true;
             this.idclienteActivo.Location = new System.Drawing.Point(12, 41);
             this.idclienteActivo.Name = "idclienteActivo";
-            this.idclienteActivo.Size = new System.Drawing.Size(46, 17);
+            this.idclienteActivo.Size = new System.Drawing.Size(45, 16);
             this.idclienteActivo.TabIndex = 46;
             this.idclienteActivo.Text = "label9";
             // 
@@ -434,7 +434,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.animales_razas.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.animales_razas.OnHoverItemForeColor = System.Drawing.Color.White;
             this.animales_razas.Radius = 5;
-            this.animales_razas.Size = new System.Drawing.Size(520, 40);
+            this.animales_razas.Size = new System.Drawing.Size(520, 33);
             this.animales_razas.TabIndex = 50;
             this.animales_razas.SelectedIndexChanged += new System.EventHandler(this.animales_razas_SelectedIndexChanged);
             // 
@@ -443,7 +443,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.animal_raza.AutoSize = true;
             this.animal_raza.Location = new System.Drawing.Point(941, 41);
             this.animal_raza.Name = "animal_raza";
-            this.animal_raza.Size = new System.Drawing.Size(54, 17);
+            this.animal_raza.Size = new System.Drawing.Size(52, 16);
             this.animal_raza.TabIndex = 52;
             this.animal_raza.Text = "label10";
             // 
@@ -451,7 +451,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             // 
             this.dgvDatosPropietarios.AllowUserToAddRows = false;
             this.dgvDatosPropietarios.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
             this.dgvDatosPropietarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDatosPropietarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -462,10 +462,10 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.dgvDatosPropietarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvDatosPropietarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvDatosPropietarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -474,15 +474,15 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.Column1,
             this.Column2});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 14F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(185)))), ((int)(((byte)(175)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvDatosPropietarios.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDatosPropietarios.EnableHeadersVisualStyles = false;
-            this.dgvDatosPropietarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.dgvDatosPropietarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
             this.dgvDatosPropietarios.Location = new System.Drawing.Point(68, 292);
             this.dgvDatosPropietarios.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDatosPropietarios.Name = "dgvDatosPropietarios";
@@ -494,28 +494,28 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.dgvDatosPropietarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDatosPropietarios.Size = new System.Drawing.Size(715, 745);
             this.dgvDatosPropietarios.TabIndex = 53;
-            this.dgvDatosPropietarios.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
-            this.dgvDatosPropietarios.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvDatosPropietarios.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Teal;
+            this.dgvDatosPropietarios.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
             this.dgvDatosPropietarios.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.dgvDatosPropietarios.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.dgvDatosPropietarios.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.dgvDatosPropietarios.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.dgvDatosPropietarios.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.dgvDatosPropietarios.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.dgvDatosPropietarios.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.dgvDatosPropietarios.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
+            this.dgvDatosPropietarios.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.dgvDatosPropietarios.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvDatosPropietarios.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.dgvDatosPropietarios.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvDatosPropietarios.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvDatosPropietarios.ThemeStyle.HeaderStyle.Height = 40;
             this.dgvDatosPropietarios.ThemeStyle.ReadOnly = false;
-            this.dgvDatosPropietarios.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvDatosPropietarios.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
             this.dgvDatosPropietarios.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvDatosPropietarios.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.dgvDatosPropietarios.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.dgvDatosPropietarios.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dgvDatosPropietarios.ThemeStyle.RowsStyle.Height = 40;
-            this.dgvDatosPropietarios.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
-            this.dgvDatosPropietarios.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.dgvDatosPropietarios.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(185)))), ((int)(((byte)(175)))));
+            this.dgvDatosPropietarios.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.dgvDatosPropietarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatosPropietarios_CellDoubleClick);
             // 
             // Column1
@@ -620,7 +620,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.ClientSize = new System.Drawing.Size(1942, 1102);
+            this.ClientSize = new System.Drawing.Size(1940, 1100);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label1);
