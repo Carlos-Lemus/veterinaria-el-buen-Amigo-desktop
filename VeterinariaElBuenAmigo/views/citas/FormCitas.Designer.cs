@@ -87,7 +87,7 @@ namespace VeterinariaElBuenAmigo.views
             this.btnAddCita.ImageSize = new System.Drawing.Size(20, 20);
             this.btnAddCita.Location = new System.Drawing.Point(575, 92);
             this.btnAddCita.Name = "btnAddCita";
-            this.btnAddCita.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
+            this.btnAddCita.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.btnAddCita.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnAddCita.OnHoverForeColor = System.Drawing.Color.White;
             this.btnAddCita.OnHoverImage = null;
