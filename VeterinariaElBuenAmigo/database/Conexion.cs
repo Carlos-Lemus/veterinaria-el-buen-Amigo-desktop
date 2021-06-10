@@ -65,43 +65,19 @@ namespace VeterinariaElBuenAmigo.database
                                 descripcion TEXT,
                                 fecha_adquisicion TEXT);
 
-
-                            CREATE TABLE vitaminas(
-                                idVitamina INTEGER PRIMARY KEY AUTOINCREMENT, 
-                                producto VARCHAR(150),
-                                refuerzo VARCHAR(150));
-
-
-                            CREATE TABLE vacunas(
-                                idVacuna INTEGER PRIMARY KEY AUTOINCREMENT, 
-                                nombreVacuna VARCHAR(150),
-                                dosis INTEGER,
-                                padecimiento VARCHAR(100),
-                                refuerzo VARCHAR(150));
-
-
-                            CREATE TABLE ResetaVacunas(
-                                idResetaVacuna INTEGER PRIMARY KEY AUTOINCREMENT, 
-                                idPaciente INTEGER,
-                                idVacuna INTEGER,
-                                FOREIGN KEY (idPaciente) REFERENCES pacientes(idPaciente)
-                                ON DELETE CASCADE
-                                ON UPDATE CASCADE
-                                FOREIGN KEY (idVacuna) REFERENCES vacunas(idVacuna)
+                            CREATE TABLE recetas(
+                                idReceta INTEGER PRIMARY KEY AUTOINCREMENT, 
+								idPaciente INTEGER,
+                                tipoReceta INTEGER,
+								padecimiento VARCHAR(100),
+								nombre_Producto VARCHAR(150),
+								dosis INTEGER,
+								refuerzo VARCHAR(150), 
+								FOREIGN KEY (idPaciente) REFERENCES pacientes(idPaciente)
                                 ON DELETE CASCADE
                                 ON UPDATE CASCADE);
 
-                            CREATE TABLE ResetaVitaminas(
-                                idResetaVitamina INTEGER PRIMARY KEY AUTOINCREMENT, 
-                                idPaciente INTEGER,
-                                idVitamina INTEGER,
-                                FOREIGN KEY (idPaciente) REFERENCES pacientes(idPaciente)
-                                ON DELETE CASCADE
-                                ON UPDATE CASCADE
-                                FOREIGN KEY (idVitamina) REFERENCES vitaminas(idVitamina)
-                                ON DELETE CASCADE
-                                ON UPDATE CASCADE);
-
+                            
                             CREATE TABLE clientes(
                                 idCliente INTEGER PRIMARY KEY AUTOINCREMENT, 
                                 nombreCliente VARCHAR(150),
@@ -182,6 +158,41 @@ namespace VeterinariaElBuenAmigo.database
             ON UPDATE CASCADE)
 
 
+            CREATE TABLE vitaminas(
+                                idVitamina INTEGER PRIMARY KEY AUTOINCREMENT, 
+                                producto VARCHAR(150),
+                                refuerzo VARCHAR(150));
+
+
+                            CREATE TABLE vacunas(
+                                idVacuna INTEGER PRIMARY KEY AUTOINCREMENT, 
+                                nombreVacuna VARCHAR(150),
+                                dosis INTEGER,
+                                padecimiento VARCHAR(100),
+                                refuerzo VARCHAR(150));
+
+
+                            CREATE TABLE ResetaVacunas(
+                                idResetaVacuna INTEGER PRIMARY KEY AUTOINCREMENT, 
+                                idPaciente INTEGER,
+                                idVacuna INTEGER,
+                                FOREIGN KEY (idPaciente) REFERENCES pacientes(idPaciente)
+                                ON DELETE CASCADE
+                                ON UPDATE CASCADE
+                                FOREIGN KEY (idVacuna) REFERENCES vacunas(idVacuna)
+                                ON DELETE CASCADE
+                                ON UPDATE CASCADE);
+
+                            CREATE TABLE ResetaVitaminas(
+                                idResetaVitamina INTEGER PRIMARY KEY AUTOINCREMENT, 
+                                idPaciente INTEGER,
+                                idVitamina INTEGER,
+                                FOREIGN KEY (idPaciente) REFERENCES pacientes(idPaciente)
+                                ON DELETE CASCADE
+                                ON UPDATE CASCADE
+                                FOREIGN KEY (idVitamina) REFERENCES vitaminas(idVitamina)
+                                ON DELETE CASCADE
+                                ON UPDATE CASCADE);
             */
         }
     }

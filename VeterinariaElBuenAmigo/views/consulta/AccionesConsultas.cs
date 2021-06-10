@@ -66,6 +66,8 @@ namespace VeterinariaElBuenAmigo.views.consulta
                 || verificarVacio(txt_Temperatura.Text) || verificarVacio(txt_controlCelo.Text)
                 || verificarVacio(txt_Comentarios.Text)) {
 
+                MessageBox.Show("Tiene Campos Vacios", "Precaución", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                 if (verificarVacio(txt_Padecimineto.Text)) campos_padecimineto.Visible = true;
                 if (verificarVacio(txt_Temperatura.Text)) campos_temperatura.Visible = true;
                 if (verificarVacio(txt_Peso.Text)) campos_peso.Visible = true;
@@ -102,8 +104,8 @@ namespace VeterinariaElBuenAmigo.views.consulta
 
         private void ActualizarTabla()
         {
-
-                tbl_ConsultasAnteriores.Rows.Clear();
+            tbl_ConsultasAnteriores.Columns["Column1"].Visible = false;
+            tbl_ConsultasAnteriores.Rows.Clear();
             tbl_ConsultasAnteriores.Refresh();
                
              
@@ -234,12 +236,20 @@ namespace VeterinariaElBuenAmigo.views.consulta
 
         private void btn_Vacunas_Click(object sender, EventArgs e)
         {
+            using (RecetasForm formRecetas = new RecetasForm(this.Nombre, this.id, 1))
+            {
 
+                formRecetas.ShowDialog();
+            }
         }
 
         private void btn_Vitaminas_Click(object sender, EventArgs e)
         {
+            using (RecetasForm formRecetas = new RecetasForm(this.Nombre, this.id, 2))
+            {
 
+                formRecetas.ShowDialog();
+            }
         }
 
         private void txt_Padecimineto_KeyPress(object sender, KeyPressEventArgs e)
