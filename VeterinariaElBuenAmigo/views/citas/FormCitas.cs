@@ -190,7 +190,7 @@ namespace VeterinariaElBuenAmigo.views
             datos = CloneDataGrid(dvgCitasProgramadas);
 
             int n = datos.Columns.Count;
-            MessageBox.Show(n.ToString());
+            
             if (n > 5)
             {
                 //datos.Columns.RemoveAt(4);

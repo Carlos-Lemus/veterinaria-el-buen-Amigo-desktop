@@ -137,5 +137,18 @@ namespace VeterinariaElBuenAmigo.views
             easyHTMLReports1.AddDatagridView(tbl_Consulta);
             easyHTMLReports1.ShowPrintPreviewDialog();
         }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            Image imagen = Resources.Recurso_1_0_5x;
+            easyHTMLReports1.AddImage(imagen, "width = 100");
+
+            easyHTMLReports1.AddString("<h1>Tabla Pacientes - Consulta</h1>");
+
+            easyHTMLReports1.AddHorizontalRule();
+
+            easyHTMLReports1.AddDatagridView(tbl_Consulta);
+            easyHTMLReports1.ShowPrintPreviewDialog();
+        }
     }
 }

@@ -335,34 +335,6 @@ namespace VeterinariaElBuenAmigo.views.consulta
             return cloneDataGridView;
         }
 
-        private void gunaButton1_Click(object sender, EventArgs e)
-        {
-            DataGridView datos;
-            datos = CloneDataGrid(tbl_ConsultasAnteriores);
-
-            int n = datos.Columns.Count;
-
-            if (n > 6)
-            {
-                datos.Columns.RemoveAt(6);
-            }
-
-            //datos.Columns.RemoveAt(7);
-            Image imagen = Resources.Recurso_1_0_5x;
-
-            easyHTMLReports1.Clear();
-
-            easyHTMLReports1.AddImage(imagen, "width = 100");          
-            easyHTMLReports1.AddLineBreak();
-            easyHTMLReports1.AddLineBreak();
-            easyHTMLReports1.AddString("<h2>Consultas de " + this.Nombre + "</h2>");
-            easyHTMLReports1.AddHorizontalRule();
-            easyHTMLReports1.AddDatagridView(datos);
-            AgregarTablasImpresion(1,1,1);
-
-            easyHTMLReports1.ShowPrintPreviewDialog();
-        }
-
         private void AgregarTablasImpresion(int consultas, int vacunas, int vitaminas)
         {     
               
@@ -424,6 +396,35 @@ namespace VeterinariaElBuenAmigo.views.consulta
             else { }
 
         }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            DataGridView datos;
+            datos = CloneDataGrid(tbl_ConsultasAnteriores);
+
+            int n = datos.Columns.Count;
+
+            if (n > 6)
+            {
+                datos.Columns.RemoveAt(6);
+            }
+
+            //datos.Columns.RemoveAt(7);
+            Image imagen = Resources.Recurso_1_0_5x;
+
+            easyHTMLReports1.Clear();
+
+            easyHTMLReports1.AddImage(imagen, "width = 100");
+            easyHTMLReports1.AddLineBreak();
+            easyHTMLReports1.AddLineBreak();
+            easyHTMLReports1.AddString("<h2>Consultas de " + this.Nombre + "</h2>");
+            easyHTMLReports1.AddHorizontalRule();
+            easyHTMLReports1.AddDatagridView(datos);
+            AgregarTablasImpresion(1, 1, 1);
+
+            easyHTMLReports1.ShowPrintPreviewDialog();
+        }
+
         private void tbl_ConsultasAnteriores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (tbl_ConsultasAnteriores.Columns[e.ColumnIndex].Name == "ColumnEdit")
