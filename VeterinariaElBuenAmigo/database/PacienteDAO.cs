@@ -15,7 +15,7 @@ namespace VeterinariaElBuenAmigo.database
 
         // LISTA PARA ALMACENAR LOS PACIENTES
         private List<Paciente> lista;
-        private List<Paciente> listaMascotasDePropietario;
+        private List<templateClientePaciente> listaMascotasDePropietario;
         private List<Especie> listaEspecies;
         private List<Raza> listaRazas;
 
@@ -27,7 +27,7 @@ namespace VeterinariaElBuenAmigo.database
             lista = new List<Paciente>();            
             listaEspecies = new List<Especie>();
             listaRazas = new List<Raza>();
-            listaMascotasDePropietario = new List<Paciente>();
+            listaMascotasDePropietario = new List<templateClientePaciente>();
             listaTemplateCP = new List<templateClientePaciente>();
         }
 
@@ -191,7 +191,7 @@ namespace VeterinariaElBuenAmigo.database
             return p;
         }
 
-        public List<Paciente> getListMascotasDePropietario(int id)
+        public List<templateClientePaciente> getListMascotasDePropietario(int id)
         {
             try
             {
@@ -201,7 +201,7 @@ namespace VeterinariaElBuenAmigo.database
 
                 using (SQLiteCommand command = new SQLiteCommand())
                 {
-                    string sql = $"SELECT * FROM {TABLE_PACIENTE} WHERE idCliente = {id}";
+                    string sql = $"SELECT p.{IDPACIENTE}, p.{NOMBREPACIENTE}, c.{NOMBRECLIENTE}, p.{COLOR}, p.{GENERO}, e.{NOMBRE_ESPECIE}, r.{NOMBRE_RAZA} FROM {TABLE_PACIENTE} AS p INNER JOIN {TABLE_CLIENTE} AS c ON p.{IDCLIENTE} = c.{IDCLIENTE} INNER JOIN {TABLE_ESPECIE} AS e ON p.{IDESPECIE} = e.{IDESPECIE} INNER JOIN {TABLE_RAZA} AS r ON p.{IDRAZA} = r.{IDRAZA} WHERE p.{IDCLIENTE} = {id}";                    
                     command.CommandText = sql;
                     command.Connection = Conexion.Conn;
 
@@ -216,19 +216,18 @@ namespace VeterinariaElBuenAmigo.database
                         {
                             while (result.Read())
                             {
-                                Paciente paciente = new Paciente();
 
-                                paciente.idPaciente = Convert.ToInt32(result[IDPACIENTE].ToString());
-                                paciente.nombrePaciente = result[NOMBREPACIENTE].ToString();
-                                paciente.fechaNacimiento = result[FECHA_NACIMIENTO].ToString();
-                                paciente.genero = result[GENERO].ToString();
-                                paciente.color = result[COLOR].ToString();
-                                paciente.caracteristicasEspeciales = result[CARACTERISTICAS_ESPECIALES].ToString();
-                                paciente.idCliente = Convert.ToInt32(result[IDCLIENTE].ToString());
-                                paciente.idRaza = Convert.ToInt32(result[IDRAZA].ToString());
-                                paciente.idEspecie = Convert.ToInt32(result[IDESPECIE].ToString());
+                                templateClientePaciente consulta = new templateClientePaciente();
 
-                                listaMascotasDePropietario.Add(paciente);
+                                consulta.idPaciente = Convert.ToInt32(result[IDPACIENTE].ToString());
+                                consulta.nombrePaciente = result[NOMBREPACIENTE].ToString();
+                                consulta.nombreCliente = result[NOMBRECLIENTE].ToString();
+                                consulta.genero = result[GENERO].ToString();
+                                consulta.color = result[COLOR].ToString();
+                                consulta.nombreEspecie = result[NOMBRE_ESPECIE].ToString();
+                                consulta.nombreRaza = result[NOMBRE_RAZA].ToString();
+
+                                listaMascotasDePropietario.Add(consulta);
                             }
                         }
                     }
