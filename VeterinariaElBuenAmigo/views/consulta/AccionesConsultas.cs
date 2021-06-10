@@ -10,6 +10,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using VeterinariaElBuenAmigo.database;
 using VeterinariaElBuenAmigo.models;
+using KimToo;
+using VeterinariaElBuenAmigo.Properties;
+using System.Threading;
+using System.Globalization;
 
 namespace VeterinariaElBuenAmigo.views.consulta
 {
@@ -27,6 +31,8 @@ namespace VeterinariaElBuenAmigo.views.consulta
        
         public AccionesConsultas(int id, string Nombre)
         {
+        //    Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
+
             Guna.UI.Lib.ScrollBar.PanelScrollHelper Scroll;
             consultaDao = new ConsultaDAO();
 
@@ -66,6 +72,8 @@ namespace VeterinariaElBuenAmigo.views.consulta
                 || verificarVacio(txt_Temperatura.Text) || verificarVacio(txt_controlCelo.Text)
                 || verificarVacio(txt_Comentarios.Text)) {
 
+                MessageBox.Show("Tiene Campos Vacios", "Precaución", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                 if (verificarVacio(txt_Padecimineto.Text)) campos_padecimineto.Visible = true;
                 if (verificarVacio(txt_Temperatura.Text)) campos_temperatura.Visible = true;
                 if (verificarVacio(txt_Peso.Text)) campos_peso.Visible = true;
@@ -102,8 +110,8 @@ namespace VeterinariaElBuenAmigo.views.consulta
 
         private void ActualizarTabla()
         {
-
-                tbl_ConsultasAnteriores.Rows.Clear();
+            tbl_ConsultasAnteriores.Columns["Column1"].Visible = false;
+            tbl_ConsultasAnteriores.Rows.Clear();
             tbl_ConsultasAnteriores.Refresh();
                
              
@@ -112,9 +120,10 @@ namespace VeterinariaElBuenAmigo.views.consulta
 
                 foreach (Consulta consulta in listaConsulta)
                 {
-                tbl_ConsultasAnteriores.Rows.Add(consulta.IdConsulta, consulta.Padecimineto, consulta.Temperatura+ " °C",
-                        consulta.Peso+" Lbs", consulta.ControldeCelo, consulta.Comentarios);
-                    
+
+                tbl_ConsultasAnteriores.Rows.Add(consulta.IdConsulta, consulta.Padecimineto, consulta.Temperatura + " °C",
+                       consulta.Peso + " Lbs", consulta.ControldeCelo, consulta.Comentarios);
+    
                 }
             tbl_ConsultasAnteriores.Refresh();
         }
@@ -234,12 +243,20 @@ namespace VeterinariaElBuenAmigo.views.consulta
 
         private void btn_Vacunas_Click(object sender, EventArgs e)
         {
+            using (RecetasForm formRecetas = new RecetasForm(this.Nombre, this.id, 1))
+            {
 
+                formRecetas.ShowDialog();              
+            }
         }
 
         private void btn_Vitaminas_Click(object sender, EventArgs e)
         {
+            using (RecetasForm formRecetas = new RecetasForm(this.Nombre, this.id, 2))
+            {
 
+                formRecetas.ShowDialog();
+            }
         }
 
         private void txt_Padecimineto_KeyPress(object sender, KeyPressEventArgs e)
@@ -279,6 +296,66 @@ namespace VeterinariaElBuenAmigo.views.consulta
 
                 }
             }
+        }
+
+        public DataGridView CloneDataGrid(DataGridView mainDataGridView)
+        {
+            DataGridView cloneDataGridView = new DataGridView();
+
+            if (cloneDataGridView.Columns.Count == 0)
+            {
+                foreach (DataGridViewColumn datagrid in mainDataGridView.Columns)
+                {
+                    cloneDataGridView.Columns.Add(datagrid.Clone() as DataGridViewColumn);
+                }
+            }
+
+            DataGridViewRow dataRow = new DataGridViewRow();
+
+            for (int i = 0; i < mainDataGridView.Rows.Count; i++)
+            {
+                dataRow = (DataGridViewRow)mainDataGridView.Rows[i].Clone();
+                int Index = 0;
+                foreach (DataGridViewCell cell in mainDataGridView.Rows[i].Cells)
+                {
+                    dataRow.Cells[Index].Value = cell.Value;
+                    Index++;
+                }
+                cloneDataGridView.Rows.Add(dataRow);
+            }
+            cloneDataGridView.AllowUserToAddRows = false;
+            cloneDataGridView.Refresh();
+
+
+            return cloneDataGridView;
+        }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+            DataGridView datos; 
+            datos = CloneDataGrid(tbl_ConsultasAnteriores);
+
+            int n = datos.Columns.Count;
+
+            if (n > 6)
+            {
+                datos.Columns.RemoveAt(6);
+            }
+
+            //datos.Columns.RemoveAt(7);
+            Image imagen = Resources.Recurso_1_0_5x;
+
+            easyHTMLReports1.Clear();
+
+            easyHTMLReports1.AddImage(imagen, "width = 100");
+
+            easyHTMLReports1.AddString("<h1>Consultas de "+this.Nombre+"</h1>");
+
+            easyHTMLReports1.AddHorizontalRule();
+
+
+            easyHTMLReports1.AddDatagridView(datos);
+            easyHTMLReports1.ShowPrintPreviewDialog();
         }
 
         private void tbl_ConsultasAnteriores_CellClick(object sender, DataGridViewCellEventArgs e)

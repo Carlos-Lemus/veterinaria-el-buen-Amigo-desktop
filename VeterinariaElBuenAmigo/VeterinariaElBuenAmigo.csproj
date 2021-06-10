@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EasyHTMLReports, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EasyHTMLReports.1.0.0\lib\EasyHTMLReports.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -85,6 +88,7 @@
     <Compile Include="database\Conexion.cs" />
     <Compile Include="database\DAO.cs" />
     <Compile Include="database\ProductosDAO.cs" />
+    <Compile Include="database\RecetasDAO.cs" />
     <Compile Include="models\Cita.cs" />
     <Compile Include="database\PacienteDAO.cs" />
     <Compile Include="models\Cliente.cs" />
@@ -92,6 +96,7 @@
     <Compile Include="models\Paciente.cs" />
     <Compile Include="models\Producto.cs" />
     <Compile Include="models\Raza.cs" />
+    <Compile Include="models\Recetas.cs" />
     <Compile Include="models\templateClientePaciente.cs" />
     <Compile Include="models\Consulta.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -110,6 +115,12 @@
     </Compile>
     <Compile Include="views\consulta\AccionesConsultas.Designer.cs">
       <DependentUpon>AccionesConsultas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\consulta\RecetasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\consulta\RecetasForm.Designer.cs">
+      <DependentUpon>RecetasForm.cs</DependentUpon>
     </Compile>
     <Compile Include="views\FormConfiguracion.cs">
       <SubType>Form</SubType>
@@ -191,6 +202,12 @@
     <Compile Include="views\propietarios\FormPropietarioInfo.Designer.cs">
       <DependentUpon>FormPropietarioInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\VentanaInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\VentanaInicial.Designer.cs">
+      <DependentUpon>VentanaInicial.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="views\citas\FormCitaActions.resx">
       <DependentUpon>FormCitaActions.cs</DependentUpon>
     </EmbeddedResource>
@@ -199,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\consulta\AccionesConsultas.resx">
       <DependentUpon>AccionesConsultas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\consulta\RecetasForm.resx">
+      <DependentUpon>RecetasForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\FormConfiguracion.resx">
       <DependentUpon>FormConfiguracion.cs</DependentUpon>
@@ -241,6 +261,9 @@
     <EmbeddedResource Include="views\propietarios\FormPropietarioInfo.resx">
       <DependentUpon>FormPropietarioInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\VentanaInicial.resx">
+      <DependentUpon>VentanaInicial.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -275,6 +298,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon-edit-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recurso 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recurso 1%400.5x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
