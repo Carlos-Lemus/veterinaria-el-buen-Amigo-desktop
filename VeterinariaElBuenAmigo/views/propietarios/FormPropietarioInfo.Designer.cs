@@ -246,7 +246,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.dgvMascotas1.RowHeadersWidth = 51;
             this.dgvMascotas1.RowTemplate.Height = 40;
             this.dgvMascotas1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMascotas1.Size = new System.Drawing.Size(1016, 354);
+            this.dgvMascotas1.Size = new System.Drawing.Size(995, 354);
             this.dgvMascotas1.TabIndex = 41;
             this.dgvMascotas1.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Teal;
             this.dgvMascotas1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
@@ -318,7 +318,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.label4.Location = new System.Drawing.Point(29, 21);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(408, 37);
+            this.label4.Size = new System.Drawing.Size(387, 37);
             this.label4.TabIndex = 28;
             this.label4.Text = "Mascotas del propietario";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -418,7 +418,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.lblTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTelefono.Size = new System.Drawing.Size(576, 34);
+            this.lblTelefono.Size = new System.Drawing.Size(555, 34);
             this.lblTelefono.TabIndex = 23;
             this.lblTelefono.Text = "Telefono ";
             this.lblTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -444,7 +444,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.lblId.Location = new System.Drawing.Point(300, 495);
             this.lblId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(576, 34);
+            this.lblId.Size = new System.Drawing.Size(555, 34);
             this.lblId.TabIndex = 32;
             this.lblId.Text = "Id propietario";
             this.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -458,7 +458,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.lblCorreo.Location = new System.Drawing.Point(300, 754);
             this.lblCorreo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(576, 34);
+            this.lblCorreo.Size = new System.Drawing.Size(555, 34);
             this.lblCorreo.TabIndex = 24;
             this.lblCorreo.Text = "Correo ";
             this.lblCorreo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

@@ -305,6 +305,10 @@
   <ItemGroup>
     <None Include="Resources\Recurso 1%400.5x.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ios-close1.png" />
+    <None Include="Resources\ios-close11.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
