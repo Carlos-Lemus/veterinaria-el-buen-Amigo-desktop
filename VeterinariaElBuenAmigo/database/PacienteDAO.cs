@@ -15,6 +15,7 @@ namespace VeterinariaElBuenAmigo.database
 
         // LISTA PARA ALMACENAR LOS PACIENTES
         private List<Paciente> lista;
+        private List<templateClientePaciente> listaMascotasDePropietario;
         private List<Especie> listaEspecies;
         private List<Raza> listaRazas;
 
@@ -26,6 +27,7 @@ namespace VeterinariaElBuenAmigo.database
             lista = new List<Paciente>();            
             listaEspecies = new List<Especie>();
             listaRazas = new List<Raza>();
+            listaMascotasDePropietario = new List<templateClientePaciente>();
             listaTemplateCP = new List<templateClientePaciente>();
         }
 
@@ -115,6 +117,8 @@ namespace VeterinariaElBuenAmigo.database
 
                 conn.Open();
 
+                deleteCitas(idMascota);
+
                 using (SQLiteCommand command = new SQLiteCommand())
                 {
                     string sql = $"DELETE FROM {TABLE_PACIENTE} WHERE {IDPACIENTE} = @{IDPACIENTE};";
@@ -134,6 +138,28 @@ namespace VeterinariaElBuenAmigo.database
                 MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 return false;
+            }
+        }
+
+        private void deleteCitas(int idMascota)
+        {
+            try
+            {
+
+                using (SQLiteCommand command = new SQLiteCommand())
+                {
+                    string sql = $"DELETE FROM {TABLE_CITA} WHERE {IDPACIENTE} = @{IDPACIENTE};";
+
+                    command.CommandText = sql;
+                    command.Connection = Conexion.Conn;
+                    command.Parameters.AddWithValue($"@{IDPACIENTE}", idMascota);
+                    command.ExecuteNonQuery();
+
+                }
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -170,7 +196,7 @@ namespace VeterinariaElBuenAmigo.database
                                 p.color = result[COLOR].ToString();
                                 p.caracteristicasEspeciales = result[CARACTERISTICAS_ESPECIALES].ToString();
                                 p.idCliente = Convert.ToInt32(result[IDCLIENTE].ToString());
-                                p.idRaza = Convert.ToInt32(result[IDRAZA].ToString());
+                                p.idRaza = Int32.Parse(result[IDRAZA].ToString());
                                 p.idEspecie = Convert.ToInt32(result[IDESPECIE].ToString());
                             }
                         }
@@ -189,6 +215,59 @@ namespace VeterinariaElBuenAmigo.database
             return p;
         }
 
+        public List<templateClientePaciente> getListMascotasDePropietario(int id)
+        {
+            try
+            {
+                conn = Conexion.Conn;
+
+                conn.Open();
+
+                using (SQLiteCommand command = new SQLiteCommand())
+                {
+                    string sql = $"SELECT p.{IDPACIENTE}, p.{NOMBREPACIENTE}, c.{NOMBRECLIENTE}, p.{COLOR}, p.{GENERO}, e.{NOMBRE_ESPECIE}, r.{NOMBRE_RAZA} FROM {TABLE_PACIENTE} AS p INNER JOIN {TABLE_CLIENTE} AS c ON p.{IDCLIENTE} = c.{IDCLIENTE} INNER JOIN {TABLE_ESPECIE} AS e ON p.{IDESPECIE} = e.{IDESPECIE} INNER JOIN {TABLE_RAZA} AS r ON p.{IDRAZA} = r.{IDRAZA} WHERE p.{IDCLIENTE} = {id}";                    
+                    command.CommandText = sql;
+                    command.Connection = Conexion.Conn;
+
+                    using (SQLiteDataReader result = command.ExecuteReader())
+                    {
+                        if (listaMascotasDePropietario.Count > 0)
+                        {
+                            listaMascotasDePropietario.Clear();
+                        }
+
+                        if (result.HasRows)
+                        {
+                            while (result.Read())
+                            {
+
+                                templateClientePaciente consulta = new templateClientePaciente();
+
+                                consulta.idPaciente = Convert.ToInt32(result[IDPACIENTE].ToString());
+                                consulta.nombrePaciente = result[NOMBREPACIENTE].ToString();
+                                consulta.nombreCliente = result[NOMBRECLIENTE].ToString();
+                                consulta.genero = result[GENERO].ToString();
+                                consulta.color = result[COLOR].ToString();
+                                consulta.nombreEspecie = result[NOMBRE_ESPECIE].ToString();
+                                consulta.nombreRaza = result[NOMBRE_RAZA].ToString();
+
+                                listaMascotasDePropietario.Add(consulta);
+                            }
+                        }
+                    }
+
+                }
+
+                conn.Close();
+
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return listaMascotasDePropietario;
+        }
 
 
         // FUNCION QUE DEVUELVE TODOS LOS PACIENTES 

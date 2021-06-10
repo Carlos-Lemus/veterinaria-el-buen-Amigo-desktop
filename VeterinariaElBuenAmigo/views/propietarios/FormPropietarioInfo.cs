@@ -16,8 +16,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
     public partial class FormPropietarioInfo : Form
     {
         private ClienteDAO clienteDao;
-        private PacienteDAO pacienteDao;
-        private List<Paciente> lista;
+        private PacienteDAO pacienteDao;        
 
         private int posicionFormX;
         private int posicionFormY;
@@ -33,20 +32,19 @@ namespace VeterinariaElBuenAmigo.views.propietarios
         {
             InitializeComponent();
 
-            pacienteDao = new PacienteDAO();
+            pacienteDao = new PacienteDAO();            
 
             Guna.UI.Lib.ScrollBar.PanelScrollHelper Scroll;
             Scroll = new Guna.UI.Lib.ScrollBar.PanelScrollHelper(panelContenido, gunaVScrollBar1, true);
-            Scroll.UpdateScrollBar();
-
-            cargarMascotas();
+            Scroll.UpdateScrollBar();            
 
             position = new Point(Location.X, Location.Y);
             size = new Size(Size.Width, Size.Height);
 
             this.clienteDao = clienteDao;
 
-            this.id = Convert.ToInt32(id);
+            this.id = Convert.ToInt32(id);            
+            cargarMascotas();
 
             lblId.Text = id;
             lblNombre.Text = nombreCompleto;
@@ -96,32 +94,31 @@ namespace VeterinariaElBuenAmigo.views.propietarios
         private void btnMin_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }        
+
+        private void cargarMascotas()
+        {
+            List<templateClientePaciente> lista = new List<templateClientePaciente>();
+            if (dgvMascotas1.RowCount > 0)
+            {
+                dgvMascotas1.Rows.Clear();
+                lista.Clear();
+            }
+
+            lista = pacienteDao.getListMascotasDePropietario(this.id);
+
+            foreach (templateClientePaciente consulta in lista)
+            {
+                dgvMascotas1.Rows.Add(consulta.idPaciente, consulta.nombrePaciente, consulta.nombreRaza, consulta.nombreEspecie, consulta.genero);
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //this.Parent.Parent.Visible = false;
-
-            using (FormGuardarMascota formPropietarioActions = new FormGuardarMascota(false, this.id))
+            using (FormGuardarMascota formPropietarioActions = new FormGuardarMascota())
             {
 
                 formPropietarioActions.ShowDialog();
-            }            
-        }
-
-        private void cargarMascotas()
-        {
-            if (dgvMascotas.RowCount > 0)
-            {
-                dgvMascotas.Rows.Clear();
-                lista.Clear();
-            }
-
-            lista = pacienteDao.getList();
-
-            foreach (Paciente paciente in lista)
-            {
-                dgvMascotas.Rows.Add(paciente.idPaciente, paciente.nombrePaciente, paciente.idRaza, paciente.idEspecie, paciente.genero);
             }
         }
     }

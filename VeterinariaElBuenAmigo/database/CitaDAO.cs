@@ -52,6 +52,46 @@ namespace VeterinariaElBuenAmigo.database
             }
         }
 
+        public Cita getCita(int id)
+        {
+            Cita cita = new Cita();
+            try
+            {
+                conn = Conexion.Conn;
+                conn.Open();
+
+                using (SQLiteCommand command = new SQLiteCommand())
+                {
+                    string sql = $"SELECT * FROM {TABLE_CITA} AS c INNER JOIN {TABLE_PACIENTE} AS p ON c.{IDPACIENTE} = p.{IDPACIENTE} WHERE {IDCITA} = @{IDCITA}";
+                    command.CommandText = sql;
+                    command.Connection = Conexion.Conn;
+                    command.Parameters.AddWithValue($"@{IDCITA}", id);
+
+                    using (SQLiteDataReader result = command.ExecuteReader())
+                    {
+                        if (result.HasRows)
+                        {
+                            while (result.Read())
+                            {
+                                cita.IdCita = Convert.ToInt32(result[IDCITA].ToString());
+                                cita.Fecha_cita = result[FECHA_CITA].ToString();
+                                cita.IdPaciente = Convert.ToInt32(result[IDPACIENTE].ToString());
+                                cita.NombrePaciente = result[NOMBREPACIENTE].ToString();
+                                cita.Motivo = result[MOTIVO].ToString();
+                            }
+                        }
+                    }
+                }
+                conn.Close();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return cita;
+        }
+
         public List<Cita> getListaCitas()
         {
             try
@@ -61,7 +101,7 @@ namespace VeterinariaElBuenAmigo.database
 
                 using (SQLiteCommand command = new SQLiteCommand())
                 {
-                    string sql = $"SELECT * FROM {TABLE_CITA}";
+                    string sql = $"SELECT * FROM {TABLE_CITA} AS c INNER JOIN {TABLE_PACIENTE} AS p ON c.{IDPACIENTE} = p.{IDPACIENTE}";
                     command.CommandText = sql;
                     command.Connection = Conexion.Conn;
 
@@ -84,6 +124,7 @@ namespace VeterinariaElBuenAmigo.database
                                 cita.IdCita = Convert.ToInt32(result[IDCITA].ToString());
                                 cita.Fecha_cita = result[FECHA_CITA].ToString();
                                 cita.IdPaciente = Convert.ToInt32(result[IDPACIENTE].ToString());
+                                cita.NombrePaciente = result[NOMBREPACIENTE].ToString();
                                 cita.Motivo = result[MOTIVO].ToString();
 
                                 listaCitas.Add(cita);

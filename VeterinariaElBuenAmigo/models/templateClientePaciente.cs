@@ -11,7 +11,9 @@ namespace VeterinariaElBuenAmigo.models
         public int idPaciente { get; set; }
         public string nombrePaciente { get; set; }
         public string nombreCliente { get; set; }
+        public string nombreEspecie { get; set; }
         public string genero { get; set; }
+        public string nombreRaza { get; set;}
         public string color { get; set; }
 
         public templateClientePaciente()

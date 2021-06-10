@@ -24,21 +24,7 @@ namespace VeterinariaElBuenAmigo.views
             InitializeComponent();
             pacienteDao = new PacienteDAO();
             cargarDatosCP();
-        }
-
-        private void dgvMascotas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            lblPacientes.Text = "Index: " + e.RowIndex;
-            string id = dgvMascotas.Rows[e.RowIndex].Cells[0].Value.ToString();
-
-            using (FormGuardarMascota formPropietarioInfo = new FormGuardarMascota(true, Int32.Parse(id)))
-            {
-
-                formPropietarioInfo.ShowDialog();
-            }
-
-            cargarDatosCP();
-        }
+        }        
 
         //CARGA ALGUNOS DATOS DE LA TABLA PACIENTES
         private void cargarDatos()
@@ -77,6 +63,60 @@ namespace VeterinariaElBuenAmigo.views
             foreach (templateClientePaciente templateCP in listaConsulta)
             {
                 dgvMascotas.Rows.Add(templateCP.idPaciente, templateCP.nombrePaciente, templateCP.nombreCliente ,templateCP.color, templateCP.genero);
+            }
+        }       
+
+        private void btnAgregarMascota_Click_1(object sender, EventArgs e)
+        {
+            using (FormGuardarMascota formPropietarioActions = new FormGuardarMascota())
+            {
+                formPropietarioActions.ShowDialog();
+            }
+
+            cargarDatosCP();
+        }
+
+        private void dgvMascotas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dgvMascotas.Columns[e.ColumnIndex].Name == "editarColumna")
+                {
+                    string id = dgvMascotas.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    using (FormEditarMascota form = new FormEditarMascota(Int32.Parse(id)))
+                    {
+                        form.ShowDialog();
+                    }
+
+                    cargarDatosCP();                }
+            }
+            catch (Exception exception)
+            {
+
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            List<DataGridViewRow> rows = dgvMascotas.Rows.Cast<DataGridViewRow>().Where(p => Convert.ToBoolean(p.Cells["ColumnSelect"].Value) == true).ToList();
+
+            if (rows.Count > 0)
+            {
+                DialogResult dialogQuestion = MessageBox.Show("¿Estas seguro de que quieres eliminar los registros?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (dialogQuestion == DialogResult.Yes)
+                {
+
+                    for (int i = 0; i < rows.Count; i++)
+                    {
+                        DataGridViewRow row = rows[i];
+
+                        pacienteDao.delete(Convert.ToInt32(row.Cells[0].Value));
+
+                        cargarDatosCP();
+                    }
+
+                }
             }
         }
     }
