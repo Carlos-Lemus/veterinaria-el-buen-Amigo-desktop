@@ -120,6 +120,6 @@ namespace VeterinariaElBuenAmigo.views.propietarios
 
                 formPropietarioActions.ShowDialog();
             }
-        }
+        }      
     }
 }
