@@ -23,6 +23,7 @@ namespace VeterinariaElBuenAmigo.views
             InitializeComponent();
 
             citaDao = new CitaDAO();
+            gunaDateTimePickerCita.Value = DateTime.Now;
             cargarCitas();
         }
 
@@ -67,13 +68,6 @@ namespace VeterinariaElBuenAmigo.views
             lblCitasDelDia.Text = " Citas del Dia: " + countCitasDelDia;
         }
 
-        /**
-         * 
-         * 
-         * CORRECCION PENDIENTE
-         * 
-         * 
-         */
         //Escucha el clic en las celdas la tabala Citas Programadas
         private void dvgCitasProgramadas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -153,6 +147,46 @@ namespace VeterinariaElBuenAmigo.views
                 }
             }
             catch (Exception exception)
+            {
+
+            }
+        }
+
+        private void cargarCitasSearch(List<Cita> listaCitasSearch)
+        {
+            if (dvgCitasProgramadas.RowCount > 0)
+            {
+                dvgCitasProgramadas.Rows.Clear();
+            }
+
+            foreach (Cita cita in listaCitasSearch)
+            {
+                dvgCitasProgramadas.Rows.Add(cita.IdCita, cita.NombrePaciente, cita.Fecha_cita, cita.Motivo);
+            }
+        }
+
+        private void txtBuscarCita_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            var listaSearch = listaCitas.Where(cita => cita.NombrePaciente.ToLower().Contains(txtBuscarCita.Text.ToLower()));
+            cargarCitasSearch(listaSearch.ToList());
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtBuscarCita.Text = "";
+            gunaDateTimePickerCita.Value = DateTime.Now;
+            cargarCitas();
+        }
+
+        private void gunaDateTimePickerCita_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string fecha = gunaDateTimePickerCita.Value.ToString("dddd, dd MMMM yyyy");
+                var listaSearch = listaCitas.Where(cita => cita.Fecha_cita.ToLower().Contains(fecha.ToLower()));
+                cargarCitasSearch(listaSearch.ToList());
+            }
+            catch(Exception exception)
             {
 
             }
