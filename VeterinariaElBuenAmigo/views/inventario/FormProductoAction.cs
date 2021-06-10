@@ -32,8 +32,8 @@ namespace VeterinariaElBuenAmigo.views.inventario
 
             if (isEdit)
             {
-                position.X = 188;
-                position.Y = 530;
+                position.X = 251;
+                position.Y = 652;
 
                 btnAdd.Visible = false;
                 btnEdit.Visible = true;
