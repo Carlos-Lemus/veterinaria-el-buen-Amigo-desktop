@@ -247,7 +247,7 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.mascotas_collection.ForeColor = System.Drawing.Color.White;
             this.mascotas_collection.FormattingEnabled = true;
             this.mascotas_collection.Location = new System.Drawing.Point(69, 214);
-            this.mascotas_collection.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mascotas_collection.Margin = new System.Windows.Forms.Padding(2);
             this.mascotas_collection.Name = "mascotas_collection";
             this.mascotas_collection.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.mascotas_collection.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -270,7 +270,7 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.gunaDateTimePickerCita.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.gunaDateTimePickerCita.ForeColor = System.Drawing.Color.White;
             this.gunaDateTimePickerCita.Location = new System.Drawing.Point(69, 93);
-            this.gunaDateTimePickerCita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaDateTimePickerCita.Margin = new System.Windows.Forms.Padding(2);
             this.gunaDateTimePickerCita.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.gunaDateTimePickerCita.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.gunaDateTimePickerCita.Name = "gunaDateTimePickerCita";
@@ -289,7 +289,7 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.ClientSize = new System.Drawing.Size(540, 565);
+            this.ClientSize = new System.Drawing.Size(540, 614);
             this.Controls.Add(this.gunaDateTimePickerCita);
             this.Controls.Add(this.mascotas_collection);
             this.Controls.Add(this.lblErrorMotivo);
