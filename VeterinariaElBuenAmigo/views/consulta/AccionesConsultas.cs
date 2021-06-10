@@ -23,18 +23,23 @@ namespace VeterinariaElBuenAmigo.views.consulta
         private ConsultaDAO consultaDao;
         private List<Consulta> listaConsulta;
 
-        private PacienteDAO pacienteDao;
-        private List<Paciente> listaPaciente; 
+        private RecetasDAO recetaDao;
+        private List<Recetas> listaReceta;
         private int id, idConsulta_;
         private string Nombre;
-        private bool isEdit; 
-       
+        private bool isEdit;
+
+        private DataGridView receta;
         public AccionesConsultas(int id, string Nombre)
         {
         //    Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
 
             Guna.UI.Lib.ScrollBar.PanelScrollHelper Scroll;
             consultaDao = new ConsultaDAO();
+            recetaDao = new RecetasDAO();
+            receta = new DataGridView();
+
+            receta.Columns.Add("a", "a");
 
             this.id = id;
             this.Nombre = Nombre;
@@ -332,7 +337,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
 
         private void gunaButton1_Click(object sender, EventArgs e)
         {
-            DataGridView datos; 
+            DataGridView datos;
             datos = CloneDataGrid(tbl_ConsultasAnteriores);
 
             int n = datos.Columns.Count;
@@ -347,17 +352,78 @@ namespace VeterinariaElBuenAmigo.views.consulta
 
             easyHTMLReports1.Clear();
 
-            easyHTMLReports1.AddImage(imagen, "width = 100");
-
-            easyHTMLReports1.AddString("<h1>Consultas de "+this.Nombre+"</h1>");
-
+            easyHTMLReports1.AddImage(imagen, "width = 100");          
+            easyHTMLReports1.AddLineBreak();
+            easyHTMLReports1.AddLineBreak();
+            easyHTMLReports1.AddString("<h2>Consultas de " + this.Nombre + "</h2>");
             easyHTMLReports1.AddHorizontalRule();
-
-
             easyHTMLReports1.AddDatagridView(datos);
+            AgregarTablasImpresion(1,1,1);
+
             easyHTMLReports1.ShowPrintPreviewDialog();
         }
 
+        private void AgregarTablasImpresion(int consultas, int vacunas, int vitaminas)
+        {     
+              
+            if (vacunas == 1)
+            {
+
+                receta.Columns.Clear();
+
+                receta.Columns.Add("Paciente", "Paciente");
+                receta.Columns.Add("Padecimiento", "Padecimiento");
+                receta.Columns.Add("Producto", "Producto");
+                receta.Columns.Add("Dosis", "Dosis");
+                receta.Columns.Add("Refuerzo", "Refuerzo");
+
+                receta.Rows.Clear();
+                receta.Refresh();
+      
+                listaReceta = recetaDao.getList(1, this.id);      
+                foreach (Recetas receta_ in listaReceta)
+                {//receta_.IdReceta,
+                    receta.Rows.Add(this.Nombre, receta_.Padecimineto, receta_.NombrePReceta, receta_.Dosis, receta_.Refuerzo);
+                }
+
+                easyHTMLReports1.AddLineBreak();
+                easyHTMLReports1.AddLineBreak();
+                easyHTMLReports1.AddString("<h2>Control de Vacunas de " + this.Nombre + "</h2>");
+                easyHTMLReports1.AddHorizontalRule();
+                easyHTMLReports1.AddDatagridView(receta);
+
+            }
+            else { }
+
+            if (vitaminas == 1)
+            {
+
+                receta.Columns.Clear();
+
+                receta.Columns.Add("Paciente", "Paciente");
+                receta.Columns.Add("Padecimiento", "Padecimiento");
+                receta.Columns.Add("Producto", "Producto");
+                receta.Columns.Add("Refuerzo", "Refuerzo");
+
+                receta.Rows.Clear();
+                receta.Refresh();
+                listaReceta = recetaDao.getList(1, this.id);
+
+
+                foreach (Recetas receta_ in listaReceta)
+                {//receta_.IdReceta,
+                    receta.Rows.Add(this.Nombre, receta_.Padecimineto, receta_.NombrePReceta, receta_.Refuerzo);
+                }
+                easyHTMLReports1.AddLineBreak();
+                easyHTMLReports1.AddLineBreak();
+                easyHTMLReports1.AddString("<h2>Control de Vitaminas de " + this.Nombre + "</h2>");
+                easyHTMLReports1.AddHorizontalRule();
+                easyHTMLReports1.AddDatagridView(receta);
+
+            }
+            else { }
+
+        }
         private void tbl_ConsultasAnteriores_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (tbl_ConsultasAnteriores.Columns[e.ColumnIndex].Name == "ColumnEdit")
