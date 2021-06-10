@@ -146,7 +146,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(491, 117);
+            this.label1.Location = new System.Drawing.Point(491, 83);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(970, 59);
@@ -280,7 +280,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.generMascota.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.generMascota.OnHoverItemForeColor = System.Drawing.Color.White;
             this.generMascota.Radius = 5;
-            this.generMascota.Size = new System.Drawing.Size(367, 33);
+            this.generMascota.Size = new System.Drawing.Size(367, 40);
             this.generMascota.TabIndex = 34;
             this.generMascota.SelectedIndexChanged += new System.EventHandler(this.generMascota_SelectedIndexChanged);
             // 
@@ -301,7 +301,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.especieMascota.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.especieMascota.OnHoverItemForeColor = System.Drawing.Color.White;
             this.especieMascota.Radius = 5;
-            this.especieMascota.Size = new System.Drawing.Size(367, 33);
+            this.especieMascota.Size = new System.Drawing.Size(367, 40);
             this.especieMascota.TabIndex = 35;
             this.especieMascota.SelectedIndexChanged += new System.EventHandler(this.especieMascota_SelectedIndexChanged);
             // 
@@ -374,9 +374,10 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.idEspe.AutoSize = true;
             this.idEspe.Location = new System.Drawing.Point(292, 41);
             this.idEspe.Name = "idEspe";
-            this.idEspe.Size = new System.Drawing.Size(45, 16);
+            this.idEspe.Size = new System.Drawing.Size(46, 17);
             this.idEspe.TabIndex = 42;
             this.idEspe.Text = "label9";
+            this.idEspe.Visible = false;
             // 
             // txtcolor
             // 
@@ -404,18 +405,20 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.gener.AutoSize = true;
             this.gener.Location = new System.Drawing.Point(1211, 41);
             this.gener.Name = "gener";
-            this.gener.Size = new System.Drawing.Size(45, 16);
+            this.gener.Size = new System.Drawing.Size(46, 17);
             this.gener.TabIndex = 45;
             this.gener.Text = "label9";
+            this.gener.Visible = false;
             // 
             // idclienteActivo
             // 
             this.idclienteActivo.AutoSize = true;
             this.idclienteActivo.Location = new System.Drawing.Point(12, 41);
             this.idclienteActivo.Name = "idclienteActivo";
-            this.idclienteActivo.Size = new System.Drawing.Size(45, 16);
+            this.idclienteActivo.Size = new System.Drawing.Size(46, 17);
             this.idclienteActivo.TabIndex = 46;
             this.idclienteActivo.Text = "label9";
+            this.idclienteActivo.Visible = false;
             // 
             // animales_razas
             // 
@@ -434,7 +437,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.animales_razas.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.animales_razas.OnHoverItemForeColor = System.Drawing.Color.White;
             this.animales_razas.Radius = 5;
-            this.animales_razas.Size = new System.Drawing.Size(520, 33);
+            this.animales_razas.Size = new System.Drawing.Size(520, 40);
             this.animales_razas.TabIndex = 50;
             this.animales_razas.SelectedIndexChanged += new System.EventHandler(this.animales_razas_SelectedIndexChanged);
             // 
@@ -443,9 +446,10 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.animal_raza.AutoSize = true;
             this.animal_raza.Location = new System.Drawing.Point(941, 41);
             this.animal_raza.Name = "animal_raza";
-            this.animal_raza.Size = new System.Drawing.Size(52, 16);
+            this.animal_raza.Size = new System.Drawing.Size(54, 17);
             this.animal_raza.TabIndex = 52;
             this.animal_raza.Text = "label10";
+            this.animal_raza.Visible = false;
             // 
             // dgvDatosPropietarios
             // 
@@ -483,7 +487,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.dgvDatosPropietarios.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDatosPropietarios.EnableHeadersVisualStyles = false;
             this.dgvDatosPropietarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
-            this.dgvDatosPropietarios.Location = new System.Drawing.Point(68, 292);
+            this.dgvDatosPropietarios.Location = new System.Drawing.Point(68, 255);
             this.dgvDatosPropietarios.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDatosPropietarios.Name = "dgvDatosPropietarios";
             this.dgvDatosPropietarios.RowHeadersVisible = false;
@@ -548,7 +552,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Image = global::VeterinariaElBuenAmigo.Properties.Resources.search;
             this.btnSearch.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSearch.Location = new System.Drawing.Point(571, 214);
+            this.btnSearch.Location = new System.Drawing.Point(571, 177);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
@@ -566,7 +570,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(63, 218);
+            this.label9.Location = new System.Drawing.Point(63, 189);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(116, 40);
@@ -584,7 +588,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.txtSearch.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.txtSearch.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtSearch.Location = new System.Drawing.Point(187, 214);
+            this.txtSearch.Location = new System.Drawing.Point(187, 177);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
@@ -610,7 +614,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.descripcionMascota);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Location = new System.Drawing.Point(809, 214);
+            this.panel1.Location = new System.Drawing.Point(809, 180);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1068, 823);
             this.panel1.TabIndex = 57;
