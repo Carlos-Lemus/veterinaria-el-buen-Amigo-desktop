@@ -44,7 +44,6 @@ namespace VeterinariaElBuenAmigo.views.citas
 
                 gunaDateTimePickerCita.Value = DateTime.Parse(cita.Fecha_cita);              
                 txtMotivo.Text = cita.Motivo;
-                selectMascota.Text = cita.IdPaciente.ToString();
                 mascotas_collection.SelectedValue = cita.IdPaciente;
             }
         }
@@ -63,13 +62,14 @@ namespace VeterinariaElBuenAmigo.views.citas
         {
             string fecha = gunaDateTimePickerCita.Value.ToString("dddd, dd MMMM yyyy");           
             string motivo = txtMotivo.Text;
+            int idPasiente = Convert.ToInt32(mascotas_collection.SelectedValue.ToString());
 
-            bool isValidFecha = isValidInput(fecha.ToString(), lblErrorFecha);            
+            bool isValidFecha = isValidInput(fecha.ToString(), lblErrorFecha); 
             bool isValidMotivo = isValidInput(motivo, lblErrorMotivo);
 
             if(isValidFecha && isValidMotivo)
             {
-                citaDao.ingresarCita(new Cita(0, fecha, Convert.ToInt32(selectMascota.Text), motivo));
+                citaDao.ingresarCita(new Cita(0, fecha, idPasiente, "", motivo));
                 this.Close();
             }
         }
@@ -77,12 +77,12 @@ namespace VeterinariaElBuenAmigo.views.citas
         private void btnEdit_Click(object sender, EventArgs e)
         {
             int idCita = cita.IdCita;
-            string fecha = gunaDateTimePickerCita.Value.ToString("dddd, dd MMMM yyyy");          
+            string fecha = gunaDateTimePickerCita.Value.ToString("dddd, dd MMMM yyyy");
+            int idPasiente = Convert.ToInt32(mascotas_collection.SelectedValue.ToString());
             string motivo = txtMotivo.Text;
 
             bool isValidFecha = isValidInput(fecha.ToString(), lblErrorFecha);            
             bool isValidMotivo = isValidInput(motivo, lblErrorMotivo);
-
 
             if (isValidFecha && isValidMotivo)
             {
@@ -90,7 +90,7 @@ namespace VeterinariaElBuenAmigo.views.citas
 
                 if(dialogResult == DialogResult.Yes)
                 {
-                    citaDao.editarCita(new Cita(idCita, fecha, Int32.Parse(selectMascota.Text), motivo));
+                    citaDao.editarCita(new Cita(idCita, fecha, idPasiente, "", motivo));
                     this.Close();
                 }
             }
@@ -107,7 +107,6 @@ namespace VeterinariaElBuenAmigo.views.citas
 
         private bool isValidInput(String txtInput, Label lblMessageError)
         {
-
             lblMessageError.Visible = false;
 
             if (String.IsNullOrEmpty(txtInput))
@@ -117,11 +116,6 @@ namespace VeterinariaElBuenAmigo.views.citas
                 return false;
             }
             return true;
-        }
-
-        private void mascotas_collection_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            selectMascota.Text = mascotas_collection.SelectedValue.ToString();
         }
     }
 }

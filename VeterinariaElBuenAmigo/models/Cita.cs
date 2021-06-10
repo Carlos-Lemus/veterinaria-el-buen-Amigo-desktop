@@ -72,7 +72,7 @@ namespace VeterinariaElBuenAmigo.models
             }
             set
             {
-                this.NombrePaciente = value;
+                this.nombrePaciente = value;
             }
         }
 
