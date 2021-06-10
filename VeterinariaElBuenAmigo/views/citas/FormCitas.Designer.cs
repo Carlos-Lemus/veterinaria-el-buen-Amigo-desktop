@@ -39,7 +39,6 @@ namespace VeterinariaElBuenAmigo.views
             this.lblCitasDelDia = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.lblCitasProgramadas = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dvgCitasProgramadas = new Guna.UI.WinForms.GunaDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,13 +48,16 @@ namespace VeterinariaElBuenAmigo.views
             this.Editar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dvgCitasDelDia = new Guna.UI.WinForms.GunaDataGridView();
+            this.btnDelete1 = new Guna.UI.WinForms.GunaButton();
+            this.btnClear = new Guna.UI.WinForms.GunaButton();
+            this.txtBuscarCita = new Guna.UI.WinForms.GunaTextBox();
+            this.lblCitasProgramadas = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.gunaDateTimePickerCita = new Guna.UI.WinForms.GunaDateTimePicker();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.btnDelete1 = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -66,6 +68,7 @@ namespace VeterinariaElBuenAmigo.views
             // 
             // btnAddCita
             // 
+            this.btnAddCita.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddCita.AnimationHoverSpeed = 0.07F;
             this.btnAddCita.AnimationSpeed = 0.03F;
             this.btnAddCita.BackColor = System.Drawing.Color.Transparent;
@@ -78,7 +81,7 @@ namespace VeterinariaElBuenAmigo.views
             this.btnAddCita.ForeColor = System.Drawing.Color.White;
             this.btnAddCita.Image = global::VeterinariaElBuenAmigo.Properties.Resources.add;
             this.btnAddCita.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAddCita.Location = new System.Drawing.Point(73, 39);
+            this.btnAddCita.Location = new System.Drawing.Point(711, 113);
             this.btnAddCita.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddCita.Name = "btnAddCita";
             this.btnAddCita.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
@@ -122,24 +125,12 @@ namespace VeterinariaElBuenAmigo.views
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
             this.dataGridViewImageColumn2.Width = 133;
             // 
-            // lblCitasProgramadas
-            // 
-            this.lblCitasProgramadas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblCitasProgramadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCitasProgramadas.Location = new System.Drawing.Point(0, 0);
-            this.lblCitasProgramadas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCitasProgramadas.Name = "lblCitasProgramadas";
-            this.lblCitasProgramadas.Size = new System.Drawing.Size(1071, 37);
-            this.lblCitasProgramadas.TabIndex = 6;
-            this.lblCitasProgramadas.Text = "Citas programadas: N";
-            this.lblCitasProgramadas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // splitContainer1
             // 
             this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer1.Location = new System.Drawing.Point(73, 119);
+            this.splitContainer1.Location = new System.Drawing.Point(73, 164);
             this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -147,14 +138,13 @@ namespace VeterinariaElBuenAmigo.views
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.dvgCitasProgramadas);
-            this.splitContainer1.Panel1.Controls.Add(this.lblCitasProgramadas);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dvgCitasDelDia);
             this.splitContainer1.Panel2.Controls.Add(this.lblCitasDelDia);
-            this.splitContainer1.Size = new System.Drawing.Size(1071, 654);
-            this.splitContainer1.SplitterDistance = 247;
+            this.splitContainer1.Size = new System.Drawing.Size(1071, 609);
+            this.splitContainer1.SplitterDistance = 230;
             this.splitContainer1.SplitterWidth = 62;
             this.splitContainer1.TabIndex = 13;
             // 
@@ -196,14 +186,14 @@ namespace VeterinariaElBuenAmigo.views
             this.dvgCitasProgramadas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dvgCitasProgramadas.EnableHeadersVisualStyles = false;
             this.dvgCitasProgramadas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.dvgCitasProgramadas.Location = new System.Drawing.Point(0, 37);
+            this.dvgCitasProgramadas.Location = new System.Drawing.Point(0, 0);
             this.dvgCitasProgramadas.Margin = new System.Windows.Forms.Padding(4);
             this.dvgCitasProgramadas.Name = "dvgCitasProgramadas";
             this.dvgCitasProgramadas.RowHeadersVisible = false;
             this.dvgCitasProgramadas.RowHeadersWidth = 51;
             this.dvgCitasProgramadas.RowTemplate.Height = 40;
             this.dvgCitasProgramadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgCitasProgramadas.Size = new System.Drawing.Size(1071, 210);
+            this.dvgCitasProgramadas.Size = new System.Drawing.Size(1071, 230);
             this.dvgCitasProgramadas.TabIndex = 9;
             this.dvgCitasProgramadas.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dvgCitasProgramadas.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -301,9 +291,7 @@ namespace VeterinariaElBuenAmigo.views
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.Edit,
-            this.Delete});
+            this.dataGridViewTextBoxColumn4});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 14F);
@@ -322,7 +310,7 @@ namespace VeterinariaElBuenAmigo.views
             this.dvgCitasDelDia.RowHeadersWidth = 51;
             this.dvgCitasDelDia.RowTemplate.Height = 40;
             this.dvgCitasDelDia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgCitasDelDia.Size = new System.Drawing.Size(1071, 302);
+            this.dvgCitasDelDia.Size = new System.Drawing.Size(1071, 274);
             this.dvgCitasDelDia.TabIndex = 14;
             this.dvgCitasDelDia.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dvgCitasDelDia.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -346,7 +334,131 @@ namespace VeterinariaElBuenAmigo.views
             this.dvgCitasDelDia.ThemeStyle.RowsStyle.Height = 40;
             this.dvgCitasDelDia.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
             this.dvgCitasDelDia.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.dvgCitasDelDia.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgCitasDelDia_CellClick);
+            // 
+            // btnDelete1
+            // 
+            this.btnDelete1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete1.AnimationHoverSpeed = 0.07F;
+            this.btnDelete1.AnimationSpeed = 0.03F;
+            this.btnDelete1.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(82)))), ((int)(((byte)(83)))));
+            this.btnDelete1.BorderColor = System.Drawing.Color.Black;
+            this.btnDelete1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete1.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDelete1.FocusedColor = System.Drawing.Color.Empty;
+            this.btnDelete1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDelete1.ForeColor = System.Drawing.Color.White;
+            this.btnDelete1.Image = global::VeterinariaElBuenAmigo.Properties.Resources.delete;
+            this.btnDelete1.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnDelete1.Location = new System.Drawing.Point(969, 112);
+            this.btnDelete1.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete1.Name = "btnDelete1";
+            this.btnDelete1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(117)))));
+            this.btnDelete1.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnDelete1.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnDelete1.OnHoverImage = null;
+            this.btnDelete1.OnPressedColor = System.Drawing.Color.Black;
+            this.btnDelete1.Radius = 5;
+            this.btnDelete1.Size = new System.Drawing.Size(175, 43);
+            this.btnDelete1.TabIndex = 33;
+            this.btnDelete1.Text = "Eliminar ";
+            this.btnDelete1.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.AnimationHoverSpeed = 0.07F;
+            this.btnClear.AnimationSpeed = 0.03F;
+            this.btnClear.BackColor = System.Drawing.Color.Transparent;
+            this.btnClear.BaseColor = System.Drawing.Color.White;
+            this.btnClear.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.btnClear.BorderSize = 2;
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClear.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnClear.FocusedColor = System.Drawing.Color.White;
+            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnClear.ForeColor = System.Drawing.Color.Transparent;
+            this.btnClear.Image = global::VeterinariaElBuenAmigo.Properties.Resources.ios_close1;
+            this.btnClear.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnClear.ImageSize = new System.Drawing.Size(42, 42);
+            this.btnClear.Location = new System.Drawing.Point(1101, 61);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
+            this.btnClear.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnClear.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnClear.OnHoverImage = null;
+            this.btnClear.OnPressedColor = System.Drawing.Color.Black;
+            this.btnClear.Radius = 5;
+            this.btnClear.Size = new System.Drawing.Size(43, 43);
+            this.btnClear.TabIndex = 37;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // txtBuscarCita
+            // 
+            this.txtBuscarCita.BackColor = System.Drawing.Color.Transparent;
+            this.txtBuscarCita.BaseColor = System.Drawing.Color.White;
+            this.txtBuscarCita.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
+            this.txtBuscarCita.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBuscarCita.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtBuscarCita.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.txtBuscarCita.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txtBuscarCita.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtBuscarCita.Location = new System.Drawing.Point(221, 61);
+            this.txtBuscarCita.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscarCita.Name = "txtBuscarCita";
+            this.txtBuscarCita.PasswordChar = '\0';
+            this.txtBuscarCita.Radius = 4;
+            this.txtBuscarCita.Size = new System.Drawing.Size(380, 43);
+            this.txtBuscarCita.TabIndex = 36;
+            this.txtBuscarCita.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscarCita_KeyPress);
+            // 
+            // lblCitasProgramadas
+            // 
+            this.lblCitasProgramadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCitasProgramadas.Location = new System.Drawing.Point(73, 117);
+            this.lblCitasProgramadas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCitasProgramadas.Name = "lblCitasProgramadas";
+            this.lblCitasProgramadas.Size = new System.Drawing.Size(575, 43);
+            this.lblCitasProgramadas.TabIndex = 38;
+            this.lblCitasProgramadas.Text = "Citas Programadas";
+            this.lblCitasProgramadas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(73, 61);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(140, 43);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Buscar";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // gunaDateTimePickerCita
+            // 
+            this.gunaDateTimePickerCita.BackColor = System.Drawing.Color.Transparent;
+            this.gunaDateTimePickerCita.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.gunaDateTimePickerCita.BorderColor = System.Drawing.Color.White;
+            this.gunaDateTimePickerCita.CustomFormat = null;
+            this.gunaDateTimePickerCita.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.gunaDateTimePickerCita.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.gunaDateTimePickerCita.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.gunaDateTimePickerCita.ForeColor = System.Drawing.Color.White;
+            this.gunaDateTimePickerCita.Location = new System.Drawing.Point(608, 60);
+            this.gunaDateTimePickerCita.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gunaDateTimePickerCita.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.gunaDateTimePickerCita.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.gunaDateTimePickerCita.Name = "gunaDateTimePickerCita";
+            this.gunaDateTimePickerCita.OnHoverBaseColor = System.Drawing.Color.White;
+            this.gunaDateTimePickerCita.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.gunaDateTimePickerCita.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.gunaDateTimePickerCita.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaDateTimePickerCita.Radius = 5;
+            this.gunaDateTimePickerCita.Size = new System.Drawing.Size(486, 44);
+            this.gunaDateTimePickerCita.TabIndex = 40;
+            this.gunaDateTimePickerCita.Text = "lunes, 7 de junio de 2021";
+            this.gunaDateTimePickerCita.Value = new System.DateTime(2021, 6, 7, 13, 4, 55, 439);
+            this.gunaDateTimePickerCita.ValueChanged += new System.EventHandler(this.gunaDateTimePickerCita_ValueChanged);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -367,63 +479,17 @@ namespace VeterinariaElBuenAmigo.views
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.FillWeight = 145F;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Apellido";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Fecha";
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Telefono";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Motivo";
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // Edit
-            // 
-            this.Edit.FillWeight = 25F;
-            this.Edit.HeaderText = "";
-            this.Edit.Image = global::VeterinariaElBuenAmigo.Properties.Resources.edit;
-            this.Edit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Edit.MinimumWidth = 6;
-            this.Edit.Name = "Edit";
-            this.Edit.ReadOnly = true;
-            // 
-            // Delete
-            // 
-            this.Delete.FillWeight = 25F;
-            this.Delete.HeaderText = "";
-            this.Delete.MinimumWidth = 6;
-            this.Delete.Name = "Delete";
-            // 
-            // btnDelete1
-            // 
-            this.btnDelete1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete1.AnimationHoverSpeed = 0.07F;
-            this.btnDelete1.AnimationSpeed = 0.03F;
-            this.btnDelete1.BackColor = System.Drawing.Color.Transparent;
-            this.btnDelete1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(82)))), ((int)(((byte)(83)))));
-            this.btnDelete1.BorderColor = System.Drawing.Color.Black;
-            this.btnDelete1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnDelete1.FocusedColor = System.Drawing.Color.Empty;
-            this.btnDelete1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnDelete1.ForeColor = System.Drawing.Color.White;
-            this.btnDelete1.Image = global::VeterinariaElBuenAmigo.Properties.Resources.delete;
-            this.btnDelete1.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnDelete1.Location = new System.Drawing.Point(969, 72);
-            this.btnDelete1.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDelete1.Name = "btnDelete1";
-            this.btnDelete1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(117)))));
-            this.btnDelete1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnDelete1.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnDelete1.OnHoverImage = null;
-            this.btnDelete1.OnPressedColor = System.Drawing.Color.Black;
-            this.btnDelete1.Radius = 5;
-            this.btnDelete1.Size = new System.Drawing.Size(175, 43);
-            this.btnDelete1.TabIndex = 33;
-            this.btnDelete1.Text = "Eliminar ";
-            this.btnDelete1.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // FormCitas
             // 
@@ -431,6 +497,11 @@ namespace VeterinariaElBuenAmigo.views
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1240, 849);
+            this.Controls.Add(this.gunaDateTimePickerCita);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblCitasProgramadas);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.txtBuscarCita);
             this.Controls.Add(this.btnDelete1);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.btnAddCita);
@@ -454,7 +525,6 @@ namespace VeterinariaElBuenAmigo.views
         private System.Windows.Forms.Label lblCitasDelDia;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
-        private System.Windows.Forms.Label lblCitasProgramadas;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private Guna.UI.WinForms.GunaDataGridView dvgCitasDelDia;
         private Guna.UI.WinForms.GunaDataGridView dvgCitasProgramadas;
@@ -465,11 +535,14 @@ namespace VeterinariaElBuenAmigo.views
         private System.Windows.Forms.DataGridViewImageColumn Editar;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Eliminar;
         private Guna.UI.WinForms.GunaButton btnDelete1;
+        private Guna.UI.WinForms.GunaButton btnClear;
+        private Guna.UI.WinForms.GunaTextBox txtBuscarCita;
+        private System.Windows.Forms.Label lblCitasProgramadas;
+        private System.Windows.Forms.Label label2;
+        public Guna.UI.WinForms.GunaDateTimePicker gunaDateTimePickerCita;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewImageColumn Edit;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Delete;
     }
 }

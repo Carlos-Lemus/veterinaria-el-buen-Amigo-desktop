@@ -129,12 +129,6 @@ namespace VeterinariaElBuenAmigo
             openFormInPane(new FormConsulta());
         }
 
-        private void btnHistorial_Click(object sender, EventArgs e)
-        {
-            activaButton(btnHistorial);
-            openFormInPane(new FormHistorial());
-        }
-
         private void btnInventario_Click(object sender, EventArgs e)
         {
             activaButton(btnInventario);

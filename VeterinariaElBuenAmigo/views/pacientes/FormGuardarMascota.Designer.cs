@@ -30,10 +30,10 @@ namespace VeterinariaElBuenAmigo.views.pacientes
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaResize1 = new Guna.UI.WinForms.GunaResize(this.components);
             this.panelTop = new Guna.UI.WinForms.GunaPanel();
             this.btnMin = new FontAwesome.Sharp.IconButton();
@@ -62,7 +62,6 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.dgvDatosPropietarios = new Guna.UI.WinForms.GunaDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSearch = new Guna.UI.WinForms.GunaButton();
             this.label9 = new System.Windows.Forms.Label();
             this.txtSearch = new Guna.UI.WinForms.GunaTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -135,7 +134,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.label2.Location = new System.Drawing.Point(61, 100);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(193, 34);
+            this.label2.Size = new System.Drawing.Size(285, 34);
             this.label2.TabIndex = 25;
             this.label2.Text = "Nombre o Alias";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -146,7 +145,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(491, 117);
+            this.label1.Location = new System.Drawing.Point(491, 83);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(970, 59);
@@ -280,7 +279,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.generMascota.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.generMascota.OnHoverItemForeColor = System.Drawing.Color.White;
             this.generMascota.Radius = 5;
-            this.generMascota.Size = new System.Drawing.Size(367, 33);
+            this.generMascota.Size = new System.Drawing.Size(367, 40);
             this.generMascota.TabIndex = 34;
             this.generMascota.SelectedIndexChanged += new System.EventHandler(this.generMascota_SelectedIndexChanged);
             // 
@@ -301,7 +300,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.especieMascota.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.especieMascota.OnHoverItemForeColor = System.Drawing.Color.White;
             this.especieMascota.Radius = 5;
-            this.especieMascota.Size = new System.Drawing.Size(367, 33);
+            this.especieMascota.Size = new System.Drawing.Size(367, 40);
             this.especieMascota.TabIndex = 35;
             this.especieMascota.SelectedIndexChanged += new System.EventHandler(this.especieMascota_SelectedIndexChanged);
             // 
@@ -374,9 +373,10 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.idEspe.AutoSize = true;
             this.idEspe.Location = new System.Drawing.Point(292, 41);
             this.idEspe.Name = "idEspe";
-            this.idEspe.Size = new System.Drawing.Size(45, 16);
+            this.idEspe.Size = new System.Drawing.Size(46, 17);
             this.idEspe.TabIndex = 42;
             this.idEspe.Text = "label9";
+            this.idEspe.Visible = false;
             // 
             // txtcolor
             // 
@@ -404,18 +404,20 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.gener.AutoSize = true;
             this.gener.Location = new System.Drawing.Point(1211, 41);
             this.gener.Name = "gener";
-            this.gener.Size = new System.Drawing.Size(45, 16);
+            this.gener.Size = new System.Drawing.Size(46, 17);
             this.gener.TabIndex = 45;
             this.gener.Text = "label9";
+            this.gener.Visible = false;
             // 
             // idclienteActivo
             // 
             this.idclienteActivo.AutoSize = true;
             this.idclienteActivo.Location = new System.Drawing.Point(12, 41);
             this.idclienteActivo.Name = "idclienteActivo";
-            this.idclienteActivo.Size = new System.Drawing.Size(45, 16);
+            this.idclienteActivo.Size = new System.Drawing.Size(46, 17);
             this.idclienteActivo.TabIndex = 46;
             this.idclienteActivo.Text = "label9";
+            this.idclienteActivo.Visible = false;
             // 
             // animales_razas
             // 
@@ -434,7 +436,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.animales_razas.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.animales_razas.OnHoverItemForeColor = System.Drawing.Color.White;
             this.animales_razas.Radius = 5;
-            this.animales_razas.Size = new System.Drawing.Size(520, 33);
+            this.animales_razas.Size = new System.Drawing.Size(520, 40);
             this.animales_razas.TabIndex = 50;
             this.animales_razas.SelectedIndexChanged += new System.EventHandler(this.animales_razas_SelectedIndexChanged);
             // 
@@ -443,16 +445,17 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.animal_raza.AutoSize = true;
             this.animal_raza.Location = new System.Drawing.Point(941, 41);
             this.animal_raza.Name = "animal_raza";
-            this.animal_raza.Size = new System.Drawing.Size(52, 16);
+            this.animal_raza.Size = new System.Drawing.Size(54, 17);
             this.animal_raza.TabIndex = 52;
             this.animal_raza.Text = "label10";
+            this.animal_raza.Visible = false;
             // 
             // dgvDatosPropietarios
             // 
             this.dgvDatosPropietarios.AllowUserToAddRows = false;
             this.dgvDatosPropietarios.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
-            this.dgvDatosPropietarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
+            this.dgvDatosPropietarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvDatosPropietarios.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -461,35 +464,35 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.dgvDatosPropietarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvDatosPropietarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvDatosPropietarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDatosPropietarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDatosPropietarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvDatosPropietarios.ColumnHeadersHeight = 40;
             this.dgvDatosPropietarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 14F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(185)))), ((int)(((byte)(175)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDatosPropietarios.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 14F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(185)))), ((int)(((byte)(175)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDatosPropietarios.DefaultCellStyle = dataGridViewCellStyle15;
             this.dgvDatosPropietarios.EnableHeadersVisualStyles = false;
             this.dgvDatosPropietarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
-            this.dgvDatosPropietarios.Location = new System.Drawing.Point(68, 292);
+            this.dgvDatosPropietarios.Location = new System.Drawing.Point(68, 255);
             this.dgvDatosPropietarios.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDatosPropietarios.Name = "dgvDatosPropietarios";
             this.dgvDatosPropietarios.RowHeadersVisible = false;
             this.dgvDatosPropietarios.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvDatosPropietarios.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvDatosPropietarios.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvDatosPropietarios.RowTemplate.Height = 40;
             this.dgvDatosPropietarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDatosPropietarios.Size = new System.Drawing.Size(715, 745);
@@ -534,39 +537,11 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
-            // btnSearch
-            // 
-            this.btnSearch.AnimationHoverSpeed = 0.07F;
-            this.btnSearch.AnimationSpeed = 0.03F;
-            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
-            this.btnSearch.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.btnSearch.BorderColor = System.Drawing.Color.Black;
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSearch.FocusedColor = System.Drawing.Color.Empty;
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Image = global::VeterinariaElBuenAmigo.Properties.Resources.search;
-            this.btnSearch.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnSearch.Location = new System.Drawing.Point(571, 214);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
-            this.btnSearch.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnSearch.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnSearch.OnHoverImage = null;
-            this.btnSearch.OnPressedColor = System.Drawing.Color.Black;
-            this.btnSearch.Radius = 5;
-            this.btnSearch.Size = new System.Drawing.Size(212, 49);
-            this.btnSearch.TabIndex = 56;
-            this.btnSearch.Text = "Buscar";
-            this.btnSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(63, 218);
+            this.label9.Location = new System.Drawing.Point(63, 189);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(116, 40);
@@ -584,13 +559,14 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.txtSearch.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.txtSearch.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtSearch.Location = new System.Drawing.Point(187, 214);
+            this.txtSearch.Location = new System.Drawing.Point(187, 177);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.Radius = 4;
-            this.txtSearch.Size = new System.Drawing.Size(376, 49);
+            this.txtSearch.Size = new System.Drawing.Size(482, 49);
             this.txtSearch.TabIndex = 54;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // panel1
             // 
@@ -610,7 +586,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.descripcionMascota);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Location = new System.Drawing.Point(809, 214);
+            this.panel1.Location = new System.Drawing.Point(809, 180);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1068, 823);
             this.panel1.TabIndex = 57;
@@ -622,7 +598,6 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.ClientSize = new System.Drawing.Size(1940, 1100);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtSearch);
@@ -635,6 +610,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormGuardarMascota";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormGuardarMascota";
             this.panelTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosPropietarios)).EndInit();
@@ -673,7 +649,6 @@ namespace VeterinariaElBuenAmigo.views.pacientes
         private Guna.UI.WinForms.GunaComboBox animales_razas;
         private Guna.UI.WinForms.GunaDataGridView dgvDatosPropietarios;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI.WinForms.GunaButton btnSearch;
         private System.Windows.Forms.Label label9;
         private Guna.UI.WinForms.GunaTextBox txtSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

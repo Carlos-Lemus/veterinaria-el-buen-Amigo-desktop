@@ -119,5 +119,24 @@ namespace VeterinariaElBuenAmigo.views
                 }
             }
         }
+
+        private void cargarPacientesSearch(List<templateClientePaciente> listaSearch)
+        {
+            if (dgvMascotas.RowCount > 0)
+            {
+                dgvMascotas.Rows.Clear();
+            }
+
+            foreach (templateClientePaciente templateCP in listaSearch)
+            {
+                dgvMascotas.Rows.Add(templateCP.idPaciente, templateCP.nombrePaciente, templateCP.nombreCliente, templateCP.color, templateCP.genero);
+            }
+        }
+
+        private void txtBuscarPaciente_TextChanged(object sender, EventArgs e)
+        {
+            var listaSearch = listaConsulta.Where(templateCP => templateCP.nombrePaciente.ToLower().Contains(txtBuscarPaciente.Text.ToLower()));
+            cargarPacientesSearch(listaSearch.ToList());
+        }
     }
 }

@@ -117,5 +117,30 @@ namespace VeterinariaElBuenAmigo.views
 
             }
         }
+
+        private void cargarProductosSearch(List<Producto> listaProductosSearch)
+        {
+            if(dgvInventario.RowCount > 0)
+            {
+                dgvInventario.Rows.Clear();
+            }
+
+            foreach (Producto producto in listaProductosSearch)
+            {
+                dgvInventario.Rows.Add(producto.IdProducto, producto.NombreProducto, producto.CantidadDisponible, producto.TipoProducto);
+            }
+        }
+
+        private void txtBuscarProducto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            var listaSearch = listaProductos.Where(producto => producto.NombreProducto.ToLower().Contains(txtBuscarProducto.Text.ToLower()));
+            cargarProductosSearch(listaSearch.ToList());
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtBuscarProducto.Text = "";
+            cargarProductos();
+        }
     }
 }

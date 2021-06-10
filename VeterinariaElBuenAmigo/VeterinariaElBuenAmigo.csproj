@@ -146,12 +146,6 @@
     <Compile Include="views\consulta\FormConsulta.Designer.cs">
       <DependentUpon>FormConsulta.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\FormHistorial.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="views\FormHistorial.Designer.cs">
-      <DependentUpon>FormHistorial.cs</DependentUpon>
-    </Compile>
     <Compile Include="views\inventario\FormProductoAction.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,9 +225,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\consulta\FormConsulta.resx">
       <DependentUpon>FormConsulta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="views\FormHistorial.resx">
-      <DependentUpon>FormHistorial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\inventario\FormInventario.resx">
       <DependentUpon>FormInventario.cs</DependentUpon>

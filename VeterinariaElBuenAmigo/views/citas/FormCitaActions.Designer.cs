@@ -242,7 +242,7 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.txtMotivo.PasswordChar = '\0';
             this.txtMotivo.Radius = 4;
             this.txtMotivo.Size = new System.Drawing.Size(544, 116);
-            this.txtMotivo.TabIndex = 27;
+            this.txtMotivo.TabIndex = 3;
             // 
             // mascotas_collection
             // 
@@ -262,7 +262,7 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.mascotas_collection.OnHoverItemForeColor = System.Drawing.Color.White;
             this.mascotas_collection.Radius = 5;
             this.mascotas_collection.Size = new System.Drawing.Size(544, 40);
-            this.mascotas_collection.TabIndex = 37;
+            this.mascotas_collection.TabIndex = 2;
             // 
             // windowDragControl
             // 
@@ -289,7 +289,7 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.gunaDateTimePickerCita.OnPressedColor = System.Drawing.Color.Black;
             this.gunaDateTimePickerCita.Radius = 5;
             this.gunaDateTimePickerCita.Size = new System.Drawing.Size(544, 44);
-            this.gunaDateTimePickerCita.TabIndex = 54;
+            this.gunaDateTimePickerCita.TabIndex = 1;
             this.gunaDateTimePickerCita.Text = "lunes, 7 de junio de 2021";
             this.gunaDateTimePickerCita.Value = new System.DateTime(2021, 6, 7, 13, 4, 55, 439);
             // 
