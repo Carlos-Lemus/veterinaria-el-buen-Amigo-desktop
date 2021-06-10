@@ -87,7 +87,9 @@
     <Compile Include="database\ClienteDAO.cs" />
     <Compile Include="database\Conexion.cs" />
     <Compile Include="database\DAO.cs" />
+    <Compile Include="database\EspecieDAO.cs" />
     <Compile Include="database\ProductosDAO.cs" />
+    <Compile Include="database\RazaDAO.cs" />
     <Compile Include="database\RecetasDAO.cs" />
     <Compile Include="models\Cita.cs" />
     <Compile Include="database\PacienteDAO.cs" />
@@ -110,6 +112,18 @@
     <Compile Include="views\citas\FormCitaActions.Designer.cs">
       <DependentUpon>FormCitaActions.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\configuracion\FormEspecieActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\configuracion\FormEspecieActions.Designer.cs">
+      <DependentUpon>FormEspecieActions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\configuracion\FormRazaActions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\configuracion\FormRazaActions.Designer.cs">
+      <DependentUpon>FormRazaActions.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\consulta\AccionesConsultas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,10 +136,10 @@
     <Compile Include="views\consulta\RecetasForm.Designer.cs">
       <DependentUpon>RecetasForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\FormConfiguracion.cs">
+    <Compile Include="views\configuracion\FormConfiguracion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\FormConfiguracion.Designer.cs">
+    <Compile Include="views\configuracion\FormConfiguracion.Designer.cs">
       <DependentUpon>FormConfiguracion.cs</DependentUpon>
     </Compile>
     <Compile Include="views\inventario\FormInventario.cs">
@@ -214,13 +228,19 @@
     <EmbeddedResource Include="views\citas\FormCitas.resx">
       <DependentUpon>FormCitas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\configuracion\FormEspecieActions.resx">
+      <DependentUpon>FormEspecieActions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\configuracion\FormRazaActions.resx">
+      <DependentUpon>FormRazaActions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\consulta\AccionesConsultas.resx">
       <DependentUpon>AccionesConsultas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\consulta\RecetasForm.resx">
       <DependentUpon>RecetasForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\FormConfiguracion.resx">
+    <EmbeddedResource Include="views\configuracion\FormConfiguracion.resx">
       <DependentUpon>FormConfiguracion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\consulta\FormConsulta.resx">
