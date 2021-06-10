@@ -78,27 +78,20 @@ namespace VeterinariaElBuenAmigo.views
                 Nombre = consultaDao.NombrePropietarioporID(paciente.idCliente);
                 Num = consultaDao.NumerodeConsultas(paciente.idPaciente);
 
-                tbl_Consulta.Rows.Add(paciente.idPaciente, paciente.nombrePaciente, Especie, Nombre, Num); 
+                if(Nombre.Equals("No se encontró al propietario"))
+                {
+
+                }
+                else
+                {
+                    tbl_Consulta.Rows.Add(paciente.idPaciente, paciente.nombrePaciente, Especie, Nombre, Num);
+                }            
                
 
             }
         }
 
-        private void gunaButton1_Click(object sender, EventArgs e)
-        {
-            Image imagen = Resources.Recurso_1_0_5x;
-            easyHTMLReports1.AddImage(imagen, "width = 100");        
-
-            easyHTMLReports1.AddString("<h1>Tabla Pacientes - Consulta</h1>");
-
-            easyHTMLReports1.AddHorizontalRule();
-
-            easyHTMLReports1.AddDatagridView(tbl_Consulta);
-            easyHTMLReports1.ShowPrintPreviewDialog();
-             
-
-            
-        }
+      
 
         private void cargarPacientesSearch(List<Paciente> listaPacientesSearch)
         {
@@ -129,6 +122,33 @@ namespace VeterinariaElBuenAmigo.views
         {
             gunaTextBox1.Text = "";
             cargarMascotas();
+        }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+
+            Image imagen = Resources.Recurso_1_0_5x;
+            easyHTMLReports1.AddImage(imagen, "width = 100");
+
+            easyHTMLReports1.AddString("<h1>Tabla Pacientes - Consulta</h1>");
+
+            easyHTMLReports1.AddHorizontalRule();
+
+            easyHTMLReports1.AddDatagridView(tbl_Consulta);
+            easyHTMLReports1.ShowPrintPreviewDialog();
+        }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            Image imagen = Resources.Recurso_1_0_5x;
+            easyHTMLReports1.AddImage(imagen, "width = 100");
+
+            easyHTMLReports1.AddString("<h1>Tabla Pacientes - Consulta</h1>");
+
+            easyHTMLReports1.AddHorizontalRule();
+
+            easyHTMLReports1.AddDatagridView(tbl_Consulta);
+            easyHTMLReports1.ShowPrintPreviewDialog();
         }
     }
 }
