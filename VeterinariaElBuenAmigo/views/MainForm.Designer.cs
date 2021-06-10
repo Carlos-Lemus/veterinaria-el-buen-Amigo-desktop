@@ -30,7 +30,7 @@ namespace VeterinariaElBuenAmigo
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI.Animation.Animation animation3 = new Guna.UI.Animation.Animation();
+            Guna.UI.Animation.Animation animation1 = new Guna.UI.Animation.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelNavegacion = new Guna.UI.WinForms.GunaPanel();
             this.btnConfiguracion = new FontAwesome.Sharp.IconButton();
@@ -88,7 +88,7 @@ namespace VeterinariaElBuenAmigo
             this.btnConfiguracion.IconSize = 52;
             this.btnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConfiguracion.Location = new System.Drawing.Point(0, 510);
-            this.btnConfiguracion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfiguracion.Margin = new System.Windows.Forms.Padding(2);
             this.btnConfiguracion.MinimumSize = new System.Drawing.Size(262, 57);
             this.btnConfiguracion.Name = "btnConfiguracion";
             this.btnConfiguracion.Size = new System.Drawing.Size(270, 65);
@@ -113,7 +113,7 @@ namespace VeterinariaElBuenAmigo
             this.btnInventario.IconSize = 52;
             this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInventario.Location = new System.Drawing.Point(0, 445);
-            this.btnInventario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInventario.Margin = new System.Windows.Forms.Padding(2);
             this.btnInventario.MinimumSize = new System.Drawing.Size(262, 57);
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Size = new System.Drawing.Size(270, 65);
@@ -138,7 +138,7 @@ namespace VeterinariaElBuenAmigo
             this.btnConsulta.IconSize = 52;
             this.btnConsulta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsulta.Location = new System.Drawing.Point(0, 380);
-            this.btnConsulta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConsulta.Margin = new System.Windows.Forms.Padding(2);
             this.btnConsulta.MinimumSize = new System.Drawing.Size(262, 57);
             this.btnConsulta.Name = "btnConsulta";
             this.btnConsulta.Size = new System.Drawing.Size(270, 65);
@@ -163,7 +163,7 @@ namespace VeterinariaElBuenAmigo
             this.btnCitas.IconSize = 52;
             this.btnCitas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCitas.Location = new System.Drawing.Point(0, 315);
-            this.btnCitas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCitas.Margin = new System.Windows.Forms.Padding(2);
             this.btnCitas.MinimumSize = new System.Drawing.Size(262, 57);
             this.btnCitas.Name = "btnCitas";
             this.btnCitas.Size = new System.Drawing.Size(270, 65);
@@ -188,7 +188,7 @@ namespace VeterinariaElBuenAmigo
             this.btnPacientes.IconSize = 52;
             this.btnPacientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPacientes.Location = new System.Drawing.Point(0, 250);
-            this.btnPacientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPacientes.Margin = new System.Windows.Forms.Padding(2);
             this.btnPacientes.MinimumSize = new System.Drawing.Size(262, 57);
             this.btnPacientes.Name = "btnPacientes";
             this.btnPacientes.Size = new System.Drawing.Size(270, 65);
@@ -213,7 +213,7 @@ namespace VeterinariaElBuenAmigo
             this.btnPropietario.IconSize = 52;
             this.btnPropietario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPropietario.Location = new System.Drawing.Point(0, 185);
-            this.btnPropietario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPropietario.Margin = new System.Windows.Forms.Padding(2);
             this.btnPropietario.MinimumSize = new System.Drawing.Size(262, 57);
             this.btnPropietario.Name = "btnPropietario";
             this.btnPropietario.Size = new System.Drawing.Size(270, 65);
@@ -238,7 +238,7 @@ namespace VeterinariaElBuenAmigo
             this.btnDashboard.IconSize = 52;
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.Location = new System.Drawing.Point(0, 120);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2);
             this.btnDashboard.MinimumSize = new System.Drawing.Size(262, 57);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(270, 65);
@@ -254,7 +254,7 @@ namespace VeterinariaElBuenAmigo
             this.pbLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pbLogo.Image = global::VeterinariaElBuenAmigo.Properties.Resources.logo_menu;
             this.pbLogo.Location = new System.Drawing.Point(0, 0);
-            this.pbLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbLogo.Margin = new System.Windows.Forms.Padding(2);
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.Size = new System.Drawing.Size(270, 120);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -376,28 +376,29 @@ namespace VeterinariaElBuenAmigo
             // 
             this.AnimacionPanelNavegacion.AnimationType = Guna.UI.Animation.AnimationType.HorizSlide;
             this.AnimacionPanelNavegacion.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 0;
-            animation3.Padding = new System.Windows.Forms.Padding(0);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 0F;
-            animation3.TransparencyCoeff = 0F;
-            this.AnimacionPanelNavegacion.DefaultAnimation = animation3;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.AnimacionPanelNavegacion.DefaultAnimation = animation1;
             this.AnimacionPanelNavegacion.Interval = 3;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1040, 640);
             this.Controls.Add(this.panelContenido);
             this.Controls.Add(this.panelTop);

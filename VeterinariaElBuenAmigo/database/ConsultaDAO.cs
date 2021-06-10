@@ -18,7 +18,7 @@ namespace VeterinariaElBuenAmigo.database
 
         public ConsultaDAO()
         {
-            Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
+            //Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
             lista = new List<Consulta>();
         }
 

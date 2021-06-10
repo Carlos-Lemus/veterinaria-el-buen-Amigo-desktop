@@ -34,6 +34,8 @@ namespace VeterinariaElBuenAmigo
             position = new Point(Location.X, Location.Y);
             size = new Size(Size.Width, Size.Height);
 
+            activaButton(btnPropietario);
+            openFormInPane(new FormPropietario());
         }
 
         private void btnClose_Click(object sender, EventArgs e)

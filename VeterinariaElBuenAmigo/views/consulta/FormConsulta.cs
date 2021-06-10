@@ -25,12 +25,10 @@ namespace VeterinariaElBuenAmigo.views
        
         public FormConsulta()
         {
+            InitializeComponent();
+
             consultaDao = new ConsultaDAO();
             pacienteDao = new PacienteDAO();
-
-          
-
-            InitializeComponent();
 
             cargarMascotas();
         }
