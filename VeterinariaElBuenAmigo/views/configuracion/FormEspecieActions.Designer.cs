@@ -58,7 +58,7 @@ namespace VeterinariaElBuenAmigo.views.configuracion
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.Image = null;
             this.btnEdit.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnEdit.Location = new System.Drawing.Point(24, 372);
+            this.btnEdit.Location = new System.Drawing.Point(24, 338);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(202)))), ((int)(((byte)(87)))));
             this.btnEdit.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -88,7 +88,7 @@ namespace VeterinariaElBuenAmigo.views.configuracion
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = null;
             this.btnAdd.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAdd.Location = new System.Drawing.Point(24, 331);
+            this.btnAdd.Location = new System.Drawing.Point(24, 286);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.btnAdd.OnHoverBorderColor = System.Drawing.Color.Black;

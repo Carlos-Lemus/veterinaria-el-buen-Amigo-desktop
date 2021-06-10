@@ -30,7 +30,7 @@ namespace VeterinariaElBuenAmigo
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI.Animation.Animation animation1 = new Guna.UI.Animation.Animation();
+            Guna.UI.Animation.Animation animation3 = new Guna.UI.Animation.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelNavegacion = new Guna.UI.WinForms.GunaPanel();
             this.btnConfiguracion = new FontAwesome.Sharp.IconButton();
@@ -69,9 +69,8 @@ namespace VeterinariaElBuenAmigo
             this.AnimacionPanelNavegacion.SetDecoration(this.panelNavegacion, Guna.UI.Animation.DecorationType.None);
             this.panelNavegacion.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelNavegacion.Location = new System.Drawing.Point(0, 0);
-            this.panelNavegacion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelNavegacion.Name = "panelNavegacion";
-            this.panelNavegacion.Size = new System.Drawing.Size(360, 886);
+            this.panelNavegacion.Size = new System.Drawing.Size(270, 640);
             this.panelNavegacion.TabIndex = 0;
             // 
             // btnConfiguracion
@@ -88,11 +87,11 @@ namespace VeterinariaElBuenAmigo
             this.btnConfiguracion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnConfiguracion.IconSize = 52;
             this.btnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfiguracion.Location = new System.Drawing.Point(0, 628);
-            this.btnConfiguracion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnConfiguracion.MinimumSize = new System.Drawing.Size(349, 70);
+            this.btnConfiguracion.Location = new System.Drawing.Point(0, 510);
+            this.btnConfiguracion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConfiguracion.MinimumSize = new System.Drawing.Size(262, 57);
             this.btnConfiguracion.Name = "btnConfiguracion";
-            this.btnConfiguracion.Size = new System.Drawing.Size(360, 80);
+            this.btnConfiguracion.Size = new System.Drawing.Size(270, 65);
             this.btnConfiguracion.TabIndex = 8;
             this.btnConfiguracion.Text = "Configuracion";
             this.btnConfiguracion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -113,11 +112,11 @@ namespace VeterinariaElBuenAmigo
             this.btnInventario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInventario.IconSize = 52;
             this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventario.Location = new System.Drawing.Point(0, 548);
-            this.btnInventario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnInventario.MinimumSize = new System.Drawing.Size(349, 70);
+            this.btnInventario.Location = new System.Drawing.Point(0, 445);
+            this.btnInventario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInventario.MinimumSize = new System.Drawing.Size(262, 57);
             this.btnInventario.Name = "btnInventario";
-            this.btnInventario.Size = new System.Drawing.Size(360, 80);
+            this.btnInventario.Size = new System.Drawing.Size(270, 65);
             this.btnInventario.TabIndex = 7;
             this.btnInventario.Text = "Inventario";
             this.btnInventario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -138,11 +137,11 @@ namespace VeterinariaElBuenAmigo
             this.btnConsulta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnConsulta.IconSize = 52;
             this.btnConsulta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsulta.Location = new System.Drawing.Point(0, 468);
-            this.btnConsulta.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnConsulta.MinimumSize = new System.Drawing.Size(349, 70);
+            this.btnConsulta.Location = new System.Drawing.Point(0, 380);
+            this.btnConsulta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConsulta.MinimumSize = new System.Drawing.Size(262, 57);
             this.btnConsulta.Name = "btnConsulta";
-            this.btnConsulta.Size = new System.Drawing.Size(360, 80);
+            this.btnConsulta.Size = new System.Drawing.Size(270, 65);
             this.btnConsulta.TabIndex = 5;
             this.btnConsulta.Text = "Consulta";
             this.btnConsulta.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -163,11 +162,11 @@ namespace VeterinariaElBuenAmigo
             this.btnCitas.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCitas.IconSize = 52;
             this.btnCitas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCitas.Location = new System.Drawing.Point(0, 388);
-            this.btnCitas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCitas.MinimumSize = new System.Drawing.Size(349, 70);
+            this.btnCitas.Location = new System.Drawing.Point(0, 315);
+            this.btnCitas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCitas.MinimumSize = new System.Drawing.Size(262, 57);
             this.btnCitas.Name = "btnCitas";
-            this.btnCitas.Size = new System.Drawing.Size(360, 80);
+            this.btnCitas.Size = new System.Drawing.Size(270, 65);
             this.btnCitas.TabIndex = 4;
             this.btnCitas.Text = "Citas";
             this.btnCitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -188,11 +187,11 @@ namespace VeterinariaElBuenAmigo
             this.btnPacientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPacientes.IconSize = 52;
             this.btnPacientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPacientes.Location = new System.Drawing.Point(0, 308);
-            this.btnPacientes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPacientes.MinimumSize = new System.Drawing.Size(349, 70);
+            this.btnPacientes.Location = new System.Drawing.Point(0, 250);
+            this.btnPacientes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPacientes.MinimumSize = new System.Drawing.Size(262, 57);
             this.btnPacientes.Name = "btnPacientes";
-            this.btnPacientes.Size = new System.Drawing.Size(360, 80);
+            this.btnPacientes.Size = new System.Drawing.Size(270, 65);
             this.btnPacientes.TabIndex = 3;
             this.btnPacientes.Text = "Pacientes";
             this.btnPacientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -213,11 +212,11 @@ namespace VeterinariaElBuenAmigo
             this.btnPropietario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPropietario.IconSize = 52;
             this.btnPropietario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPropietario.Location = new System.Drawing.Point(0, 228);
-            this.btnPropietario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnPropietario.MinimumSize = new System.Drawing.Size(349, 70);
+            this.btnPropietario.Location = new System.Drawing.Point(0, 185);
+            this.btnPropietario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPropietario.MinimumSize = new System.Drawing.Size(262, 57);
             this.btnPropietario.Name = "btnPropietario";
-            this.btnPropietario.Size = new System.Drawing.Size(360, 80);
+            this.btnPropietario.Size = new System.Drawing.Size(270, 65);
             this.btnPropietario.TabIndex = 2;
             this.btnPropietario.Text = "Propietarios";
             this.btnPropietario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -238,11 +237,11 @@ namespace VeterinariaElBuenAmigo
             this.btnDashboard.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDashboard.IconSize = 52;
             this.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDashboard.Location = new System.Drawing.Point(0, 148);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDashboard.MinimumSize = new System.Drawing.Size(349, 70);
+            this.btnDashboard.Location = new System.Drawing.Point(0, 120);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDashboard.MinimumSize = new System.Drawing.Size(262, 57);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.Size = new System.Drawing.Size(360, 80);
+            this.btnDashboard.Size = new System.Drawing.Size(270, 65);
             this.btnDashboard.TabIndex = 1;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -255,9 +254,9 @@ namespace VeterinariaElBuenAmigo
             this.pbLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pbLogo.Image = global::VeterinariaElBuenAmigo.Properties.Resources.logo_menu;
             this.pbLogo.Location = new System.Drawing.Point(0, 0);
-            this.pbLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(360, 148);
+            this.pbLogo.Size = new System.Drawing.Size(270, 120);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 0;
             this.pbLogo.TabStop = false;
@@ -271,10 +270,9 @@ namespace VeterinariaElBuenAmigo
             this.panelTop.Controls.Add(this.btnClose);
             this.AnimacionPanelNavegacion.SetDecoration(this.panelTop, Guna.UI.Animation.DecorationType.None);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(360, 0);
-            this.panelTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelTop.Location = new System.Drawing.Point(270, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1240, 37);
+            this.panelTop.Size = new System.Drawing.Size(770, 30);
             this.panelTop.TabIndex = 1;
             // 
             // btnMin
@@ -287,10 +285,10 @@ namespace VeterinariaElBuenAmigo
             this.btnMin.IconColor = System.Drawing.Color.Black;
             this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMin.IconSize = 32;
-            this.btnMin.Location = new System.Drawing.Point(1028, 0);
+            this.btnMin.Location = new System.Drawing.Point(610, 0);
             this.btnMin.Margin = new System.Windows.Forms.Padding(0);
             this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(53, 37);
+            this.btnMin.Size = new System.Drawing.Size(40, 30);
             this.btnMin.TabIndex = 11;
             this.btnMin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMin.UseVisualStyleBackColor = true;
@@ -306,10 +304,10 @@ namespace VeterinariaElBuenAmigo
             this.btnRestore.IconColor = System.Drawing.Color.Black;
             this.btnRestore.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRestore.IconSize = 32;
-            this.btnRestore.Location = new System.Drawing.Point(1081, 0);
+            this.btnRestore.Location = new System.Drawing.Point(650, 0);
             this.btnRestore.Margin = new System.Windows.Forms.Padding(0);
             this.btnRestore.Name = "btnRestore";
-            this.btnRestore.Size = new System.Drawing.Size(53, 37);
+            this.btnRestore.Size = new System.Drawing.Size(40, 30);
             this.btnRestore.TabIndex = 10;
             this.btnRestore.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRestore.UseVisualStyleBackColor = true;
@@ -326,10 +324,10 @@ namespace VeterinariaElBuenAmigo
             this.btnMax.IconColor = System.Drawing.Color.Black;
             this.btnMax.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMax.IconSize = 32;
-            this.btnMax.Location = new System.Drawing.Point(1134, 0);
+            this.btnMax.Location = new System.Drawing.Point(690, 0);
             this.btnMax.Margin = new System.Windows.Forms.Padding(0);
             this.btnMax.Name = "btnMax";
-            this.btnMax.Size = new System.Drawing.Size(53, 37);
+            this.btnMax.Size = new System.Drawing.Size(40, 30);
             this.btnMax.TabIndex = 6;
             this.btnMax.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMax.UseVisualStyleBackColor = true;
@@ -346,10 +344,10 @@ namespace VeterinariaElBuenAmigo
             this.btnClose.IconColor = System.Drawing.Color.Black;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 32;
-            this.btnClose.Location = new System.Drawing.Point(1187, 0);
+            this.btnClose.Location = new System.Drawing.Point(730, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(53, 37);
+            this.btnClose.Size = new System.Drawing.Size(40, 30);
             this.btnClose.TabIndex = 4;
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClose.UseVisualStyleBackColor = true;
@@ -364,10 +362,10 @@ namespace VeterinariaElBuenAmigo
             this.panelContenido.BackColor = System.Drawing.Color.White;
             this.AnimacionPanelNavegacion.SetDecoration(this.panelContenido, Guna.UI.Animation.DecorationType.None);
             this.panelContenido.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenido.Location = new System.Drawing.Point(360, 37);
+            this.panelContenido.Location = new System.Drawing.Point(270, 30);
             this.panelContenido.Margin = new System.Windows.Forms.Padding(0);
             this.panelContenido.Name = "panelContenido";
-            this.panelContenido.Size = new System.Drawing.Size(1240, 849);
+            this.panelContenido.Size = new System.Drawing.Size(770, 610);
             this.panelContenido.TabIndex = 2;
             // 
             // windowResize
@@ -378,35 +376,34 @@ namespace VeterinariaElBuenAmigo
             // 
             this.AnimacionPanelNavegacion.AnimationType = Guna.UI.Animation.AnimationType.HorizSlide;
             this.AnimacionPanelNavegacion.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 0;
-            animation1.Padding = new System.Windows.Forms.Padding(0);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 0F;
-            animation1.TransparencyCoeff = 0F;
-            this.AnimacionPanelNavegacion.DefaultAnimation = animation1;
+            animation3.AnimateOnlyDifferences = true;
+            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
+            animation3.LeafCoeff = 0F;
+            animation3.MaxTime = 1F;
+            animation3.MinTime = 0F;
+            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
+            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
+            animation3.MosaicSize = 0;
+            animation3.Padding = new System.Windows.Forms.Padding(0);
+            animation3.RotateCoeff = 0F;
+            animation3.RotateLimit = 0F;
+            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
+            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
+            animation3.TimeCoeff = 0F;
+            animation3.TransparencyCoeff = 0F;
+            this.AnimacionPanelNavegacion.DefaultAnimation = animation3;
             this.AnimacionPanelNavegacion.Interval = 3;
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 886);
+            this.ClientSize = new System.Drawing.Size(1040, 640);
             this.Controls.Add(this.panelContenido);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelNavegacion);
             this.AnimacionPanelNavegacion.SetDecoration(this, Guna.UI.Animation.DecorationType.None);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Veterinaria";
