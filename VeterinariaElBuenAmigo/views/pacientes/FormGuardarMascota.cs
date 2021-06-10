@@ -56,19 +56,30 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.paciente = new Paciente();
 
             int idPropietario = Int32.Parse(dgvDatosPropietarios.Rows[dgvDatosPropietarios.CurrentRow.Index].Cells[0].Value.ToString());
-            MessageBox.Show(null, idPropietario.ToString(), MessageBoxButtons.OK);
+        //    MessageBox.Show(null, idPropietario.ToString(), MessageBoxButtons.OK);
 
-            paciente.idCliente = idPropietario;
-            paciente.idRaza = Int32.Parse(animal_raza.Text);
-            paciente.idEspecie = Int32.Parse(idEspe.Text);
-            paciente.color = txtcolor.Text;
-            paciente.nombrePaciente = txtNombreMascota.Text;
-            paciente.genero = gener.Text;
-            paciente.caracteristicasEspeciales = descripcionMascota.Text;
-            paciente.fechaNacimiento = fechaMascota.Text;
+            if (String.IsNullOrEmpty(txtNombreMascota.Text) || String.IsNullOrEmpty(descripcionMascota.Text)
+                || String.IsNullOrEmpty(txtcolor.Text))
+            {
+                MessageBox.Show("Tiene Campos Vacios", "Precaución", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                paciente.idCliente = idPropietario;
+                paciente.idRaza = Int32.Parse(animal_raza.Text);
+                paciente.idEspecie = Int32.Parse(idEspe.Text);
+                paciente.color = txtcolor.Text;
+                paciente.nombrePaciente = txtNombreMascota.Text;
+                paciente.genero = gener.Text;
+                paciente.caracteristicasEspeciales = descripcionMascota.Text;
+                paciente.fechaNacimiento = fechaMascota.Text;
 
-            pacienteDao.insert(paciente);
-            this.Close();
+                pacienteDao.insert(paciente);
+                MessageBox.Show("Se ha Guardado Correctamente, saldrá de esta ventana", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                this.Close();
+            }
+           
         }
 
         private void cargarEspecies()

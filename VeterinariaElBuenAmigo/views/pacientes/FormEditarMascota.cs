@@ -93,18 +93,30 @@ namespace VeterinariaElBuenAmigo.views.pacientes
 
         private void btnEditMascota_Click(object sender, EventArgs e)
         {
-            Paciente p = new Paciente();
-            p.idPaciente = Int32.Parse(id_client.Text);
-            p.idRaza = Int32.Parse(rm.Text);
-            p.idEspecie = Int32.Parse(especie_de_mascota.Text);
-            p.color = txtcolor1.Text;
-            p.nombrePaciente = txtNombreMascota1.Text;
-            p.genero = genero_de_mascota.Text;
-            p.caracteristicasEspeciales = descripcionMascota1.Text;
-            p.fechaNacimiento = fechaMascota1.Text;
+            if (String.IsNullOrEmpty(txtNombreMascota1.Text) || String.IsNullOrEmpty(descripcionMascota1.Text)
+                || String.IsNullOrEmpty(txtcolor1.Text))
+            {
+                MessageBox.Show("Tiene Campos Vacios", "Precaución", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                Paciente p = new Paciente();
+                p.idPaciente = Int32.Parse(id_client.Text);
+                p.idRaza = Int32.Parse(rm.Text);
+                p.idEspecie = Int32.Parse(especie_de_mascota.Text);
+                p.color = txtcolor1.Text;
+                p.nombrePaciente = txtNombreMascota1.Text;
+                p.genero = genero_de_mascota.Text;
+                p.caracteristicasEspeciales = descripcionMascota1.Text;
+                p.fechaNacimiento = fechaMascota1.Text;
 
-            pacienteDao.update(p);
-            this.Close();
+                pacienteDao.update(p);
+                MessageBox.Show("Se ha editado Correctamente, saldrá de esta ventana", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+
+            
+        
         }
     }
 }
