@@ -154,7 +154,7 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.btnAdd.Location = new System.Drawing.Point(251, 652);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.OnHoverBaseColor = System.Drawing.Color.Empty;
+            this.btnAdd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.btnAdd.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnAdd.OnHoverForeColor = System.Drawing.Color.White;
             this.btnAdd.OnHoverImage = null;

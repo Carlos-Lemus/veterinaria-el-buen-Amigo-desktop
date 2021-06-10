@@ -48,7 +48,7 @@ namespace VeterinariaElBuenAmigo.views
             this.panelTop.Controls.Add(this.label1);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
-            this.panelTop.Margin = new System.Windows.Forms.Padding(4);
+            this.panelTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(1200, 57);
             this.panelTop.TabIndex = 1;
@@ -107,7 +107,7 @@ namespace VeterinariaElBuenAmigo.views
             this.pictureBox1.Image = global::VeterinariaElBuenAmigo.Properties.Resources.Recurso_3;
             this.pictureBox1.ImageLocation = "";
             this.pictureBox1.Location = new System.Drawing.Point(288, 64);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(628, 377);
             this.pictureBox1.TabIndex = 2;
@@ -125,14 +125,13 @@ namespace VeterinariaElBuenAmigo.views
             this.txt_Clave.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txt_Clave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.txt_Clave.Location = new System.Drawing.Point(288, 530);
-            this.txt_Clave.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Clave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Clave.Name = "txt_Clave";
             this.txt_Clave.PasswordChar = '\0';
             this.txt_Clave.Radius = 15;
             this.txt_Clave.Size = new System.Drawing.Size(628, 52);
-            this.txt_Clave.TabIndex = 1;
+            this.txt_Clave.TabIndex = 40;
             this.txt_Clave.TextOffsetX = 10;
-            this.txt_Clave.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Clave_KeyPress);
             // 
             // label3
             // 
@@ -161,16 +160,16 @@ namespace VeterinariaElBuenAmigo.views
             this.btn_Ingresar.Image = null;
             this.btn_Ingresar.ImageSize = new System.Drawing.Size(20, 20);
             this.btn_Ingresar.Location = new System.Drawing.Point(288, 604);
-            this.btn_Ingresar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Ingresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Ingresar.Name = "btn_Ingresar";
-            this.btn_Ingresar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
+            this.btn_Ingresar.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.btn_Ingresar.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_Ingresar.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Ingresar.OnHoverImage = null;
             this.btn_Ingresar.OnPressedColor = System.Drawing.Color.Black;
             this.btn_Ingresar.Radius = 5;
             this.btn_Ingresar.Size = new System.Drawing.Size(628, 52);
-            this.btn_Ingresar.TabIndex = 2;
+            this.btn_Ingresar.TabIndex = 47;
             this.btn_Ingresar.Text = "Ingresar";
             this.btn_Ingresar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_Ingresar.Click += new System.EventHandler(this.btn_Guardar_Click);
@@ -187,7 +186,7 @@ namespace VeterinariaElBuenAmigo.views
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "VentanaInicial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VentanaInicial";

@@ -30,9 +30,9 @@ namespace VeterinariaElBuenAmigo.views.propietarios
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelTop = new Guna.UI.WinForms.GunaPanel();
             this.btnMin = new FontAwesome.Sharp.IconButton();
             this.btnRestore = new FontAwesome.Sharp.IconButton();
@@ -40,8 +40,18 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.windowsDragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.windowResize = new Guna.UI.WinForms.GunaResize(this.components);
-            this.gunaVScrollBar1 = new Guna.UI.WinForms.GunaVScrollBar();
             this.panelContenido = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.dgvMascotas1 = new Guna.UI.WinForms.GunaDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,19 +59,11 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCorreo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblDireccion = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblTelefono = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblId = new System.Windows.Forms.Label();
+            this.gunaVScrollBar1 = new Guna.UI.WinForms.GunaVScrollBar();
             this.lblCorreo = new System.Windows.Forms.Label();
             this.panelTop.SuspendLayout();
             this.panelContenido.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMascotas1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,7 +78,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Margin = new System.Windows.Forms.Padding(4);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1267, 37);
+            this.panelTop.Size = new System.Drawing.Size(1591, 37);
             this.panelTop.TabIndex = 3;
             // 
             // btnMin
@@ -88,7 +90,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.btnMin.IconColor = System.Drawing.Color.White;
             this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMin.IconSize = 32;
-            this.btnMin.Location = new System.Drawing.Point(1055, 0);
+            this.btnMin.Location = new System.Drawing.Point(1379, 0);
             this.btnMin.Margin = new System.Windows.Forms.Padding(0);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(53, 37);
@@ -106,7 +108,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.btnRestore.IconColor = System.Drawing.Color.White;
             this.btnRestore.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRestore.IconSize = 32;
-            this.btnRestore.Location = new System.Drawing.Point(1108, 0);
+            this.btnRestore.Location = new System.Drawing.Point(1432, 0);
             this.btnRestore.Margin = new System.Windows.Forms.Padding(0);
             this.btnRestore.Name = "btnRestore";
             this.btnRestore.Size = new System.Drawing.Size(53, 37);
@@ -125,7 +127,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.btnMax.IconColor = System.Drawing.Color.White;
             this.btnMax.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMax.IconSize = 32;
-            this.btnMax.Location = new System.Drawing.Point(1161, 0);
+            this.btnMax.Location = new System.Drawing.Point(1485, 0);
             this.btnMax.Margin = new System.Windows.Forms.Padding(0);
             this.btnMax.Name = "btnMax";
             this.btnMax.Size = new System.Drawing.Size(53, 37);
@@ -144,7 +146,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.btnClose.IconColor = System.Drawing.Color.White;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 32;
-            this.btnClose.Location = new System.Drawing.Point(1214, 0);
+            this.btnClose.Location = new System.Drawing.Point(1538, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(53, 37);
@@ -161,51 +163,172 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             // 
             this.windowResize.TargetForm = this;
             // 
-            // gunaVScrollBar1
-            // 
-            this.gunaVScrollBar1.LargeChange = 10;
-            this.gunaVScrollBar1.Location = new System.Drawing.Point(1213, 78);
-            this.gunaVScrollBar1.Margin = new System.Windows.Forms.Padding(4);
-            this.gunaVScrollBar1.Maximum = 100;
-            this.gunaVScrollBar1.Name = "gunaVScrollBar1";
-            this.gunaVScrollBar1.ScrollIdleColor = System.Drawing.Color.Teal;
-            this.gunaVScrollBar1.Size = new System.Drawing.Size(23, 559);
-            this.gunaVScrollBar1.TabIndex = 41;
-            this.gunaVScrollBar1.ThumbColor = System.Drawing.Color.LightBlue;
-            this.gunaVScrollBar1.ThumbHoverColor = System.Drawing.Color.LightBlue;
-            this.gunaVScrollBar1.ThumbPressedColor = System.Drawing.Color.LightBlue;
-            // 
             // panelContenido
             // 
             this.panelContenido.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelContenido.AutoScroll = true;
+            this.panelContenido.Controls.Add(this.label1);
+            this.panelContenido.Controls.Add(this.panel1);
             this.panelContenido.Controls.Add(this.dgvMascotas1);
             this.panelContenido.Controls.Add(this.label4);
-            this.panelContenido.Controls.Add(this.label2);
-            this.panelContenido.Controls.Add(this.label1);
-            this.panelContenido.Controls.Add(this.label3);
-            this.panelContenido.Controls.Add(this.lblNombre);
-            this.panelContenido.Controls.Add(this.label5);
-            this.panelContenido.Controls.Add(this.lblDireccion);
-            this.panelContenido.Controls.Add(this.label6);
-            this.panelContenido.Controls.Add(this.lblTelefono);
-            this.panelContenido.Controls.Add(this.label7);
-            this.panelContenido.Controls.Add(this.lblId);
-            this.panelContenido.Controls.Add(this.lblCorreo);
             this.panelContenido.Location = new System.Drawing.Point(41, 70);
             this.panelContenido.Margin = new System.Windows.Forms.Padding(4);
             this.panelContenido.Name = "panelContenido";
-            this.panelContenido.Size = new System.Drawing.Size(1151, 566);
+            this.panelContenido.Size = new System.Drawing.Size(1475, 544);
             this.panelContenido.TabIndex = 40;
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblId);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.lblNombre);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lblDireccion);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.lblCorreo);
+            this.panel1.Controls.Add(this.lblTelefono);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Location = new System.Drawing.Point(51, 89);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(552, 431);
+            this.panel1.TabIndex = 42;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(139, 13);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(392, 34);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Informacion del propietario";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(55, 47);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(171, 34);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Id propietario:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblId
+            // 
+            this.lblId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.ForeColor = System.Drawing.Color.White;
+            this.lblId.Location = new System.Drawing.Point(234, 47);
+            this.lblId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(181, 34);
+            this.lblId.TabIndex = 32;
+            this.lblId.Text = "Id propietario";
+            this.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(55, 112);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(139, 34);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "Nombre: ";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.White;
+            this.lblNombre.Location = new System.Drawing.Point(234, 112);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(256, 34);
+            this.lblNombre.TabIndex = 21;
+            this.lblNombre.Text = "Nombre ";
+            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(55, 341);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(108, 34);
+            this.label3.TabIndex = 38;
+            this.label3.Text = "Correo:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblDireccion
+            // 
+            this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccion.ForeColor = System.Drawing.Color.White;
+            this.lblDireccion.Location = new System.Drawing.Point(234, 184);
+            this.lblDireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(285, 34);
+            this.lblDireccion.TabIndex = 22;
+            this.lblDireccion.Text = "Direccion ";
+            this.lblDireccion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(55, 264);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label5.Size = new System.Drawing.Size(131, 34);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "Telefono:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblTelefono
+            // 
+            this.lblTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefono.ForeColor = System.Drawing.Color.White;
+            this.lblTelefono.Location = new System.Drawing.Point(234, 264);
+            this.lblTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblTelefono.Size = new System.Drawing.Size(135, 34);
+            this.lblTelefono.TabIndex = 23;
+            this.lblTelefono.Text = "Telefono ";
+            this.lblTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(55, 184);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(131, 34);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "Direccion:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dgvMascotas1
             // 
             this.dgvMascotas1.AllowUserToAddRows = false;
             this.dgvMascotas1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
-            this.dgvMascotas1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
+            this.dgvMascotas1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvMascotas1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMascotas1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -213,14 +336,14 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.dgvMascotas1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvMascotas1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvMascotas1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMascotas1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMascotas1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvMascotas1.ColumnHeadersHeight = 40;
             this.dgvMascotas1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -228,17 +351,17 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.Column3,
             this.Column4,
             this.ColumnCorreo});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 14F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(185)))), ((int)(((byte)(175)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMascotas1.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 14F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(185)))), ((int)(((byte)(175)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMascotas1.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgvMascotas1.EnableHeadersVisualStyles = false;
             this.dgvMascotas1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
-            this.dgvMascotas1.Location = new System.Drawing.Point(48, 88);
+            this.dgvMascotas1.Location = new System.Drawing.Point(654, 89);
             this.dgvMascotas1.Margin = new System.Windows.Forms.Padding(4);
             this.dgvMascotas1.Name = "dgvMascotas1";
             this.dgvMascotas1.ReadOnly = true;
@@ -246,7 +369,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.dgvMascotas1.RowHeadersWidth = 51;
             this.dgvMascotas1.RowTemplate.Height = 40;
             this.dgvMascotas1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMascotas1.Size = new System.Drawing.Size(995, 354);
+            this.dgvMascotas1.Size = new System.Drawing.Size(755, 431);
             this.dgvMascotas1.TabIndex = 41;
             this.dgvMascotas1.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Teal;
             this.dgvMascotas1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
@@ -315,139 +438,27 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(29, 21);
+            this.label4.Location = new System.Drawing.Point(878, 12);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(387, 37);
+            this.label4.Size = new System.Drawing.Size(365, 37);
             this.label4.TabIndex = 28;
             this.label4.Text = "Mascotas del propietario";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label2
+            // gunaVScrollBar1
             // 
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(13, 495);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 34);
-            this.label2.TabIndex = 39;
-            this.label2.Text = "Id propietario:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(11, 446);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(555, 34);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Informacion del propietario";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(13, 754);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(165, 34);
-            this.label3.TabIndex = 38;
-            this.label3.Text = "Correo:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(300, 560);
-            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(752, 34);
-            this.lblNombre.TabIndex = 21;
-            this.lblNombre.Text = "Nombre ";
-            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(13, 690);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label5.Size = new System.Drawing.Size(165, 34);
-            this.label5.TabIndex = 37;
-            this.label5.Text = "Telefono:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblDireccion
-            // 
-            this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccion.ForeColor = System.Drawing.Color.White;
-            this.lblDireccion.Location = new System.Drawing.Point(300, 624);
-            this.lblDireccion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(752, 34);
-            this.lblDireccion.TabIndex = 22;
-            this.lblDireccion.Text = "Direccion ";
-            this.lblDireccion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(13, 624);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(165, 34);
-            this.label6.TabIndex = 36;
-            this.label6.Text = "Direccion:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblTelefono
-            // 
-            this.lblTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.ForeColor = System.Drawing.Color.White;
-            this.lblTelefono.Location = new System.Drawing.Point(300, 690);
-            this.lblTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTelefono.Size = new System.Drawing.Size(555, 34);
-            this.lblTelefono.TabIndex = 23;
-            this.lblTelefono.Text = "Telefono ";
-            this.lblTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(12, 560);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(241, 34);
-            this.label7.TabIndex = 35;
-            this.label7.Text = "Nombre y  Apellido:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblId
-            // 
-            this.lblId.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId.ForeColor = System.Drawing.Color.White;
-            this.lblId.Location = new System.Drawing.Point(300, 495);
-            this.lblId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(555, 34);
-            this.lblId.TabIndex = 32;
-            this.lblId.Text = "Id propietario";
-            this.lblId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.gunaVScrollBar1.LargeChange = 10;
+            this.gunaVScrollBar1.Location = new System.Drawing.Point(1600, 78);
+            this.gunaVScrollBar1.Margin = new System.Windows.Forms.Padding(4);
+            this.gunaVScrollBar1.Maximum = 100;
+            this.gunaVScrollBar1.Name = "gunaVScrollBar1";
+            this.gunaVScrollBar1.ScrollIdleColor = System.Drawing.Color.Teal;
+            this.gunaVScrollBar1.Size = new System.Drawing.Size(23, 559);
+            this.gunaVScrollBar1.TabIndex = 41;
+            this.gunaVScrollBar1.ThumbColor = System.Drawing.Color.LightBlue;
+            this.gunaVScrollBar1.ThumbHoverColor = System.Drawing.Color.LightBlue;
+            this.gunaVScrollBar1.ThumbPressedColor = System.Drawing.Color.LightBlue;
             // 
             // lblCorreo
             // 
@@ -455,10 +466,10 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreo.ForeColor = System.Drawing.Color.White;
-            this.lblCorreo.Location = new System.Drawing.Point(300, 754);
+            this.lblCorreo.Location = new System.Drawing.Point(234, 341);
             this.lblCorreo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(555, 34);
+            this.lblCorreo.Size = new System.Drawing.Size(226, 34);
             this.lblCorreo.TabIndex = 24;
             this.lblCorreo.Text = "Correo ";
             this.lblCorreo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -468,7 +479,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.ClientSize = new System.Drawing.Size(1267, 689);
+            this.ClientSize = new System.Drawing.Size(1591, 667);
             this.Controls.Add(this.gunaVScrollBar1);
             this.Controls.Add(this.panelContenido);
             this.Controls.Add(this.panelTop);
@@ -479,6 +490,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.Text = "FormPropietarioInfo";
             this.panelTop.ResumeLayout(false);
             this.panelContenido.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMascotas1)).EndInit();
             this.ResumeLayout(false);
 
@@ -493,7 +505,6 @@ namespace VeterinariaElBuenAmigo.views.propietarios
         private FontAwesome.Sharp.IconButton btnClose;
         private Guna.UI.WinForms.GunaDragControl windowsDragControl;
         private Guna.UI.WinForms.GunaResize windowResize;
-        private Guna.UI.WinForms.GunaVScrollBar gunaVScrollBar1;
         private System.Windows.Forms.Panel panelContenido;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -504,7 +515,6 @@ namespace VeterinariaElBuenAmigo.views.propietarios
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblCorreo;
         private System.Windows.Forms.Label label4;
         private Guna.UI.WinForms.GunaDataGridView dgvMascotas1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -513,5 +523,8 @@ namespace VeterinariaElBuenAmigo.views.propietarios
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCorreo;
         private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI.WinForms.GunaVScrollBar gunaVScrollBar1;
+        private System.Windows.Forms.Label lblCorreo;
     }
 }
