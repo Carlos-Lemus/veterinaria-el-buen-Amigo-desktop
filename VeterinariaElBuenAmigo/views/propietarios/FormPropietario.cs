@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -122,6 +123,33 @@ namespace VeterinariaElBuenAmigo.views
 
                 cargarPropietarios();
             }
+        }
+
+        private void cargarPropietariosSearch(List<Cliente> listaSearch)
+        {
+            if (dgvPropietarios.RowCount > 0)
+            {
+                dgvPropietarios.Rows.Clear();
+            }
+
+            foreach (Cliente cliente in listaSearch)
+            {
+                dgvPropietarios.Rows.Add(cliente.IdCliente, cliente.NombreCliente, cliente.Direccion, cliente.Telefono, cliente.Correo);
+            }
+        }
+
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            var listaSearch = lista.Where(cliente => cliente.NombreCliente.ToLower().Contains(txtSearch.Text.ToLower()));
+
+            cargarPropietariosSearch(listaSearch.ToList());
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            var listaSearch = lista.Where(cliente => cliente.NombreCliente.ToLower().Contains(txtSearch.Text.ToLower()));
+
+            cargarPropietariosSearch(listaSearch.ToList());
         }
     }
 }
