@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using VeterinariaElBuenAmigo.database;
 using VeterinariaElBuenAmigo.models;
 using VeterinariaElBuenAmigo.views.consulta;
+using KimToo;
+using VeterinariaElBuenAmigo.Properties;
 
 namespace VeterinariaElBuenAmigo.views
 {
@@ -20,10 +22,13 @@ namespace VeterinariaElBuenAmigo.views
 
         private PacienteDAO pacienteDao;
         private List<Paciente> listaPaciente;
+       
         public FormConsulta()
         {
             consultaDao = new ConsultaDAO();
-            pacienteDao = new PacienteDAO(); 
+            pacienteDao = new PacienteDAO();
+
+          
 
             InitializeComponent();
 
@@ -59,9 +64,9 @@ namespace VeterinariaElBuenAmigo.views
 
         private void cargarMascotas()
         {
-
+            
             String Especie = "", Nombre = "", Num = ""; 
-            tbl_Consulta.Rows.Clear();
+            tbl_Consulta.Rows.Clear();       
             tbl_Consulta.Refresh();
 
             listaPaciente = pacienteDao.getList();
@@ -74,7 +79,25 @@ namespace VeterinariaElBuenAmigo.views
                 Num = consultaDao.NumerodeConsultas(paciente.idPaciente);
 
                 tbl_Consulta.Rows.Add(paciente.idPaciente, paciente.nombrePaciente, Especie, Nombre, Num); 
+               
+
             }
+        }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+            Image imagen = Resources.Recurso_1_0_5x;
+            easyHTMLReports1.AddImage(imagen, "width = 100");        
+
+            easyHTMLReports1.AddString("<h1>Tabla Pacientes - Consulta</h1>");
+
+            easyHTMLReports1.AddHorizontalRule();
+
+            easyHTMLReports1.AddDatagridView(tbl_Consulta);
+            easyHTMLReports1.ShowPrintPreviewDialog();
+             
+
+            
         }
     }
 }

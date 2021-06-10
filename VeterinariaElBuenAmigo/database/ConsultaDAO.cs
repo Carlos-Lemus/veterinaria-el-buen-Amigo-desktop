@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VeterinariaElBuenAmigo.models;
@@ -16,6 +18,7 @@ namespace VeterinariaElBuenAmigo.database
 
         public ConsultaDAO()
         {
+            Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo("en-US");
             lista = new List<Consulta>();
         }
 
@@ -143,7 +146,7 @@ namespace VeterinariaElBuenAmigo.database
                                 consulta.IdConsulta = Convert.ToInt32(result[IDCONSULTA].ToString());
                                 consulta.Padecimineto = result[PADECIMIENTO].ToString();
                                 consulta.Temperatura = result[TEMPERATURA].ToString();
-                                consulta.Peso = result[PESO].ToString();
+                                consulta.Peso = result[PESO].ToString(); 
                                 consulta.IdPaciente = Convert.ToInt32(result[ID_PACIENTE].ToString());
                                 consulta.ControldeCelo = result[CONTROLDECELO].ToString();
                                 consulta.Comentarios = result[COMENTARIOS].ToString();

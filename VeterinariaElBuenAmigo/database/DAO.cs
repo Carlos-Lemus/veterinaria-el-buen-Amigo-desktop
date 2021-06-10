@@ -8,6 +8,9 @@ namespace VeterinariaElBuenAmigo.database
 {
     public class DAO
     {
+        //CLAVE DE ACCESO
+        protected const string CLAVEINGRESO = "a"; 
+
         //PRODUCTOS
         protected const string TABLE_PRODUCTO = "productos";
         protected const string IDPRODUCTO = "idProducto";
@@ -61,5 +64,14 @@ namespace VeterinariaElBuenAmigo.database
         protected const string ID_PACIENTE = "idPaciente";
         protected const string CONTROLDECELO = "controlCelo";
         protected const string COMENTARIOS = "comentarios";
+
+        //RESETA
+        protected const string TABLA_RECETA = "recetas";
+        protected const string IDRECETA = "idReceta";        
+        protected const string TIPO_RECETA = "tipoReceta";
+        protected const string NOMBREPRODUCTORECETA = "nombre_Producto";
+        protected const string DOSIS = "dosis";
+        protected const string REFUERZO = "refuerzo";
+
     }
 }
