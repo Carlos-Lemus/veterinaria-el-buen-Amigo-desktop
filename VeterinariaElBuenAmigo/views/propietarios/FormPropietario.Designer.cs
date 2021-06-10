@@ -249,7 +249,6 @@ namespace VeterinariaElBuenAmigo.views
             this.btnAdd.Size = new System.Drawing.Size(313, 43);
             this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "Agregar Propietario";
-            this.btnAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // dataGridViewImageColumn1
