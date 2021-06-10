@@ -14,30 +14,20 @@ namespace VeterinariaElBuenAmigo.views.pacientes
 {
     public partial class FormGuardarMascota : Form
     {
-        private PacienteDAO pacienteDao;      
-
-        Paciente paciente;       
-        int idCliente;        
-        public FormGuardarMascota(bool isEdit, int idCliente) {            
-            InitializeComponent();            
-            this.idCliente = idCliente;
-            idclienteActivo.Text = idCliente.ToString();
+        private ClienteDAO clienteDao;
+        private PacienteDAO pacienteDao;
+        private List<Cliente> listaProp;
+        Paciente paciente;                  
+        public FormGuardarMascota() {            
+            InitializeComponent();                        
+            //idclienteActivo.Text = idCliente.ToString();
+            this.clienteDao = new ClienteDAO();
             this.pacienteDao = new PacienteDAO();
+            cargarDatosProp();
             cargarRazas();
             cargarEspecies();
-
-            btnEditMascota.Visible = false;
-            btnElminarMascota.Visible = false;
-            btnInfo.Visible = false;
-            
-            if(isEdit)
-            {                
-                btnAddMascota.Visible = false;
-                btnEditMascota.Visible = true;
-                btnElminarMascota.Visible = true;
-                btnInfo.Visible = true;
-                cargarValores();
-            }
+            generMascota.SelectedItem = "Hembra";
+            idclienteActivo.Text = dgvDatosPropietarios.Rows[0].Cells[0].Value.ToString();
         }
 
         private void btnMin_Click(object sender, EventArgs e)
@@ -64,7 +54,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
         private void btnAddMascota_Click(object sender, EventArgs e)
         {
             this.paciente = new Paciente();
-            paciente.idCliente = this.idCliente;
+            paciente.idCliente = Int32.Parse(idclienteActivo.Text);
             paciente.idRaza = Int32.Parse(animal_raza.Text);
             paciente.idEspecie = Int32.Parse(idEspe.Text);
             paciente.color = txtcolor.Text;
@@ -96,47 +86,54 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             animales_razas.ValueMember = "idRaza";
         }
 
-        public void cargarValores()
-        {
-            Paciente p = new Paciente();
-            p = pacienteDao.searchPaciente(this.idCliente);
-
-            txtNombreMascota.Text = p.nombrePaciente;
-            fechaMascota.Value = DateTime.Parse(p.fechaNacimiento);
-            txtcolor.Text = p.color;
-            descripcionMascota.Text = p.caracteristicasEspeciales;
-            generMascota.SelectedItem = p.genero;
-            especieMascota.SelectedValue = p.idEspecie;
-            //animales_razas.SelectedValue = p.idRaza-1;
-            animal_raza.Text = p.idRaza.ToString();            
-        }
-
         private void animales_razas_SelectedIndexChanged(object sender, EventArgs e)
         {
             cargarRazas();
             animal_raza.Text = animales_razas.SelectedValue.ToString();          
         }
 
-        private void btnEditMascota_Click(object sender, EventArgs e)
-        {
-            Paciente p = new Paciente();
-            p.idPaciente = this.idCliente;
-            p.idRaza = Int32.Parse(animal_raza.Text);
-            p.idEspecie = Int32.Parse(idEspe.Text);
-            p.color = txtcolor.Text;
-            p.nombrePaciente = txtNombreMascota.Text;
-            p.genero = gener.Text;
-            p.caracteristicasEspeciales = descripcionMascota.Text;
-            p.fechaNacimiento = fechaMascota.Text;
+        //private void btnEditMascota_Click(object sender, EventArgs e)
+        //{
+        //    Paciente p = new Paciente();
+        //    //p.idPaciente = this.idCliente;
+        //    p.idRaza = Int32.Parse(animal_raza.Text);
+        //    p.idEspecie = Int32.Parse(idEspe.Text);
+        //    p.color = txtcolor.Text;
+        //    p.nombrePaciente = txtNombreMascota.Text;
+        //    p.genero = gener.Text;
+        //    p.caracteristicasEspeciales = descripcionMascota.Text;
+        //    p.fechaNacimiento = fechaMascota.Text;
 
-            pacienteDao.update(p);
-            this.Close();
+        //    pacienteDao.update(p);
+        //    this.Close();
+        //}
+
+        //private void btnElminarMascota_Click(object sender, EventArgs e)
+        //{
+        //    //pacienteDao.delete(this.idCliente);
+        //    this.Close();
+        //}
+
+        private void cargarDatosProp()
+        {
+            if (dgvDatosPropietarios.RowCount > 0)
+            {
+                dgvDatosPropietarios.Rows.Clear();
+                listaProp.Clear();
+            }
+
+            listaProp = clienteDao.getList();
+           
+
+            foreach (Cliente cliente in listaProp)
+            {
+                dgvDatosPropietarios.Rows.Add(cliente.IdCliente, cliente.NombreCliente);
+            }
         }
 
-        private void btnElminarMascota_Click(object sender, EventArgs e)
+        private void dgvDatosPropietarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            pacienteDao.delete(this.idCliente);
-            this.Close();
+            idclienteActivo.Text = dgvDatosPropietarios.Rows[e.RowIndex].Cells[0].Value.ToString();
         }
     }
 }

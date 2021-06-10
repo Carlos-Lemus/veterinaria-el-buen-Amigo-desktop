@@ -15,6 +15,7 @@ namespace VeterinariaElBuenAmigo.database
 
         // LISTA PARA ALMACENAR LOS PACIENTES
         private List<Paciente> lista;
+        private List<Paciente> listaMascotasDePropietario;
         private List<Especie> listaEspecies;
         private List<Raza> listaRazas;
 
@@ -26,6 +27,7 @@ namespace VeterinariaElBuenAmigo.database
             lista = new List<Paciente>();            
             listaEspecies = new List<Especie>();
             listaRazas = new List<Raza>();
+            listaMascotasDePropietario = new List<Paciente>();
             listaTemplateCP = new List<templateClientePaciente>();
         }
 
@@ -170,7 +172,7 @@ namespace VeterinariaElBuenAmigo.database
                                 p.color = result[COLOR].ToString();
                                 p.caracteristicasEspeciales = result[CARACTERISTICAS_ESPECIALES].ToString();
                                 p.idCliente = Convert.ToInt32(result[IDCLIENTE].ToString());
-                                p.idRaza = Convert.ToInt32(result[IDRAZA].ToString());
+                                p.idRaza = Int32.Parse(result[IDRAZA].ToString());
                                 p.idEspecie = Convert.ToInt32(result[IDESPECIE].ToString());
                             }
                         }
@@ -189,6 +191,60 @@ namespace VeterinariaElBuenAmigo.database
             return p;
         }
 
+        public List<Paciente> getListMascotasDePropietario(int id)
+        {
+            try
+            {
+                conn = Conexion.Conn;
+
+                conn.Open();
+
+                using (SQLiteCommand command = new SQLiteCommand())
+                {
+                    string sql = $"SELECT * FROM {TABLE_PACIENTE} WHERE idCliente = {id}";
+                    command.CommandText = sql;
+                    command.Connection = Conexion.Conn;
+
+                    using (SQLiteDataReader result = command.ExecuteReader())
+                    {
+                        if (listaMascotasDePropietario.Count > 0)
+                        {
+                            listaMascotasDePropietario.Clear();
+                        }
+
+                        if (result.HasRows)
+                        {
+                            while (result.Read())
+                            {
+                                Paciente paciente = new Paciente();
+
+                                paciente.idPaciente = Convert.ToInt32(result[IDPACIENTE].ToString());
+                                paciente.nombrePaciente = result[NOMBREPACIENTE].ToString();
+                                paciente.fechaNacimiento = result[FECHA_NACIMIENTO].ToString();
+                                paciente.genero = result[GENERO].ToString();
+                                paciente.color = result[COLOR].ToString();
+                                paciente.caracteristicasEspeciales = result[CARACTERISTICAS_ESPECIALES].ToString();
+                                paciente.idCliente = Convert.ToInt32(result[IDCLIENTE].ToString());
+                                paciente.idRaza = Convert.ToInt32(result[IDRAZA].ToString());
+                                paciente.idEspecie = Convert.ToInt32(result[IDESPECIE].ToString());
+
+                                listaMascotasDePropietario.Add(paciente);
+                            }
+                        }
+                    }
+
+                }
+
+                conn.Close();
+
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return listaMascotasDePropietario;
+        }
 
 
         // FUNCION QUE DEVUELVE TODOS LOS PACIENTES 

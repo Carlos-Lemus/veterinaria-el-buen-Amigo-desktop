@@ -55,7 +55,7 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.panelTop.Controls.Add(this.btnClose);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
-            this.panelTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelTop.Margin = new System.Windows.Forms.Padding(4);
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(733, 37);
             this.panelTop.TabIndex = 3;
@@ -114,7 +114,7 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.btnEdit.Image = null;
             this.btnEdit.ImageSize = new System.Drawing.Size(20, 20);
             this.btnEdit.Location = new System.Drawing.Point(92, 709);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.btnEdit.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -145,7 +145,7 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.btnAdd.Image = null;
             this.btnAdd.ImageSize = new System.Drawing.Size(20, 20);
             this.btnAdd.Location = new System.Drawing.Point(92, 658);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.OnHoverBaseColor = System.Drawing.Color.Empty;
             this.btnAdd.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -237,7 +237,7 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.txtMotivo.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtMotivo.ForeColor = System.Drawing.Color.White;
             this.txtMotivo.Location = new System.Drawing.Point(92, 383);
-            this.txtMotivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMotivo.Margin = new System.Windows.Forms.Padding(4);
             this.txtMotivo.MultiLine = true;
             this.txtMotivo.Name = "txtMotivo";
             this.txtMotivo.PasswordChar = '\0';
@@ -273,7 +273,6 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.selectMascota.Size = new System.Drawing.Size(98, 17);
             this.selectMascota.TabIndex = 38;
             this.selectMascota.Text = "selectMascota";
-            this.selectMascota.Visible = false;
             // 
             // windowDragControl
             // 
@@ -323,7 +322,7 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormCitaActions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Formulario de Citas";

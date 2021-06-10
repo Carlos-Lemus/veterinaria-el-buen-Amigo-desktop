@@ -24,21 +24,7 @@ namespace VeterinariaElBuenAmigo.views
             InitializeComponent();
             pacienteDao = new PacienteDAO();
             cargarDatosCP();
-        }
-
-        private void dgvMascotas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            lblPacientes.Text = "Index: " + e.RowIndex;
-            string id = dgvMascotas.Rows[e.RowIndex].Cells[0].Value.ToString();
-
-            using (FormGuardarMascota formPropietarioInfo = new FormGuardarMascota(true, Int32.Parse(id)))
-            {
-
-                formPropietarioInfo.ShowDialog();
-            }
-
-            cargarDatosCP();
-        }
+        }        
 
         //CARGA ALGUNOS DATOS DE LA TABLA PACIENTES
         private void cargarDatos()
@@ -77,6 +63,36 @@ namespace VeterinariaElBuenAmigo.views
             foreach (templateClientePaciente templateCP in listaConsulta)
             {
                 dgvMascotas.Rows.Add(templateCP.idPaciente, templateCP.nombrePaciente, templateCP.nombreCliente ,templateCP.color, templateCP.genero);
+            }
+        }       
+
+        private void btnAgregarMascota_Click_1(object sender, EventArgs e)
+        {
+            using (FormGuardarMascota formPropietarioActions = new FormGuardarMascota())
+            {
+                formPropietarioActions.ShowDialog();
+            }
+
+            cargarDatosCP();
+        }
+
+        private void dgvMascotas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dgvMascotas.Columns[e.ColumnIndex].Name == "editarColumna")
+                {
+                    string id = dgvMascotas.Rows[e.RowIndex].Cells[0].Value.ToString();
+                    using (FormEditarMascota form = new FormEditarMascota(Int32.Parse(id)))
+                    {
+                        form.ShowDialog();
+                    }
+
+                    cargarDatosCP();                }
+            }
+            catch (Exception exception)
+            {
+
             }
         }
     }

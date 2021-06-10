@@ -35,28 +35,7 @@ namespace VeterinariaElBuenAmigo.views
 
             cargarPropietarios();
 
-        }
-
-        private void dgvPropietarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-            if(e.RowIndex != -1)
-            {
-                string id = dgvPropietarios.Rows[e.RowIndex].Cells[0].Value.ToString();
-                string nombreCompleto = dgvPropietarios.Rows[e.RowIndex].Cells[1].Value.ToString();
-                string direccion = dgvPropietarios.Rows[e.RowIndex].Cells[2].Value.ToString();
-                string telefono = dgvPropietarios.Rows[e.RowIndex].Cells[3].Value.ToString();
-                string correo = dgvPropietarios.Rows[e.RowIndex].Cells[4].Value.ToString();
-
-                using (FormPropietarioInfo formPropietarioInfo = new FormPropietarioInfo(clienteDao, id, nombreCompleto, direccion, telefono, correo))
-                {
-
-                    formPropietarioInfo.ShowDialog();
-                }
-
-                cargarPropietarios();
-            }
-        }
+        }              
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -126,5 +105,23 @@ namespace VeterinariaElBuenAmigo.views
             }
         }
 
+        private void dgvPropietarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex != -1)
+            {
+                string id = dgvPropietarios.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string nombreCompleto = dgvPropietarios.Rows[e.RowIndex].Cells[1].Value.ToString();
+                string direccion = dgvPropietarios.Rows[e.RowIndex].Cells[2].Value.ToString();
+                string telefono = dgvPropietarios.Rows[e.RowIndex].Cells[3].Value.ToString();
+                string correo = dgvPropietarios.Rows[e.RowIndex].Cells[4].Value.ToString();
+
+                using (FormPropietarioInfo formPropietarioInfo = new FormPropietarioInfo(clienteDao, id, nombreCompleto, direccion, telefono, correo))
+                {
+                    formPropietarioInfo.ShowDialog();
+                }
+
+                cargarPropietarios();
+            }
+        }
     }
 }
