@@ -35,7 +35,11 @@ namespace VeterinariaElBuenAmigo.views.consulta
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
+            this.checkConsultas = new System.Windows.Forms.CheckBox();
+            this.checkVitaminas = new System.Windows.Forms.CheckBox();
+            this.checkVacunas = new System.Windows.Forms.CheckBox();
+            this.Imprimir = new FontAwesome.Sharp.IconButton();
+            this.btnDelete = new Guna.UI.WinForms.GunaButton();
             this.tbl_ConsultasAnteriores = new Guna.UI.WinForms.GunaDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +47,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnEdit = new System.Windows.Forms.DataGridViewImageColumn();
             this.ColumnSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.campos_comentarios = new System.Windows.Forms.Label();
             this.campos_control = new System.Windows.Forms.Label();
@@ -50,6 +55,8 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.campos_temperatura = new System.Windows.Forms.Label();
             this.campos_padecimineto = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.btn_Guardar = new Guna.UI.WinForms.GunaButton();
             this.btn_Vitaminas = new Guna.UI.WinForms.GunaButton();
             this.btn_Vacunas = new Guna.UI.WinForms.GunaButton();
@@ -65,20 +72,16 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.gunaVScrollBar1 = new Guna.UI.WinForms.GunaVScrollBar();
             this.windowDragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.panelTop = new System.Windows.Forms.Panel();
             this.Nombre_Paciente = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnDelete = new Guna.UI.WinForms.GunaButton();
-            this.ColumnEdit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.iconButton2 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnMin = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.easyHTMLReports1 = new KimToo.EasyHTMLReports(this.components);
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbl_ConsultasAnteriores)).BeginInit();
@@ -93,7 +96,10 @@ namespace VeterinariaElBuenAmigo.views.consulta
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.AutoScroll = true;
             this.panel2.AutoScrollMargin = new System.Drawing.Size(0, 100);
-            this.panel2.Controls.Add(this.gunaButton1);
+            this.panel2.Controls.Add(this.checkConsultas);
+            this.panel2.Controls.Add(this.checkVitaminas);
+            this.panel2.Controls.Add(this.checkVacunas);
+            this.panel2.Controls.Add(this.Imprimir);
             this.panel2.Controls.Add(this.btnDelete);
             this.panel2.Controls.Add(this.tbl_ConsultasAnteriores);
             this.panel2.Controls.Add(this.campos_comentarios);
@@ -123,33 +129,92 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.panel2.Size = new System.Drawing.Size(939, 518);
             this.panel2.TabIndex = 17;
             // 
-            // gunaButton1
+            // checkConsultas
             // 
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.gunaButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.gunaButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaButton1.Image = null;
-            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(820, 319);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.Radius = 5;
-            this.gunaButton1.Size = new System.Drawing.Size(94, 35);
-            this.gunaButton1.TabIndex = 37;
-            this.gunaButton1.Text = "Imprimir";
-            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaButton1.Click += new System.EventHandler(this.gunaButton1_Click);
+            this.checkConsultas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkConsultas.AutoSize = true;
+            this.checkConsultas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkConsultas.ForeColor = System.Drawing.Color.White;
+            this.checkConsultas.Location = new System.Drawing.Point(757, 319);
+            this.checkConsultas.Name = "checkConsultas";
+            this.checkConsultas.Size = new System.Drawing.Size(94, 22);
+            this.checkConsultas.TabIndex = 46;
+            this.checkConsultas.Text = "Consultas";
+            this.checkConsultas.UseVisualStyleBackColor = true;
+            this.checkConsultas.Visible = false;
+            // 
+            // checkVitaminas
+            // 
+            this.checkVitaminas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkVitaminas.AutoSize = true;
+            this.checkVitaminas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkVitaminas.ForeColor = System.Drawing.Color.White;
+            this.checkVitaminas.Location = new System.Drawing.Point(615, 319);
+            this.checkVitaminas.Name = "checkVitaminas";
+            this.checkVitaminas.Size = new System.Drawing.Size(144, 22);
+            this.checkVitaminas.TabIndex = 45;
+            this.checkVitaminas.Text = "Control Vitaminas";
+            this.checkVitaminas.UseVisualStyleBackColor = true;
+            this.checkVitaminas.Visible = false;
+            // 
+            // checkVacunas
+            // 
+            this.checkVacunas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkVacunas.AutoSize = true;
+            this.checkVacunas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkVacunas.ForeColor = System.Drawing.Color.White;
+            this.checkVacunas.Location = new System.Drawing.Point(477, 319);
+            this.checkVacunas.Name = "checkVacunas";
+            this.checkVacunas.Size = new System.Drawing.Size(137, 22);
+            this.checkVacunas.TabIndex = 44;
+            this.checkVacunas.Text = "Control Vacunas";
+            this.checkVacunas.UseVisualStyleBackColor = true;
+            this.checkVacunas.Visible = false;
+            // 
+            // Imprimir
+            // 
+            this.Imprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Imprimir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Imprimir.FlatAppearance.BorderSize = 0;
+            this.Imprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Imprimir.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.Imprimir.IconColor = System.Drawing.Color.White;
+            this.Imprimir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Imprimir.IconSize = 32;
+            this.Imprimir.Location = new System.Drawing.Point(865, 319);
+            this.Imprimir.Name = "Imprimir";
+            this.Imprimir.Size = new System.Drawing.Size(49, 33);
+            this.Imprimir.TabIndex = 43;
+            this.Imprimir.UseVisualStyleBackColor = true;
+            this.Imprimir.Click += new System.EventHandler(this.Imprimir_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.AnimationHoverSpeed = 0.07F;
+            this.btnDelete.AnimationSpeed = 0.03F;
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(82)))), ((int)(((byte)(83)))));
+            this.btnDelete.BorderColor = System.Drawing.Color.Black;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnDelete.FocusedColor = System.Drawing.Color.Empty;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Image = global::VeterinariaElBuenAmigo.Properties.Resources.delete;
+            this.btnDelete.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnDelete.Location = new System.Drawing.Point(788, 12);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(117)))));
+            this.btnDelete.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnDelete.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnDelete.OnHoverImage = null;
+            this.btnDelete.OnPressedColor = System.Drawing.Color.Black;
+            this.btnDelete.Radius = 5;
+            this.btnDelete.Size = new System.Drawing.Size(131, 35);
+            this.btnDelete.TabIndex = 36;
+            this.btnDelete.Text = "Eliminar ";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // tbl_ConsultasAnteriores
             // 
@@ -276,6 +341,16 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
+            // ColumnEdit
+            // 
+            this.ColumnEdit.FillWeight = 25F;
+            this.ColumnEdit.HeaderText = "";
+            this.ColumnEdit.Image = global::VeterinariaElBuenAmigo.Properties.Resources.edit;
+            this.ColumnEdit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ColumnEdit.MinimumWidth = 6;
+            this.ColumnEdit.Name = "ColumnEdit";
+            this.ColumnEdit.ReadOnly = true;
+            // 
             // ColumnSelect
             // 
             this.ColumnSelect.FillWeight = 25F;
@@ -287,7 +362,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.campos_comentarios.AutoSize = true;
             this.campos_comentarios.ForeColor = System.Drawing.Color.Brown;
-            this.campos_comentarios.Location = new System.Drawing.Point(129, 968);
+            this.campos_comentarios.Location = new System.Drawing.Point(129, 1023);
             this.campos_comentarios.Name = "campos_comentarios";
             this.campos_comentarios.Size = new System.Drawing.Size(279, 24);
             this.campos_comentarios.TabIndex = 34;
@@ -297,7 +372,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.campos_control.AutoSize = true;
             this.campos_control.ForeColor = System.Drawing.Color.Brown;
-            this.campos_control.Location = new System.Drawing.Point(129, 790);
+            this.campos_control.Location = new System.Drawing.Point(129, 845);
             this.campos_control.Name = "campos_control";
             this.campos_control.Size = new System.Drawing.Size(279, 24);
             this.campos_control.TabIndex = 33;
@@ -307,7 +382,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.campos_peso.AutoSize = true;
             this.campos_peso.ForeColor = System.Drawing.Color.Brown;
-            this.campos_peso.Location = new System.Drawing.Point(129, 674);
+            this.campos_peso.Location = new System.Drawing.Point(129, 734);
             this.campos_peso.Name = "campos_peso";
             this.campos_peso.Size = new System.Drawing.Size(279, 24);
             this.campos_peso.TabIndex = 32;
@@ -317,7 +392,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.campos_temperatura.AutoSize = true;
             this.campos_temperatura.ForeColor = System.Drawing.Color.Brown;
-            this.campos_temperatura.Location = new System.Drawing.Point(129, 562);
+            this.campos_temperatura.Location = new System.Drawing.Point(129, 622);
             this.campos_temperatura.Name = "campos_temperatura";
             this.campos_temperatura.Size = new System.Drawing.Size(279, 24);
             this.campos_temperatura.TabIndex = 31;
@@ -327,7 +402,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.campos_padecimineto.AutoSize = true;
             this.campos_padecimineto.ForeColor = System.Drawing.Color.Brown;
-            this.campos_padecimineto.Location = new System.Drawing.Point(129, 452);
+            this.campos_padecimineto.Location = new System.Drawing.Point(129, 512);
             this.campos_padecimineto.Name = "campos_padecimineto";
             this.campos_padecimineto.Size = new System.Drawing.Size(279, 24);
             this.campos_padecimineto.TabIndex = 30;
@@ -337,10 +412,44 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.panel5.Controls.Add(this.iconButton3);
             this.panel5.Controls.Add(this.iconButton4);
-            this.panel5.Location = new System.Drawing.Point(274, 629);
+            this.panel5.Location = new System.Drawing.Point(274, 689);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(52, 40);
             this.panel5.TabIndex = 29;
+            // 
+            // iconButton3
+            // 
+            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.iconButton3.FlatAppearance.BorderSize = 0;
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
+            this.iconButton3.IconColor = System.Drawing.Color.White;
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 32;
+            this.iconButton3.Location = new System.Drawing.Point(0, 18);
+            this.iconButton3.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(52, 22);
+            this.iconButton3.TabIndex = 1;
+            this.iconButton3.UseVisualStyleBackColor = true;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
+            // iconButton4
+            // 
+            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton4.FlatAppearance.BorderSize = 0;
+            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.ChevronUp;
+            this.iconButton4.IconColor = System.Drawing.Color.White;
+            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton4.IconSize = 32;
+            this.iconButton4.Location = new System.Drawing.Point(0, 0);
+            this.iconButton4.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton4.Name = "iconButton4";
+            this.iconButton4.Size = new System.Drawing.Size(52, 22);
+            this.iconButton4.TabIndex = 0;
+            this.iconButton4.UseVisualStyleBackColor = true;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // btn_Guardar
             // 
@@ -384,7 +493,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.btn_Vitaminas.ForeColor = System.Drawing.Color.White;
             this.btn_Vitaminas.Image = null;
             this.btn_Vitaminas.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Vitaminas.Location = new System.Drawing.Point(522, 1013);
+            this.btn_Vitaminas.Location = new System.Drawing.Point(218, 319);
             this.btn_Vitaminas.Name = "btn_Vitaminas";
             this.btn_Vitaminas.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.btn_Vitaminas.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -392,7 +501,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.btn_Vitaminas.OnHoverImage = null;
             this.btn_Vitaminas.OnPressedColor = System.Drawing.Color.Black;
             this.btn_Vitaminas.Radius = 5;
-            this.btn_Vitaminas.Size = new System.Drawing.Size(261, 35);
+            this.btn_Vitaminas.Size = new System.Drawing.Size(190, 35);
             this.btn_Vitaminas.TabIndex = 26;
             this.btn_Vitaminas.Text = "Control de Vitaminas";
             this.btn_Vitaminas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -412,7 +521,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.btn_Vacunas.ForeColor = System.Drawing.Color.White;
             this.btn_Vacunas.Image = null;
             this.btn_Vacunas.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Vacunas.Location = new System.Drawing.Point(217, 1013);
+            this.btn_Vacunas.Location = new System.Drawing.Point(15, 319);
             this.btn_Vacunas.Name = "btn_Vacunas";
             this.btn_Vacunas.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.btn_Vacunas.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -420,7 +529,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.btn_Vacunas.OnHoverImage = null;
             this.btn_Vacunas.OnPressedColor = System.Drawing.Color.Black;
             this.btn_Vacunas.Radius = 5;
-            this.btn_Vacunas.Size = new System.Drawing.Size(271, 35);
+            this.btn_Vacunas.Size = new System.Drawing.Size(189, 35);
             this.btn_Vacunas.TabIndex = 20;
             this.btn_Vacunas.Text = "Control de Vacunas";
             this.btn_Vacunas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -437,7 +546,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.txt_Comentarios.FocusedForeColor = System.Drawing.Color.White;
             this.txt_Comentarios.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txt_Comentarios.ForeColor = System.Drawing.Color.White;
-            this.txt_Comentarios.Location = new System.Drawing.Point(117, 862);
+            this.txt_Comentarios.Location = new System.Drawing.Point(117, 917);
             this.txt_Comentarios.MultiLine = true;
             this.txt_Comentarios.Name = "txt_Comentarios";
             this.txt_Comentarios.PasswordChar = '\0';
@@ -451,7 +560,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(113, 822);
+            this.label7.Location = new System.Drawing.Point(113, 877);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(242, 24);
             this.label7.TabIndex = 24;
@@ -468,7 +577,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.txt_controlCelo.FocusedForeColor = System.Drawing.Color.White;
             this.txt_controlCelo.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txt_controlCelo.ForeColor = System.Drawing.Color.White;
-            this.txt_controlCelo.Location = new System.Drawing.Point(117, 746);
+            this.txt_controlCelo.Location = new System.Drawing.Point(117, 801);
             this.txt_controlCelo.Name = "txt_controlCelo";
             this.txt_controlCelo.PasswordChar = '\0';
             this.txt_controlCelo.Radius = 15;
@@ -481,7 +590,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(113, 709);
+            this.label6.Location = new System.Drawing.Point(113, 764);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(141, 24);
             this.label6.TabIndex = 22;
@@ -498,7 +607,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.txt_Peso.FocusedForeColor = System.Drawing.Color.White;
             this.txt_Peso.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txt_Peso.ForeColor = System.Drawing.Color.White;
-            this.txt_Peso.Location = new System.Drawing.Point(117, 630);
+            this.txt_Peso.Location = new System.Drawing.Point(117, 690);
             this.txt_Peso.Name = "txt_Peso";
             this.txt_Peso.PasswordChar = '\0';
             this.txt_Peso.Radius = 15;
@@ -511,7 +620,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(113, 593);
+            this.label5.Location = new System.Drawing.Point(113, 653);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 24);
             this.label5.TabIndex = 20;
@@ -528,7 +637,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.txt_Temperatura.FocusedForeColor = System.Drawing.Color.White;
             this.txt_Temperatura.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txt_Temperatura.ForeColor = System.Drawing.Color.White;
-            this.txt_Temperatura.Location = new System.Drawing.Point(117, 519);
+            this.txt_Temperatura.Location = new System.Drawing.Point(117, 579);
             this.txt_Temperatura.Name = "txt_Temperatura";
             this.txt_Temperatura.PasswordChar = '\0';
             this.txt_Temperatura.Radius = 15;
@@ -541,7 +650,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(113, 479);
+            this.label4.Location = new System.Drawing.Point(113, 539);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(118, 24);
             this.label4.TabIndex = 18;
@@ -558,7 +667,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.txt_Padecimineto.FocusedForeColor = System.Drawing.Color.White;
             this.txt_Padecimineto.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txt_Padecimineto.ForeColor = System.Drawing.Color.White;
-            this.txt_Padecimineto.Location = new System.Drawing.Point(117, 410);
+            this.txt_Padecimineto.Location = new System.Drawing.Point(117, 470);
             this.txt_Padecimineto.Name = "txt_Padecimineto";
             this.txt_Padecimineto.PasswordChar = '\0';
             this.txt_Padecimineto.Radius = 15;
@@ -571,7 +680,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(113, 372);
+            this.label3.Location = new System.Drawing.Point(113, 432);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 24);
             this.label3.TabIndex = 16;
@@ -591,10 +700,44 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.panel4.Controls.Add(this.iconButton2);
             this.panel4.Controls.Add(this.iconButton1);
-            this.panel4.Location = new System.Drawing.Point(274, 519);
+            this.panel4.Location = new System.Drawing.Point(274, 579);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(52, 40);
             this.panel4.TabIndex = 28;
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
+            this.iconButton2.IconColor = System.Drawing.Color.White;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 32;
+            this.iconButton2.Location = new System.Drawing.Point(0, 18);
+            this.iconButton2.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(52, 22);
+            this.iconButton2.TabIndex = 1;
+            this.iconButton2.UseVisualStyleBackColor = true;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ChevronUp;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 32;
+            this.iconButton1.Location = new System.Drawing.Point(0, 0);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(52, 22);
+            this.iconButton1.TabIndex = 0;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // gunaVScrollBar1
             // 
@@ -638,134 +781,6 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.Nombre_Paciente.Text = "Paciente";
             this.Nombre_Paciente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(371, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 38);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Consulta";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.FillWeight = 25F;
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = global::VeterinariaElBuenAmigo.Properties.Resources.edit;
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn1.MinimumWidth = 6;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.ReadOnly = true;
-            this.dataGridViewImageColumn1.Width = 33;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.AnimationHoverSpeed = 0.07F;
-            this.btnDelete.AnimationSpeed = 0.03F;
-            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
-            this.btnDelete.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(82)))), ((int)(((byte)(83)))));
-            this.btnDelete.BorderColor = System.Drawing.Color.Black;
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnDelete.FocusedColor = System.Drawing.Color.Empty;
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Image = global::VeterinariaElBuenAmigo.Properties.Resources.delete;
-            this.btnDelete.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnDelete.Location = new System.Drawing.Point(788, 12);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(117)))));
-            this.btnDelete.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnDelete.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnDelete.OnHoverImage = null;
-            this.btnDelete.OnPressedColor = System.Drawing.Color.Black;
-            this.btnDelete.Radius = 5;
-            this.btnDelete.Size = new System.Drawing.Size(131, 35);
-            this.btnDelete.TabIndex = 36;
-            this.btnDelete.Text = "Eliminar ";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // ColumnEdit
-            // 
-            this.ColumnEdit.FillWeight = 25F;
-            this.ColumnEdit.HeaderText = "";
-            this.ColumnEdit.Image = global::VeterinariaElBuenAmigo.Properties.Resources.edit;
-            this.ColumnEdit.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.ColumnEdit.MinimumWidth = 6;
-            this.ColumnEdit.Name = "ColumnEdit";
-            this.ColumnEdit.ReadOnly = true;
-            // 
-            // iconButton3
-            // 
-            this.iconButton3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.iconButton3.FlatAppearance.BorderSize = 0;
-            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
-            this.iconButton3.IconColor = System.Drawing.Color.White;
-            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton3.IconSize = 32;
-            this.iconButton3.Location = new System.Drawing.Point(0, 18);
-            this.iconButton3.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton3.Name = "iconButton3";
-            this.iconButton3.Size = new System.Drawing.Size(52, 22);
-            this.iconButton3.TabIndex = 1;
-            this.iconButton3.UseVisualStyleBackColor = true;
-            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
-            // 
-            // iconButton4
-            // 
-            this.iconButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton4.FlatAppearance.BorderSize = 0;
-            this.iconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton4.IconChar = FontAwesome.Sharp.IconChar.ChevronUp;
-            this.iconButton4.IconColor = System.Drawing.Color.White;
-            this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton4.IconSize = 32;
-            this.iconButton4.Location = new System.Drawing.Point(0, 0);
-            this.iconButton4.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(52, 22);
-            this.iconButton4.TabIndex = 0;
-            this.iconButton4.UseVisualStyleBackColor = true;
-            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
-            // 
-            // iconButton2
-            // 
-            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.iconButton2.FlatAppearance.BorderSize = 0;
-            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.ChevronDown;
-            this.iconButton2.IconColor = System.Drawing.Color.White;
-            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton2.IconSize = 32;
-            this.iconButton2.Location = new System.Drawing.Point(0, 18);
-            this.iconButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton2.Name = "iconButton2";
-            this.iconButton2.Size = new System.Drawing.Size(52, 22);
-            this.iconButton2.TabIndex = 1;
-            this.iconButton2.UseVisualStyleBackColor = true;
-            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ChevronUp;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 32;
-            this.iconButton1.Location = new System.Drawing.Point(0, 0);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(52, 22);
-            this.iconButton1.TabIndex = 0;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
-            // 
             // btnMin
             // 
             this.btnMin.Dock = System.Windows.Forms.DockStyle.Right;
@@ -802,6 +817,28 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(371, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(134, 38);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Consulta";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.FillWeight = 25F;
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::VeterinariaElBuenAmigo.Properties.Resources.edit;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.ReadOnly = true;
+            this.dataGridViewImageColumn1.Width = 33;
             // 
             // easyHTMLReports1
             // 
@@ -884,7 +921,10 @@ namespace VeterinariaElBuenAmigo.views.consulta
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
-        private Guna.UI.WinForms.GunaButton gunaButton1;
         private KimToo.EasyHTMLReports easyHTMLReports1;
+        private FontAwesome.Sharp.IconButton Imprimir;
+        private System.Windows.Forms.CheckBox checkConsultas;
+        private System.Windows.Forms.CheckBox checkVitaminas;
+        private System.Windows.Forms.CheckBox checkVacunas;
     }
 }

@@ -29,12 +29,13 @@ namespace VeterinariaElBuenAmigo.views
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAddCita = new Guna.UI.WinForms.GunaButton();
             this.lblCitasDelDia = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -58,6 +59,8 @@ namespace VeterinariaElBuenAmigo.views
             this.lblCitasProgramadas = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.gunaDateTimePickerCita = new Guna.UI.WinForms.GunaDateTimePicker();
+            this.Imprimir = new FontAwesome.Sharp.IconButton();
+            this.easyHTMLReports1 = new KimToo.EasyHTMLReports(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -80,9 +83,9 @@ namespace VeterinariaElBuenAmigo.views
             this.btnAddCita.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnAddCita.ForeColor = System.Drawing.Color.White;
             this.btnAddCita.Image = global::VeterinariaElBuenAmigo.Properties.Resources.add;
+            this.btnAddCita.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.btnAddCita.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAddCita.Location = new System.Drawing.Point(711, 113);
-            this.btnAddCita.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddCita.Location = new System.Drawing.Point(575, 92);
             this.btnAddCita.Name = "btnAddCita";
             this.btnAddCita.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.btnAddCita.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -90,7 +93,7 @@ namespace VeterinariaElBuenAmigo.views
             this.btnAddCita.OnHoverImage = null;
             this.btnAddCita.OnPressedColor = System.Drawing.Color.Black;
             this.btnAddCita.Radius = 5;
-            this.btnAddCita.Size = new System.Drawing.Size(250, 43);
+            this.btnAddCita.Size = new System.Drawing.Size(146, 35);
             this.btnAddCita.TabIndex = 11;
             this.btnAddCita.Text = "Agregar Cita";
             this.btnAddCita.Click += new System.EventHandler(this.btnAddCita_Click);
@@ -100,10 +103,9 @@ namespace VeterinariaElBuenAmigo.views
             this.lblCitasDelDia.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblCitasDelDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCitasDelDia.Location = new System.Drawing.Point(0, 0);
-            this.lblCitasDelDia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCitasDelDia.Name = "lblCitasDelDia";
             this.lblCitasDelDia.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCitasDelDia.Size = new System.Drawing.Size(1071, 43);
+            this.lblCitasDelDia.Size = new System.Drawing.Size(803, 35);
             this.lblCitasDelDia.TabIndex = 9;
             this.lblCitasDelDia.Text = "Citas del dia YY/mm/dd : N";
             this.lblCitasDelDia.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -130,8 +132,7 @@ namespace VeterinariaElBuenAmigo.views
             this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer1.Location = new System.Drawing.Point(73, 164);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
+            this.splitContainer1.Location = new System.Drawing.Point(55, 133);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -143,30 +144,30 @@ namespace VeterinariaElBuenAmigo.views
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dvgCitasDelDia);
             this.splitContainer1.Panel2.Controls.Add(this.lblCitasDelDia);
-            this.splitContainer1.Size = new System.Drawing.Size(1071, 609);
-            this.splitContainer1.SplitterDistance = 230;
-            this.splitContainer1.SplitterWidth = 62;
+            this.splitContainer1.Size = new System.Drawing.Size(803, 495);
+            this.splitContainer1.SplitterDistance = 186;
+            this.splitContainer1.SplitterWidth = 50;
             this.splitContainer1.TabIndex = 13;
             // 
             // dvgCitasProgramadas
             // 
             this.dvgCitasProgramadas.AllowUserToAddRows = false;
             this.dvgCitasProgramadas.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dvgCitasProgramadas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
+            this.dvgCitasProgramadas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
             this.dvgCitasProgramadas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dvgCitasProgramadas.BackgroundColor = System.Drawing.Color.White;
             this.dvgCitasProgramadas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dvgCitasProgramadas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dvgCitasProgramadas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgCitasProgramadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgCitasProgramadas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.dvgCitasProgramadas.ColumnHeadersHeight = 40;
             this.dvgCitasProgramadas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -175,25 +176,24 @@ namespace VeterinariaElBuenAmigo.views
             this.Column4,
             this.Editar,
             this.Eliminar});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 14F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dvgCitasProgramadas.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 14F);
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dvgCitasProgramadas.DefaultCellStyle = dataGridViewCellStyle21;
             this.dvgCitasProgramadas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dvgCitasProgramadas.EnableHeadersVisualStyles = false;
             this.dvgCitasProgramadas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.dvgCitasProgramadas.Location = new System.Drawing.Point(0, 0);
-            this.dvgCitasProgramadas.Margin = new System.Windows.Forms.Padding(4);
             this.dvgCitasProgramadas.Name = "dvgCitasProgramadas";
             this.dvgCitasProgramadas.RowHeadersVisible = false;
             this.dvgCitasProgramadas.RowHeadersWidth = 51;
             this.dvgCitasProgramadas.RowTemplate.Height = 40;
             this.dvgCitasProgramadas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgCitasProgramadas.Size = new System.Drawing.Size(1071, 230);
+            this.dvgCitasProgramadas.Size = new System.Drawing.Size(803, 186);
             this.dvgCitasProgramadas.TabIndex = 9;
             this.dvgCitasProgramadas.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dvgCitasProgramadas.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -271,46 +271,45 @@ namespace VeterinariaElBuenAmigo.views
             // 
             this.dvgCitasDelDia.AllowUserToAddRows = false;
             this.dvgCitasDelDia.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dvgCitasDelDia.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.White;
+            this.dvgCitasDelDia.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
             this.dvgCitasDelDia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dvgCitasDelDia.BackgroundColor = System.Drawing.Color.White;
             this.dvgCitasDelDia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dvgCitasDelDia.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dvgCitasDelDia.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgCitasDelDia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgCitasDelDia.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.dvgCitasDelDia.ColumnHeadersHeight = 40;
             this.dvgCitasDelDia.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 14F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dvgCitasDelDia.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 14F);
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dvgCitasDelDia.DefaultCellStyle = dataGridViewCellStyle24;
             this.dvgCitasDelDia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dvgCitasDelDia.EnableHeadersVisualStyles = false;
             this.dvgCitasDelDia.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.dvgCitasDelDia.Location = new System.Drawing.Point(0, 43);
-            this.dvgCitasDelDia.Margin = new System.Windows.Forms.Padding(4);
+            this.dvgCitasDelDia.Location = new System.Drawing.Point(0, 35);
             this.dvgCitasDelDia.Name = "dvgCitasDelDia";
             this.dvgCitasDelDia.RowHeadersVisible = false;
             this.dvgCitasDelDia.RowHeadersWidth = 51;
             this.dvgCitasDelDia.RowTemplate.Height = 40;
             this.dvgCitasDelDia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgCitasDelDia.Size = new System.Drawing.Size(1071, 274);
+            this.dvgCitasDelDia.Size = new System.Drawing.Size(803, 224);
             this.dvgCitasDelDia.TabIndex = 14;
             this.dvgCitasDelDia.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dvgCitasDelDia.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -381,8 +380,7 @@ namespace VeterinariaElBuenAmigo.views
             this.btnDelete1.ForeColor = System.Drawing.Color.White;
             this.btnDelete1.Image = global::VeterinariaElBuenAmigo.Properties.Resources.delete;
             this.btnDelete1.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnDelete1.Location = new System.Drawing.Point(969, 112);
-            this.btnDelete1.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete1.Location = new System.Drawing.Point(727, 91);
             this.btnDelete1.Name = "btnDelete1";
             this.btnDelete1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(117)))));
             this.btnDelete1.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -390,7 +388,7 @@ namespace VeterinariaElBuenAmigo.views
             this.btnDelete1.OnHoverImage = null;
             this.btnDelete1.OnPressedColor = System.Drawing.Color.Black;
             this.btnDelete1.Radius = 5;
-            this.btnDelete1.Size = new System.Drawing.Size(175, 43);
+            this.btnDelete1.Size = new System.Drawing.Size(131, 35);
             this.btnDelete1.TabIndex = 33;
             this.btnDelete1.Text = "Eliminar ";
             this.btnDelete1.Click += new System.EventHandler(this.btnDelete_Click);
@@ -411,8 +409,7 @@ namespace VeterinariaElBuenAmigo.views
             this.btnClear.Image = global::VeterinariaElBuenAmigo.Properties.Resources.ios_close1;
             this.btnClear.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnClear.ImageSize = new System.Drawing.Size(42, 42);
-            this.btnClear.Location = new System.Drawing.Point(1101, 61);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClear.Location = new System.Drawing.Point(826, 50);
             this.btnClear.Name = "btnClear";
             this.btnClear.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.btnClear.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -420,7 +417,7 @@ namespace VeterinariaElBuenAmigo.views
             this.btnClear.OnHoverImage = null;
             this.btnClear.OnPressedColor = System.Drawing.Color.Black;
             this.btnClear.Radius = 5;
-            this.btnClear.Size = new System.Drawing.Size(43, 43);
+            this.btnClear.Size = new System.Drawing.Size(32, 35);
             this.btnClear.TabIndex = 37;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
@@ -434,22 +431,20 @@ namespace VeterinariaElBuenAmigo.views
             this.txtBuscarCita.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.txtBuscarCita.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtBuscarCita.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtBuscarCita.Location = new System.Drawing.Point(221, 61);
-            this.txtBuscarCita.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscarCita.Location = new System.Drawing.Point(166, 50);
             this.txtBuscarCita.Name = "txtBuscarCita";
             this.txtBuscarCita.PasswordChar = '\0';
             this.txtBuscarCita.Radius = 4;
-            this.txtBuscarCita.Size = new System.Drawing.Size(380, 43);
+            this.txtBuscarCita.Size = new System.Drawing.Size(285, 35);
             this.txtBuscarCita.TabIndex = 36;
             this.txtBuscarCita.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscarCita_KeyPress);
             // 
             // lblCitasProgramadas
             // 
             this.lblCitasProgramadas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCitasProgramadas.Location = new System.Drawing.Point(73, 117);
-            this.lblCitasProgramadas.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCitasProgramadas.Location = new System.Drawing.Point(55, 95);
             this.lblCitasProgramadas.Name = "lblCitasProgramadas";
-            this.lblCitasProgramadas.Size = new System.Drawing.Size(575, 43);
+            this.lblCitasProgramadas.Size = new System.Drawing.Size(276, 35);
             this.lblCitasProgramadas.TabIndex = 38;
             this.lblCitasProgramadas.Text = "Citas Programadas";
             this.lblCitasProgramadas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -457,10 +452,9 @@ namespace VeterinariaElBuenAmigo.views
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(73, 61);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(55, 50);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(140, 43);
+            this.label2.Size = new System.Drawing.Size(105, 35);
             this.label2.TabIndex = 39;
             this.label2.Text = "Buscar";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -475,8 +469,8 @@ namespace VeterinariaElBuenAmigo.views
             this.gunaDateTimePickerCita.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.gunaDateTimePickerCita.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.gunaDateTimePickerCita.ForeColor = System.Drawing.Color.White;
-            this.gunaDateTimePickerCita.Location = new System.Drawing.Point(608, 60);
-            this.gunaDateTimePickerCita.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gunaDateTimePickerCita.Location = new System.Drawing.Point(456, 49);
+            this.gunaDateTimePickerCita.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gunaDateTimePickerCita.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.gunaDateTimePickerCita.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.gunaDateTimePickerCita.Name = "gunaDateTimePickerCita";
@@ -485,18 +479,46 @@ namespace VeterinariaElBuenAmigo.views
             this.gunaDateTimePickerCita.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.gunaDateTimePickerCita.OnPressedColor = System.Drawing.Color.Black;
             this.gunaDateTimePickerCita.Radius = 5;
-            this.gunaDateTimePickerCita.Size = new System.Drawing.Size(486, 44);
+            this.gunaDateTimePickerCita.Size = new System.Drawing.Size(364, 36);
             this.gunaDateTimePickerCita.TabIndex = 40;
             this.gunaDateTimePickerCita.Text = "lunes, 7 de junio de 2021";
             this.gunaDateTimePickerCita.Value = new System.DateTime(2021, 6, 7, 13, 4, 55, 439);
             this.gunaDateTimePickerCita.ValueChanged += new System.EventHandler(this.gunaDateTimePickerCita_ValueChanged);
             // 
+            // Imprimir
+            // 
+            this.Imprimir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Imprimir.FlatAppearance.BorderSize = 0;
+            this.Imprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Imprimir.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.Imprimir.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.Imprimir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.Imprimir.IconSize = 32;
+            this.Imprimir.Location = new System.Drawing.Point(511, 94);
+            this.Imprimir.Name = "Imprimir";
+            this.Imprimir.Size = new System.Drawing.Size(49, 33);
+            this.Imprimir.TabIndex = 41;
+            this.Imprimir.UseVisualStyleBackColor = true;
+            this.Imprimir.Click += new System.EventHandler(this.Imprimir_Click);
+            // 
+            // easyHTMLReports1
+            // 
+            this.easyHTMLReports1.AlternativeRowBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(229)))), ((int)(((byte)(229)))));
+            this.easyHTMLReports1.AlternativeRowGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(65)))));
+            this.easyHTMLReports1.HeaderBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(183)))), ((int)(((byte)(197)))));
+            this.easyHTMLReports1.HeaderFontColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(46)))));
+            this.easyHTMLReports1.HeaderGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(65)))));
+            this.easyHTMLReports1.RowDefaultBackgroudColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.easyHTMLReports1.RowDefaultFontColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(46)))));
+            this.easyHTMLReports1.RowDefaultGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(65)))));
+            // 
             // FormCitas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1240, 849);
+            this.ClientSize = new System.Drawing.Size(930, 640);
+            this.Controls.Add(this.Imprimir);
             this.Controls.Add(this.gunaDateTimePickerCita);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblCitasProgramadas);
@@ -506,7 +528,6 @@ namespace VeterinariaElBuenAmigo.views
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.btnAddCita);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormCitas";
             this.Text = "Form1";
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -544,5 +565,7 @@ namespace VeterinariaElBuenAmigo.views
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private FontAwesome.Sharp.IconButton Imprimir;
+        private KimToo.EasyHTMLReports easyHTMLReports1;
     }
 }
