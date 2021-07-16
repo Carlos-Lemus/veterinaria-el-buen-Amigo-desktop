@@ -17,9 +17,16 @@ namespace VeterinariaElBuenAmigo.views.pacientes
         private ClienteDAO clienteDao;
         private PacienteDAO pacienteDao;
         private List<Cliente> listaProp;
-        Paciente paciente;                  
+        Paciente paciente;
+
+        private int idclienteActivo;
+        private int idEspe;
+        private int animal_raza;
+        private string gener;
+
         public FormGuardarMascota() {            
-            InitializeComponent();                        
+            InitializeComponent();
+
             //idclienteActivo.Text = idCliente.ToString();
             this.clienteDao = new ClienteDAO();
             this.pacienteDao = new PacienteDAO();
@@ -27,7 +34,9 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             cargarRazas();
             cargarEspecies();
             generMascota.SelectedItem = "Hembra";
-            idclienteActivo.Text = dgvDatosPropietarios.Rows[dgvDatosPropietarios.SelectedRows.Count].Cells[0].Value.ToString();
+            idclienteActivo = Convert.ToInt32(dgvDatosPropietarios.Rows[dgvDatosPropietarios.SelectedRows.Count].Cells[0].Value.ToString());
+
+            fechaMascota.Value = DateTime.Now;
         }
 
         private void btnMin_Click(object sender, EventArgs e)
@@ -43,12 +52,12 @@ namespace VeterinariaElBuenAmigo.views.pacientes
         private void especieMascota_SelectedIndexChanged(object sender, EventArgs e)
         {
             cargarEspecies();
-            idEspe.Text = especieMascota.SelectedValue.ToString();
+            idEspe = Convert.ToInt32(especieMascota.SelectedValue.ToString());
         }        
 
         private void generMascota_SelectedIndexChanged(object sender, EventArgs e)
         {
-            gener.Text = generMascota.SelectedItem.ToString();
+            gener = generMascota.SelectedItem.ToString();
         }
 
         private void btnAddMascota_Click(object sender, EventArgs e)
@@ -66,11 +75,11 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             else
             {
                 paciente.idCliente = idPropietario;
-                paciente.idRaza = Int32.Parse(animal_raza.Text);
-                paciente.idEspecie = Int32.Parse(idEspe.Text);
+                paciente.idRaza = animal_raza;
+                paciente.idEspecie = idEspe;
                 paciente.color = txtcolor.Text;
                 paciente.nombrePaciente = txtNombreMascota.Text;
-                paciente.genero = gener.Text;
+                paciente.genero = gener;
                 paciente.caracteristicasEspeciales = descripcionMascota.Text;
                 paciente.fechaNacimiento = fechaMascota.Text;
 
@@ -104,7 +113,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
         private void animales_razas_SelectedIndexChanged(object sender, EventArgs e)
         {
             cargarRazas();
-            animal_raza.Text = animales_razas.SelectedValue.ToString();          
+            animal_raza = Convert.ToInt32(animales_razas.SelectedValue.ToString());          
         }
 
         //private void btnEditMascota_Click(object sender, EventArgs e)
@@ -148,7 +157,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
 
         private void dgvDatosPropietarios_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            idclienteActivo.Text = dgvDatosPropietarios.Rows[e.RowIndex].Cells[0].Value.ToString();
+            idclienteActivo = Convert.ToInt32(dgvDatosPropietarios.Rows[e.RowIndex].Cells[0].Value.ToString());
         }
 
         private void cargarPropSearch(List<Cliente> listaPropSearch)
