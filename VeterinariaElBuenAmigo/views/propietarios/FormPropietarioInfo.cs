@@ -57,7 +57,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
         {
             this.Close();
         }
-
+        
         private void btnMax_Click(object sender, EventArgs e)
         {
             // obtengo la posicion de la ventana previo a maximizar la ventana
@@ -70,8 +70,6 @@ namespace VeterinariaElBuenAmigo.views.propietarios
 
             Size = Screen.PrimaryScreen.WorkingArea.Size;
             Location = Screen.PrimaryScreen.WorkingArea.Location;
-            btnMax.Visible = false;
-            btnRestore.Visible = true;
         }
 
         private void btnRestore_Click(object sender, EventArgs e)
@@ -86,9 +84,6 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             position.Y = posicionFormY;
 
             Location = position;
-
-            btnMax.Visible = true;
-            btnRestore.Visible = false;
         }
 
         private void btnMin_Click(object sender, EventArgs e)
@@ -120,6 +115,6 @@ namespace VeterinariaElBuenAmigo.views.propietarios
 
                 formPropietarioActions.ShowDialog();
             }
-        }      
+        }
     }
 }

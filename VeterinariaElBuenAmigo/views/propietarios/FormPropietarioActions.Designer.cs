@@ -46,7 +46,12 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.lblErrorDireccion = new System.Windows.Forms.Label();
             this.lblErrorNombre = new System.Windows.Forms.Label();
             this.windowResize = new Guna.UI.WinForms.GunaResize(this.components);
+            this.panelTop = new Guna.UI.WinForms.GunaPanel();
             this.SuspendLayout();
+            // 
+            // windowDragControl
+            // 
+            this.windowDragControl.TargetControl = null;
             // 
             // btnAdd
             // 
@@ -292,12 +297,22 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             // 
             this.windowResize.TargetForm = this;
             // 
+            // panelTop
+            // 
+            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTop.Location = new System.Drawing.Point(0, 0);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.Size = new System.Drawing.Size(550, 20);
+            this.panelTop.TabIndex = 25;
+            // 
             // FormPropietarioActions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(550, 640);
+            this.Controls.Add(this.panelTop);
             this.Controls.Add(this.lblErrorTelefono);
             this.Controls.Add(this.lblErrorDireccion);
             this.Controls.Add(this.lblErrorNombre);
@@ -312,10 +327,12 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtNombre);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "FormPropietarioActions";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Datos del Propietario";
             this.ResumeLayout(false);
 
         }
@@ -337,5 +354,6 @@ namespace VeterinariaElBuenAmigo.views.propietarios
         private System.Windows.Forms.Label lblErrorDireccion;
         private System.Windows.Forms.Label lblErrorNombre;
         private Guna.UI.WinForms.GunaResize windowResize;
+        private Guna.UI.WinForms.GunaPanel panelTop;
     }
 }
