@@ -68,7 +68,7 @@ namespace VeterinariaElBuenAmigo.views
             this.btnMin.Margin = new System.Windows.Forms.Padding(0);
             this.btnMin.Name = "btnMin";
             this.btnMin.Size = new System.Drawing.Size(48, 46);
-            this.btnMin.TabIndex = 12;
+            this.btnMin.TabIndex = 3;
             this.btnMin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMin.UseVisualStyleBackColor = true;
             this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
@@ -87,7 +87,7 @@ namespace VeterinariaElBuenAmigo.views
             this.btnClose.Margin = new System.Windows.Forms.Padding(0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(39, 46);
-            this.btnClose.TabIndex = 5;
+            this.btnClose.TabIndex = 4;
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -126,11 +126,13 @@ namespace VeterinariaElBuenAmigo.views
             this.txt_Clave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.txt_Clave.Location = new System.Drawing.Point(216, 431);
             this.txt_Clave.Name = "txt_Clave";
-            this.txt_Clave.PasswordChar = '\0';
+            this.txt_Clave.PasswordChar = '●';
             this.txt_Clave.Radius = 15;
             this.txt_Clave.Size = new System.Drawing.Size(471, 42);
-            this.txt_Clave.TabIndex = 40;
+            this.txt_Clave.TabIndex = 1;
             this.txt_Clave.TextOffsetX = 10;
+            this.txt_Clave.UseSystemPasswordChar = true;
+            this.txt_Clave.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Clave_KeyPress);
             // 
             // label3
             // 
@@ -166,7 +168,7 @@ namespace VeterinariaElBuenAmigo.views
             this.btn_Ingresar.OnPressedColor = System.Drawing.Color.Black;
             this.btn_Ingresar.Radius = 5;
             this.btn_Ingresar.Size = new System.Drawing.Size(471, 42);
-            this.btn_Ingresar.TabIndex = 47;
+            this.btn_Ingresar.TabIndex = 2;
             this.btn_Ingresar.Text = "Ingresar";
             this.btn_Ingresar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_Ingresar.Click += new System.EventHandler(this.btn_Guardar_Click);

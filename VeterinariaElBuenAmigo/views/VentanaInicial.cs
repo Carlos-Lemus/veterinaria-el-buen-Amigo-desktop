@@ -25,11 +25,11 @@ namespace VeterinariaElBuenAmigo.views
             clave = loginDAO.getLogin().password;
         }
 
-        private void btn_Guardar_Click(object sender, EventArgs e)
+        private void evaluar()
         {
             if (String.IsNullOrEmpty(txt_Clave.Text))
             {
-                MessageBox.Show("Debe ingresar la Clave", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); 
+                MessageBox.Show("Debe ingresar la Clave", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             else
             {
@@ -40,7 +40,7 @@ namespace VeterinariaElBuenAmigo.views
                     {
                         this.Hide();
                         main.ShowDialog();
-                        
+
                     }
                 }
                 else
@@ -48,7 +48,11 @@ namespace VeterinariaElBuenAmigo.views
                     MessageBox.Show("Clave Incorrecta", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-           
+        }
+
+        private void btn_Guardar_Click(object sender, EventArgs e)
+        {
+            evaluar();
         }
 
         private void btnMin_Click(object sender, EventArgs e)
@@ -59,6 +63,14 @@ namespace VeterinariaElBuenAmigo.views
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txt_Clave_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                evaluar();
+            }
         }
     }
 }

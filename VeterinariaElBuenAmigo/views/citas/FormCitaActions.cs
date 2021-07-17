@@ -34,8 +34,8 @@ namespace VeterinariaElBuenAmigo.views.citas
 
             if (isEdit)
             {
-                position.X = 70;
-                position.Y = 552;
+                position.X = 198;
+                position.Y = 485;
 
                 btnAdd.Visible = false;
                 btnEdit.Visible = true;

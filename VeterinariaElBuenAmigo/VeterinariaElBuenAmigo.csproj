@@ -174,6 +174,12 @@
     <Compile Include="views\inventario\FormProductoInfo.Designer.cs">
       <DependentUpon>FormProductoInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\pacientes\AccionesConsultas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\pacientes\AccionesConsultas.Designer.cs">
+      <DependentUpon>AccionesConsultas.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\pacientes\FormEditarMascota.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -256,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\inventario\FormProductoInfo.resx">
       <DependentUpon>FormProductoInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\pacientes\AccionesConsultas.resx">
+      <DependentUpon>AccionesConsultas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\pacientes\FormEditarMascota.resx">
       <DependentUpon>FormEditarMascota.cs</DependentUpon>

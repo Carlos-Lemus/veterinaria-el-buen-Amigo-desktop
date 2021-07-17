@@ -55,7 +55,6 @@ namespace VeterinariaElBuenAmigo.views.inventario
         {
             using (FormProductoAction formProductoAction = new FormProductoAction(true, true, productoDao, producto))
             {
-                this.Visible = false;
                 formProductoAction.ShowDialog();
                 this.Close();
             }

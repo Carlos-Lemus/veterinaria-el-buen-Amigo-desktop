@@ -31,8 +31,6 @@ namespace VeterinariaElBuenAmigo.views.inventario
         {
             this.components = new System.ComponentModel.Container();
             this.panelTop = new Guna.UI.WinForms.GunaPanel();
-            this.btnMin = new FontAwesome.Sharp.IconButton();
-            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -51,61 +49,21 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.windowDragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.btnDlt = new Guna.UI.WinForms.GunaButton();
             this.btnEdit = new Guna.UI.WinForms.GunaButton();
-            this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.panelTop.Controls.Add(this.btnMin);
-            this.panelTop.Controls.Add(this.btnClose);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(875, 30);
+            this.panelTop.Size = new System.Drawing.Size(875, 20);
             this.panelTop.TabIndex = 5;
-            // 
-            // btnMin
-            // 
-            this.btnMin.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMin.FlatAppearance.BorderSize = 0;
-            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMin.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.btnMin.IconColor = System.Drawing.Color.White;
-            this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMin.IconSize = 32;
-            this.btnMin.Location = new System.Drawing.Point(795, 0);
-            this.btnMin.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(40, 30);
-            this.btnMin.TabIndex = 11;
-            this.btnMin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMin.UseVisualStyleBackColor = true;
-            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.btnClose.IconColor = System.Drawing.Color.White;
-            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnClose.IconSize = 32;
-            this.btnClose.Location = new System.Drawing.Point(835, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(40, 30);
-            this.btnClose.TabIndex = 4;
-            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.label6.Location = new System.Drawing.Point(450, 406);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(400, 28);
@@ -116,7 +74,7 @@ namespace VeterinariaElBuenAmigo.views.inventario
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.label4.Location = new System.Drawing.Point(450, 246);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(400, 28);
@@ -127,7 +85,7 @@ namespace VeterinariaElBuenAmigo.views.inventario
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.label3.Location = new System.Drawing.Point(25, 325);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(400, 28);
@@ -138,7 +96,7 @@ namespace VeterinariaElBuenAmigo.views.inventario
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.label2.Location = new System.Drawing.Point(450, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(400, 28);
@@ -149,7 +107,7 @@ namespace VeterinariaElBuenAmigo.views.inventario
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.label1.Location = new System.Drawing.Point(25, 147);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(400, 28);
@@ -162,15 +120,16 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.txtLbNombreProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtLbNombreProducto.BackColor = System.Drawing.Color.Transparent;
-            this.txtLbNombreProducto.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txtLbNombreProducto.BorderColor = System.Drawing.Color.White;
+            this.txtLbNombreProducto.BaseColor = System.Drawing.Color.White;
+            this.txtLbNombreProducto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.txtLbNombreProducto.BorderSize = 1;
             this.txtLbNombreProducto.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtLbNombreProducto.Enabled = false;
-            this.txtLbNombreProducto.FocusedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txtLbNombreProducto.FocusedBorderColor = System.Drawing.Color.White;
-            this.txtLbNombreProducto.FocusedForeColor = System.Drawing.Color.White;
+            this.txtLbNombreProducto.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtLbNombreProducto.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.txtLbNombreProducto.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.txtLbNombreProducto.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtLbNombreProducto.ForeColor = System.Drawing.Color.White;
+            this.txtLbNombreProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.txtLbNombreProducto.Location = new System.Drawing.Point(25, 185);
             this.txtLbNombreProducto.MultiLine = true;
             this.txtLbNombreProducto.Name = "txtLbNombreProducto";
@@ -184,15 +143,16 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.txtLbTipoProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtLbTipoProducto.BackColor = System.Drawing.Color.Transparent;
-            this.txtLbTipoProducto.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txtLbTipoProducto.BorderColor = System.Drawing.Color.White;
+            this.txtLbTipoProducto.BaseColor = System.Drawing.Color.White;
+            this.txtLbTipoProducto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.txtLbTipoProducto.BorderSize = 1;
             this.txtLbTipoProducto.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtLbTipoProducto.Enabled = false;
-            this.txtLbTipoProducto.FocusedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txtLbTipoProducto.FocusedBorderColor = System.Drawing.Color.White;
-            this.txtLbTipoProducto.FocusedForeColor = System.Drawing.Color.White;
+            this.txtLbTipoProducto.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtLbTipoProducto.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.txtLbTipoProducto.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.txtLbTipoProducto.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtLbTipoProducto.ForeColor = System.Drawing.Color.White;
+            this.txtLbTipoProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.txtLbTipoProducto.Location = new System.Drawing.Point(25, 363);
             this.txtLbTipoProducto.MultiLine = true;
             this.txtLbTipoProducto.Name = "txtLbTipoProducto";
@@ -206,15 +166,16 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.txtLbDescripcionProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtLbDescripcionProducto.BackColor = System.Drawing.Color.Transparent;
-            this.txtLbDescripcionProducto.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txtLbDescripcionProducto.BorderColor = System.Drawing.Color.White;
+            this.txtLbDescripcionProducto.BaseColor = System.Drawing.Color.White;
+            this.txtLbDescripcionProducto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.txtLbDescripcionProducto.BorderSize = 1;
             this.txtLbDescripcionProducto.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtLbDescripcionProducto.Enabled = false;
-            this.txtLbDescripcionProducto.FocusedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txtLbDescripcionProducto.FocusedBorderColor = System.Drawing.Color.White;
-            this.txtLbDescripcionProducto.FocusedForeColor = System.Drawing.Color.White;
+            this.txtLbDescripcionProducto.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtLbDescripcionProducto.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.txtLbDescripcionProducto.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.txtLbDescripcionProducto.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtLbDescripcionProducto.ForeColor = System.Drawing.Color.White;
+            this.txtLbDescripcionProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.txtLbDescripcionProducto.Location = new System.Drawing.Point(450, 442);
             this.txtLbDescripcionProducto.MultiLine = true;
             this.txtLbDescripcionProducto.Name = "txtLbDescripcionProducto";
@@ -228,15 +189,16 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.txtLbCantidadProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtLbCantidadProducto.BackColor = System.Drawing.Color.Transparent;
-            this.txtLbCantidadProducto.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txtLbCantidadProducto.BorderColor = System.Drawing.Color.White;
+            this.txtLbCantidadProducto.BaseColor = System.Drawing.Color.White;
+            this.txtLbCantidadProducto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.txtLbCantidadProducto.BorderSize = 1;
             this.txtLbCantidadProducto.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtLbCantidadProducto.Enabled = false;
-            this.txtLbCantidadProducto.FocusedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txtLbCantidadProducto.FocusedBorderColor = System.Drawing.Color.White;
-            this.txtLbCantidadProducto.FocusedForeColor = System.Drawing.Color.White;
+            this.txtLbCantidadProducto.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtLbCantidadProducto.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.txtLbCantidadProducto.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.txtLbCantidadProducto.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtLbCantidadProducto.ForeColor = System.Drawing.Color.White;
+            this.txtLbCantidadProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.txtLbCantidadProducto.Location = new System.Drawing.Point(450, 88);
             this.txtLbCantidadProducto.MultiLine = true;
             this.txtLbCantidadProducto.Name = "txtLbCantidadProducto";
@@ -248,7 +210,7 @@ namespace VeterinariaElBuenAmigo.views.inventario
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.label7.Location = new System.Drawing.Point(450, 147);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(400, 28);
@@ -261,15 +223,16 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.txtLbFechaProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtLbFechaProducto.BackColor = System.Drawing.Color.Transparent;
-            this.txtLbFechaProducto.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txtLbFechaProducto.BorderColor = System.Drawing.Color.White;
+            this.txtLbFechaProducto.BaseColor = System.Drawing.Color.White;
+            this.txtLbFechaProducto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.txtLbFechaProducto.BorderSize = 1;
             this.txtLbFechaProducto.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtLbFechaProducto.Enabled = false;
-            this.txtLbFechaProducto.FocusedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txtLbFechaProducto.FocusedBorderColor = System.Drawing.Color.White;
-            this.txtLbFechaProducto.FocusedForeColor = System.Drawing.Color.White;
+            this.txtLbFechaProducto.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtLbFechaProducto.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.txtLbFechaProducto.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.txtLbFechaProducto.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtLbFechaProducto.ForeColor = System.Drawing.Color.White;
+            this.txtLbFechaProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.txtLbFechaProducto.Location = new System.Drawing.Point(450, 185);
             this.txtLbFechaProducto.MultiLine = true;
             this.txtLbFechaProducto.Name = "txtLbFechaProducto";
@@ -283,15 +246,16 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.txtLbMarcaProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtLbMarcaProducto.BackColor = System.Drawing.Color.Transparent;
-            this.txtLbMarcaProducto.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txtLbMarcaProducto.BorderColor = System.Drawing.Color.White;
+            this.txtLbMarcaProducto.BaseColor = System.Drawing.Color.White;
+            this.txtLbMarcaProducto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.txtLbMarcaProducto.BorderSize = 1;
             this.txtLbMarcaProducto.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtLbMarcaProducto.Enabled = false;
-            this.txtLbMarcaProducto.FocusedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txtLbMarcaProducto.FocusedBorderColor = System.Drawing.Color.White;
-            this.txtLbMarcaProducto.FocusedForeColor = System.Drawing.Color.White;
+            this.txtLbMarcaProducto.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtLbMarcaProducto.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.txtLbMarcaProducto.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.txtLbMarcaProducto.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtLbMarcaProducto.ForeColor = System.Drawing.Color.White;
+            this.txtLbMarcaProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.txtLbMarcaProducto.Location = new System.Drawing.Point(450, 284);
             this.txtLbMarcaProducto.MultiLine = true;
             this.txtLbMarcaProducto.Name = "txtLbMarcaProducto";
@@ -305,15 +269,16 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.txtLbIdProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtLbIdProducto.BackColor = System.Drawing.Color.Transparent;
-            this.txtLbIdProducto.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txtLbIdProducto.BorderColor = System.Drawing.Color.White;
+            this.txtLbIdProducto.BaseColor = System.Drawing.Color.White;
+            this.txtLbIdProducto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.txtLbIdProducto.BorderSize = 1;
             this.txtLbIdProducto.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtLbIdProducto.Enabled = false;
-            this.txtLbIdProducto.FocusedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txtLbIdProducto.FocusedBorderColor = System.Drawing.Color.White;
-            this.txtLbIdProducto.FocusedForeColor = System.Drawing.Color.White;
+            this.txtLbIdProducto.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtLbIdProducto.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.txtLbIdProducto.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.txtLbIdProducto.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtLbIdProducto.ForeColor = System.Drawing.Color.White;
+            this.txtLbIdProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.txtLbIdProducto.Location = new System.Drawing.Point(25, 88);
             this.txtLbIdProducto.MultiLine = true;
             this.txtLbIdProducto.Name = "txtLbIdProducto";
@@ -325,7 +290,7 @@ namespace VeterinariaElBuenAmigo.views.inventario
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.label5.Location = new System.Drawing.Point(25, 50);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(400, 28);
@@ -428,7 +393,7 @@ namespace VeterinariaElBuenAmigo.views.inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(875, 652);
             this.Controls.Add(this.btnDlt);
             this.Controls.Add(this.btnEdit);
@@ -448,11 +413,11 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelTop);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "FormProductoInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = " ";
-            this.panelTop.ResumeLayout(false);
+            this.Text = " Detalles del Producto";
             this.ResumeLayout(false);
 
         }
@@ -460,8 +425,6 @@ namespace VeterinariaElBuenAmigo.views.inventario
         #endregion
 
         private Guna.UI.WinForms.GunaPanel panelTop;
-        private FontAwesome.Sharp.IconButton btnMin;
-        private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

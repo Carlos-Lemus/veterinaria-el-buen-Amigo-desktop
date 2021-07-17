@@ -31,8 +31,6 @@ namespace VeterinariaElBuenAmigo.views.citas
         {
             this.components = new System.ComponentModel.Container();
             this.panelTop = new Guna.UI.WinForms.GunaPanel();
-            this.btnMin = new FontAwesome.Sharp.IconButton();
-            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.btnEdit = new Guna.UI.WinForms.GunaButton();
             this.btnAdd = new Guna.UI.WinForms.GunaButton();
             this.lblErrorMotivo = new System.Windows.Forms.Label();
@@ -44,56 +42,16 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.mascotas_collection = new Guna.UI.WinForms.GunaComboBox();
             this.windowDragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.gunaDateTimePickerCita = new Guna.UI.WinForms.GunaDateTimePicker();
-            this.panelTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.panelTop.Controls.Add(this.btnMin);
-            this.panelTop.Controls.Add(this.btnClose);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(540, 30);
+            this.panelTop.Size = new System.Drawing.Size(540, 20);
             this.panelTop.TabIndex = 3;
-            // 
-            // btnMin
-            // 
-            this.btnMin.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMin.FlatAppearance.BorderSize = 0;
-            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMin.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.btnMin.IconColor = System.Drawing.Color.White;
-            this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMin.IconSize = 32;
-            this.btnMin.Location = new System.Drawing.Point(460, 0);
-            this.btnMin.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(40, 30);
-            this.btnMin.TabIndex = 11;
-            this.btnMin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMin.UseVisualStyleBackColor = true;
-            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.btnClose.IconColor = System.Drawing.Color.White;
-            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnClose.IconSize = 32;
-            this.btnClose.Location = new System.Drawing.Point(500, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(40, 30);
-            this.btnClose.TabIndex = 4;
-            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnEdit
             // 
@@ -111,7 +69,7 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.Image = null;
             this.btnEdit.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnEdit.Location = new System.Drawing.Point(69, 515);
+            this.btnEdit.Location = new System.Drawing.Point(198, 533);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.btnEdit.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -119,7 +77,7 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.btnEdit.OnHoverImage = null;
             this.btnEdit.OnPressedColor = System.Drawing.Color.Black;
             this.btnEdit.Radius = 5;
-            this.btnEdit.Size = new System.Drawing.Size(390, 35);
+            this.btnEdit.Size = new System.Drawing.Size(160, 42);
             this.btnEdit.TabIndex = 22;
             this.btnEdit.Text = "Editar";
             this.btnEdit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -141,7 +99,7 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = null;
             this.btnAdd.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAdd.Location = new System.Drawing.Point(69, 474);
+            this.btnAdd.Location = new System.Drawing.Point(198, 485);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.btnAdd.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -149,7 +107,7 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.btnAdd.OnHoverImage = null;
             this.btnAdd.OnPressedColor = System.Drawing.Color.Black;
             this.btnAdd.Radius = 5;
-            this.btnAdd.Size = new System.Drawing.Size(390, 35);
+            this.btnAdd.Size = new System.Drawing.Size(160, 42);
             this.btnAdd.TabIndex = 21;
             this.btnAdd.Text = "Guardar";
             this.btnAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -183,7 +141,7 @@ namespace VeterinariaElBuenAmigo.views.citas
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.label3.Location = new System.Drawing.Point(65, 280);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -195,7 +153,7 @@ namespace VeterinariaElBuenAmigo.views.citas
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.label2.Location = new System.Drawing.Point(65, 172);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(404, 28);
@@ -206,7 +164,7 @@ namespace VeterinariaElBuenAmigo.views.citas
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.label1.Location = new System.Drawing.Point(65, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(404, 28);
@@ -219,14 +177,15 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.txtMotivo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMotivo.BackColor = System.Drawing.Color.Transparent;
-            this.txtMotivo.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txtMotivo.BorderColor = System.Drawing.Color.White;
+            this.txtMotivo.BaseColor = System.Drawing.Color.White;
+            this.txtMotivo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.txtMotivo.BorderSize = 1;
             this.txtMotivo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMotivo.FocusedBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txtMotivo.FocusedBorderColor = System.Drawing.Color.White;
-            this.txtMotivo.FocusedForeColor = System.Drawing.Color.White;
+            this.txtMotivo.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtMotivo.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.txtMotivo.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.txtMotivo.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtMotivo.ForeColor = System.Drawing.Color.White;
+            this.txtMotivo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.txtMotivo.Location = new System.Drawing.Point(69, 311);
             this.txtMotivo.MultiLine = true;
             this.txtMotivo.Name = "txtMotivo";
@@ -238,13 +197,14 @@ namespace VeterinariaElBuenAmigo.views.citas
             // mascotas_collection
             // 
             this.mascotas_collection.BackColor = System.Drawing.Color.Transparent;
-            this.mascotas_collection.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.mascotas_collection.BorderColor = System.Drawing.Color.White;
+            this.mascotas_collection.BaseColor = System.Drawing.Color.White;
+            this.mascotas_collection.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.mascotas_collection.BorderSize = 1;
             this.mascotas_collection.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.mascotas_collection.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.mascotas_collection.FocusedColor = System.Drawing.Color.Empty;
             this.mascotas_collection.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.mascotas_collection.ForeColor = System.Drawing.Color.White;
+            this.mascotas_collection.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.mascotas_collection.FormattingEnabled = true;
             this.mascotas_collection.Location = new System.Drawing.Point(69, 214);
             this.mascotas_collection.Margin = new System.Windows.Forms.Padding(2);
@@ -262,13 +222,14 @@ namespace VeterinariaElBuenAmigo.views.citas
             // gunaDateTimePickerCita
             // 
             this.gunaDateTimePickerCita.BackColor = System.Drawing.Color.Transparent;
-            this.gunaDateTimePickerCita.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.gunaDateTimePickerCita.BorderColor = System.Drawing.Color.White;
+            this.gunaDateTimePickerCita.BaseColor = System.Drawing.Color.White;
+            this.gunaDateTimePickerCita.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.gunaDateTimePickerCita.BorderSize = 1;
             this.gunaDateTimePickerCita.CustomFormat = null;
             this.gunaDateTimePickerCita.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.gunaDateTimePickerCita.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gunaDateTimePickerCita.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.gunaDateTimePickerCita.ForeColor = System.Drawing.Color.White;
+            this.gunaDateTimePickerCita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.gunaDateTimePickerCita.Location = new System.Drawing.Point(69, 93);
             this.gunaDateTimePickerCita.Margin = new System.Windows.Forms.Padding(2);
             this.gunaDateTimePickerCita.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -288,7 +249,7 @@ namespace VeterinariaElBuenAmigo.views.citas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(540, 614);
             this.Controls.Add(this.gunaDateTimePickerCita);
             this.Controls.Add(this.mascotas_collection);
@@ -301,11 +262,11 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.panelTop);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "FormCitaActions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Formulario de Citas";
-            this.panelTop.ResumeLayout(false);
+            this.Text = "Datos de  la Cita";
             this.ResumeLayout(false);
 
         }
@@ -313,8 +274,6 @@ namespace VeterinariaElBuenAmigo.views.citas
         #endregion
 
         private Guna.UI.WinForms.GunaPanel panelTop;
-        private FontAwesome.Sharp.IconButton btnMin;
-        private FontAwesome.Sharp.IconButton btnClose;
         private Guna.UI.WinForms.GunaButton btnEdit;
         private Guna.UI.WinForms.GunaButton btnAdd;
         private System.Windows.Forms.Label lblErrorMotivo;

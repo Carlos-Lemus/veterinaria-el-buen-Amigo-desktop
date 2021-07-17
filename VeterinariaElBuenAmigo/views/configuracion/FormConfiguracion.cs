@@ -133,10 +133,10 @@ namespace VeterinariaElBuenAmigo.views
         {
             try
             {
-                if (dvgRazas.Columns[e.ColumnIndex].Name == "ColumnEditRaza")
+                if (dvgEspecies.Columns[e.ColumnIndex].Name == "ColumnEditEspecie")
                 {
-                    int id = Convert.ToInt32(dvgRazas.Rows[e.RowIndex].Cells[0].Value);
-                    string nombre = dvgRazas.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    int id = Convert.ToInt32(dvgEspecies.Rows[e.RowIndex].Cells[0].Value);
+                    string nombre = dvgEspecies.Rows[e.RowIndex].Cells[1].Value.ToString();
 
                     Especie especie = new Especie();
                     especie.idEspecie = id;
