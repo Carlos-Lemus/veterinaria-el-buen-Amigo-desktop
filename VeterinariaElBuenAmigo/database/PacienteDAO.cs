@@ -406,7 +406,7 @@ namespace VeterinariaElBuenAmigo.database
 
                                 raza.idRaza = Convert.ToInt32(result[IDRAZA].ToString());
                                 raza.nombreRaza = result[NOMBRE_RAZA].ToString();
-                                raza.descripcion = result[RAZA_DESCRIPCION].ToString();
+                                raza.idEspecie = Convert.ToInt32(result[IDESPECIE].ToString());
 
                                 listaRazas.Add(raza);
                             }

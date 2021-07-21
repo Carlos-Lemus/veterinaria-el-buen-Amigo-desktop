@@ -30,7 +30,7 @@ namespace VeterinariaElBuenAmigo.database
 
                 using (SQLiteCommand command = new SQLiteCommand())
                 {
-                    string sql = $"INSERT INTO {TABLE_RAZA} ({IDRAZA}, {NOMBRE_RAZA}, {RAZA_DESCRIPCION}) ";
+                    string sql = $"INSERT INTO {TABLE_RAZA} ({IDRAZA}, {NOMBRE_RAZA}, {IDESPECIE}) ";
                     sql += $"VALUES(NULL, @{NOMBRE_RAZA}, '');";
 
                     command.CommandText = sql;
@@ -82,7 +82,7 @@ namespace VeterinariaElBuenAmigo.database
 
                                 raza.idRaza = Convert.ToInt32(result[IDRAZA].ToString());
                                 raza.nombreRaza = result[NOMBRE_RAZA].ToString();
-                                raza.descripcion = result[RAZA_DESCRIPCION].ToString();
+                                raza.idEspecie = Convert.ToInt32(result[IDESPECIE].ToString());
 
                                 lista.Add(raza);
                             }

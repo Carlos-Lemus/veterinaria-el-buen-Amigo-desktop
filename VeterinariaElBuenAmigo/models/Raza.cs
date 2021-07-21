@@ -10,6 +10,6 @@ namespace VeterinariaElBuenAmigo.models
     {
         public int idRaza { get; set; }
         public string nombreRaza { get; set; }
-        public string descripcion { get; set; }
+        public int idEspecie { get; set; }
     }
 }

@@ -48,7 +48,6 @@ namespace VeterinariaElBuenAmigo.database
         protected const string TABLE_RAZA = "razas";
         protected const string IDRAZA = "idRaza";
         protected const string NOMBRE_RAZA = "nombreRaza";
-        protected const string RAZA_DESCRIPCION = "descripcion";
 
         //ESPECIES
         protected const string TABLE_ESPECIE = "especies";
