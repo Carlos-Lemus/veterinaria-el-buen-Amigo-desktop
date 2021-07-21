@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VeterinariaElBuenAmigo.commons;
 using VeterinariaElBuenAmigo.database;
 using VeterinariaElBuenAmigo.models;
 
@@ -20,7 +21,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
         private string mascota;
         private int idMascota;
         private int tipo;
-        private int idReceta; 
+
         public RecetasForm(string mascota, int idMascota, int tipo)
         {
             recetaDao = new RecetasDAO();
@@ -53,34 +54,36 @@ namespace VeterinariaElBuenAmigo.views.consulta
 
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
+            string padecimiento = txt_Padecimineto.Text;
+            string producto = txt_Producto.Text;
+            string refuerzo = txt_Refuerzo.Text;
+            string dosis = txt_Dosis.Text;
 
+            bool isValidPadecimiento = ValidFields.isValidInput(padecimiento, lblErrorPadecimiento);
+            bool isValidProducto = ValidFields.isValidInput(producto, lblErrorProducto);
+            bool isValidRefuerzo = ValidFields.isValidInput(refuerzo, lblErrorRefuerzo);
+            bool isValidDosis = ValidFields.isValidInput(dosis, lblErrorDosis);
 
-            if (verificarVacio(txt_Padecimineto.Text) || verificarVacio(txt_Producto.Text) 
-                || verificarVacio(txt_Refuerzo.Text) || verificarVacio(txt_Dosis.Text))
+            if (isValidPadecimiento && isValidProducto && isValidRefuerzo && isValidDosis)
             {
-                MessageBox.Show("No puede dejar Campos Vacios", "Precaución", MessageBoxButtons.OK, MessageBoxIcon.Warning); 
-            
-            }
-            else
-            {
+             
                 if (tipo.Equals(1))
                 {
                    
-                        recetaDao.InsertarReceta(new Recetas(0, this.idMascota, this.tipo, txt_Padecimineto.Text, txt_Producto.Text, Convert.ToInt32(txt_Dosis.Text), txt_Refuerzo.Text));
-                        MessageBox.Show("Se ha registrado el control correctamente!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        LlenartablaVacuna();
-                        LimpiarText(1);                                
+                    recetaDao.InsertarReceta(new Recetas(0, this.idMascota, this.tipo, padecimiento, producto, Convert.ToInt32(dosis), refuerzo));
+                    LlenartablaVacuna();
+                    LimpiarText(1);                                
                    
                 }
                 else
                 {
                    
-                    recetaDao.InsertarReceta(new Recetas(0, this.idMascota, this.tipo, txt_Padecimineto.Text, txt_Producto.Text, 0, txt_Refuerzo.Text));
-                    MessageBox.Show("Se ha registrado el control correctamente!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    recetaDao.InsertarReceta(new Recetas(0, this.idMascota, this.tipo, padecimiento, producto, 0, refuerzo));
                     LlenartablaVitamina();
                     LimpiarText(2);
                 }
                
+                MessageBox.Show("Se ha registrado el control correctamente!", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             }
@@ -164,45 +167,32 @@ namespace VeterinariaElBuenAmigo.views.consulta
 
         private void LimpiarText(int t)
         {
+            txt_Padecimineto.Text = "";
+            txt_Producto.Text = "";
+            txt_Refuerzo.Text = "";
+
             if (t.Equals(1))
-            {
-                txt_Padecimineto.Text = "";
+            {   
                 txt_Dosis.Text = "";
-                txt_Producto.Text = "";
-                txt_Refuerzo.Text = "";
-            }
-            else
-            {
-                txt_Padecimineto.Text = "";              
-                txt_Producto.Text = "";
-                txt_Refuerzo.Text = "";
+                
             }
            
         }
 
-        private bool verificarVacio(string txt)
-        {
-            if (String.IsNullOrEmpty(txt))
-            {
-                return true;
-            }
-
-            return false;
-        }
 
         private void txt_Dosis_KeyPress(object sender, KeyPressEventArgs e)
         {
             if(!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
-                MessageBox.Show("Solo se permiten números enteros", "Precaución", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lblErrorDosis.Text = "Ingresa solo numeros";
             }
             
             if(txt_Dosis.Text.Length > 3)
             {
                 e.Handled = true;
             }
-
+            lblErrorDosis.Text = "Obligatorio";
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

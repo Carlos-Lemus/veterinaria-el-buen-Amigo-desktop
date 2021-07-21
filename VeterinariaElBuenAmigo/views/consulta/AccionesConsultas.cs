@@ -14,6 +14,7 @@ using KimToo;
 using VeterinariaElBuenAmigo.Properties;
 using System.Threading;
 using System.Globalization;
+using VeterinariaElBuenAmigo.commons;
 
 namespace VeterinariaElBuenAmigo.views.consulta
 {
@@ -47,7 +48,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             InitializeComponent();
 
 
-            Nombre_Paciente.Text = Nombre;
+            Nombre_Paciente.Text = "Consulta " + Nombre;
             ActualizarTabla();
 
 
@@ -103,16 +104,6 @@ namespace VeterinariaElBuenAmigo.views.consulta
         private void btnMin_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
-        }
-
-        private bool verificarVacio(string txt)
-        {
-            if (String.IsNullOrEmpty(txt))
-            {
-                return true;
-            }
-
-            return false;
         }
 
         private void txt_Padecimineto_KeyPress(object sender, KeyPressEventArgs e)
@@ -250,53 +241,42 @@ namespace VeterinariaElBuenAmigo.views.consulta
 
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
-            if (verificarVacio(txt_Padecimineto.Text) || verificarVacio(txt_Peso.Text)
-               || verificarVacio(txt_Temperatura.Text) || verificarVacio(txt_controlCelo.Text)
-               || verificarVacio(txt_Comentarios.Text))
-            {
+            string padecimineto = txt_Padecimineto.Text;
+            string peso = txt_Peso.Text;
+            string controlCelo = txt_controlCelo.Text;
+            string temperatura = txt_Temperatura.Text;
+            string comentarios = txt_Comentarios.Text;
 
-                MessageBox.Show("Tiene Campos Vacios", "Precaución", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            bool isValidPadecimineto = ValidFields.isValidInput(padecimineto, campos_padecimineto);
+            bool isValidPeso = ValidFields.isValidInput(peso, campos_peso);
+            bool isValidControlCelo = ValidFields.isValidInput(controlCelo, campos_control);
+            bool isValidTemperatura = ValidFields.isValidInput(temperatura, campos_temperatura);
+            bool isValidComentarios = ValidFields.isValidInput(comentarios, campos_comentarios);
 
-                if (verificarVacio(txt_Padecimineto.Text)) campos_padecimineto.Visible = true;
-                if (verificarVacio(txt_Temperatura.Text)) campos_temperatura.Visible = true;
-                if (verificarVacio(txt_Peso.Text)) campos_peso.Visible = true;
-                if (verificarVacio(txt_controlCelo.Text)) campos_control.Visible = true;
-                if (verificarVacio(txt_Comentarios.Text)) campos_comentarios.Visible = true;
 
-            }
-            else
+            if (isValidPadecimineto && isValidPeso && isValidControlCelo && isValidTemperatura && isValidComentarios )
             {
 
                 if (isEdit)
                 {
                     //  MessageBox.Show("bool: " + isEdit.ToString() + "idconsulta:" + idConsulta_.ToString());
-                    consultaDao.EditarConsulta(new Consulta(0, txt_Padecimineto.Text, String.Format("{0:0.00}", txt_Temperatura.Text), String.Format("{0:0.00}", txt_Peso.Text), this.id, txt_controlCelo.Text, txt_Comentarios.Text), this.idConsulta_);
+                    consultaDao.EditarConsulta(new Consulta(0, padecimineto, String.Format("{0:0.00}", temperatura), String.Format("{0:0.00}", peso), this.id, controlCelo, comentarios), this.idConsulta_);
                     MessageBox.Show("Se ha cambiado la consulta correctamente", "Actualizado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     // this.isEdit = false; 
                 }
                 else
                 {
-                    consultaDao.InsertarConsulta(new Consulta(0, txt_Padecimineto.Text, String.Format("{0:0.00}", txt_Temperatura.Text), String.Format("{0:0.00}", txt_Peso.Text), this.id, txt_controlCelo.Text, txt_Comentarios.Text));
+                    consultaDao.InsertarConsulta(new Consulta(0, padecimineto, String.Format("{0:0.00}", temperatura), String.Format("{0:0.00}", peso), this.id, controlCelo, comentarios));
                     MessageBox.Show("Se ha registrado la consulta correctamente", "Guardado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 ActualizarTabla();
                 LimpiarText();
-
-
-
-                //txt_Padecimineto.Text + "\n" + txt_Peso.Text + "\n" + txt_Temperatura.Text + "\n" + txt_controlCelo.Text + "\n" + txt_Comentarios.Text
 
             }
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
         {
-            /*
-             * //decimal separator will always be '.'
-                a.ToString(System.Globalization.CultureInfo.InvariantCulture);
-               //back to a double
-                double.Parse(txt, System.Globalization.CultureInfo.InvariantCulture);
-            */
             if (String.IsNullOrEmpty(txt_Temperatura.Text))
             {
                 txt_Temperatura.Text = "0";
@@ -451,7 +431,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
                 }
                 catch(Exception exception)
                 {
-
+                    MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

@@ -35,14 +35,6 @@ namespace VeterinariaElBuenAmigo.views.consulta
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.titulo = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbl_Control = new Guna.UI.WinForms.GunaDataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.txt_Padecimineto = new Guna.UI.WinForms.GunaTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_Producto = new Guna.UI.WinForms.GunaTextBox();
@@ -57,8 +49,20 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.btn_Guardar = new Guna.UI.WinForms.GunaButton();
             this.btnDelete = new Guna.UI.WinForms.GunaButton();
             this.panelTop = new Guna.UI.WinForms.GunaPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.tbl_Control)).BeginInit();
+            this.lblErrorPadecimiento = new System.Windows.Forms.Label();
+            this.lblErrorProducto = new System.Windows.Forms.Label();
+            this.lblErrorRefuerzo = new System.Windows.Forms.Label();
+            this.lblErrorDosis = new System.Windows.Forms.Label();
+            this.tbl_Control = new Guna.UI.WinForms.GunaDataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSelect = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbl_Control)).BeginInit();
             this.SuspendLayout();
             // 
             // titulo
@@ -83,138 +87,11 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.label1.Text = "Control de";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // tbl_Control
-            // 
-            this.tbl_Control.AllowUserToAddRows = false;
-            this.tbl_Control.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
-            this.tbl_Control.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.tbl_Control.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbl_Control.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.tbl_Control.BackgroundColor = System.Drawing.Color.White;
-            this.tbl_Control.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbl_Control.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.tbl_Control.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tbl_Control.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.tbl_Control.ColumnHeadersHeight = 40;
-            this.tbl_Control.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.ColumnSelect});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(185)))), ((int)(((byte)(175)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tbl_Control.DefaultCellStyle = dataGridViewCellStyle3;
-            this.tbl_Control.EnableHeadersVisualStyles = false;
-            this.tbl_Control.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
-            this.tbl_Control.Location = new System.Drawing.Point(73, 102);
-            this.tbl_Control.Name = "tbl_Control";
-            this.tbl_Control.RowHeadersVisible = false;
-            this.tbl_Control.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.tbl_Control.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.tbl_Control.RowTemplate.Height = 40;
-            this.tbl_Control.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tbl_Control.Size = new System.Drawing.Size(729, 205);
-            this.tbl_Control.TabIndex = 36;
-            this.tbl_Control.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Teal;
-            this.tbl_Control.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(223)))), ((int)(((byte)(219)))));
-            this.tbl_Control.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.tbl_Control.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.tbl_Control.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.tbl_Control.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.tbl_Control.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.tbl_Control.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(222)))), ((int)(((byte)(218)))));
-            this.tbl_Control.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
-            this.tbl_Control.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.tbl_Control.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbl_Control.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.tbl_Control.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.tbl_Control.ThemeStyle.HeaderStyle.Height = 40;
-            this.tbl_Control.ThemeStyle.ReadOnly = false;
-            this.tbl_Control.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(233)))), ((int)(((byte)(231)))));
-            this.tbl_Control.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.tbl_Control.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbl_Control.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.tbl_Control.ThemeStyle.RowsStyle.Height = 40;
-            this.tbl_Control.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(185)))), ((int)(((byte)(175)))));
-            this.tbl_Control.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            // 
-            // Column1
-            // 
-            this.Column1.FillWeight = 50F;
-            this.Column1.HeaderText = "Paciente";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.FillWeight = 150F;
-            this.Column2.HeaderText = "Padecimineto";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.FillWeight = 75F;
-            this.Column3.HeaderText = "Producto";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.FillWeight = 75F;
-            this.Column4.HeaderText = "Dosis";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Refuerzo";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // ColumnSelect
-            // 
-            this.ColumnSelect.FillWeight = 25F;
-            this.ColumnSelect.HeaderText = "";
-            this.ColumnSelect.MinimumWidth = 6;
-            this.ColumnSelect.Name = "ColumnSelect";
-            // 
             // txt_Padecimineto
             // 
             this.txt_Padecimineto.BackColor = System.Drawing.Color.Transparent;
             this.txt_Padecimineto.BaseColor = System.Drawing.Color.White;
-            this.txt_Padecimineto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txt_Padecimineto.BorderSize = 1;
+            this.txt_Padecimineto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.txt_Padecimineto.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Padecimineto.FocusedBaseColor = System.Drawing.Color.White;
             this.txt_Padecimineto.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
@@ -244,8 +121,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.txt_Producto.BackColor = System.Drawing.Color.Transparent;
             this.txt_Producto.BaseColor = System.Drawing.Color.White;
-            this.txt_Producto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txt_Producto.BorderSize = 1;
+            this.txt_Producto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.txt_Producto.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Producto.FocusedBaseColor = System.Drawing.Color.White;
             this.txt_Producto.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
@@ -275,8 +151,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.txt_Dosis.BackColor = System.Drawing.Color.Transparent;
             this.txt_Dosis.BaseColor = System.Drawing.Color.White;
-            this.txt_Dosis.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txt_Dosis.BorderSize = 1;
+            this.txt_Dosis.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.txt_Dosis.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Dosis.FocusedBaseColor = System.Drawing.Color.White;
             this.txt_Dosis.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
@@ -288,7 +163,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.txt_Dosis.PasswordChar = '\0';
             this.txt_Dosis.Radius = 5;
             this.txt_Dosis.Size = new System.Drawing.Size(90, 42);
-            this.txt_Dosis.TabIndex = 42;
+            this.txt_Dosis.TabIndex = 44;
             this.txt_Dosis.TextOffsetX = 10;
             this.txt_Dosis.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Dosis_KeyPress);
             // 
@@ -307,8 +182,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             // 
             this.txt_Refuerzo.BackColor = System.Drawing.Color.Transparent;
             this.txt_Refuerzo.BaseColor = System.Drawing.Color.White;
-            this.txt_Refuerzo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txt_Refuerzo.BorderSize = 1;
+            this.txt_Refuerzo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.txt_Refuerzo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_Refuerzo.FocusedBaseColor = System.Drawing.Color.White;
             this.txt_Refuerzo.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
@@ -320,7 +194,7 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.txt_Refuerzo.PasswordChar = '\0';
             this.txt_Refuerzo.Radius = 5;
             this.txt_Refuerzo.Size = new System.Drawing.Size(312, 42);
-            this.txt_Refuerzo.TabIndex = 44;
+            this.txt_Refuerzo.TabIndex = 42;
             this.txt_Refuerzo.TextOffsetX = 10;
             // 
             // label5
@@ -442,12 +316,188 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.panelTop.Size = new System.Drawing.Size(894, 20);
             this.panelTop.TabIndex = 48;
             // 
+            // lblErrorPadecimiento
+            // 
+            this.lblErrorPadecimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorPadecimiento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(59)))), ((int)(((byte)(87)))));
+            this.lblErrorPadecimiento.Location = new System.Drawing.Point(276, 320);
+            this.lblErrorPadecimiento.Name = "lblErrorPadecimiento";
+            this.lblErrorPadecimiento.Size = new System.Drawing.Size(109, 24);
+            this.lblErrorPadecimiento.TabIndex = 52;
+            this.lblErrorPadecimiento.Text = "Obligatorio";
+            this.lblErrorPadecimiento.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblErrorPadecimiento.Visible = false;
+            // 
+            // lblErrorProducto
+            // 
+            this.lblErrorProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(59)))), ((int)(((byte)(87)))));
+            this.lblErrorProducto.Location = new System.Drawing.Point(709, 320);
+            this.lblErrorProducto.Name = "lblErrorProducto";
+            this.lblErrorProducto.Size = new System.Drawing.Size(109, 24);
+            this.lblErrorProducto.TabIndex = 53;
+            this.lblErrorProducto.Text = "Obligatorio";
+            this.lblErrorProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblErrorProducto.Visible = false;
+            // 
+            // lblErrorRefuerzo
+            // 
+            this.lblErrorRefuerzo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorRefuerzo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(59)))), ((int)(((byte)(87)))));
+            this.lblErrorRefuerzo.Location = new System.Drawing.Point(276, 419);
+            this.lblErrorRefuerzo.Name = "lblErrorRefuerzo";
+            this.lblErrorRefuerzo.Size = new System.Drawing.Size(109, 24);
+            this.lblErrorRefuerzo.TabIndex = 54;
+            this.lblErrorRefuerzo.Text = "Obligatorio";
+            this.lblErrorRefuerzo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblErrorRefuerzo.Visible = false;
+            // 
+            // lblErrorDosis
+            // 
+            this.lblErrorDosis.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorDosis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(59)))), ((int)(((byte)(87)))));
+            this.lblErrorDosis.Location = new System.Drawing.Point(564, 419);
+            this.lblErrorDosis.Name = "lblErrorDosis";
+            this.lblErrorDosis.Size = new System.Drawing.Size(109, 24);
+            this.lblErrorDosis.TabIndex = 55;
+            this.lblErrorDosis.Text = "Obligatorio";
+            this.lblErrorDosis.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblErrorDosis.Visible = false;
+            // 
+            // tbl_Control
+            // 
+            this.tbl_Control.AllowUserToAddRows = false;
+            this.tbl_Control.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.tbl_Control.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.tbl_Control.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbl_Control.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tbl_Control.BackgroundColor = System.Drawing.Color.White;
+            this.tbl_Control.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbl_Control.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.tbl_Control.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tbl_Control.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.tbl_Control.ColumnHeadersHeight = 40;
+            this.tbl_Control.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.ColumnSelect});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tbl_Control.DefaultCellStyle = dataGridViewCellStyle3;
+            this.tbl_Control.EnableHeadersVisualStyles = false;
+            this.tbl_Control.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.tbl_Control.Location = new System.Drawing.Point(73, 113);
+            this.tbl_Control.Name = "tbl_Control";
+            this.tbl_Control.RowHeadersVisible = false;
+            this.tbl_Control.RowHeadersWidth = 51;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.tbl_Control.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.tbl_Control.RowTemplate.Height = 40;
+            this.tbl_Control.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tbl_Control.Size = new System.Drawing.Size(729, 195);
+            this.tbl_Control.TabIndex = 57;
+            this.tbl_Control.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.tbl_Control.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.tbl_Control.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.tbl_Control.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.tbl_Control.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.tbl_Control.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.tbl_Control.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.tbl_Control.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
+            this.tbl_Control.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.tbl_Control.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.tbl_Control.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbl_Control.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.tbl_Control.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.tbl_Control.ThemeStyle.HeaderStyle.Height = 40;
+            this.tbl_Control.ThemeStyle.ReadOnly = false;
+            this.tbl_Control.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.tbl_Control.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.tbl_Control.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbl_Control.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.tbl_Control.ThemeStyle.RowsStyle.Height = 40;
+            this.tbl_Control.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
+            this.tbl_Control.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            // 
+            // id
+            // 
+            this.id.FillWeight = 50F;
+            this.id.HeaderText = "Id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Paciente";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Padecimiento";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Producto";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Dosis";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Refuerzo";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // ColumnSelect
+            // 
+            this.ColumnSelect.FillWeight = 25F;
+            this.ColumnSelect.HeaderText = "";
+            this.ColumnSelect.MinimumWidth = 6;
+            this.ColumnSelect.Name = "ColumnSelect";
+            // 
             // RecetasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(894, 589);
+            this.Controls.Add(this.tbl_Control);
+            this.Controls.Add(this.lblErrorDosis);
+            this.Controls.Add(this.lblErrorRefuerzo);
+            this.Controls.Add(this.lblErrorProducto);
+            this.Controls.Add(this.lblErrorPadecimiento);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.titulo);
             this.Controls.Add(this.btnDelete);
@@ -462,15 +512,14 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_Padecimineto);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.tbl_Control);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "RecetasForm";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RecetasForm";
-            ((System.ComponentModel.ISupportInitialize)(this.tbl_Control)).EndInit();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tbl_Control)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -479,7 +528,6 @@ namespace VeterinariaElBuenAmigo.views.consulta
         #endregion
         private System.Windows.Forms.Label titulo;
         private System.Windows.Forms.Label label1;
-        private Guna.UI.WinForms.GunaDataGridView tbl_Control;
         private Guna.UI.WinForms.GunaTextBox txt_Padecimineto;
         private System.Windows.Forms.Label label3;
         private Guna.UI.WinForms.GunaTextBox txt_Producto;
@@ -493,6 +541,12 @@ namespace VeterinariaElBuenAmigo.views.consulta
         private FontAwesome.Sharp.IconButton iconButton1;
         private Guna.UI.WinForms.GunaButton btn_Guardar;
         private Guna.UI.WinForms.GunaButton btnDelete;
+        private Guna.UI.WinForms.GunaPanel panelTop;
+        private System.Windows.Forms.Label lblErrorPadecimiento;
+        private System.Windows.Forms.Label lblErrorProducto;
+        private System.Windows.Forms.Label lblErrorRefuerzo;
+        private System.Windows.Forms.Label lblErrorDosis;
+        private Guna.UI.WinForms.GunaDataGridView tbl_Control;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -500,6 +554,5 @@ namespace VeterinariaElBuenAmigo.views.consulta
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ColumnSelect;
-        private Guna.UI.WinForms.GunaPanel panelTop;
     }
 }

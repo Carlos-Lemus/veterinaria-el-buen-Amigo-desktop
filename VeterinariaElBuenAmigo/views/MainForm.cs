@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VeterinariaElBuenAmigo.database;
 using VeterinariaElBuenAmigo.views;
 
 namespace VeterinariaElBuenAmigo
@@ -19,66 +20,48 @@ namespace VeterinariaElBuenAmigo
         private Color colorPrimary = Color.FromArgb(0, 173, 181);
         private Color colorSelect = Color.FromArgb(170, 216, 211);
 
-        private int posicionFormX;
-        private int posicionFormY;
-        private int WindowWidth;
-        private int WindowHeight;
+        // Class DAOs
+        private ClienteDAO clienteDao;
+        private PacienteDAO pacienteDao;
+        private CitaDAO citaDao;
+        private ConsultaDAO consultaDao;
+        private ProductosDAO productoDao;
+        private RazaDAO razaDAO;
+        private EspecieDAO especieDAO;
+        private LoginDAO loginDAO;
 
-        private Point position;
-        private Size size;
+        private bool isSignOut = false;
 
         public MainForm()
         {
             InitializeComponent();
 
-            position = new Point(Location.X, Location.Y);
-            size = new Size(Size.Width, Size.Height);
-
             activaButton(btnPropietario);
-            openFormInPane(new FormPropietario());
+
+            InitDAOs();
+
+            openFormInPane(new FormPropietario(clienteDao));
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void InitDAOs()
         {
-            Application.Exit();
+            clienteDao = new ClienteDAO();
+            pacienteDao = new PacienteDAO();
+            citaDao = new CitaDAO();
+            consultaDao = new ConsultaDAO();
+            productoDao = new ProductosDAO();
+            razaDAO = new RazaDAO();
+            especieDAO = new EspecieDAO();
+            loginDAO = new LoginDAO();
         }
 
-        private void btnMax_Click(object sender, EventArgs e)
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // obtengo la posicion de la ventana previo a maximizar la ventana
-            posicionFormX = Location.X;
-            posicionFormY = Location.Y;
+            if(!isSignOut)
+            {
+                Application.Exit();
+            }
 
-            // obtengo la tamaño de la ventana previo a maximizar la ventana
-            WindowWidth =  Size.Width;
-            WindowHeight = Size.Height;
-
-            Size = Screen.PrimaryScreen.WorkingArea.Size;
-            Location = Screen.PrimaryScreen.WorkingArea.Location;
-            btnMax.Visible = false;
-            btnRestore.Visible = true;
-        }
-
-        private void btnRestore_Click(object sender, EventArgs e)
-        {
-            size.Width = WindowWidth;
-            size.Height = WindowHeight;
-            Size = size;
-            
-            // devulvo a la ventana a la posicion previo a maximizar la ventana
-            
-            position.X = posicionFormX;
-            position.Y = posicionFormY;
-            
-            Location = position;
-            
-            btnMax.Visible = true;
-            btnRestore.Visible = false;
-        }
-
-        private void btnMin_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -110,37 +93,37 @@ namespace VeterinariaElBuenAmigo
         private void btnPropietario_Click(object sender, EventArgs e)
         {
             activaButton(btnPropietario);
-            openFormInPane(new FormPropietario());
+            openFormInPane(new FormPropietario(clienteDao));
         }
 
         private void btnPacientes_Click(object sender, EventArgs e)
         {
             activaButton(btnPacientes);
-            openFormInPane(new FormPacientes());
+            openFormInPane(new FormPacientes(pacienteDao));
         }
 
         private void btnCitas_Click(object sender, EventArgs e)
         {
             activaButton(btnCitas);
-            openFormInPane(new FormCitas());
+            openFormInPane(new FormCitas(citaDao));
         }
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
             activaButton(btnConsulta);
-            openFormInPane(new FormConsulta());
-        }
+            openFormInPane(new FormConsulta(consultaDao, pacienteDao));
+        }                                   
 
         private void btnInventario_Click(object sender, EventArgs e)
         {
             activaButton(btnInventario);
-            openFormInPane(new FormInventario());
+            openFormInPane(new FormInventario(productoDao));
         }
 
         private void btnConfiguracion_Click(object sender, EventArgs e)
         {
             activaButton(btnConfiguracion);
-            openFormInPane(new FormConfiguracion());
+            openFormInPane(new FormConfiguracion(loginDAO, razaDAO, especieDAO));
         }
 
         // cambia los estilos del button que esten en el panel de navegacion cuando se haga click en el
@@ -176,6 +159,12 @@ namespace VeterinariaElBuenAmigo
             panelContenido.Tag = currentForm;
             currentForm.Show();
 
+        }
+
+        private void btnSingOut_Click(object sender, EventArgs e)
+        {
+            isSignOut = true;
+            this.Close();
         }
 
     }

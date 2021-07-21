@@ -87,7 +87,7 @@ namespace VeterinariaElBuenAmigo.views.configuracion
             this.btnAdd.ImageSize = new System.Drawing.Size(20, 20);
             this.btnAdd.Location = new System.Drawing.Point(24, 286);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
+            this.btnAdd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.btnAdd.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnAdd.OnHoverForeColor = System.Drawing.Color.White;
             this.btnAdd.OnHoverImage = null;
@@ -140,11 +140,10 @@ namespace VeterinariaElBuenAmigo.views.configuracion
             this.txtNombre.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNombre.BackColor = System.Drawing.Color.Transparent;
             this.txtNombre.BaseColor = System.Drawing.Color.White;
-            this.txtNombre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txtNombre.BorderSize = 1;
+            this.txtNombre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNombre.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtNombre.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(137)))), ((int)(((byte)(181)))));
+            this.txtNombre.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.txtNombre.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
@@ -154,6 +153,7 @@ namespace VeterinariaElBuenAmigo.views.configuracion
             this.txtNombre.Radius = 4;
             this.txtNombre.Size = new System.Drawing.Size(363, 42);
             this.txtNombre.TabIndex = 30;
+            this.txtNombre.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombre_KeyDown);
             // 
             // panelTop
             // 

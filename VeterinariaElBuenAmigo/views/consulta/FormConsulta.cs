@@ -18,17 +18,15 @@ namespace VeterinariaElBuenAmigo.views
     public partial class FormConsulta : Form
     {
         private ConsultaDAO consultaDao;
-      //  private List<Consulta> listaConsulta;
-
         private PacienteDAO pacienteDao;
         private List<Paciente> listaPaciente;
        
-        public FormConsulta()
+        public FormConsulta(ConsultaDAO consultaDao, PacienteDAO pacienteDao)
         {
             InitializeComponent();
 
-            consultaDao = new ConsultaDAO();
-            pacienteDao = new PacienteDAO();
+            this.consultaDao = consultaDao;
+            this.pacienteDao = pacienteDao;
 
             cargarMascotas();
         }
@@ -76,14 +74,10 @@ namespace VeterinariaElBuenAmigo.views
                 Nombre = consultaDao.NombrePropietarioporID(paciente.idCliente);
                 Num = consultaDao.NumerodeConsultas(paciente.idPaciente);
 
-                if(Nombre.Equals("No se encontró al propietario"))
-                {
-
-                }
-                else
+                if(!Nombre.Equals("No se encontró al propietario"))
                 {
                     tbl_Consulta.Rows.Add(paciente.idPaciente, paciente.nombrePaciente, Especie, Nombre, Num);
-                }            
+                }         
                
 
             }

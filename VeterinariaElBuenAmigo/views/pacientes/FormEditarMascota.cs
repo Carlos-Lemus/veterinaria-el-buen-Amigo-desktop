@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VeterinariaElBuenAmigo.commons;
 using VeterinariaElBuenAmigo.database;
 using VeterinariaElBuenAmigo.models;
 
@@ -14,10 +15,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
 {
     public partial class FormEditarMascota : Form
     {
-        private ClienteDAO clienteDao;
         private PacienteDAO pacienteDao;
-        private List<Cliente> listaProp;
-        Paciente paciente;
 
         private int id_client;
         private string genero_de_mascota;
@@ -103,12 +101,15 @@ namespace VeterinariaElBuenAmigo.views.pacientes
 
         private void btnEditMascota_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(txtNombreMascota1.Text) || String.IsNullOrEmpty(descripcionMascota1.Text)
-                || String.IsNullOrEmpty(txtcolor1.Text))
-            {
-                MessageBox.Show("Tiene Campos Vacios", "Precaución", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
+            string nombre = txtNombreMascota1.Text;
+            string descripcion = descripcionMascota1.Text;
+            string color = txtcolor1.Text;
+
+            bool isValidNombre = ValidFields.isValidInput(nombre, lblErrorNombre);
+            bool isValidDescripcion = ValidFields.isValidInput(descripcion, lblErrorDescripcion);
+            bool isValidTelefono = ValidFields.isValidInput(color, lblErrorColor);
+
+            if (isValidNombre && isValidDescripcion && isValidTelefono)
             {
                 Paciente p = new Paciente();
                 p.idPaciente = id_client;
@@ -124,6 +125,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
                 MessageBox.Show("Se ha editado Correctamente, saldrá de esta ventana", "Guardado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
+
         }
     }
 }

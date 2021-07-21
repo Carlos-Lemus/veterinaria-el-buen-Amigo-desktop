@@ -19,32 +19,14 @@ namespace VeterinariaElBuenAmigo.views
         private List<Paciente> lista;
         private List<templateClientePaciente> listaConsulta;
 
-        public FormPacientes()
+        public FormPacientes(PacienteDAO pacienteDao)
         {
             InitializeComponent();
-            pacienteDao = new PacienteDAO();
+
+            this.pacienteDao = pacienteDao;
+
             cargarDatosCP();
         }        
-
-        //CARGA ALGUNOS DATOS DE LA TABLA PACIENTES
-        private void cargarDatos()
-        {
-            if (dgvMascotas.RowCount > 0)
-            {
-                dgvMascotas.Rows.Clear();
-                lista.Clear();
-            }
-
-            lista = pacienteDao.getList();
-
-
-            lblPacientes.Text = "Numeros de propietarios: " + lista.Count;
-
-            foreach (Paciente paciente in lista)
-            {
-                dgvMascotas.Rows.Add(paciente.idPaciente, paciente.nombrePaciente, paciente.color, paciente.genero);
-            }
-        }
 
         // CARGA ALGUNOS DATOS DE LA RELACION ENTRE CLIENTES Y PACIENTES
         private void cargarDatosCP()
@@ -92,7 +74,7 @@ namespace VeterinariaElBuenAmigo.views
             }
             catch (Exception exception)
             {
-
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -137,6 +119,12 @@ namespace VeterinariaElBuenAmigo.views
         {
             var listaSearch = listaConsulta.Where(templateCP => templateCP.nombrePaciente.ToLower().Contains(txtBuscarPaciente.Text.ToLower()));
             cargarPacientesSearch(listaSearch.ToList());
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtBuscarPaciente.Text = "";
+            cargarDatosCP();
         }
     }
 }

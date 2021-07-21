@@ -19,11 +19,12 @@ namespace VeterinariaElBuenAmigo.views
         private ProductosDAO productoDao;
         private List<Producto> listaProductos;
 
-        public FormInventario()
+        public FormInventario(ProductosDAO productoDao)
         {
             InitializeComponent();
 
-            productoDao = new ProductosDAO();
+            this.productoDao = productoDao;
+
             cargarProductos();
         }
 
@@ -34,7 +35,6 @@ namespace VeterinariaElBuenAmigo.views
                 formProductoAction.ShowDialog();
             }
             cargarProductos();
-            this.Parent.Parent.Visible = true;
         }
 
         private void cargarProductos()
@@ -89,12 +89,11 @@ namespace VeterinariaElBuenAmigo.views
                         formProductoAction.ShowDialog();
                     }
                     cargarProductos();
-                    this.Visible = true;
                 }
             }
             catch (Exception exception)
             {
-                //MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -107,15 +106,13 @@ namespace VeterinariaElBuenAmigo.views
 
                 using (FormProductoInfo formProductoInfo = new FormProductoInfo(productoView))
                 {
-                    this.Visible = false;
                     formProductoInfo.ShowDialog();
                 }
                 cargarProductos();
-                this.Visible = true;
             }
             catch (Exception exception)
             {
-
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

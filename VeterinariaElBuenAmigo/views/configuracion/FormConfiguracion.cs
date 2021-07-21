@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VeterinariaElBuenAmigo.commons;
 using VeterinariaElBuenAmigo.database;
 using VeterinariaElBuenAmigo.models;
 using VeterinariaElBuenAmigo.views.configuracion;
@@ -22,14 +23,14 @@ namespace VeterinariaElBuenAmigo.views
         private RazaDAO razaDAO;
         private EspecieDAO especieDAO;
 
-        public FormConfiguracion()
+        public FormConfiguracion(LoginDAO loginDAO, RazaDAO razaDAO, EspecieDAO especieDAO)
         {
             InitializeComponent();
 
-            razaDAO = new RazaDAO();
-            especieDAO = new EspecieDAO();
-            loginDAO = new LoginDAO();
-
+            this.loginDAO = loginDAO;
+            this.razaDAO = razaDAO; 
+            this.especieDAO = especieDAO;
+            
             cargarRazas();
             cargarEspecies();
         }
@@ -125,7 +126,7 @@ namespace VeterinariaElBuenAmigo.views
             }
             catch (Exception exception)
             {
-
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -153,7 +154,7 @@ namespace VeterinariaElBuenAmigo.views
             }
             catch (Exception exception)
             {
-
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -191,29 +192,28 @@ namespace VeterinariaElBuenAmigo.views
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            
-            if(string.IsNullOrEmpty(txtChangeKey.Text))
-            {
-                MessageBox.Show("La clave no puede estar vacia", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                return;
-            }
+            string key = txtChangeKey.Text;
+            bool isValidKey = ValidFields.isValidInput(key, lblErrorClave);
 
-            DialogResult dialogQuestion = MessageBox.Show("¿Estas seguro de cambiar la clave de acceso?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (dialogQuestion == DialogResult.Yes)
+            if (isValidKey)
             {
 
-                Login login = loginDAO.getLogin();
+                DialogResult dialogQuestion = MessageBox.Show("¿Estas seguro de cambiar la clave de acceso?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                login.password = txtChangeKey.Text;
+                if (dialogQuestion == DialogResult.Yes)
+                {
 
-                loginDAO.update(login);
+                    Login login = loginDAO.getLogin();
 
-                txtChangeKey.Text = "";
+                    login.password = txtChangeKey.Text;
 
+                    loginDAO.update(login);
+
+                    txtChangeKey.Text = "";
+
+                }
             }
-
         }
     }
 }

@@ -29,13 +29,10 @@ namespace VeterinariaElBuenAmigo.views.propietarios
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.windowDragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.btnAdd = new Guna.UI.WinForms.GunaButton();
             this.txtNombre = new Guna.UI.WinForms.GunaTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtDireccion = new Guna.UI.WinForms.GunaTextBox();
-            this.txtTelefono = new Guna.UI.WinForms.GunaTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label123 = new System.Windows.Forms.Label();
@@ -45,13 +42,9 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.lblErrorTelefono = new System.Windows.Forms.Label();
             this.lblErrorDireccion = new System.Windows.Forms.Label();
             this.lblErrorNombre = new System.Windows.Forms.Label();
-            this.windowResize = new Guna.UI.WinForms.GunaResize(this.components);
             this.panelTop = new Guna.UI.WinForms.GunaPanel();
+            this.txtTelefono = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
-            // 
-            // windowDragControl
-            // 
-            this.windowDragControl.TargetControl = null;
             // 
             // btnAdd
             // 
@@ -89,8 +82,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNombre.BackColor = System.Drawing.Color.Transparent;
             this.txtNombre.BaseColor = System.Drawing.Color.White;
-            this.txtNombre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txtNombre.BorderSize = 1;
+            this.txtNombre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.txtNombre.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNombre.FocusedBaseColor = System.Drawing.Color.White;
             this.txtNombre.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
@@ -123,8 +115,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDireccion.BackColor = System.Drawing.Color.Transparent;
             this.txtDireccion.BaseColor = System.Drawing.Color.White;
-            this.txtDireccion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txtDireccion.BorderSize = 1;
+            this.txtDireccion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.txtDireccion.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDireccion.FocusedBaseColor = System.Drawing.Color.White;
             this.txtDireccion.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
@@ -137,28 +128,6 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.txtDireccion.Radius = 4;
             this.txtDireccion.Size = new System.Drawing.Size(400, 42);
             this.txtDireccion.TabIndex = 2;
-            // 
-            // txtTelefono
-            // 
-            this.txtTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTelefono.BackColor = System.Drawing.Color.Transparent;
-            this.txtTelefono.BaseColor = System.Drawing.Color.White;
-            this.txtTelefono.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txtTelefono.BorderSize = 1;
-            this.txtTelefono.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTelefono.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtTelefono.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txtTelefono.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.txtTelefono.Location = new System.Drawing.Point(70, 363);
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.PasswordChar = '\0';
-            this.txtTelefono.Radius = 4;
-            this.txtTelefono.Size = new System.Drawing.Size(400, 42);
-            this.txtTelefono.TabIndex = 3;
-            this.txtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefono_KeyPress);
             // 
             // label2
             // 
@@ -211,8 +180,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCorreo.BackColor = System.Drawing.Color.Transparent;
             this.txtCorreo.BaseColor = System.Drawing.Color.White;
-            this.txtCorreo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.txtCorreo.BorderSize = 1;
+            this.txtCorreo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.txtCorreo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtCorreo.FocusedBaseColor = System.Drawing.Color.White;
             this.txtCorreo.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
@@ -293,10 +261,6 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.lblErrorNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lblErrorNombre.Visible = false;
             // 
-            // windowResize
-            // 
-            this.windowResize.TargetForm = this;
-            // 
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
@@ -306,12 +270,25 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.panelTop.Size = new System.Drawing.Size(550, 20);
             this.panelTop.TabIndex = 25;
             // 
+            // txtTelefono
+            // 
+            this.txtTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            this.txtTelefono.Location = new System.Drawing.Point(70, 363);
+            this.txtTelefono.Mask = "0000-0000";
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(400, 29);
+            this.txtTelefono.TabIndex = 3;
+            this.txtTelefono.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FormPropietarioActions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(550, 640);
+            this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.lblErrorTelefono);
             this.Controls.Add(this.lblErrorDireccion);
@@ -322,7 +299,6 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.Controls.Add(this.label123);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtTelefono);
             this.Controls.Add(this.txtDireccion);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAdd);
@@ -334,16 +310,15 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Datos del Propietario";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private Guna.UI.WinForms.GunaDragControl windowDragControl;
         private Guna.UI.WinForms.GunaButton btnAdd;
         private Guna.UI.WinForms.GunaTextBox txtNombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private Guna.UI.WinForms.GunaTextBox txtTelefono;
         private Guna.UI.WinForms.GunaTextBox txtDireccion;
         private System.Windows.Forms.Label label1212;
         private Guna.UI.WinForms.GunaTextBox txtCorreo;
@@ -353,7 +328,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
         private System.Windows.Forms.Label lblErrorTelefono;
         private System.Windows.Forms.Label lblErrorDireccion;
         private System.Windows.Forms.Label lblErrorNombre;
-        private Guna.UI.WinForms.GunaResize windowResize;
         private Guna.UI.WinForms.GunaPanel panelTop;
+        private System.Windows.Forms.MaskedTextBox txtTelefono;
     }
 }

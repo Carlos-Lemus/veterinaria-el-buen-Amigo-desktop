@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VeterinariaElBuenAmigo.commons;
 using VeterinariaElBuenAmigo.database;
 using VeterinariaElBuenAmigo.models;
 
@@ -48,16 +49,6 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnMin_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string nombre = txtNombre.Text;
@@ -65,13 +56,21 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             string telefono = txtTelefono.Text;
             string correo = txtCorreo.Text;
 
-            bool isValidNombre = isValidInput(nombre, lblErrorNombre);
-            bool isValidDireccion = isValidInput(direccion, lblErrorDireccion);
-            bool isValidTelefono = isValidInput(telefono, lblErrorTelefono);
+            bool isValidNombre = ValidFields.isValidInput(nombre, lblErrorNombre);
+            bool isValidDireccion = ValidFields.isValidInput(direccion, lblErrorDireccion);
+            bool isValidTelefono = txtTelefono.MaskFull;
 
-            if(isValidNombre && isValidDireccion && isValidTelefono)
+            if(!isValidTelefono)
             {
-                clienteDao.insert(new Cliente(0, nombre, direccion, Convert.ToInt32(telefono), correo));
+                ValidFields.isValidInput("", lblErrorTelefono);
+            } else
+            {
+                ValidFields.isValidInput(txtTelefono.Text, lblErrorTelefono);
+            }
+            
+            if (isValidNombre && isValidDireccion && isValidTelefono)
+            {
+                clienteDao.insert(new Cliente(0, nombre, direccion, telefono, correo));
                 this.Close();
             }  
             
@@ -84,9 +83,18 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             string telefono = txtTelefono.Text;
             string correo = txtCorreo.Text;
 
-            bool isValidNombre = isValidInput(nombre, lblErrorNombre);
-            bool isValidDireccion = isValidInput(direccion, lblErrorDireccion);
-            bool isValidTelefono = isValidInput(telefono, lblErrorTelefono);
+            bool isValidNombre = ValidFields.isValidInput(nombre, lblErrorNombre);
+            bool isValidDireccion = ValidFields.isValidInput(direccion, lblErrorDireccion);
+            bool isValidTelefono = txtTelefono.MaskFull;
+
+            if (!isValidTelefono)
+            {
+                ValidFields.isValidInput("", lblErrorTelefono);
+            }
+            else
+            {
+                ValidFields.isValidInput(txtTelefono.Text, lblErrorTelefono);
+            }
 
             if (isValidNombre && isValidDireccion && isValidTelefono)
             {
@@ -94,7 +102,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
 
                 if (dialogQuestion == DialogResult.Yes)
                 {
-                    clienteDao.update(new Cliente(cliente.IdCliente, nombre, direccion, Convert.ToInt32(telefono), correo));
+                    clienteDao.update(new Cliente(cliente.IdCliente, nombre, direccion, telefono, correo));
 
                     this.Close();
                 }
@@ -102,27 +110,5 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             
         }
 
-        private bool isValidInput(String txtInput, Label lblMessageError)
-        {
-
-            lblMessageError.Visible = false;
-
-            if (String.IsNullOrEmpty(txtInput))
-           {
-                lblMessageError.Visible = true;
-                
-                return false;
-           }
-
-
-            return true;
-        }
-
-        private void txtTelefono_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar) && (e.KeyChar != (char)Keys.Back)) {
-                e.Handled = true;
-            } 
-        }
     }
 }

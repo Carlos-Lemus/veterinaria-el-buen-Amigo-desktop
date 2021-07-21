@@ -15,7 +15,6 @@ namespace VeterinariaElBuenAmigo.views.citas
     public partial class FormCitaActions : Form
     {
         private CitaDAO citaDao;
-        private Point position;
         private PacienteDAO pacienteDao;
         private Cita cita;
         private List<Paciente> listaPacientes;
@@ -24,7 +23,6 @@ namespace VeterinariaElBuenAmigo.views.citas
         {
             InitializeComponent();
 
-            position = new Point();
             this.citaDao = citaDao;            
             this.pacienteDao = new PacienteDAO();
             cargarPacientes();
@@ -34,12 +32,9 @@ namespace VeterinariaElBuenAmigo.views.citas
 
             if (isEdit)
             {
-                position.X = 198;
-                position.Y = 485;
-
                 btnAdd.Visible = false;
                 btnEdit.Visible = true;
-                btnEdit.Location = position;
+                btnEdit.Location = btnAdd.Location;
 
                 this.cita = cita;
 
@@ -123,6 +118,20 @@ namespace VeterinariaElBuenAmigo.views.citas
                 return false;
             }
             return true;
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            int index = mascotas_collection.FindString(txtBuscar.Text);
+
+            if (index != -1)
+            {
+                mascotas_collection.SelectedIndex = index;
+            }
+            else
+            {
+                mascotas_collection.SelectedIndex = 0;
+            }
         }
     }
 }

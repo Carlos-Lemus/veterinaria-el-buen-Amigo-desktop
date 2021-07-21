@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VeterinariaElBuenAmigo.commons;
 using VeterinariaElBuenAmigo.database;
 using VeterinariaElBuenAmigo.models;
 
@@ -25,6 +26,8 @@ namespace VeterinariaElBuenAmigo.views.configuracion
 
             if (isEdit)
             {
+                this.raza = raza;
+
                 btnEdit.Location = btnAdd.Location;
 
                 btnAdd.Visible = false;
@@ -48,9 +51,8 @@ namespace VeterinariaElBuenAmigo.views.configuracion
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string nombre = txtNombre.Text;
-            
-            bool isValidNombre = isValidInput(nombre, lblErrorNombre);
-            
+            bool isValidNombre = ValidFields.isValidInput(nombre, lblErrorNombre);
+
             if (isValidNombre)
             {
                 Raza raza = new Raza();
@@ -66,7 +68,7 @@ namespace VeterinariaElBuenAmigo.views.configuracion
         {
             string nombre = txtNombre.Text;
 
-            bool isValidNombre = isValidInput(nombre, lblErrorNombre);
+            bool isValidNombre = ValidFields.isValidInput(nombre, lblErrorNombre);
 
             if (isValidNombre)
             {
@@ -74,7 +76,7 @@ namespace VeterinariaElBuenAmigo.views.configuracion
 
                 if (dialogQuestion == DialogResult.Yes)
                 {
-                    raza.nombreRaza = txtNombre.Text;
+                    raza.nombreRaza = nombre;
 
                     razaDAO.update(raza);
 
@@ -84,20 +86,22 @@ namespace VeterinariaElBuenAmigo.views.configuracion
             }
         }
 
-            private bool isValidInput(String txtInput, Label lblMessageError)
+        private void txtNombre_KeyDown(object sender, KeyEventArgs e)
         {
 
-            lblMessageError.Visible = false;
-
-            if (String.IsNullOrEmpty(txtInput))
+            if (e.KeyCode == Keys.Enter)
             {
-                lblMessageError.Visible = true;
+                if (this.btnAdd.Visible)
+                {
+                    btnAdd_Click(sender, e);
+                }
 
-                return false;
+                else if (this.btnEdit.Visible)
+                {
+                    btnEdit_Click(sender, e);
+                }
             }
 
-
-            return true;
         }
     }
 }

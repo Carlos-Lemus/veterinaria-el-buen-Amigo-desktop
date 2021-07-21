@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using VeterinariaElBuenAmigo.commons;
 using VeterinariaElBuenAmigo.database;
 using VeterinariaElBuenAmigo.models;
 
@@ -42,7 +43,7 @@ namespace VeterinariaElBuenAmigo.views.inventario
                 this.producto = producto;
 
                 txtNombreProducto.Text = producto.NombreProducto;
-                gnExistencias.Value = producto.CantidadDisponible;
+                gnExistencias.Text = producto.CantidadDisponible.ToString();
                 txtTipoProducto.Text = producto.TipoProducto;
                 txtMarcaProducto.Text = producto.Marca;
                 txtDescripcionProducto.Text = producto.Descripcion;
@@ -53,20 +54,21 @@ namespace VeterinariaElBuenAmigo.views.inventario
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string nombreproducto = txtNombreProducto.Text;
-            int existencias = Convert.ToInt32(gnExistencias.Value);
+            string existencias = gnExistencias.Text;
             string tipoProducto = txtTipoProducto.Text;
             string marca = txtMarcaProducto.Text;
             string descripcion = txtDescripcionProducto.Text;
             string fechaAdquisicion = dtFechaAdquisicion.Value.ToString("dddd, dd MMMM yyyy");
 
-            bool vNombreproducto = isValidInput(nombreproducto, lblErrorNombreProducto);
-            bool vTipoProducto = isValidInput(tipoProducto, lblErrorTipoProducto);
-            bool vMarca = isValidInput(marca, lblErrorMarcaProducto);
-            bool vDescripcion = isValidInput(descripcion, lblErrorDescripcionProducto);
+            bool vNombreproducto = ValidFields.isValidInput(nombreproducto, lblErrorNombreProducto);
+            bool vExistencia = ValidFields.isValidInput(existencias, lblErrorExistencia);
+            bool vTipoProducto = ValidFields.isValidInput(tipoProducto, lblErrorTipoProducto);
+            bool vMarca = ValidFields.isValidInput(marca, lblErrorMarcaProducto);
+            bool vDescripcion = ValidFields.isValidInput(descripcion, lblErrorDescripcionProducto);
 
-            if(vNombreproducto && vTipoProducto && vMarca && vDescripcion)
+            if(vNombreproducto && vTipoProducto && vMarca && vDescripcion && vExistencia)
             {
-                productoDao.ingresarProducto(new Producto(0, nombreproducto, existencias, tipoProducto, marca, descripcion, fechaAdquisicion));
+                productoDao.ingresarProducto(new Producto(0, nombreproducto, Convert.ToInt32(gnExistencias.Text), tipoProducto, marca, descripcion, fechaAdquisicion));
                 this.Close();
             }
         }
@@ -75,16 +77,16 @@ namespace VeterinariaElBuenAmigo.views.inventario
         {
             int idProducto = producto.IdProducto;
             string nombreproducto = txtNombreProducto.Text;
-            int existencias = Convert.ToInt32(gnExistencias.Value);
+            int existencias = Convert.ToInt32(gnExistencias.Text);
             string tipoProducto = txtTipoProducto.Text;
             string marca = txtMarcaProducto.Text;
             string descripcion = txtDescripcionProducto.Text;
             string fechaAdquisicion = dtFechaAdquisicion.Value.ToString("dddd, dd MMMM yyyy");
 
-            bool vNombreproducto = isValidInput(nombreproducto, lblErrorNombreProducto);
-            bool vTipoProducto = isValidInput(tipoProducto, lblErrorTipoProducto);
-            bool vMarca = isValidInput(marca, lblErrorMarcaProducto);
-            bool vDescripcion = isValidInput(descripcion, lblErrorDescripcionProducto);
+            bool vNombreproducto = ValidFields.isValidInput(nombreproducto, lblErrorNombreProducto);
+            bool vTipoProducto = ValidFields.isValidInput(tipoProducto, lblErrorTipoProducto);
+            bool vMarca = ValidFields.isValidInput(marca, lblErrorMarcaProducto);
+            bool vDescripcion = ValidFields.isValidInput(descripcion, lblErrorDescripcionProducto);
 
             if (vNombreproducto && vTipoProducto && vMarca && vDescripcion)
             {
@@ -108,20 +110,6 @@ namespace VeterinariaElBuenAmigo.views.inventario
             }
         }
 
-        private bool isValidInput(String txtInput, Label lblMessageError)
-        {
-
-            lblMessageError.Visible = false;
-
-            if (String.IsNullOrEmpty(txtInput))
-            {
-                lblMessageError.Visible = true;
-
-                return false;
-            }
-            return true;
-        }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -130,6 +118,14 @@ namespace VeterinariaElBuenAmigo.views.inventario
         private void btnMin_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void gnExistencias_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && (e.KeyChar != (char)Keys.Back))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

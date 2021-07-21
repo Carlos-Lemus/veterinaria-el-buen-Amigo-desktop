@@ -18,14 +18,16 @@ namespace VeterinariaElBuenAmigo.views
     public partial class FormCitas : Form
     {
         private CitaDAO citaDao;
-        private List<Cita> listaCitas;
+        private List<Cita> listaCitas = null;
 
-        public FormCitas()
+        public FormCitas(CitaDAO citaDao)
         {
             InitializeComponent();
 
-            citaDao = new CitaDAO();
+            this.citaDao = citaDao;
+
             gunaDateTimePickerCita.Value = DateTime.Now;
+
             cargarCitas();
         }
 
@@ -88,7 +90,7 @@ namespace VeterinariaElBuenAmigo.views
                 }
             }catch(Exception exception)
             {
-
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void btnDelete_Click(object sender, EventArgs e)
@@ -144,13 +146,17 @@ namespace VeterinariaElBuenAmigo.views
         {
             try
             {
-                string fecha = gunaDateTimePickerCita.Value.ToString("dddd, dd MMMM yyyy");
-                var listaSearch = listaCitas.Where(cita => cita.Fecha_cita.ToLower().Contains(fecha.ToLower()));
-                cargarCitasSearch(listaSearch.ToList());
+                if(listaCitas != null)
+                {
+                    string fecha = gunaDateTimePickerCita.Value.ToString("dddd, dd MMMM yyyy");
+                    var listaSearch = listaCitas.Where(cita => cita.Fecha_cita.ToLower().Contains(fecha.ToLower()));
+                    cargarCitasSearch(listaSearch.ToList());
+
+                }
             }
             catch(Exception exception)
             {
-
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         public DataGridView CloneDataGrid(DataGridView mainDataGridView)

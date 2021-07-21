@@ -81,7 +81,7 @@ namespace VeterinariaElBuenAmigo.database
                             CREATE TABLE clientes(
                                 idCliente INTEGER PRIMARY KEY AUTOINCREMENT, 
                                 nombreCliente VARCHAR(150),
-                                telefono INTEGER,
+                                telefono TEXT,
                                 direccion TEXT,
                                 correo VARCHAR(150));
 
@@ -131,7 +131,10 @@ namespace VeterinariaElBuenAmigo.database
                                 idPaciente INTEGER,
                                 controlCelo VARCHAR(50),
                                 comentarios TEXT);
-                            ";
+                            
+                            INSERT INTO login(password) VALUES('admin');
+
+                        ";
 
                     command.CommandText = sql;
                     command.Connection = conn;
@@ -146,54 +149,7 @@ namespace VeterinariaElBuenAmigo.database
             {
                 MessageBox.Show(exception.Message, "Error Create DataBase", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            /*FOREIGN KEY (idPaciente) REFERENCES pacientes(idPaciente) 
-            ON DELETE CASCADE
-            ON UPDATE CASCADE*/
 
-
-            /* Citas
-             
-            FOREIGN KEY (idPaciente) REFERENCES pacientes(idPaciente)
-            ON DELETE CASCADE
-            ON UPDATE CASCADE)
-
-
-            CREATE TABLE vitaminas(
-                                idVitamina INTEGER PRIMARY KEY AUTOINCREMENT, 
-                                producto VARCHAR(150),
-                                refuerzo VARCHAR(150));
-
-
-                            CREATE TABLE vacunas(
-                                idVacuna INTEGER PRIMARY KEY AUTOINCREMENT, 
-                                nombreVacuna VARCHAR(150),
-                                dosis INTEGER,
-                                padecimiento VARCHAR(100),
-                                refuerzo VARCHAR(150));
-
-
-                            CREATE TABLE ResetaVacunas(
-                                idResetaVacuna INTEGER PRIMARY KEY AUTOINCREMENT, 
-                                idPaciente INTEGER,
-                                idVacuna INTEGER,
-                                FOREIGN KEY (idPaciente) REFERENCES pacientes(idPaciente)
-                                ON DELETE CASCADE
-                                ON UPDATE CASCADE
-                                FOREIGN KEY (idVacuna) REFERENCES vacunas(idVacuna)
-                                ON DELETE CASCADE
-                                ON UPDATE CASCADE);
-
-                            CREATE TABLE ResetaVitaminas(
-                                idResetaVitamina INTEGER PRIMARY KEY AUTOINCREMENT, 
-                                idPaciente INTEGER,
-                                idVitamina INTEGER,
-                                FOREIGN KEY (idPaciente) REFERENCES pacientes(idPaciente)
-                                ON DELETE CASCADE
-                                ON UPDATE CASCADE
-                                FOREIGN KEY (idVitamina) REFERENCES vitaminas(idVitamina)
-                                ON DELETE CASCADE
-                                ON UPDATE CASCADE);
-            */
         }
     }
 }

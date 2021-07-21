@@ -30,10 +30,10 @@ namespace VeterinariaElBuenAmigo.views
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblproducto = new System.Windows.Forms.Label();
             this.txtBuscarProducto = new Guna.UI.WinForms.GunaTextBox();
             this.dgvInventario = new Guna.UI.WinForms.GunaDataGridView();
@@ -50,13 +50,14 @@ namespace VeterinariaElBuenAmigo.views
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.iconButton5 = new FontAwesome.Sharp.IconButton();
             this.easyHTMLReports1 = new KimToo.EasyHTMLReports(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             this.SuspendLayout();
             // 
             // lblproducto
             // 
             this.lblproducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblproducto.Location = new System.Drawing.Point(48, 111);
+            this.lblproducto.Location = new System.Drawing.Point(49, 44);
             this.lblproducto.Name = "lblproducto";
             this.lblproducto.Size = new System.Drawing.Size(111, 35);
             this.lblproducto.TabIndex = 14;
@@ -73,7 +74,7 @@ namespace VeterinariaElBuenAmigo.views
             this.txtBuscarProducto.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.txtBuscarProducto.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtBuscarProducto.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtBuscarProducto.Location = new System.Drawing.Point(165, 111);
+            this.txtBuscarProducto.Location = new System.Drawing.Point(166, 44);
             this.txtBuscarProducto.Name = "txtBuscarProducto";
             this.txtBuscarProducto.PasswordChar = '\0';
             this.txtBuscarProducto.Radius = 4;
@@ -85,8 +86,8 @@ namespace VeterinariaElBuenAmigo.views
             // 
             this.dgvInventario.AllowUserToAddRows = false;
             this.dgvInventario.AllowUserToResizeRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.dgvInventario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.dgvInventario.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvInventario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -95,14 +96,14 @@ namespace VeterinariaElBuenAmigo.views
             this.dgvInventario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInventario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvInventario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvInventario.ColumnHeadersHeight = 40;
             this.dgvInventario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -111,25 +112,25 @@ namespace VeterinariaElBuenAmigo.views
             this.Column4,
             this.Editar,
             this.Eliminar});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 14F);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInventario.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 14F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInventario.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvInventario.EnableHeadersVisualStyles = false;
             this.dgvInventario.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.dgvInventario.Location = new System.Drawing.Point(49, 153);
+            this.dgvInventario.Location = new System.Drawing.Point(49, 192);
             this.dgvInventario.Name = "dgvInventario";
             this.dgvInventario.RowHeadersVisible = false;
             this.dgvInventario.RowHeadersWidth = 51;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvInventario.RowTemplate.Height = 40;
             this.dgvInventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInventario.Size = new System.Drawing.Size(825, 413);
+            this.dgvInventario.Size = new System.Drawing.Size(825, 374);
             this.dgvInventario.TabIndex = 33;
             this.dgvInventario.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgvInventario.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -230,7 +231,7 @@ namespace VeterinariaElBuenAmigo.views
             this.btnClear.Image = global::VeterinariaElBuenAmigo.Properties.Resources.ios_close1;
             this.btnClear.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnClear.ImageSize = new System.Drawing.Size(42, 42);
-            this.btnClear.Location = new System.Drawing.Point(489, 111);
+            this.btnClear.Location = new System.Drawing.Point(490, 44);
             this.btnClear.Name = "btnClear";
             this.btnClear.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
             this.btnClear.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -257,7 +258,7 @@ namespace VeterinariaElBuenAmigo.views
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = global::VeterinariaElBuenAmigo.Properties.Resources.delete;
             this.btnDelete.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnDelete.Location = new System.Drawing.Point(746, 110);
+            this.btnDelete.Location = new System.Drawing.Point(743, 102);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(117)))));
             this.btnDelete.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -284,7 +285,7 @@ namespace VeterinariaElBuenAmigo.views
             this.btnAddProducto.ForeColor = System.Drawing.Color.White;
             this.btnAddProducto.Image = global::VeterinariaElBuenAmigo.Properties.Resources.add;
             this.btnAddProducto.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAddProducto.Location = new System.Drawing.Point(49, 50);
+            this.btnAddProducto.Location = new System.Drawing.Point(49, 102);
             this.btnAddProducto.Name = "btnAddProducto";
             this.btnAddProducto.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.btnAddProducto.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -292,7 +293,7 @@ namespace VeterinariaElBuenAmigo.views
             this.btnAddProducto.OnHoverImage = null;
             this.btnAddProducto.OnPressedColor = System.Drawing.Color.Black;
             this.btnAddProducto.Radius = 5;
-            this.btnAddProducto.Size = new System.Drawing.Size(225, 35);
+            this.btnAddProducto.Size = new System.Drawing.Size(188, 35);
             this.btnAddProducto.TabIndex = 12;
             this.btnAddProducto.Text = "Agregar Producto";
             this.btnAddProducto.Click += new System.EventHandler(this.btnAddProducto_Click);
@@ -310,22 +311,23 @@ namespace VeterinariaElBuenAmigo.views
             // iconButton5
             // 
             this.iconButton5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.iconButton5.BackColor = System.Drawing.Color.Transparent;
             this.iconButton5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.iconButton5.FlatAppearance.BorderSize = 0;
             this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton5.ForeColor = System.Drawing.Color.White;
+            this.iconButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.Print;
-            this.iconButton5.IconColor = System.Drawing.Color.White;
+            this.iconButton5.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton5.IconSize = 32;
             this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(700, 110);
+            this.iconButton5.Location = new System.Drawing.Point(617, 102);
             this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(40, 35);
+            this.iconButton5.Size = new System.Drawing.Size(120, 35);
             this.iconButton5.TabIndex = 40;
-            this.iconButton5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.iconButton5.Text = "Imprimir";
+            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton5.UseVisualStyleBackColor = false;
             this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
             // 
@@ -340,12 +342,23 @@ namespace VeterinariaElBuenAmigo.views
             this.easyHTMLReports1.RowDefaultFontColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(46)))));
             this.easyHTMLReports1.RowDefaultGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(65)))));
             // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(45, 151);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(477, 27);
+            this.label2.TabIndex = 41;
+            this.label2.Text = "Da doble click para mirar mas detalles del producto";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // FormInventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(930, 640);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.iconButton5);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.dgvInventario);
@@ -380,5 +393,6 @@ namespace VeterinariaElBuenAmigo.views
         private Guna.UI.WinForms.GunaButton btnClear;
         private FontAwesome.Sharp.IconButton iconButton5;
         private KimToo.EasyHTMLReports easyHTMLReports1;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -19,11 +19,11 @@ namespace VeterinariaElBuenAmigo.views
         private ClienteDAO clienteDao;
         private List<Cliente> lista;
 
-        public FormPropietario()
+        public FormPropietario(ClienteDAO clienteDao)
         {
             InitializeComponent();
 
-            clienteDao = new ClienteDAO();
+            this.clienteDao = clienteDao;
             cargarPropietarios();
         }
 
@@ -71,7 +71,7 @@ namespace VeterinariaElBuenAmigo.views
                     int id = Convert.ToInt32(dgvPropietarios.Rows[e.RowIndex].Cells[0].Value);
                     string nombreCompleto = dgvPropietarios.Rows[e.RowIndex].Cells[1].Value.ToString();
                     string direccion = dgvPropietarios.Rows[e.RowIndex].Cells[2].Value.ToString();
-                    int telefono = Convert.ToInt32(dgvPropietarios.Rows[e.RowIndex].Cells[3].Value);
+                    string telefono = dgvPropietarios.Rows[e.RowIndex].Cells[3].Value.ToString();
                     string correo = dgvPropietarios.Rows[e.RowIndex].Cells[4].Value.ToString();
 
                     using (FormPropietarioActions formPropietarioActions = new FormPropietarioActions(true, clienteDao, new Cliente(id, nombreCompleto, direccion, telefono, correo)))
@@ -83,7 +83,7 @@ namespace VeterinariaElBuenAmigo.views
             }
             catch(Exception exception)
             {
-
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
             
@@ -150,6 +150,12 @@ namespace VeterinariaElBuenAmigo.views
             var listaSearch = lista.Where(cliente => cliente.NombreCliente.ToLower().Contains(txtSearch.Text.ToLower()));
 
             cargarPropietariosSearch(listaSearch.ToList());
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtSearch.Text = "";
+            cargarPropietarios();
         }
     }
 }

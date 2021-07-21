@@ -48,16 +48,17 @@ namespace VeterinariaElBuenAmigo.views
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnDelete = new Guna.UI.WinForms.GunaButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnClear = new Guna.UI.WinForms.GunaButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropietarios)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPropietarios
             // 
             this.lblPropietarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPropietarios.Location = new System.Drawing.Point(60, 55);
-            this.lblPropietarios.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPropietarios.Location = new System.Drawing.Point(45, 45);
             this.lblPropietarios.Name = "lblPropietarios";
-            this.lblPropietarios.Size = new System.Drawing.Size(353, 37);
+            this.lblPropietarios.Size = new System.Drawing.Size(265, 30);
             this.lblPropietarios.TabIndex = 0;
             this.lblPropietarios.Text = "Numeros de propietarios: N";
             this.lblPropietarios.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -72,12 +73,11 @@ namespace VeterinariaElBuenAmigo.views
             this.txtSearch.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.txtSearch.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtSearch.Location = new System.Drawing.Point(184, 122);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Location = new System.Drawing.Point(138, 99);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.Radius = 4;
-            this.txtSearch.Size = new System.Drawing.Size(376, 52);
+            this.txtSearch.Size = new System.Drawing.Size(282, 35);
             this.txtSearch.TabIndex = 1;
             this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             // 
@@ -122,8 +122,7 @@ namespace VeterinariaElBuenAmigo.views
             this.dgvPropietarios.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPropietarios.EnableHeadersVisualStyles = false;
             this.dgvPropietarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.dgvPropietarios.Location = new System.Drawing.Point(65, 258);
-            this.dgvPropietarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvPropietarios.Location = new System.Drawing.Point(49, 233);
             this.dgvPropietarios.Name = "dgvPropietarios";
             this.dgvPropietarios.RowHeadersVisible = false;
             this.dgvPropietarios.RowHeadersWidth = 51;
@@ -131,7 +130,7 @@ namespace VeterinariaElBuenAmigo.views
             this.dgvPropietarios.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPropietarios.RowTemplate.Height = 40;
             this.dgvPropietarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPropietarios.Size = new System.Drawing.Size(1100, 508);
+            this.dgvPropietarios.Size = new System.Drawing.Size(825, 396);
             this.dgvPropietarios.TabIndex = 2;
             this.dgvPropietarios.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgvPropietarios.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -215,10 +214,9 @@ namespace VeterinariaElBuenAmigo.views
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(60, 122);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(45, 99);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 43);
+            this.label1.Size = new System.Drawing.Size(87, 35);
             this.label1.TabIndex = 3;
             this.label1.Text = "Nombre";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -237,8 +235,7 @@ namespace VeterinariaElBuenAmigo.views
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = global::VeterinariaElBuenAmigo.Properties.Resources.add;
             this.btnAdd.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAdd.Location = new System.Drawing.Point(65, 187);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Location = new System.Drawing.Point(49, 152);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.btnAdd.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -246,7 +243,7 @@ namespace VeterinariaElBuenAmigo.views
             this.btnAdd.OnHoverImage = null;
             this.btnAdd.OnPressedColor = System.Drawing.Color.Black;
             this.btnAdd.Radius = 5;
-            this.btnAdd.Size = new System.Drawing.Size(313, 43);
+            this.btnAdd.Size = new System.Drawing.Size(202, 35);
             this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "Agregar Propietario";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -284,8 +281,7 @@ namespace VeterinariaElBuenAmigo.views
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = global::VeterinariaElBuenAmigo.Properties.Resources.delete;
             this.btnDelete.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnDelete.Location = new System.Drawing.Point(991, 187);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Location = new System.Drawing.Point(743, 152);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(117)))));
             this.btnDelete.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -293,17 +289,57 @@ namespace VeterinariaElBuenAmigo.views
             this.btnDelete.OnHoverImage = null;
             this.btnDelete.OnPressedColor = System.Drawing.Color.Black;
             this.btnDelete.Radius = 5;
-            this.btnDelete.Size = new System.Drawing.Size(175, 43);
+            this.btnDelete.Size = new System.Drawing.Size(131, 35);
             this.btnDelete.TabIndex = 31;
             this.btnDelete.Text = "Eliminar ";
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(45, 203);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(425, 27);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "Da doble click para mirar las mascotas del dueño";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnClear
+            // 
+            this.btnClear.AnimationHoverSpeed = 0.07F;
+            this.btnClear.AnimationSpeed = 0.03F;
+            this.btnClear.BackColor = System.Drawing.Color.Transparent;
+            this.btnClear.BaseColor = System.Drawing.Color.White;
+            this.btnClear.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            this.btnClear.BorderSize = 2;
+            this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClear.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnClear.FocusedColor = System.Drawing.Color.White;
+            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnClear.ForeColor = System.Drawing.Color.Transparent;
+            this.btnClear.Image = global::VeterinariaElBuenAmigo.Properties.Resources.ios_close1;
+            this.btnClear.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnClear.ImageSize = new System.Drawing.Size(42, 42);
+            this.btnClear.Location = new System.Drawing.Point(438, 99);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
+            this.btnClear.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnClear.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnClear.OnHoverImage = null;
+            this.btnClear.OnPressedColor = System.Drawing.Color.Black;
+            this.btnClear.Radius = 5;
+            this.btnClear.Size = new System.Drawing.Size(32, 35);
+            this.btnClear.TabIndex = 35;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // FormPropietario
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1240, 849);
+            this.ClientSize = new System.Drawing.Size(930, 690);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label1);
@@ -311,7 +347,6 @@ namespace VeterinariaElBuenAmigo.views
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblPropietarios);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormPropietario";
             this.Text = "FormPropietario";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPropietarios)).EndInit();
@@ -336,5 +371,7 @@ namespace VeterinariaElBuenAmigo.views
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewImageColumn ColumnEdit;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ColumnSelect;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI.WinForms.GunaButton btnClear;
     }
 }

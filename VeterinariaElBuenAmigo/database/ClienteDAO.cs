@@ -87,7 +87,7 @@ namespace VeterinariaElBuenAmigo.database
                                 cliente.IdCliente = Convert.ToInt32(result[IDCLIENTE].ToString());
                                 cliente.NombreCliente = result[NOMBRECLIENTE].ToString();
                                 cliente.Direccion = result[DIRECCION].ToString();
-                                cliente.Telefono = Convert.ToInt32(result[TELEFONO].ToString());
+                                cliente.Telefono = result[TELEFONO].ToString();
                                 cliente.Correo = result[CORREO].ToString();
 
                                 lista.Add(cliente);

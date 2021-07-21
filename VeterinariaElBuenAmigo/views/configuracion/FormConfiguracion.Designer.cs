@@ -29,13 +29,14 @@ namespace VeterinariaElBuenAmigo.views
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConfiguracion));
             this.dvgRazas = new Guna.UI.WinForms.GunaDataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,91 +53,73 @@ namespace VeterinariaElBuenAmigo.views
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdd = new Guna.UI.WinForms.GunaButton();
             this.gunaSeparator1 = new Guna.UI.WinForms.GunaSeparator();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.btnDeleteDelete = new Guna.UI.WinForms.GunaButton();
             this.btnAddRaza = new Guna.UI.WinForms.GunaButton();
             this.btnDeleteEspecie = new Guna.UI.WinForms.GunaButton();
             this.btnAddEspecie = new Guna.UI.WinForms.GunaButton();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
+            this.tabControl = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.gunaSeparator2 = new Guna.UI.WinForms.GunaSeparator();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.gunaSeparator3 = new Guna.UI.WinForms.GunaSeparator();
+            this.imageList = new System.Windows.Forms.ImageList(this.components);
+            this.lblErrorClave = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dvgRazas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgEspecies)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
+            this.tabControl.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer1.Location = new System.Drawing.Point(72, 223);
-            this.splitContainer1.Name = "splitContainer1";
-            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.dvgRazas);
-            this.splitContainer1.Panel1.Controls.Add(this.label2);
-            // 
-            // splitContainer1.Panel2
-            // 
-            this.splitContainer1.Panel2.Controls.Add(this.dvgEspecies);
-            this.splitContainer1.Panel2.Controls.Add(this.label3);
-            this.splitContainer1.Size = new System.Drawing.Size(594, 430);
-            this.splitContainer1.SplitterDistance = 200;
-            this.splitContainer1.SplitterWidth = 30;
-            this.splitContainer1.TabIndex = 14;
             // 
             // dvgRazas
             // 
             this.dvgRazas.AllowUserToAddRows = false;
             this.dvgRazas.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dvgRazas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.dvgRazas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            this.dvgRazas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dvgRazas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dvgRazas.BackgroundColor = System.Drawing.Color.White;
             this.dvgRazas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dvgRazas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dvgRazas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgRazas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgRazas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dvgRazas.ColumnHeadersHeight = 40;
             this.dvgRazas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column4,
             this.ColumnEditRaza,
             this.ColumnSelectRaza});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 14F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dvgRazas.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dvgRazas.Dock = System.Windows.Forms.DockStyle.Fill;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dvgRazas.DefaultCellStyle = dataGridViewCellStyle15;
             this.dvgRazas.EnableHeadersVisualStyles = false;
             this.dvgRazas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.dvgRazas.Location = new System.Drawing.Point(0, 30);
+            this.dvgRazas.Location = new System.Drawing.Point(35, 168);
             this.dvgRazas.Name = "dvgRazas";
             this.dvgRazas.RowHeadersVisible = false;
             this.dvgRazas.RowHeadersWidth = 51;
             this.dvgRazas.RowTemplate.Height = 40;
             this.dvgRazas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgRazas.Size = new System.Drawing.Size(594, 170);
+            this.dvgRazas.Size = new System.Drawing.Size(851, 375);
             this.dvgRazas.TabIndex = 9;
             this.dvgRazas.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dvgRazas.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -148,14 +131,14 @@ namespace VeterinariaElBuenAmigo.views
             this.dvgRazas.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.dvgRazas.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.dvgRazas.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dvgRazas.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.dvgRazas.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dvgRazas.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dvgRazas.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dvgRazas.ThemeStyle.HeaderStyle.Height = 40;
             this.dvgRazas.ThemeStyle.ReadOnly = false;
             this.dvgRazas.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dvgRazas.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dvgRazas.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.dvgRazas.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dvgRazas.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dvgRazas.ThemeStyle.RowsStyle.Height = 40;
             this.dvgRazas.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
@@ -196,58 +179,61 @@ namespace VeterinariaElBuenAmigo.views
             // 
             // label2
             // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(35, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(594, 30);
+            this.label2.Size = new System.Drawing.Size(851, 30);
             this.label2.TabIndex = 6;
             this.label2.Text = "Listas de razas";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dvgEspecies
             // 
             this.dvgEspecies.AllowUserToAddRows = false;
             this.dvgEspecies.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dvgEspecies.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            this.dvgEspecies.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            this.dvgEspecies.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dvgEspecies.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dvgEspecies.BackgroundColor = System.Drawing.Color.White;
             this.dvgEspecies.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dvgEspecies.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dvgEspecies.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dvgEspecies.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgEspecies.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dvgEspecies.ColumnHeadersHeight = 40;
             this.dvgEspecies.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn4,
             this.ColumnEditEspecie,
             this.ColumnSelectEspecie});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 14F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dvgEspecies.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dvgEspecies.Dock = System.Windows.Forms.DockStyle.Fill;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dvgEspecies.DefaultCellStyle = dataGridViewCellStyle18;
             this.dvgEspecies.EnableHeadersVisualStyles = false;
             this.dvgEspecies.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.dvgEspecies.Location = new System.Drawing.Point(0, 35);
+            this.dvgEspecies.Location = new System.Drawing.Point(35, 168);
             this.dvgEspecies.Name = "dvgEspecies";
             this.dvgEspecies.RowHeadersVisible = false;
             this.dvgEspecies.RowHeadersWidth = 51;
             this.dvgEspecies.RowTemplate.Height = 40;
             this.dvgEspecies.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgEspecies.Size = new System.Drawing.Size(594, 165);
+            this.dvgEspecies.Size = new System.Drawing.Size(851, 375);
             this.dvgEspecies.TabIndex = 14;
             this.dvgEspecies.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dvgEspecies.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -259,14 +245,14 @@ namespace VeterinariaElBuenAmigo.views
             this.dvgEspecies.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
             this.dvgEspecies.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.dvgEspecies.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dvgEspecies.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.dvgEspecies.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dvgEspecies.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dvgEspecies.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dvgEspecies.ThemeStyle.HeaderStyle.Height = 40;
             this.dvgEspecies.ThemeStyle.ReadOnly = false;
             this.dvgEspecies.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dvgEspecies.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dvgEspecies.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.dvgEspecies.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dvgEspecies.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dvgEspecies.ThemeStyle.RowsStyle.Height = 40;
             this.dvgEspecies.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(249)))), ((int)(((byte)(251)))));
@@ -307,15 +293,16 @@ namespace VeterinariaElBuenAmigo.views
             // 
             // label3
             // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(35, 28);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label3.Size = new System.Drawing.Size(594, 35);
+            this.label3.Size = new System.Drawing.Size(851, 35);
             this.label3.TabIndex = 9;
             this.label3.Text = "Listas de especies";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtChangeKey
             // 
@@ -329,11 +316,11 @@ namespace VeterinariaElBuenAmigo.views
             this.txtChangeKey.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.txtChangeKey.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtChangeKey.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtChangeKey.Location = new System.Drawing.Point(334, 65);
+            this.txtChangeKey.Location = new System.Drawing.Point(239, 236);
             this.txtChangeKey.Name = "txtChangeKey";
             this.txtChangeKey.PasswordChar = '\0';
             this.txtChangeKey.Radius = 4;
-            this.txtChangeKey.Size = new System.Drawing.Size(282, 42);
+            this.txtChangeKey.Size = new System.Drawing.Size(428, 42);
             this.txtChangeKey.TabIndex = 16;
             // 
             // label1
@@ -341,9 +328,9 @@ namespace VeterinariaElBuenAmigo.views
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(330, 9);
+            this.label1.Location = new System.Drawing.Point(235, 151);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(286, 30);
+            this.label1.Size = new System.Drawing.Size(432, 30);
             this.label1.TabIndex = 15;
             this.label1.Text = "¿Quieres cambiar la clave?";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -364,7 +351,7 @@ namespace VeterinariaElBuenAmigo.views
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = null;
             this.btnAdd.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAdd.Location = new System.Drawing.Point(334, 125);
+            this.btnAdd.Location = new System.Drawing.Point(239, 358);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.btnAdd.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -372,7 +359,7 @@ namespace VeterinariaElBuenAmigo.views
             this.btnAdd.OnHoverImage = null;
             this.btnAdd.OnPressedColor = System.Drawing.Color.Black;
             this.btnAdd.Radius = 5;
-            this.btnAdd.Size = new System.Drawing.Size(282, 35);
+            this.btnAdd.Size = new System.Drawing.Size(428, 35);
             this.btnAdd.TabIndex = 22;
             this.btnAdd.Text = "Guardar";
             this.btnAdd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -380,38 +367,17 @@ namespace VeterinariaElBuenAmigo.views
             // 
             // gunaSeparator1
             // 
-            this.gunaSeparator1.LineColor = System.Drawing.Color.Silver;
-            this.gunaSeparator1.Location = new System.Drawing.Point(72, 181);
-            this.gunaSeparator1.Name = "gunaSeparator1";
-            this.gunaSeparator1.Size = new System.Drawing.Size(772, 10);
-            this.gunaSeparator1.TabIndex = 23;
-            // 
-            // splitContainer2
-            // 
-            this.splitContainer2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.gunaSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer2.Location = new System.Drawing.Point(684, 253);
-            this.splitContainer2.Name = "splitContainer2";
-            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.btnDeleteDelete);
-            this.splitContainer2.Panel1.Controls.Add(this.btnAddRaza);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.btnDeleteEspecie);
-            this.splitContainer2.Panel2.Controls.Add(this.btnAddEspecie);
-            this.splitContainer2.Size = new System.Drawing.Size(185, 430);
-            this.splitContainer2.SplitterDistance = 205;
-            this.splitContainer2.SplitterWidth = 30;
-            this.splitContainer2.TabIndex = 24;
+            this.gunaSeparator1.LineColor = System.Drawing.Color.Silver;
+            this.gunaSeparator1.Location = new System.Drawing.Point(239, 184);
+            this.gunaSeparator1.Name = "gunaSeparator1";
+            this.gunaSeparator1.Size = new System.Drawing.Size(428, 20);
+            this.gunaSeparator1.TabIndex = 23;
             // 
             // btnDeleteDelete
             // 
-            this.btnDeleteDelete.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeleteDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeleteDelete.AnimationHoverSpeed = 0.07F;
             this.btnDeleteDelete.AnimationSpeed = 0.03F;
             this.btnDeleteDelete.BackColor = System.Drawing.Color.Transparent;
@@ -424,7 +390,7 @@ namespace VeterinariaElBuenAmigo.views
             this.btnDeleteDelete.ForeColor = System.Drawing.Color.White;
             this.btnDeleteDelete.Image = global::VeterinariaElBuenAmigo.Properties.Resources.delete;
             this.btnDeleteDelete.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnDeleteDelete.Location = new System.Drawing.Point(3, 62);
+            this.btnDeleteDelete.Location = new System.Drawing.Point(726, 108);
             this.btnDeleteDelete.Name = "btnDeleteDelete";
             this.btnDeleteDelete.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(117)))));
             this.btnDeleteDelete.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -432,15 +398,13 @@ namespace VeterinariaElBuenAmigo.views
             this.btnDeleteDelete.OnHoverImage = null;
             this.btnDeleteDelete.OnPressedColor = System.Drawing.Color.Black;
             this.btnDeleteDelete.Radius = 5;
-            this.btnDeleteDelete.Size = new System.Drawing.Size(179, 35);
+            this.btnDeleteDelete.Size = new System.Drawing.Size(160, 35);
             this.btnDeleteDelete.TabIndex = 34;
             this.btnDeleteDelete.Text = "Eliminar  Raza";
             this.btnDeleteDelete.Click += new System.EventHandler(this.btnDeleteDelete_Click);
             // 
             // btnAddRaza
             // 
-            this.btnAddRaza.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddRaza.AnimationHoverSpeed = 0.07F;
             this.btnAddRaza.AnimationSpeed = 0.03F;
             this.btnAddRaza.BackColor = System.Drawing.Color.Transparent;
@@ -453,23 +417,22 @@ namespace VeterinariaElBuenAmigo.views
             this.btnAddRaza.ForeColor = System.Drawing.Color.White;
             this.btnAddRaza.Image = global::VeterinariaElBuenAmigo.Properties.Resources.add;
             this.btnAddRaza.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAddRaza.Location = new System.Drawing.Point(3, 5);
+            this.btnAddRaza.Location = new System.Drawing.Point(35, 108);
             this.btnAddRaza.Name = "btnAddRaza";
-            this.btnAddRaza.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
+            this.btnAddRaza.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.btnAddRaza.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnAddRaza.OnHoverForeColor = System.Drawing.Color.White;
             this.btnAddRaza.OnHoverImage = null;
             this.btnAddRaza.OnPressedColor = System.Drawing.Color.Black;
             this.btnAddRaza.Radius = 5;
-            this.btnAddRaza.Size = new System.Drawing.Size(179, 35);
+            this.btnAddRaza.Size = new System.Drawing.Size(154, 35);
             this.btnAddRaza.TabIndex = 12;
             this.btnAddRaza.Text = "Agregar Raza";
             this.btnAddRaza.Click += new System.EventHandler(this.btnAddRaza_Click);
             // 
             // btnDeleteEspecie
             // 
-            this.btnDeleteEspecie.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDeleteEspecie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeleteEspecie.AnimationHoverSpeed = 0.07F;
             this.btnDeleteEspecie.AnimationSpeed = 0.03F;
             this.btnDeleteEspecie.BackColor = System.Drawing.Color.Transparent;
@@ -482,7 +445,7 @@ namespace VeterinariaElBuenAmigo.views
             this.btnDeleteEspecie.ForeColor = System.Drawing.Color.White;
             this.btnDeleteEspecie.Image = global::VeterinariaElBuenAmigo.Properties.Resources.delete;
             this.btnDeleteEspecie.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnDeleteEspecie.Location = new System.Drawing.Point(3, 60);
+            this.btnDeleteEspecie.Location = new System.Drawing.Point(702, 108);
             this.btnDeleteEspecie.Name = "btnDeleteEspecie";
             this.btnDeleteEspecie.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(117)))));
             this.btnDeleteEspecie.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -490,15 +453,13 @@ namespace VeterinariaElBuenAmigo.views
             this.btnDeleteEspecie.OnHoverImage = null;
             this.btnDeleteEspecie.OnPressedColor = System.Drawing.Color.Black;
             this.btnDeleteEspecie.Radius = 5;
-            this.btnDeleteEspecie.Size = new System.Drawing.Size(179, 35);
+            this.btnDeleteEspecie.Size = new System.Drawing.Size(184, 35);
             this.btnDeleteEspecie.TabIndex = 36;
             this.btnDeleteEspecie.Text = "Eliminar  Especie";
             this.btnDeleteEspecie.Click += new System.EventHandler(this.btnDeleteEspecie_Click);
             // 
             // btnAddEspecie
             // 
-            this.btnAddEspecie.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddEspecie.AnimationHoverSpeed = 0.07F;
             this.btnAddEspecie.AnimationSpeed = 0.03F;
             this.btnAddEspecie.BackColor = System.Drawing.Color.Transparent;
@@ -511,15 +472,15 @@ namespace VeterinariaElBuenAmigo.views
             this.btnAddEspecie.ForeColor = System.Drawing.Color.White;
             this.btnAddEspecie.Image = global::VeterinariaElBuenAmigo.Properties.Resources.add;
             this.btnAddEspecie.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAddEspecie.Location = new System.Drawing.Point(3, 3);
+            this.btnAddEspecie.Location = new System.Drawing.Point(35, 108);
             this.btnAddEspecie.Name = "btnAddEspecie";
-            this.btnAddEspecie.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(216)))), ((int)(((byte)(211)))));
+            this.btnAddEspecie.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.btnAddEspecie.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btnAddEspecie.OnHoverForeColor = System.Drawing.Color.White;
             this.btnAddEspecie.OnHoverImage = null;
             this.btnAddEspecie.OnPressedColor = System.Drawing.Color.Black;
             this.btnAddEspecie.Radius = 5;
-            this.btnAddEspecie.Size = new System.Drawing.Size(179, 35);
+            this.btnAddEspecie.Size = new System.Drawing.Size(174, 35);
             this.btnAddEspecie.TabIndex = 35;
             this.btnAddEspecie.Text = "Agregar Especie";
             this.btnAddEspecie.Click += new System.EventHandler(this.btnAddEspecie_Click);
@@ -546,39 +507,135 @@ namespace VeterinariaElBuenAmigo.views
             this.dataGridViewImageColumn2.ReadOnly = true;
             this.dataGridViewImageColumn2.Width = 82;
             // 
+            // tabControl
+            // 
+            this.tabControl.Controls.Add(this.tabPage1);
+            this.tabControl.Controls.Add(this.tabPage2);
+            this.tabControl.Controls.Add(this.tabPage3);
+            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.tabControl.ImageList = this.imageList;
+            this.tabControl.ItemSize = new System.Drawing.Size(52, 35);
+            this.tabControl.Location = new System.Drawing.Point(0, 0);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(930, 690);
+            this.tabControl.TabIndex = 25;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.lblErrorClave);
+            this.tabPage1.Controls.Add(this.txtChangeKey);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.gunaSeparator1);
+            this.tabPage1.Controls.Add(this.btnAdd);
+            this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage1.ImageKey = "key.png";
+            this.tabPage1.Location = new System.Drawing.Point(4, 39);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(922, 647);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Key";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.gunaSeparator2);
+            this.tabPage2.Controls.Add(this.btnDeleteDelete);
+            this.tabPage2.Controls.Add(this.dvgRazas);
+            this.tabPage2.Controls.Add(this.btnAddRaza);
+            this.tabPage2.Controls.Add(this.label2);
+            this.tabPage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage2.ImageKey = "razas.png";
+            this.tabPage2.Location = new System.Drawing.Point(4, 39);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(922, 647);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Razas";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // gunaSeparator2
+            // 
+            this.gunaSeparator2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaSeparator2.LineColor = System.Drawing.Color.Silver;
+            this.gunaSeparator2.Location = new System.Drawing.Point(35, 61);
+            this.gunaSeparator2.Name = "gunaSeparator2";
+            this.gunaSeparator2.Size = new System.Drawing.Size(851, 20);
+            this.gunaSeparator2.TabIndex = 35;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.gunaSeparator3);
+            this.tabPage3.Controls.Add(this.dvgEspecies);
+            this.tabPage3.Controls.Add(this.btnDeleteEspecie);
+            this.tabPage3.Controls.Add(this.label3);
+            this.tabPage3.Controls.Add(this.btnAddEspecie);
+            this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage3.ImageKey = "especies.png";
+            this.tabPage3.Location = new System.Drawing.Point(4, 39);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(922, 647);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Especies";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // gunaSeparator3
+            // 
+            this.gunaSeparator3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaSeparator3.LineColor = System.Drawing.Color.Silver;
+            this.gunaSeparator3.Location = new System.Drawing.Point(35, 61);
+            this.gunaSeparator3.Name = "gunaSeparator3";
+            this.gunaSeparator3.Size = new System.Drawing.Size(851, 20);
+            this.gunaSeparator3.TabIndex = 37;
+            // 
+            // imageList
+            // 
+            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
+            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList.Images.SetKeyName(0, "key.png");
+            this.imageList.Images.SetKeyName(1, "especies.png");
+            this.imageList.Images.SetKeyName(2, "razas.png");
+            // 
+            // lblErrorClave
+            // 
+            this.lblErrorClave.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblErrorClave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErrorClave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(59)))), ((int)(((byte)(87)))));
+            this.lblErrorClave.Location = new System.Drawing.Point(239, 290);
+            this.lblErrorClave.Name = "lblErrorClave";
+            this.lblErrorClave.Size = new System.Drawing.Size(428, 28);
+            this.lblErrorClave.TabIndex = 24;
+            this.lblErrorClave.Text = "La clave no puede estar vacia";
+            this.lblErrorClave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblErrorClave.Visible = false;
+            // 
             // FormConfiguracion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(930, 690);
-            this.Controls.Add(this.splitContainer2);
-            this.Controls.Add(this.gunaSeparator1);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.txtChangeKey);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.splitContainer1);
+            this.Controls.Add(this.tabControl);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormConfiguracion";
             this.Text = "Form1";
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dvgRazas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvgEspecies)).EndInit();
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.SplitContainer splitContainer1;
         private Guna.UI.WinForms.GunaDataGridView dvgRazas;
         private System.Windows.Forms.Label label2;
         private Guna.UI.WinForms.GunaDataGridView dvgEspecies;
@@ -587,7 +644,6 @@ namespace VeterinariaElBuenAmigo.views
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaButton btnAdd;
         private Guna.UI.WinForms.GunaSeparator gunaSeparator1;
-        private System.Windows.Forms.SplitContainer splitContainer2;
         private Guna.UI.WinForms.GunaButton btnAddRaza;
         private Guna.UI.WinForms.GunaButton btnDeleteDelete;
         private Guna.UI.WinForms.GunaButton btnDeleteEspecie;
@@ -602,5 +658,13 @@ namespace VeterinariaElBuenAmigo.views
         private System.Windows.Forms.DataGridViewCheckBoxColumn ColumnSelectRaza;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.TabControl tabControl;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.ImageList imageList;
+        private Guna.UI.WinForms.GunaSeparator gunaSeparator2;
+        private Guna.UI.WinForms.GunaSeparator gunaSeparator3;
+        private System.Windows.Forms.Label lblErrorClave;
     }
 }

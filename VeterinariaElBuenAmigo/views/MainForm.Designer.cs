@@ -42,13 +42,8 @@ namespace VeterinariaElBuenAmigo
             this.btnDashboard = new FontAwesome.Sharp.IconButton();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.panelTop = new Guna.UI.WinForms.GunaPanel();
-            this.btnMin = new FontAwesome.Sharp.IconButton();
-            this.btnRestore = new FontAwesome.Sharp.IconButton();
-            this.btnMax = new FontAwesome.Sharp.IconButton();
-            this.btnClose = new FontAwesome.Sharp.IconButton();
-            this.windowDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
+            this.btnSingOut = new FontAwesome.Sharp.IconButton();
             this.panelContenido = new Guna.UI.WinForms.GunaPanel();
-            this.windowResize = new Guna.UI.WinForms.GunaResize(this.components);
             this.AnimacionPanelNavegacion = new Guna.UI.WinForms.GunaTransition(this.components);
             this.panelNavegacion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
@@ -70,7 +65,7 @@ namespace VeterinariaElBuenAmigo
             this.panelNavegacion.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelNavegacion.Location = new System.Drawing.Point(0, 0);
             this.panelNavegacion.Name = "panelNavegacion";
-            this.panelNavegacion.Size = new System.Drawing.Size(270, 640);
+            this.panelNavegacion.Size = new System.Drawing.Size(270, 720);
             this.panelNavegacion.TabIndex = 0;
             // 
             // btnConfiguracion
@@ -264,98 +259,37 @@ namespace VeterinariaElBuenAmigo
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.White;
-            this.panelTop.Controls.Add(this.btnMin);
-            this.panelTop.Controls.Add(this.btnRestore);
-            this.panelTop.Controls.Add(this.btnMax);
-            this.panelTop.Controls.Add(this.btnClose);
+            this.panelTop.Controls.Add(this.btnSingOut);
             this.AnimacionPanelNavegacion.SetDecoration(this.panelTop, Guna.UI.Animation.DecorationType.None);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(270, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(770, 30);
+            this.panelTop.Size = new System.Drawing.Size(930, 30);
             this.panelTop.TabIndex = 1;
             // 
-            // btnMin
+            // btnSingOut
             // 
-            this.AnimacionPanelNavegacion.SetDecoration(this.btnMin, Guna.UI.Animation.DecorationType.None);
-            this.btnMin.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMin.FlatAppearance.BorderSize = 0;
-            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMin.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize;
-            this.btnMin.IconColor = System.Drawing.Color.Black;
-            this.btnMin.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMin.IconSize = 32;
-            this.btnMin.Location = new System.Drawing.Point(610, 0);
-            this.btnMin.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(40, 30);
-            this.btnMin.TabIndex = 11;
-            this.btnMin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMin.UseVisualStyleBackColor = true;
-            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
-            // 
-            // btnRestore
-            // 
-            this.AnimacionPanelNavegacion.SetDecoration(this.btnRestore, Guna.UI.Animation.DecorationType.None);
-            this.btnRestore.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnRestore.FlatAppearance.BorderSize = 0;
-            this.btnRestore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRestore.IconChar = FontAwesome.Sharp.IconChar.WindowRestore;
-            this.btnRestore.IconColor = System.Drawing.Color.Black;
-            this.btnRestore.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRestore.IconSize = 32;
-            this.btnRestore.Location = new System.Drawing.Point(650, 0);
-            this.btnRestore.Margin = new System.Windows.Forms.Padding(0);
-            this.btnRestore.Name = "btnRestore";
-            this.btnRestore.Size = new System.Drawing.Size(40, 30);
-            this.btnRestore.TabIndex = 10;
-            this.btnRestore.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRestore.UseVisualStyleBackColor = true;
-            this.btnRestore.Visible = false;
-            this.btnRestore.Click += new System.EventHandler(this.btnRestore_Click);
-            // 
-            // btnMax
-            // 
-            this.AnimacionPanelNavegacion.SetDecoration(this.btnMax, Guna.UI.Animation.DecorationType.None);
-            this.btnMax.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnMax.FlatAppearance.BorderSize = 0;
-            this.btnMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMax.IconChar = FontAwesome.Sharp.IconChar.WindowMaximize;
-            this.btnMax.IconColor = System.Drawing.Color.Black;
-            this.btnMax.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnMax.IconSize = 32;
-            this.btnMax.Location = new System.Drawing.Point(690, 0);
-            this.btnMax.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMax.Name = "btnMax";
-            this.btnMax.Size = new System.Drawing.Size(40, 30);
-            this.btnMax.TabIndex = 6;
-            this.btnMax.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMax.UseVisualStyleBackColor = true;
-            this.btnMax.Click += new System.EventHandler(this.btnMax_Click);
-            // 
-            // btnClose
-            // 
-            this.AnimacionPanelNavegacion.SetDecoration(this.btnClose, Guna.UI.Animation.DecorationType.None);
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.btnClose.IconColor = System.Drawing.Color.Black;
-            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnClose.IconSize = 32;
-            this.btnClose.Location = new System.Drawing.Point(730, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(40, 30);
-            this.btnClose.TabIndex = 4;
-            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // windowDragControl1
-            // 
-            this.windowDragControl1.TargetControl = this.panelTop;
+            this.btnSingOut.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AnimacionPanelNavegacion.SetDecoration(this.btnSingOut, Guna.UI.Animation.DecorationType.None);
+            this.btnSingOut.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnSingOut.FlatAppearance.BorderSize = 0;
+            this.btnSingOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSingOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSingOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(82)))), ((int)(((byte)(83)))));
+            this.btnSingOut.IconChar = FontAwesome.Sharp.IconChar.SignInAlt;
+            this.btnSingOut.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(82)))), ((int)(((byte)(83)))));
+            this.btnSingOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSingOut.IconSize = 30;
+            this.btnSingOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSingOut.Location = new System.Drawing.Point(768, 0);
+            this.btnSingOut.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSingOut.Name = "btnSingOut";
+            this.btnSingOut.Size = new System.Drawing.Size(162, 30);
+            this.btnSingOut.TabIndex = 10;
+            this.btnSingOut.Text = "Cerrar Sesion";
+            this.btnSingOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSingOut.UseVisualStyleBackColor = true;
+            this.btnSingOut.Click += new System.EventHandler(this.btnSingOut_Click);
             // 
             // panelContenido
             // 
@@ -365,12 +299,8 @@ namespace VeterinariaElBuenAmigo
             this.panelContenido.Location = new System.Drawing.Point(270, 30);
             this.panelContenido.Margin = new System.Windows.Forms.Padding(0);
             this.panelContenido.Name = "panelContenido";
-            this.panelContenido.Size = new System.Drawing.Size(770, 610);
+            this.panelContenido.Size = new System.Drawing.Size(930, 690);
             this.panelContenido.TabIndex = 2;
-            // 
-            // windowResize
-            // 
-            this.windowResize.TargetForm = this;
             // 
             // AnimacionPanelNavegacion
             // 
@@ -399,15 +329,15 @@ namespace VeterinariaElBuenAmigo
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1040, 640);
+            this.ClientSize = new System.Drawing.Size(1200, 720);
             this.Controls.Add(this.panelContenido);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelNavegacion);
             this.AnimacionPanelNavegacion.SetDecoration(this, Guna.UI.Animation.DecorationType.None);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Veterinaria";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.panelNavegacion.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.panelTop.ResumeLayout(false);
@@ -419,10 +349,6 @@ namespace VeterinariaElBuenAmigo
 
         private Guna.UI.WinForms.GunaPanel panelNavegacion;
         private Guna.UI.WinForms.GunaPanel panelTop;
-        private FontAwesome.Sharp.IconButton btnMin;
-        private FontAwesome.Sharp.IconButton btnRestore;
-        private FontAwesome.Sharp.IconButton btnMax;
-        private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.PictureBox pbLogo;
         private FontAwesome.Sharp.IconButton btnConfiguracion;
         private FontAwesome.Sharp.IconButton btnInventario;
@@ -431,10 +357,9 @@ namespace VeterinariaElBuenAmigo
         private FontAwesome.Sharp.IconButton btnPacientes;
         private FontAwesome.Sharp.IconButton btnPropietario;
         private FontAwesome.Sharp.IconButton btnDashboard;
-        private Guna.UI.WinForms.GunaDragControl windowDragControl1;
         private Guna.UI.WinForms.GunaPanel panelContenido;
-        private Guna.UI.WinForms.GunaResize windowResize;
         private Guna.UI.WinForms.GunaTransition AnimacionPanelNavegacion;
+        private FontAwesome.Sharp.IconButton btnSingOut;
     }
 }
 

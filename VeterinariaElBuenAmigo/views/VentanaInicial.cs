@@ -29,23 +29,28 @@ namespace VeterinariaElBuenAmigo.views
         {
             if (String.IsNullOrEmpty(txt_Clave.Text))
             {
-                MessageBox.Show("Debe ingresar la Clave", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                lblError.Text = "Debe ingresar la clave";
+                lblError.Visible = true;
             }
             else
             {
+                lblError.Text = "La clave es incorrecta";
+                lblError.Visible = false;
 
                 if (txt_Clave.Text == clave) //Aqui comprueba la clave
                 {
+                    txt_Clave.Text = "";
+
                     using (MainForm main = new MainForm())
                     {
-                        this.Hide();
+                        this.Visible = false;
                         main.ShowDialog();
-
+                        this.Visible = true;
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Clave Incorrecta", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    lblError.Visible = true;
                 }
             }
         }
@@ -53,16 +58,6 @@ namespace VeterinariaElBuenAmigo.views
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
             evaluar();
-        }
-
-        private void btnMin_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
 
         private void txt_Clave_KeyPress(object sender, KeyPressEventArgs e)

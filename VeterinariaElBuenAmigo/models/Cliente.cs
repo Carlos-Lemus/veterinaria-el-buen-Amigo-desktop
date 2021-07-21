@@ -10,7 +10,7 @@ namespace VeterinariaElBuenAmigo.models
     {
         private int idCliente;
         private string nombreCliente;
-        private int telefono;
+        private string telefono;
         private string correo;
         private string direccion;
 
@@ -18,7 +18,7 @@ namespace VeterinariaElBuenAmigo.models
 
         }
 
-        public Cliente (int idCliente, string nombreCliente, string direccion, int telefono, string correo)
+        public Cliente (int idCliente, string nombreCliente, string direccion, string telefono, string correo)
         {
             this.idCliente = idCliente;
             this.nombreCliente = nombreCliente;
@@ -51,7 +51,7 @@ namespace VeterinariaElBuenAmigo.models
             }
         }
 
-        public int Telefono
+        public string Telefono
         {
             get
             {
