@@ -37,7 +37,7 @@ namespace VeterinariaElBuenAmigo.views
 
         private void btnAddRaza_Click(object sender, EventArgs e)
         {
-            using (FormRazaActions formRazaActions= new FormRazaActions(false, razaDAO))
+            using (FormRazaActions formRazaActions= new FormRazaActions(false, razaDAO, especieDAO))
             {
 
                 formRazaActions.ShowDialog();
@@ -116,7 +116,7 @@ namespace VeterinariaElBuenAmigo.views
                     raza.idRaza = id;
                     raza.nombreRaza = nombre;
 
-                    using (FormRazaActions formRazaActions = new FormRazaActions(true, razaDAO, raza))
+                    using (FormRazaActions formRazaActions = new FormRazaActions(true, razaDAO, especieDAO, raza))
                     {
 
                         formRazaActions.ShowDialog();

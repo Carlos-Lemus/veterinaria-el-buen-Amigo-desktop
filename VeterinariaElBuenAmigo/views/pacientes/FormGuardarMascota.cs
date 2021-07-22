@@ -24,12 +24,16 @@ namespace VeterinariaElBuenAmigo.views.pacientes
         private int idEspe;
         private int animal_raza;
         private string gener;
+        private List<Raza> razas;
+        private List<Raza> razasFilter;
 
         public FormGuardarMascota() {            
             InitializeComponent();
 
+
             this.clienteDao = new ClienteDAO();
             this.pacienteDao = new PacienteDAO();
+            razas = pacienteDao.getListRazas();
             cargarDatosProp();
             cargarRazas();
             cargarEspecies();
@@ -59,6 +63,10 @@ namespace VeterinariaElBuenAmigo.views.pacientes
         {
             cargarEspecies();
             idEspe = Convert.ToInt32(especieMascota.SelectedValue.ToString());
+
+            razasFilter = razas.Where(r => r.idEspecie == idEspe).ToList();
+
+            cargarRazas();
         }        
 
         private void generMascota_SelectedIndexChanged(object sender, EventArgs e)
@@ -101,8 +109,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
 
         private void cargarEspecies()
         {
-            List<Especie> l = new List<Especie>();
-            l = pacienteDao.getListEspecie();
+            List<Especie> l = pacienteDao.getListEspecie();
 
             especieMascota.DataSource = l;
             especieMascota.DisplayMember = "nombreEspecie";
@@ -111,9 +118,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
 
         private void cargarRazas()
         {
-            List<Raza> r = new List<Raza>();
-            r = pacienteDao.getListRazas();
-            animales_razas.DataSource = r;
+            animales_razas.DataSource = razasFilter;
             animales_razas.DisplayMember = "nombreRaza";
             animales_razas.ValueMember = "idRaza";
         }

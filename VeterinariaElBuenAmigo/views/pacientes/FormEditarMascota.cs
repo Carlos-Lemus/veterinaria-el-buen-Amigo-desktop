@@ -21,6 +21,8 @@ namespace VeterinariaElBuenAmigo.views.pacientes
         private string genero_de_mascota;
         private int rm;
         private int especie_de_mascota;
+        private List<Raza> razas;
+        private List<Raza> razasFilter;
 
         public FormEditarMascota(int idMascota)
         {
@@ -28,27 +30,17 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             pacienteDao = new PacienteDAO();
             id_client = idMascota;
 
-            
-            cargarRazas();
+            razas = pacienteDao.getListRazas();
+
             cargarEspecies();
+            cargarRazas();
 
             cargarValores();
-        }
-
-        private void btnMin_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }        
+        }       
 
         private void cargarEspecies()
         {
-            List<Especie> l = new List<Especie>();
-            l = pacienteDao.getListEspecie();
+            List<Especie> l = pacienteDao.getListEspecie();
 
             especieMascota1.DataSource = l;
             especieMascota1.DisplayMember = "nombreEspecie";
@@ -57,18 +49,14 @@ namespace VeterinariaElBuenAmigo.views.pacientes
 
         private void cargarRazas()
         {
-            List<Raza> r = new List<Raza>();
-            r = pacienteDao.getListRazas();
-
-            animales_razas1.DataSource = r;
+            animales_razas1.DataSource = razasFilter;
             animales_razas1.DisplayMember = "nombreRaza";
             animales_razas1.ValueMember = "idRaza";
         }
 
         public void cargarValores()
         {
-            Paciente p = new Paciente();
-            p = pacienteDao.searchPaciente(id_client);
+            Paciente p = pacienteDao.searchPaciente(id_client);
 
             txtNombreMascota1.Text = p.nombrePaciente;
             fechaMascota1.Value = DateTime.Parse(p.fechaNacimiento);
@@ -76,16 +64,23 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             descripcionMascota1.Text = p.caracteristicasEspeciales;
             generMascota1.SelectedItem = p.genero;
             genero_de_mascota = p.genero;
+
             especieMascota1.SelectedValue = p.idEspecie;
             especie_de_mascota = p.idEspecie;
-            //animales_razas1.SelectedValue = p.idRaza;
+
+            animales_razas1.SelectedValue = p.idRaza;
             rm = p.idRaza;
+
         }
 
         private void especieMascota1_SelectedIndexChanged(object sender, EventArgs e)
         {
             cargarEspecies();
             especie_de_mascota = Convert.ToInt32(especieMascota1.SelectedValue.ToString());
+            
+            razasFilter = razas.Where(r => r.idEspecie == especie_de_mascota).ToList();
+            
+            cargarRazas();
         }
 
         private void animales_razas1_SelectedIndexChanged(object sender, EventArgs e)
@@ -108,6 +103,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             bool isValidNombre = ValidFields.isValidInput(nombre, lblErrorNombre);
             bool isValidDescripcion = ValidFields.isValidInput(descripcion, lblErrorDescripcion);
             bool isValidTelefono = ValidFields.isValidInput(color, lblErrorColor);
+
 
             if (isValidNombre && isValidDescripcion && isValidTelefono)
             {

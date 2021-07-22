@@ -56,6 +56,8 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             string telefono = txtTelefono.Text;
             string correo = txtCorreo.Text;
 
+            lblErrorTelefono.Text = "El telefono es obligatorio";
+
             bool isValidNombre = ValidFields.isValidInput(nombre, lblErrorNombre);
             bool isValidDireccion = ValidFields.isValidInput(direccion, lblErrorDireccion);
             bool isValidTelefono = txtTelefono.MaskFull;
@@ -68,12 +70,39 @@ namespace VeterinariaElBuenAmigo.views.propietarios
                 ValidFields.isValidInput(txtTelefono.Text, lblErrorTelefono);
             }
             
-            if (isValidNombre && isValidDireccion && isValidTelefono)
+            if (isValidNombre && isValidDireccion && isValidTelefono && isValidTelefonoAndCorreo(telefono, correo))
             {
                 clienteDao.insert(new Cliente(0, nombre, direccion, telefono, correo));
                 this.Close();
+
             }  
             
+        }
+
+        private bool isValidTelefonoAndCorreo(string telefono, string correo)
+        {
+
+            bool isExistTelefono = clienteDao.searchCliente("telefono", telefono);
+            bool isExistCorreo = clienteDao.searchCliente("correo", correo);
+
+            if(isExistTelefono || (isExistCorreo && !string.IsNullOrEmpty(correo)))
+            {
+                if (isExistTelefono)
+                {
+                    lblErrorTelefono.Visible = true;
+                    lblErrorTelefono.Text = "El telefono ya existe";
+                }
+
+                if (isExistCorreo && !string.IsNullOrEmpty(correo))
+                {
+                    lblErrorCorreo.Visible = true;
+                }
+
+                return false;
+            }
+
+            return true;
+
         }
 
         private void btnEdit_Click(object sender, EventArgs e)

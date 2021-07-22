@@ -31,11 +31,12 @@ namespace VeterinariaElBuenAmigo.database
                 using (SQLiteCommand command = new SQLiteCommand())
                 {
                     string sql = $"INSERT INTO {TABLE_RAZA} ({IDRAZA}, {NOMBRE_RAZA}, {IDESPECIE}) ";
-                    sql += $"VALUES(NULL, @{NOMBRE_RAZA}, '');";
+                    sql += $"VALUES(NULL, @{NOMBRE_RAZA}, @{IDESPECIE});";
 
                     command.CommandText = sql;
                     command.Connection = Conexion.Conn;
                     command.Parameters.AddWithValue($"@{NOMBRE_RAZA}", raza.nombreRaza);
+                    command.Parameters.AddWithValue($"@{IDESPECIE}", raza.idEspecie);
                     command.ExecuteNonQuery();
 
                     conn.Close();

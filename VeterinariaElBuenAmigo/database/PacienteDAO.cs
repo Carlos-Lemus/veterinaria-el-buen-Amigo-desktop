@@ -180,10 +180,6 @@ namespace VeterinariaElBuenAmigo.database
 
                     using (SQLiteDataReader result = command.ExecuteReader())
                     {
-                        if (listaRazas.Count > 0)
-                        {
-                            listaRazas.Clear();
-                        }
 
                         if (result.HasRows)
                         {

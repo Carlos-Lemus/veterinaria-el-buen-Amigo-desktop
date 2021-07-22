@@ -17,12 +17,17 @@ namespace VeterinariaElBuenAmigo.views.configuracion
     {
         private RazaDAO razaDAO;
         private Raza raza;
+        private EspecieDAO especieDAO;
+        private int idEspe;
 
-        public FormRazaActions(bool isEdit, RazaDAO razaDAO, Raza raza = null)
+        public FormRazaActions(bool isEdit, RazaDAO razaDAO, EspecieDAO especieDAO, Raza raza = null)
         {
             InitializeComponent();
 
             this.razaDAO = razaDAO;
+            this.especieDAO = especieDAO;
+
+            llenarEspecie();
 
             if (isEdit)
             {
@@ -38,14 +43,13 @@ namespace VeterinariaElBuenAmigo.views.configuracion
             }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void llenarEspecie()
         {
-            this.Close();
-        }
+            List<Especie> l = especieDAO.getList();
 
-        private void btnMin_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
+            especieMascota.DataSource = l;
+            especieMascota.DisplayMember = "nombreEspecie";
+            especieMascota.ValueMember = "idEspecie";
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -58,6 +62,7 @@ namespace VeterinariaElBuenAmigo.views.configuracion
                 Raza raza = new Raza();
 
                 raza.nombreRaza = nombre;
+                raza.idEspecie = idEspe;
 
                 razaDAO.insert(raza);
                 this.Close();
@@ -102,6 +107,28 @@ namespace VeterinariaElBuenAmigo.views.configuracion
                 }
             }
 
+        }
+
+        private void especieMascota_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            llenarEspecie();
+            idEspe = Convert.ToInt32(especieMascota.SelectedValue.ToString());
+        }
+
+        private void especieMascota_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (this.btnAdd.Visible)
+                {
+                    btnAdd_Click(sender, e);
+                }
+
+                else if (this.btnEdit.Visible)
+                {
+                    btnEdit_Click(sender, e);
+                }
+            }
         }
     }
 }

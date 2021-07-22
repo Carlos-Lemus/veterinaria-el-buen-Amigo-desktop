@@ -109,6 +109,48 @@ namespace VeterinariaElBuenAmigo.database
 
         }
 
+        public bool searchCliente(string field, string value)
+        {
+            bool isExistClient = false;
+
+            try
+            {
+                conn = Conexion.Conn;
+
+                conn.Open();
+
+                using (SQLiteCommand command = new SQLiteCommand())
+                {
+                    string sql = $"SELECT * FROM {TABLE_CLIENTE} WHERE {field} = '{value}';";
+                    command.CommandText = sql;
+                    command.Connection = Conexion.Conn;
+
+                    using (SQLiteDataReader result = command.ExecuteReader())
+                    {
+
+                        if (result.HasRows)
+                        {
+                            while (result.Read())
+                            {
+                                isExistClient = true;
+                            }
+                        }
+                    }
+
+                }
+
+                conn.Close();
+
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return isExistClient;
+
+        }
+
         public bool update(Cliente cliente)
         {
             try
