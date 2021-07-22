@@ -200,7 +200,25 @@ namespace VeterinariaElBuenAmigo.database
 
                 using (SQLiteCommand command = new SQLiteCommand())
                 {
-                    string sql = $"DELETE FROM {TABLE_CLIENTE} WHERE {IDCLIENTE} = @{IDCLIENTE};";
+                    string sql = "";
+
+                    sql += $"DELETE FROM {TABLA_CONSULTA} ";
+                    sql += $"WHERE {IDPACIENTE} IN ( ";
+                    sql += $"    SELECT {TABLE_PACIENTE}.{IDPACIENTE} ";
+                    sql += $"    FROM {TABLE_PACIENTE}";
+                    sql += $"    WHERE {TABLE_PACIENTE}.{IDCLIENTE} = @{IDCLIENTE} ";
+                    sql += $"); ";
+
+                    sql += $"DELETE FROM {TABLE_CITA} ";
+                    sql += $"WHERE {IDPACIENTE} IN ( ";
+                    sql += $"    SELECT {TABLE_PACIENTE}.{IDPACIENTE} ";
+                    sql += $"    FROM {TABLE_PACIENTE}";
+                    sql += $"    WHERE {TABLE_PACIENTE}.{IDCLIENTE} = @{IDCLIENTE} ";
+                    sql += $"); ";
+
+                    sql += $"DELETE FROM {TABLE_PACIENTE} WHERE {IDCLIENTE} = @{IDCLIENTE}; ";
+
+                    sql += $"DELETE FROM {TABLE_CLIENTE} WHERE {IDCLIENTE} = @{IDCLIENTE};";
 
                     command.CommandText = sql;
                     command.Connection = Conexion.Conn;
