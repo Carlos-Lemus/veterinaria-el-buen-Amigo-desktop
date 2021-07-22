@@ -32,20 +32,6 @@ namespace VeterinariaElBuenAmigo.views.inventario
             txtLbFechaProducto.Text = producto.FechaAdquisicion;
         }
 
-
-
-
-
-        private void btnMin_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnOk_Click(object sender, EventArgs e)
         {
             this.Close();

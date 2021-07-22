@@ -29,7 +29,6 @@ namespace VeterinariaElBuenAmigo.views.citas
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panelTop = new Guna.UI.WinForms.GunaPanel();
             this.btnEdit = new Guna.UI.WinForms.GunaButton();
             this.btnAdd = new Guna.UI.WinForms.GunaButton();
@@ -40,7 +39,6 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.label1 = new System.Windows.Forms.Label();
             this.txtMotivo = new Guna.UI.WinForms.GunaTextBox();
             this.mascotas_collection = new Guna.UI.WinForms.GunaComboBox();
-            this.windowDragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.gunaDateTimePickerCita = new Guna.UI.WinForms.GunaDateTimePicker();
             this.txtBuscar = new Guna.UI.WinForms.GunaTextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -215,10 +213,6 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.mascotas_collection.Size = new System.Drawing.Size(398, 33);
             this.mascotas_collection.TabIndex = 3;
             // 
-            // windowDragControl
-            // 
-            this.windowDragControl.TargetControl = this.panelTop;
-            // 
             // gunaDateTimePickerCita
             // 
             this.gunaDateTimePickerCita.BackColor = System.Drawing.Color.Transparent;
@@ -313,7 +307,6 @@ namespace VeterinariaElBuenAmigo.views.citas
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaTextBox txtMotivo;
         private Guna.UI.WinForms.GunaComboBox mascotas_collection;
-        private Guna.UI.WinForms.GunaDragControl windowDragControl;
         private Guna.UI.WinForms.GunaDateTimePicker gunaDateTimePickerCita;
         private Guna.UI.WinForms.GunaTextBox txtBuscar;
         private System.Windows.Forms.Label label4;

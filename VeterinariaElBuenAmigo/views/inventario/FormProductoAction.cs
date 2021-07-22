@@ -110,16 +110,6 @@ namespace VeterinariaElBuenAmigo.views.inventario
             }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnMin_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
         private void gnExistencias_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && (e.KeyChar != (char)Keys.Back))

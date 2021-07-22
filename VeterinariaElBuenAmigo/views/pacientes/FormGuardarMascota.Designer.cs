@@ -29,14 +29,11 @@ namespace VeterinariaElBuenAmigo.views.pacientes
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.gunaResize1 = new Guna.UI.WinForms.GunaResize(this.components);
             this.panelTop = new Guna.UI.WinForms.GunaPanel();
-            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombreMascota = new Guna.UI.WinForms.GunaTextBox();
             this.fechaMascota = new Guna.UI.WinForms.GunaDateTimePicker();
@@ -67,32 +64,22 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatosPropietarios)).BeginInit();
             this.SuspendLayout();
             // 
-            // gunaResize1
-            // 
-            this.gunaResize1.TargetForm = this;
-            // 
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(0, 0);
-            this.panelTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1719, 25);
+            this.panelTop.Size = new System.Drawing.Size(1289, 20);
             this.panelTop.TabIndex = 3;
-            // 
-            // gunaDragControl1
-            // 
-            this.gunaDragControl1.TargetControl = this.panelTop;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.label2.Location = new System.Drawing.Point(56, 20);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(42, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(203, 34);
+            this.label2.Size = new System.Drawing.Size(152, 28);
             this.label2.TabIndex = 25;
             this.label2.Text = "Nombre o Alias";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -110,12 +97,11 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.txtNombreMascota.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.txtNombreMascota.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtNombreMascota.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.txtNombreMascota.Location = new System.Drawing.Point(57, 65);
-            this.txtNombreMascota.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreMascota.Location = new System.Drawing.Point(43, 53);
             this.txtNombreMascota.Name = "txtNombreMascota";
             this.txtNombreMascota.PasswordChar = '\0';
             this.txtNombreMascota.Radius = 5;
-            this.txtNombreMascota.Size = new System.Drawing.Size(373, 52);
+            this.txtNombreMascota.Size = new System.Drawing.Size(280, 42);
             this.txtNombreMascota.TabIndex = 23;
             // 
             // fechaMascota
@@ -128,8 +114,8 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.fechaMascota.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.fechaMascota.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.fechaMascota.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.fechaMascota.Location = new System.Drawing.Point(469, 65);
-            this.fechaMascota.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.fechaMascota.Location = new System.Drawing.Point(352, 53);
+            this.fechaMascota.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.fechaMascota.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.fechaMascota.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.fechaMascota.Name = "fechaMascota";
@@ -138,7 +124,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.fechaMascota.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.fechaMascota.OnPressedColor = System.Drawing.Color.Black;
             this.fechaMascota.Radius = 5;
-            this.fechaMascota.Size = new System.Drawing.Size(491, 52);
+            this.fechaMascota.Size = new System.Drawing.Size(368, 42);
             this.fechaMascota.TabIndex = 24;
             this.fechaMascota.Text = "lunes, 7 de junio de 2021";
             this.fechaMascota.Value = new System.DateTime(2021, 6, 7, 13, 4, 55, 439);
@@ -147,10 +133,9 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.label3.Location = new System.Drawing.Point(464, 20);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(348, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(539, 34);
+            this.label3.Size = new System.Drawing.Size(404, 28);
             this.label3.TabIndex = 28;
             this.label3.Text = "Fecha de nacimimiento";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -159,10 +144,9 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.label4.Location = new System.Drawing.Point(59, 144);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(44, 117);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(372, 34);
+            this.label4.Size = new System.Drawing.Size(279, 28);
             this.label4.TabIndex = 29;
             this.label4.Text = "Genero";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -171,10 +155,9 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.label5.Location = new System.Drawing.Point(61, 257);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(46, 209);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(149, 34);
+            this.label5.Size = new System.Drawing.Size(112, 28);
             this.label5.TabIndex = 30;
             this.label5.Text = "Especie";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -183,10 +166,9 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.label6.Location = new System.Drawing.Point(469, 257);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(352, 209);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(491, 34);
+            this.label6.Size = new System.Drawing.Size(368, 28);
             this.label6.TabIndex = 31;
             this.label6.Text = "Raza";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -195,10 +177,9 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.label7.Location = new System.Drawing.Point(59, 377);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(44, 306);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(481, 34);
+            this.label7.Size = new System.Drawing.Size(361, 28);
             this.label7.TabIndex = 32;
             this.label7.Text = "Caracteristicas Especiales";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -217,13 +198,13 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.generMascota.Items.AddRange(new object[] {
             "Macho",
             "Hembra"});
-            this.generMascota.Location = new System.Drawing.Point(63, 190);
-            this.generMascota.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.generMascota.Location = new System.Drawing.Point(47, 154);
+            this.generMascota.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.generMascota.Name = "generMascota";
             this.generMascota.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.generMascota.OnHoverItemForeColor = System.Drawing.Color.White;
             this.generMascota.Radius = 5;
-            this.generMascota.Size = new System.Drawing.Size(367, 33);
+            this.generMascota.Size = new System.Drawing.Size(276, 33);
             this.generMascota.TabIndex = 25;
             this.generMascota.SelectedIndexChanged += new System.EventHandler(this.generMascota_SelectedIndexChanged);
             // 
@@ -238,13 +219,13 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.especieMascota.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.especieMascota.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.especieMascota.FormattingEnabled = true;
-            this.especieMascota.Location = new System.Drawing.Point(63, 302);
-            this.especieMascota.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.especieMascota.Location = new System.Drawing.Point(47, 245);
+            this.especieMascota.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.especieMascota.Name = "especieMascota";
             this.especieMascota.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.especieMascota.OnHoverItemForeColor = System.Drawing.Color.White;
             this.especieMascota.Radius = 5;
-            this.especieMascota.Size = new System.Drawing.Size(367, 33);
+            this.especieMascota.Size = new System.Drawing.Size(276, 33);
             this.especieMascota.TabIndex = 27;
             this.especieMascota.SelectedIndexChanged += new System.EventHandler(this.especieMascota_SelectedIndexChanged);
             // 
@@ -261,13 +242,12 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.descripcionMascota.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.descripcionMascota.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.descripcionMascota.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.descripcionMascota.Location = new System.Drawing.Point(63, 428);
-            this.descripcionMascota.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.descripcionMascota.Location = new System.Drawing.Point(47, 348);
             this.descripcionMascota.MultiLine = true;
             this.descripcionMascota.Name = "descripcionMascota";
             this.descripcionMascota.PasswordChar = '\0';
             this.descripcionMascota.Radius = 4;
-            this.descripcionMascota.Size = new System.Drawing.Size(895, 243);
+            this.descripcionMascota.Size = new System.Drawing.Size(671, 239);
             this.descripcionMascota.TabIndex = 29;
             // 
             // btnAddMascota
@@ -286,8 +266,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.btnAddMascota.ForeColor = System.Drawing.Color.White;
             this.btnAddMascota.Image = null;
             this.btnAddMascota.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnAddMascota.Location = new System.Drawing.Point(341, 673);
-            this.btnAddMascota.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddMascota.Location = new System.Drawing.Point(256, 547);
             this.btnAddMascota.Name = "btnAddMascota";
             this.btnAddMascota.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(110)))), ((int)(((byte)(114)))));
             this.btnAddMascota.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -295,7 +274,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.btnAddMascota.OnHoverImage = null;
             this.btnAddMascota.OnPressedColor = System.Drawing.Color.Black;
             this.btnAddMascota.Radius = 5;
-            this.btnAddMascota.Size = new System.Drawing.Size(359, 52);
+            this.btnAddMascota.Size = new System.Drawing.Size(269, 42);
             this.btnAddMascota.TabIndex = 38;
             this.btnAddMascota.Text = "Guardar";
             this.btnAddMascota.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -305,10 +284,9 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.label8.Location = new System.Drawing.Point(469, 144);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(352, 117);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(539, 34);
+            this.label8.Size = new System.Drawing.Size(404, 28);
             this.label8.TabIndex = 40;
             this.label8.Text = "Color";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -326,12 +304,11 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.txtcolor.FocusedForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.txtcolor.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtcolor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
-            this.txtcolor.Location = new System.Drawing.Point(473, 190);
-            this.txtcolor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtcolor.Location = new System.Drawing.Point(355, 154);
             this.txtcolor.Name = "txtcolor";
             this.txtcolor.PasswordChar = '\0';
             this.txtcolor.Radius = 5;
-            this.txtcolor.Size = new System.Drawing.Size(489, 43);
+            this.txtcolor.Size = new System.Drawing.Size(367, 35);
             this.txtcolor.TabIndex = 26;
             // 
             // animales_razas
@@ -345,13 +322,13 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.animales_razas.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.animales_razas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.animales_razas.FormattingEnabled = true;
-            this.animales_razas.Location = new System.Drawing.Point(473, 302);
-            this.animales_razas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.animales_razas.Location = new System.Drawing.Point(355, 245);
+            this.animales_razas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.animales_razas.Name = "animales_razas";
             this.animales_razas.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.animales_razas.OnHoverItemForeColor = System.Drawing.Color.White;
             this.animales_razas.Radius = 5;
-            this.animales_razas.Size = new System.Drawing.Size(485, 33);
+            this.animales_razas.Size = new System.Drawing.Size(365, 33);
             this.animales_razas.TabIndex = 28;
             this.animales_razas.SelectedIndexChanged += new System.EventHandler(this.animales_razas_SelectedIndexChanged);
             // 
@@ -359,10 +336,9 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.label9.Location = new System.Drawing.Point(32, 112);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(24, 91);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(116, 39);
+            this.label9.Size = new System.Drawing.Size(87, 32);
             this.label9.TabIndex = 55;
             this.label9.Text = "Nombre";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -377,12 +353,11 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.txtSearch.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.txtSearch.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.txtSearch.Location = new System.Drawing.Point(156, 112);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Location = new System.Drawing.Point(117, 91);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.Radius = 5;
-            this.txtSearch.Size = new System.Drawing.Size(463, 49);
+            this.txtSearch.Size = new System.Drawing.Size(347, 40);
             this.txtSearch.TabIndex = 54;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -408,20 +383,19 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.descripcionMascota);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Location = new System.Drawing.Point(672, 118);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(504, 96);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1035, 750);
+            this.panel1.Size = new System.Drawing.Size(777, 610);
             this.panel1.TabIndex = 57;
             // 
             // lblErrorDescripcion
             // 
             this.lblErrorDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(59)))), ((int)(((byte)(87)))));
-            this.lblErrorDescripcion.Location = new System.Drawing.Point(812, 377);
-            this.lblErrorDescripcion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblErrorDescripcion.Location = new System.Drawing.Point(609, 306);
             this.lblErrorDescripcion.Name = "lblErrorDescripcion";
-            this.lblErrorDescripcion.Size = new System.Drawing.Size(145, 34);
+            this.lblErrorDescripcion.Size = new System.Drawing.Size(109, 28);
             this.lblErrorDescripcion.TabIndex = 53;
             this.lblErrorDescripcion.Text = "Obligatorio";
             this.lblErrorDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -431,10 +405,9 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             // 
             this.lblErrorColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorColor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(59)))), ((int)(((byte)(87)))));
-            this.lblErrorColor.Location = new System.Drawing.Point(815, 144);
-            this.lblErrorColor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblErrorColor.Location = new System.Drawing.Point(611, 117);
             this.lblErrorColor.Name = "lblErrorColor";
-            this.lblErrorColor.Size = new System.Drawing.Size(145, 34);
+            this.lblErrorColor.Size = new System.Drawing.Size(109, 28);
             this.lblErrorColor.TabIndex = 52;
             this.lblErrorColor.Text = "Obligatorio";
             this.lblErrorColor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -444,10 +417,9 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             // 
             this.lblErrorNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErrorNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(59)))), ((int)(((byte)(87)))));
-            this.lblErrorNombre.Location = new System.Drawing.Point(285, 20);
-            this.lblErrorNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblErrorNombre.Location = new System.Drawing.Point(214, 16);
             this.lblErrorNombre.Name = "lblErrorNombre";
-            this.lblErrorNombre.Size = new System.Drawing.Size(145, 34);
+            this.lblErrorNombre.Size = new System.Drawing.Size(109, 28);
             this.lblErrorNombre.TabIndex = 51;
             this.lblErrorNombre.Text = "Obligatorio";
             this.lblErrorNombre.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -459,10 +431,9 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.label10.Location = new System.Drawing.Point(31, 49);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(23, 40);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(437, 52);
+            this.label10.Size = new System.Drawing.Size(328, 42);
             this.label10.TabIndex = 58;
             this.label10.Text = "Buscar";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -503,8 +474,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.dgvDatosPropietarios.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDatosPropietarios.EnableHeadersVisualStyles = false;
             this.dgvDatosPropietarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(152)))), ((int)(((byte)(194)))), ((int)(((byte)(189)))));
-            this.dgvDatosPropietarios.Location = new System.Drawing.Point(37, 185);
-            this.dgvDatosPropietarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDatosPropietarios.Location = new System.Drawing.Point(28, 150);
             this.dgvDatosPropietarios.Name = "dgvDatosPropietarios";
             this.dgvDatosPropietarios.RowHeadersVisible = false;
             this.dgvDatosPropietarios.RowHeadersWidth = 51;
@@ -512,7 +482,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.dgvDatosPropietarios.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvDatosPropietarios.RowTemplate.Height = 40;
             this.dgvDatosPropietarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDatosPropietarios.Size = new System.Drawing.Size(581, 684);
+            this.dgvDatosPropietarios.Size = new System.Drawing.Size(436, 556);
             this.dgvDatosPropietarios.TabIndex = 59;
             this.dgvDatosPropietarios.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.dgvDatosPropietarios.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -559,20 +529,19 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
-            this.label1.Location = new System.Drawing.Point(672, 57);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(504, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1036, 52);
+            this.label1.Size = new System.Drawing.Size(777, 42);
             this.label1.TabIndex = 24;
             this.label1.Text = "Datos de paciente";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormGuardarMascota
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1719, 907);
+            this.ClientSize = new System.Drawing.Size(1289, 737);
             this.Controls.Add(this.dgvDatosPropietarios);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel1);
@@ -581,7 +550,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "FormGuardarMascota";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -593,10 +562,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
         }
 
         #endregion
-
-        private Guna.UI.WinForms.GunaResize gunaResize1;
         private Guna.UI.WinForms.GunaPanel panelTop;
-        private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
         private System.Windows.Forms.Label label2;
         private Guna.UI.WinForms.GunaTextBox txtNombreMascota;
         private Guna.UI.WinForms.GunaTextBox descripcionMascota;

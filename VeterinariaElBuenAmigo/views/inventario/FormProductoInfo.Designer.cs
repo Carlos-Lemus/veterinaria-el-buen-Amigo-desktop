@@ -29,7 +29,6 @@ namespace VeterinariaElBuenAmigo.views.inventario
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panelTop = new Guna.UI.WinForms.GunaPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -46,7 +45,6 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.txtLbIdProducto = new Guna.UI.WinForms.GunaTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnOk = new Guna.UI.WinForms.GunaButton();
-            this.windowDragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.btnDlt = new Guna.UI.WinForms.GunaButton();
             this.btnEdit = new Guna.UI.WinForms.GunaButton();
             this.SuspendLayout();
@@ -328,10 +326,6 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.btnOk.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
-            // windowDragControl
-            // 
-            this.windowDragControl.TargetControl = this.panelTop;
-            // 
             // btnDlt
             // 
             this.btnDlt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -441,7 +435,6 @@ namespace VeterinariaElBuenAmigo.views.inventario
         private System.Windows.Forms.Label label5;
         private Guna.UI.WinForms.GunaButton btnOk;
         private Guna.UI.WinForms.GunaButton btnEdit;
-        private Guna.UI.WinForms.GunaDragControl windowDragControl;
         private Guna.UI.WinForms.GunaButton btnDlt;
     }
 }

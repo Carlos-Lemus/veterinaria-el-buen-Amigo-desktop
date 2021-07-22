@@ -67,11 +67,6 @@ namespace VeterinariaElBuenAmigo.views.consulta
 
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void ActualizarTabla()
         {
             tbl_ConsultasAnteriores.Columns["Column1"].Visible = false;
@@ -99,11 +94,6 @@ namespace VeterinariaElBuenAmigo.views.consulta
             txt_Temperatura.Text = "";
             txt_controlCelo.Text = "";
             txt_Comentarios.Text = "";
-        }
-
-        private void btnMin_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
         }
 
         private void txt_Padecimineto_KeyPress(object sender, KeyPressEventArgs e)

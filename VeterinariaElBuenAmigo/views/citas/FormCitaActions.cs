@@ -44,16 +44,6 @@ namespace VeterinariaElBuenAmigo.views.citas
             }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnMin_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string fecha = gunaDateTimePickerCita.Value.ToString("dddd, dd MMMM yyyy");           

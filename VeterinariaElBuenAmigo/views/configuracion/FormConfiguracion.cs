@@ -110,11 +110,8 @@ namespace VeterinariaElBuenAmigo.views
                 if (dvgRazas.Columns[e.ColumnIndex].Name == "ColumnEditRaza")
                 {
                     int id = Convert.ToInt32(dvgRazas.Rows[e.RowIndex].Cells[0].Value);
-                    string nombre = dvgRazas.Rows[e.RowIndex].Cells[1].Value.ToString();
 
-                    Raza raza = new Raza();
-                    raza.idRaza = id;
-                    raza.nombreRaza = nombre;
+                    Raza raza = listaRazas.Single(r => r.idRaza == id);
 
                     using (FormRazaActions formRazaActions = new FormRazaActions(true, razaDAO, especieDAO, raza))
                     {

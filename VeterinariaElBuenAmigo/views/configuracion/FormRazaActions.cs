@@ -39,7 +39,9 @@ namespace VeterinariaElBuenAmigo.views.configuracion
                 btnEdit.Visible = true;
 
                 txtNombre.Text = raza.nombreRaza;
-
+                
+                especieMascota.SelectedValue = raza.idEspecie;
+                idEspe = raza.idEspecie;
             }
         }
 
@@ -82,6 +84,7 @@ namespace VeterinariaElBuenAmigo.views.configuracion
                 if (dialogQuestion == DialogResult.Yes)
                 {
                     raza.nombreRaza = nombre;
+                    raza.idEspecie = idEspe;
 
                     razaDAO.update(raza);
 
@@ -112,7 +115,7 @@ namespace VeterinariaElBuenAmigo.views.configuracion
         private void especieMascota_SelectedIndexChanged(object sender, EventArgs e)
         {
             llenarEspecie();
-            idEspe = Convert.ToInt32(especieMascota.SelectedValue.ToString());
+            //idEspe = Convert.ToInt32(especieMascota.SelectedValue.ToString());
         }
 
         private void especieMascota_KeyDown(object sender, KeyEventArgs e)

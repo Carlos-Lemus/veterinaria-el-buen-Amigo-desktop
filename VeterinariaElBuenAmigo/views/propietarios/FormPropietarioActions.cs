@@ -79,32 +79,6 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             
         }
 
-        private bool isValidTelefonoAndCorreo(string telefono, string correo)
-        {
-
-            bool isExistTelefono = clienteDao.searchCliente("telefono", telefono);
-            bool isExistCorreo = clienteDao.searchCliente("correo", correo);
-
-            if(isExistTelefono || (isExistCorreo && !string.IsNullOrEmpty(correo)))
-            {
-                if (isExistTelefono)
-                {
-                    lblErrorTelefono.Visible = true;
-                    lblErrorTelefono.Text = "El telefono ya existe";
-                }
-
-                if (isExistCorreo && !string.IsNullOrEmpty(correo))
-                {
-                    lblErrorCorreo.Visible = true;
-                }
-
-                return false;
-            }
-
-            return true;
-
-        }
-
         private void btnEdit_Click(object sender, EventArgs e)
         {
             string nombre = txtNombre.Text;
@@ -137,6 +111,32 @@ namespace VeterinariaElBuenAmigo.views.propietarios
                 }
             }
             
+        }
+
+        private bool isValidTelefonoAndCorreo(string telefono, string correo)
+        {
+
+            bool isExistTelefono = clienteDao.searchCliente("telefono", telefono);
+            bool isExistCorreo = clienteDao.searchCliente("correo", correo);
+
+            if (isExistTelefono || (isExistCorreo && !string.IsNullOrEmpty(correo)))
+            {
+                if (isExistTelefono)
+                {
+                    lblErrorTelefono.Visible = true;
+                    lblErrorTelefono.Text = "El telefono ya existe";
+                }
+
+                if (isExistCorreo && !string.IsNullOrEmpty(correo))
+                {
+                    lblErrorCorreo.Visible = true;
+                }
+
+                return false;
+            }
+
+            return true;
+
         }
 
     }

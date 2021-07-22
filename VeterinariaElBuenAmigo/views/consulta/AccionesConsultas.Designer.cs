@@ -74,7 +74,6 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.btn_Vitaminas = new Guna.UI.WinForms.GunaButton();
             this.btn_Vacunas = new Guna.UI.WinForms.GunaButton();
             this.easyHTMLReports1 = new KimToo.EasyHTMLReports(this.components);
-            this.windowDragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.gunaVScrollBar1 = new Guna.UI.WinForms.GunaVScrollBar();
             this.gunaPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -728,10 +727,6 @@ namespace VeterinariaElBuenAmigo.views.consulta
             this.easyHTMLReports1.RowDefaultFontColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(46)))));
             this.easyHTMLReports1.RowDefaultGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(61)))), ((int)(((byte)(65)))));
             // 
-            // windowDragControl
-            // 
-            this.windowDragControl.TargetControl = this.panelTop;
-            // 
             // gunaVScrollBar1
             // 
             this.gunaVScrollBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -806,7 +801,6 @@ namespace VeterinariaElBuenAmigo.views.consulta
         private Guna.UI.WinForms.GunaButton btn_Vitaminas;
         private Guna.UI.WinForms.GunaButton btn_Vacunas;
         private KimToo.EasyHTMLReports easyHTMLReports1;
-        private Guna.UI.WinForms.GunaDragControl windowDragControl;
         private Guna.UI.WinForms.GunaVScrollBar gunaVScrollBar1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

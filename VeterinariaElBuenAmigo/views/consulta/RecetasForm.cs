@@ -155,16 +155,6 @@ namespace VeterinariaElBuenAmigo.views.consulta
             tbl_Control.Refresh();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void btnMin_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
         private void LimpiarText(int t)
         {
             txt_Padecimineto.Text = "";

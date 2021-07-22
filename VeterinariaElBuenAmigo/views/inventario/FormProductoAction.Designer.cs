@@ -29,7 +29,6 @@ namespace VeterinariaElBuenAmigo.views.inventario
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panelTop = new Guna.UI.WinForms.GunaPanel();
             this.btnEdit = new Guna.UI.WinForms.GunaButton();
             this.btnAdd = new Guna.UI.WinForms.GunaButton();
@@ -47,7 +46,6 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.lblErrorDescripcionProducto = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtDescripcionProducto = new Guna.UI.WinForms.GunaTextBox();
-            this.windowDragControl = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.dtFechaAdquisicion = new Guna.UI.WinForms.GunaDateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.gnExistencias = new Guna.UI.WinForms.GunaTextBox();
@@ -318,10 +316,6 @@ namespace VeterinariaElBuenAmigo.views.inventario
             this.txtDescripcionProducto.Size = new System.Drawing.Size(754, 123);
             this.txtDescripcionProducto.TabIndex = 6;
             // 
-            // windowDragControl
-            // 
-            this.windowDragControl.TargetControl = this.panelTop;
-            // 
             // dtFechaAdquisicion
             // 
             this.dtFechaAdquisicion.BackColor = System.Drawing.Color.Transparent;
@@ -448,7 +442,6 @@ namespace VeterinariaElBuenAmigo.views.inventario
         private System.Windows.Forms.Label lblErrorDescripcionProducto;
         private System.Windows.Forms.Label label5;
         private Guna.UI.WinForms.GunaTextBox txtDescripcionProducto;
-        private Guna.UI.WinForms.GunaDragControl windowDragControl;
         private Guna.UI.WinForms.GunaDateTimePicker dtFechaAdquisicion;
         private System.Windows.Forms.Label label7;
         private Guna.UI.WinForms.GunaTextBox gnExistencias;

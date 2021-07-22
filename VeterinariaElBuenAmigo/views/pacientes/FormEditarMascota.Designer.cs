@@ -29,11 +29,8 @@ namespace VeterinariaElBuenAmigo.views.pacientes
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panelTop = new Guna.UI.WinForms.GunaPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.gunaResize1 = new Guna.UI.WinForms.GunaResize(this.components);
-            this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.label7 = new System.Windows.Forms.Label();
             this.descripcionMascota1 = new Guna.UI.WinForms.GunaTextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -77,14 +74,6 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.label1.TabIndex = 60;
             this.label1.Text = "Editar datos de paciente";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // gunaResize1
-            // 
-            this.gunaResize1.TargetForm = this;
-            // 
-            // gunaDragControl1
-            // 
-            this.gunaDragControl1.TargetControl = this.panelTop;
             // 
             // label7
             // 
@@ -431,8 +420,6 @@ namespace VeterinariaElBuenAmigo.views.pacientes
 
         private Guna.UI.WinForms.GunaPanel panelTop;
         private System.Windows.Forms.Label label1;
-        private Guna.UI.WinForms.GunaResize gunaResize1;
-        private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI.WinForms.GunaButton btnEditMascota;
         private System.Windows.Forms.Label label8;

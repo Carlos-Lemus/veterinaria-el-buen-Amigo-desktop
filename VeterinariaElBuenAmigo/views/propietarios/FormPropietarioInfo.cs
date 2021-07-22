@@ -53,44 +53,6 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             lblCorreo.Text = correo;
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        
-        private void btnMax_Click(object sender, EventArgs e)
-        {
-            // obtengo la posicion de la ventana previo a maximizar la ventana
-            posicionFormX = Location.X;
-            posicionFormY = Location.Y;
-
-            // obtengo la tamaño de la ventana previo a maximizar la ventana
-            WindowWidth = Size.Width;
-            WindowHeight = Size.Height;
-
-            Size = Screen.PrimaryScreen.WorkingArea.Size;
-            Location = Screen.PrimaryScreen.WorkingArea.Location;
-        }
-
-        private void btnRestore_Click(object sender, EventArgs e)
-        {
-            size.Width = WindowWidth;
-            size.Height = WindowHeight;
-            Size = size;
-
-            // devulvo a la ventana a la posicion previo a maximizar la ventana
-
-            position.X = posicionFormX;
-            position.Y = posicionFormY;
-
-            Location = position;
-        }
-
-        private void btnMin_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }        
-
         private void cargarMascotas()
         {
             List<templateClientePaciente> lista = new List<templateClientePaciente>();
