@@ -25,6 +25,7 @@ namespace VeterinariaElBuenAmigo.database
         protected const string TABLE_CLIENTE = "clientes";
         protected const string IDCLIENTE = "idCliente";
         protected const string NOMBRECLIENTE = "nombreCliente";
+        protected const string APELLIDO = "apellido";
         protected const string TELEFONO = "telefono";
         protected const string DIRECCION = "direccion";
         protected const string CORREO = "correo";

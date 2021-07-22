@@ -27,6 +27,14 @@ namespace VeterinariaElBuenAmigo.views.citas
             this.pacienteDao = new PacienteDAO();
             cargarPacientes();
 
+            if(listaPacientes.Count == 0)
+            {
+                MessageBox.Show("Debe ingresar al menos un paciente", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                // Le asigno el metodo a Close a Load para que una vez que cargue por completo el form este se cierre
+                this.Load += (s, e) => Close();
+            }
+
             btnEdit.Visible = false;
             gunaDateTimePickerCita.Value = DateTime.Now;
 

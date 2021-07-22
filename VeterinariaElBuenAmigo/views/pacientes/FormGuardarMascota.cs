@@ -26,6 +26,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
         private string gener;
         private List<Raza> razas;
         private List<Raza> razasFilter;
+        private List<Especie> listaEspecies;
 
         public FormGuardarMascota() {            
             InitializeComponent();
@@ -38,7 +39,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             cargarRazas();
             cargarEspecies();
 
-            if (dgvDatosPropietarios.Rows.Count > 0)
+            if (dgvDatosPropietarios.Rows.Count > 0 && razas.Count > 0 && listaEspecies.Count > 0)
             {
                 //idclienteActivo.Text = idCliente.ToString();
                 generMascota.SelectedItem = "Hembra";
@@ -49,12 +50,10 @@ namespace VeterinariaElBuenAmigo.views.pacientes
                 txtNombreMascota.Focus();
             } else
             {
-                MessageBox.Show("Debe ingresar al menos un propietario", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe ingresar al menos un propietario, una raza y una especie", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 // Le asigno el metodo a Close a Load para que una vez que cargue por completo el form este se cierre
                 this.Load += (s, e) => Close();
-
-                return;
             }
         }
 
@@ -109,9 +108,9 @@ namespace VeterinariaElBuenAmigo.views.pacientes
 
         private void cargarEspecies()
         {
-            List<Especie> l = pacienteDao.getListEspecie();
+            listaEspecies = pacienteDao.getListEspecie();
 
-            especieMascota.DataSource = l;
+            especieMascota.DataSource = listaEspecies;
             especieMascota.DisplayMember = "nombreEspecie";
             especieMascota.ValueMember = "idEspecie";
         }
@@ -142,7 +141,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
 
             foreach (Cliente cliente in listaProp)
             {
-                dgvDatosPropietarios.Rows.Add(cliente.IdCliente, cliente.NombreCliente);
+                dgvDatosPropietarios.Rows.Add(cliente.IdCliente, cliente.NombreCliente + " " + cliente.Apellido);
             }
         }
 
@@ -160,13 +159,13 @@ namespace VeterinariaElBuenAmigo.views.pacientes
 
             foreach (Cliente cliente in listaPropSearch)
             {
-                dgvDatosPropietarios.Rows.Add(cliente.IdCliente, cliente.NombreCliente);
+                dgvDatosPropietarios.Rows.Add(cliente.IdCliente, cliente.NombreCliente + " " + cliente.Apellido);
             }
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            var listaSearch = listaProp.Where(prop => prop.NombreCliente.ToLower().Contains(txtSearch.Text.ToLower()));
+            var listaSearch = listaProp.Where(prop => prop.NombreCliente.ToLower().Contains(txtSearch.Text.ToLower()) || prop.Apellido.ToLower().Contains(txtSearch.Text.ToLower()));
             cargarPropSearch(listaSearch.ToList());
         }
 

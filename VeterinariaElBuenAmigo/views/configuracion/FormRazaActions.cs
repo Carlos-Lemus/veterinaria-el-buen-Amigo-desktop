@@ -19,6 +19,7 @@ namespace VeterinariaElBuenAmigo.views.configuracion
         private Raza raza;
         private EspecieDAO especieDAO;
         private int idEspe;
+        private List<Especie> listaEspecies;
 
         public FormRazaActions(bool isEdit, RazaDAO razaDAO, EspecieDAO especieDAO, Raza raza = null)
         {
@@ -28,6 +29,15 @@ namespace VeterinariaElBuenAmigo.views.configuracion
             this.especieDAO = especieDAO;
 
             llenarEspecie();
+
+            if(listaEspecies.Count == 0)
+            {
+                MessageBox.Show("Debe ingresar al menos una especie", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                // Le asigno el metodo a Close a Load para que una vez que cargue por completo el form este se cierre
+                this.Load += (s, e) => Close();
+            }
+
 
             if (isEdit)
             {
@@ -47,9 +57,9 @@ namespace VeterinariaElBuenAmigo.views.configuracion
 
         private void llenarEspecie()
         {
-            List<Especie> l = especieDAO.getList();
+            listaEspecies = especieDAO.getList();
 
-            especieMascota.DataSource = l;
+            especieMascota.DataSource = listaEspecies;
             especieMascota.DisplayMember = "nombreEspecie";
             especieMascota.ValueMember = "idEspecie";
         }

@@ -18,17 +18,9 @@ namespace VeterinariaElBuenAmigo.views.propietarios
         private ClienteDAO clienteDao;
         private PacienteDAO pacienteDao;        
 
-        private int posicionFormX;
-        private int posicionFormY;
-        private int WindowWidth;
-        private int WindowHeight;
-
         private int id;
 
-        private Point position;
-        private Size size;
-
-        public FormPropietarioInfo(ClienteDAO clienteDao, string id, string nombreCompleto, string telefono, string direccion, string correo)
+        public FormPropietarioInfo(ClienteDAO clienteDao, Cliente cliente)
         {
             InitializeComponent();
 
@@ -38,19 +30,17 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             Scroll = new Guna.UI.Lib.ScrollBar.PanelScrollHelper(panelContenido, gunaVScrollBar1, true);
             Scroll.UpdateScrollBar();            
 
-            position = new Point(Location.X, Location.Y);
-            size = new Size(Size.Width, Size.Height);
-
             this.clienteDao = clienteDao;
 
             this.id = Convert.ToInt32(id);            
             cargarMascotas();
 
-            lblId.Text = id;
-            lblNombre.Text = nombreCompleto;
-            lblDireccion.Text = direccion;
-            lblTelefono.Text = telefono;
-            lblCorreo.Text = correo;
+            lblId.Text = cliente.IdCliente.ToString();
+            lblNombre.Text = cliente.NombreCliente;
+            lblApellido.Text = cliente.Apellido;
+            lblDireccion.Text = cliente.Direccion;
+            lblTelefono.Text = cliente.Telefono;
+            lblCorreo.Text = cliente.Correo;
         }
 
         private void cargarMascotas()

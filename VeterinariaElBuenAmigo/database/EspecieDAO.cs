@@ -164,6 +164,8 @@ namespace VeterinariaElBuenAmigo.database
 
                     sql += $"DELETE FROM {TABLE_PACIENTE} WHERE {IDESPECIE} = @{IDESPECIE}; ";
 
+                    sql += $"DELETE FROM {TABLE_RAZA} WHERE {IDESPECIE} = @{IDESPECIE}; ";
+
                     sql += $"DELETE FROM {TABLE_ESPECIE} WHERE {IDESPECIE} = @{IDESPECIE}; ";
 
                     command.CommandText = sql;

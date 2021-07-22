@@ -17,15 +17,11 @@ namespace VeterinariaElBuenAmigo.views.propietarios
     {
         private ClienteDAO clienteDao;
 
-        private Point position;
-
         Cliente cliente;
 
         public FormPropietarioActions(bool isEdit, ClienteDAO clienteDao, Cliente cliente = null)
         {
             InitializeComponent();
-
-            position = new Point();
             
             this.clienteDao = clienteDao;
 
@@ -33,16 +29,15 @@ namespace VeterinariaElBuenAmigo.views.propietarios
 
             if (isEdit)
             {
-                position.X = 183;
-                position.Y = 552;
+                btnEdit.Location = btnAdd.Location;
 
                 btnAdd.Visible = false;
                 btnEdit.Visible = true;
-                btnEdit.Location = position;
 
                 this.cliente = cliente;
 
                 txtNombre.Text = cliente.NombreCliente;
+                txtApellido.Text = cliente.Apellido;
                 txtDireccion.Text = cliente.Direccion;
                 txtTelefono.Text = cliente.Telefono.ToString();
                 txtCorreo.Text = cliente.Correo;
@@ -52,6 +47,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string nombre = txtNombre.Text;
+            string apellido = txtApellido.Text;
             string direccion = txtDireccion.Text;
             string telefono = txtTelefono.Text;
             string correo = txtCorreo.Text;
@@ -59,6 +55,7 @@ namespace VeterinariaElBuenAmigo.views.propietarios
             lblErrorTelefono.Text = "El telefono es obligatorio";
 
             bool isValidNombre = ValidFields.isValidInput(nombre, lblErrorNombre);
+            bool isValidApellido = ValidFields.isValidInput(apellido, lblErrorApellido);
             bool isValidDireccion = ValidFields.isValidInput(direccion, lblErrorDireccion);
             bool isValidTelefono = txtTelefono.MaskFull;
 
@@ -70,9 +67,9 @@ namespace VeterinariaElBuenAmigo.views.propietarios
                 ValidFields.isValidInput(txtTelefono.Text, lblErrorTelefono);
             }
             
-            if (isValidNombre && isValidDireccion && isValidTelefono && isValidTelefonoAndCorreo(telefono, correo))
+            if (isValidNombre && isValidApellido && isValidDireccion && isValidTelefono && isValidTelefonoAndCorreo(telefono, correo))
             {
-                clienteDao.insert(new Cliente(0, nombre, direccion, telefono, correo));
+                clienteDao.insert(new Cliente(0, nombre, apellido, direccion, telefono, correo));
                 this.Close();
 
             }  
@@ -82,11 +79,13 @@ namespace VeterinariaElBuenAmigo.views.propietarios
         private void btnEdit_Click(object sender, EventArgs e)
         {
             string nombre = txtNombre.Text;
+            string apellido = txtApellido.Text;
             string direccion = txtDireccion.Text;
             string telefono = txtTelefono.Text;
             string correo = txtCorreo.Text;
 
             bool isValidNombre = ValidFields.isValidInput(nombre, lblErrorNombre);
+            bool isValidApellido = ValidFields.isValidInput(apellido, lblErrorApellido);
             bool isValidDireccion = ValidFields.isValidInput(direccion, lblErrorDireccion);
             bool isValidTelefono = txtTelefono.MaskFull;
 
@@ -99,13 +98,13 @@ namespace VeterinariaElBuenAmigo.views.propietarios
                 ValidFields.isValidInput(txtTelefono.Text, lblErrorTelefono);
             }
 
-            if (isValidNombre && isValidDireccion && isValidTelefono)
+            if (isValidNombre && isValidApellido && isValidDireccion && isValidTelefono)
             {
                 DialogResult dialogQuestion = MessageBox.Show("¿Estas seguro de que lo quieres modificar?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (dialogQuestion == DialogResult.Yes)
                 {
-                    clienteDao.update(new Cliente(cliente.IdCliente, nombre, direccion, telefono, correo));
+                    clienteDao.update(new Cliente(cliente.IdCliente, nombre, apellido, direccion, telefono, correo));
 
                     this.Close();
                 }

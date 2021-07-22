@@ -29,12 +29,13 @@ namespace VeterinariaElBuenAmigo.database
 
                 using (SQLiteCommand command = new SQLiteCommand())
                 {
-                    string sql = $"INSERT INTO {TABLE_CLIENTE} ({IDCLIENTE}, {NOMBRECLIENTE}, {TELEFONO}, {DIRECCION}, {CORREO}) ";
-                    sql += $"VALUES(NULL, @{NOMBRECLIENTE}, @{TELEFONO}, @{DIRECCION}, @{CORREO});";
+                    string sql = $"INSERT INTO {TABLE_CLIENTE} ({IDCLIENTE}, {NOMBRECLIENTE}, {APELLIDO}, {TELEFONO}, {DIRECCION}, {CORREO}) ";
+                    sql += $"VALUES(NULL, @{NOMBRECLIENTE}, @{APELLIDO}, @{TELEFONO}, @{DIRECCION}, @{CORREO});";
                     
                     command.CommandText = sql;
                     command.Connection = Conexion.Conn;
                     command.Parameters.AddWithValue($"@{NOMBRECLIENTE}", cliente.NombreCliente);
+                    command.Parameters.AddWithValue($"@{APELLIDO}", cliente.Apellido);
                     command.Parameters.AddWithValue($"@{TELEFONO}", cliente.Telefono);
                     command.Parameters.AddWithValue($"@{DIRECCION}", cliente.Direccion);
                     command.Parameters.AddWithValue($"@{CORREO}", cliente.Correo);
@@ -86,6 +87,7 @@ namespace VeterinariaElBuenAmigo.database
 
                                 cliente.IdCliente = Convert.ToInt32(result[IDCLIENTE].ToString());
                                 cliente.NombreCliente = result[NOMBRECLIENTE].ToString();
+                                cliente.Apellido = result[APELLIDO].ToString();
                                 cliente.Direccion = result[DIRECCION].ToString();
                                 cliente.Telefono = result[TELEFONO].ToString();
                                 cliente.Correo = result[CORREO].ToString();
@@ -161,13 +163,14 @@ namespace VeterinariaElBuenAmigo.database
 
                 using (SQLiteCommand command = new SQLiteCommand())
                 {
-                    string sql = $"UPDATE {TABLE_CLIENTE} SET {NOMBRECLIENTE} = @{NOMBRECLIENTE}, {TELEFONO} = @{TELEFONO}, {DIRECCION} = @{DIRECCION}, {CORREO} = @{CORREO} ";
+                    string sql = $"UPDATE {TABLE_CLIENTE} SET {NOMBRECLIENTE} = @{NOMBRECLIENTE}, {APELLIDO} = @{APELLIDO}, {TELEFONO} = @{TELEFONO}, {DIRECCION} = @{DIRECCION}, {CORREO} = @{CORREO} ";
                     sql += $"WHERE {IDCLIENTE} = @{IDCLIENTE};";
 
                     command.CommandText = sql;
                     command.Connection = Conexion.Conn;
                     command.Parameters.AddWithValue($"@{IDCLIENTE}", cliente.IdCliente);
                     command.Parameters.AddWithValue($"@{NOMBRECLIENTE}", cliente.NombreCliente);
+                    command.Parameters.AddWithValue($"@{APELLIDO}", cliente.Apellido);
                     command.Parameters.AddWithValue($"@{TELEFONO}", cliente.Telefono);
                     command.Parameters.AddWithValue($"@{DIRECCION}", cliente.Direccion);
                     command.Parameters.AddWithValue($"@{CORREO}", cliente.Correo);

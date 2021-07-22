@@ -97,6 +97,7 @@ namespace VeterinariaElBuenAmigo.views
                         especieDAO.delete(Convert.ToInt32(row.Cells[0].Value));
 
                         cargarEspecies();
+                        cargarRazas();
                     }
 
                 }

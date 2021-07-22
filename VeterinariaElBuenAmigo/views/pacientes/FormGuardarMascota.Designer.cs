@@ -115,7 +115,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.fechaMascota.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.fechaMascota.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.fechaMascota.Location = new System.Drawing.Point(352, 53);
-            this.fechaMascota.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fechaMascota.Margin = new System.Windows.Forms.Padding(2);
             this.fechaMascota.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.fechaMascota.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.fechaMascota.Name = "fechaMascota";
@@ -199,7 +199,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             "Macho",
             "Hembra"});
             this.generMascota.Location = new System.Drawing.Point(47, 154);
-            this.generMascota.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.generMascota.Margin = new System.Windows.Forms.Padding(2);
             this.generMascota.Name = "generMascota";
             this.generMascota.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.generMascota.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -220,7 +220,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.especieMascota.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.especieMascota.FormattingEnabled = true;
             this.especieMascota.Location = new System.Drawing.Point(47, 245);
-            this.especieMascota.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.especieMascota.Margin = new System.Windows.Forms.Padding(2);
             this.especieMascota.Name = "especieMascota";
             this.especieMascota.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.especieMascota.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -247,7 +247,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.descripcionMascota.Name = "descripcionMascota";
             this.descripcionMascota.PasswordChar = '\0';
             this.descripcionMascota.Radius = 4;
-            this.descripcionMascota.Size = new System.Drawing.Size(671, 239);
+            this.descripcionMascota.Size = new System.Drawing.Size(671, 176);
             this.descripcionMascota.TabIndex = 29;
             // 
             // btnAddMascota
@@ -323,7 +323,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.animales_razas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(62)))), ((int)(((byte)(70)))));
             this.animales_razas.FormattingEnabled = true;
             this.animales_razas.Location = new System.Drawing.Point(355, 245);
-            this.animales_razas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.animales_razas.Margin = new System.Windows.Forms.Padding(2);
             this.animales_razas.Name = "animales_razas";
             this.animales_razas.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(173)))), ((int)(((byte)(181)))));
             this.animales_razas.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -384,7 +384,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.panel1.Controls.Add(this.descripcionMascota);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Location = new System.Drawing.Point(504, 96);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(777, 610);
             this.panel1.TabIndex = 57;
@@ -550,7 +550,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.panelTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "FormGuardarMascota";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

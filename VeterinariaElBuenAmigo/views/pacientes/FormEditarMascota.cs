@@ -23,6 +23,7 @@ namespace VeterinariaElBuenAmigo.views.pacientes
         private int especie_de_mascota;
         private List<Raza> razas;
         private List<Raza> razasFilter;
+        private List<Especie> listaEspecies;
 
         public FormEditarMascota(int idMascota)
         {
@@ -35,14 +36,23 @@ namespace VeterinariaElBuenAmigo.views.pacientes
             cargarEspecies();
             cargarRazas();
 
-            cargarValores();
+            if (razas.Count == 0 || listaEspecies.Count == 0)
+            {
+                MessageBox.Show("Debe ingresar al menos una raza y una especie", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                // Le asigno el metodo a Close a Load para que una vez que cargue por completo el form este se cierre
+                this.Load += (s, e) => Close();
+            }
+
+                cargarValores();
+
         }       
 
         private void cargarEspecies()
         {
-            List<Especie> l = pacienteDao.getListEspecie();
+            listaEspecies = pacienteDao.getListEspecie();
 
-            especieMascota1.DataSource = l;
+            especieMascota1.DataSource = listaEspecies;
             especieMascota1.DisplayMember = "nombreEspecie";
             especieMascota1.ValueMember = "idEspecie";
         }

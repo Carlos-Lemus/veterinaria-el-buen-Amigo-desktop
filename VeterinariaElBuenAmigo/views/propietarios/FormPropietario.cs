@@ -69,12 +69,9 @@ namespace VeterinariaElBuenAmigo.views
                 if (dgvPropietarios.Columns[e.ColumnIndex].Name == "ColumnEdit")
                 {
                     int id = Convert.ToInt32(dgvPropietarios.Rows[e.RowIndex].Cells[0].Value);
-                    string nombreCompleto = dgvPropietarios.Rows[e.RowIndex].Cells[1].Value.ToString();
-                    string direccion = dgvPropietarios.Rows[e.RowIndex].Cells[2].Value.ToString();
-                    string telefono = dgvPropietarios.Rows[e.RowIndex].Cells[3].Value.ToString();
-                    string correo = dgvPropietarios.Rows[e.RowIndex].Cells[4].Value.ToString();
+                    Cliente cliente = lista.Single(c => c.IdCliente == id);
 
-                    using (FormPropietarioActions formPropietarioActions = new FormPropietarioActions(true, clienteDao, new Cliente(id, nombreCompleto, direccion, telefono, correo)))
+                    using (FormPropietarioActions formPropietarioActions = new FormPropietarioActions(true, clienteDao, cliente))
                     {
                         formPropietarioActions.ShowDialog();
                         cargarPropietarios();
@@ -102,7 +99,7 @@ namespace VeterinariaElBuenAmigo.views
 
             foreach (Cliente cliente in lista)
             {
-                dgvPropietarios.Rows.Add(cliente.IdCliente, cliente.NombreCliente, cliente.Direccion, cliente.Telefono, cliente.Correo);
+                dgvPropietarios.Rows.Add(cliente.IdCliente, cliente.NombreCliente + " " + cliente.Apellido, cliente.Direccion, cliente.Telefono, cliente.Correo);
             }
         }
 
@@ -110,18 +107,14 @@ namespace VeterinariaElBuenAmigo.views
         {
             if (e.RowIndex != -1)
             {
-                string id = dgvPropietarios.Rows[e.RowIndex].Cells[0].Value.ToString();
-                string nombreCompleto = dgvPropietarios.Rows[e.RowIndex].Cells[1].Value.ToString();
-                string direccion = dgvPropietarios.Rows[e.RowIndex].Cells[2].Value.ToString();
-                string telefono = dgvPropietarios.Rows[e.RowIndex].Cells[3].Value.ToString();
-                string correo = dgvPropietarios.Rows[e.RowIndex].Cells[4].Value.ToString();
+                int id = Convert.ToInt32(dgvPropietarios.Rows[e.RowIndex].Cells[0].Value);
+                Cliente cliente = lista.Single(c => c.IdCliente == id);
 
-                using (FormPropietarioInfo formPropietarioInfo = new FormPropietarioInfo(clienteDao, id, nombreCompleto, direccion, telefono, correo))
+                using (FormPropietarioInfo formPropietarioInfo = new FormPropietarioInfo(clienteDao, cliente))
                 {
                     formPropietarioInfo.ShowDialog();
                 }
 
-                cargarPropietarios();
             }
         }
 
@@ -134,13 +127,13 @@ namespace VeterinariaElBuenAmigo.views
 
             foreach (Cliente cliente in listaSearch)
             {
-                dgvPropietarios.Rows.Add(cliente.IdCliente, cliente.NombreCliente, cliente.Direccion, cliente.Telefono, cliente.Correo);
+                dgvPropietarios.Rows.Add(cliente.IdCliente, cliente.NombreCliente + " " + cliente.Apellido, cliente.Direccion, cliente.Telefono, cliente.Correo);
             }
         }
 
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            var listaSearch = lista.Where(cliente => cliente.NombreCliente.ToLower().Contains(txtSearch.Text.ToLower()));
+            var listaSearch = lista.Where(cliente => cliente.NombreCliente.ToLower().Contains(txtSearch.Text.ToLower()) || cliente.Apellido.ToLower().Contains(txtSearch.Text.ToLower()));
 
             cargarPropietariosSearch(listaSearch.ToList());
         }
