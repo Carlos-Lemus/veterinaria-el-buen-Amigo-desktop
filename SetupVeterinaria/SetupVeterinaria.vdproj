@@ -15,20 +15,26 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_058CD2DA642554F3046F970BB29425A9"
-        "OwnerKey" = "8:_FD95785DE8D246FDA3BD5616B3393B91"
+        "MsmKey" = "8:_055EA51AD37C4BF9BD8F443D02C37944"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_32B8B92992194F93BBBDC26445BC54B3"
+        "MsmKey" = "8:_058CD2DA642554F3046F970BB29425A9"
+        "OwnerKey" = "8:_7AD6AF2D91C749BEAB732BD2DC7F3AB2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_276907D9636C45D78D466CDB1EC701D2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_3583BA49368CF86792DD718E7615C591"
-        "OwnerKey" = "8:_FD95785DE8D246FDA3BD5616B3393B91"
+        "OwnerKey" = "8:_7AD6AF2D91C749BEAB732BD2DC7F3AB2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -46,31 +52,31 @@
         "Entry"
         {
         "MsmKey" = "8:_4A73BD795BB745B0C3894704A4D6CE5C"
-        "OwnerKey" = "8:_FD95785DE8D246FDA3BD5616B3393B91"
+        "OwnerKey" = "8:_7AD6AF2D91C749BEAB732BD2DC7F3AB2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_4E16471138EBE8861B3BB7693AB17FAC"
-        "OwnerKey" = "8:_FD95785DE8D246FDA3BD5616B3393B91"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_4FD68A3C4F1243CBA5FF81063629DE56"
-        "OwnerKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_7AD6AF2D91C749BEAB732BD2DC7F3AB2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_6EE5E8C269078857BBAB19C3512A8241"
-        "OwnerKey" = "8:_FD95785DE8D246FDA3BD5616B3393B91"
+        "OwnerKey" = "8:_7AD6AF2D91C749BEAB732BD2DC7F3AB2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_7AD6AF2D91C749BEAB732BD2DC7F3AB2"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_9C38127B78D9D3DE32B550CF9E0B1F98"
-        "OwnerKey" = "8:_FD95785DE8D246FDA3BD5616B3393B91"
+        "OwnerKey" = "8:_7AD6AF2D91C749BEAB732BD2DC7F3AB2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -87,32 +93,26 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_BE2F0ABBF546ACB12AD02479089A6B28"
-        "OwnerKey" = "8:_FD95785DE8D246FDA3BD5616B3393B91"
+        "MsmKey" = "8:_B928D8F74B2D4115A04B0FCF05CE9433"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_D14A0AEB3B51438396B573553B55BC57"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_BE2F0ABBF546ACB12AD02479089A6B28"
+        "OwnerKey" = "8:_7AD6AF2D91C749BEAB732BD2DC7F3AB2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_DC8E044C6C0998E6E561F757FA806EC0"
-        "OwnerKey" = "8:_FD95785DE8D246FDA3BD5616B3393B91"
+        "OwnerKey" = "8:_7AD6AF2D91C749BEAB732BD2DC7F3AB2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_F54AD6F7A8B41F4A4CE6BC2C40766171"
-        "OwnerKey" = "8:_FD95785DE8D246FDA3BD5616B3393B91"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_FD95785DE8D246FDA3BD5616B3393B91"
-        "OwnerKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_7AD6AF2D91C749BEAB732BD2DC7F3AB2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -124,7 +124,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_FD95785DE8D246FDA3BD5616B3393B91"
+        "OwnerKey" = "8:_7AD6AF2D91C749BEAB732BD2DC7F3AB2"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -193,6 +193,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -209,6 +217,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -238,6 +254,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_055EA51AD37C4BF9BD8F443D02C37944"
+            {
+            "SourcePath" = "8:..\\VeterinariaElBuenAmigo\\bin\\Debug\\veterinaria.db"
+            "TargetName" = "8:veterinaria.db"
+            "Tag" = "8:"
+            "Folder" = "8:_D0F3C9E1BAED4347B0580D5744958287"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_058CD2DA642554F3046F970BB29425A9"
             {
             "AssemblyRegister" = "3:1"
@@ -269,9 +305,9 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_32B8B92992194F93BBBDC26445BC54B3"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_276907D9636C45D78D466CDB1EC701D2"
             {
-            "SourcePath" = "8:..\\..\\..\\..\\Downloads\\sdadasd\\ico.ico"
+            "SourcePath" = "8:..\\..\\..\\..\\Downloads\\ico.ico"
             "TargetName" = "8:ico.ico"
             "Tag" = "8:"
             "Folder" = "8:_D0F3C9E1BAED4347B0580D5744958287"
@@ -382,26 +418,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4FD68A3C4F1243CBA5FF81063629DE56"
-            {
-            "SourcePath" = "8:..\\VeterinariaElBuenAmigo\\bin\\Debug\\veterinaria.db"
-            "TargetName" = "8:veterinaria.db"
-            "Tag" = "8:"
-            "Folder" = "8:_D0F3C9E1BAED4347B0580D5744958287"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6EE5E8C269078857BBAB19C3512A8241"
             {
             "AssemblyRegister" = "3:1"
@@ -464,6 +480,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B928D8F74B2D4115A04B0FCF05CE9433"
+            {
+            "SourcePath" = "8:..\\VeterinariaElBuenAmigo\\bin\\Debug\\x86\\SQLite.Interop.dll"
+            "TargetName" = "8:SQLite.Interop.dll"
+            "Tag" = "8:"
+            "Folder" = "8:_D0F3C9E1BAED4347B0580D5744958287"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BE2F0ABBF546ACB12AD02479089A6B28"
             {
             "AssemblyRegister" = "3:1"
@@ -493,26 +529,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D14A0AEB3B51438396B573553B55BC57"
-            {
-            "SourcePath" = "8:..\\VeterinariaElBuenAmigo\\bin\\Debug\\x86\\SQLite.Interop.dll"
-            "TargetName" = "8:SQLite.Interop.dll"
-            "Tag" = "8:"
-            "Folder" = "8:_D0F3C9E1BAED4347B0580D5744958287"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_DC8E044C6C0998E6E561F757FA806EC0"
@@ -765,7 +781,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_32026DE1493C4E5D86E49C2EFCDE27D3"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_329CDE3352D74672B70BBD8AFFBC75ED"
             {
             "Name" = "8:Veterinaria"
             "Arguments" = "8:"
@@ -773,13 +789,13 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_FD95785DE8D246FDA3BD5616B3393B91"
+            "Target" = "8:_7AD6AF2D91C749BEAB732BD2DC7F3AB2"
             "Folder" = "8:_D6958C6E5DB448B1B65E3E72EB08F2F7"
             "WorkingFolder" = "8:_D0F3C9E1BAED4347B0580D5744958287"
-            "Icon" = "8:_32B8B92992194F93BBBDC26445BC54B3"
+            "Icon" = "8:_276907D9636C45D78D466CDB1EC701D2"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_DAE783373F284C08A2D449A384720EDF"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_575F66705D484B59A065BF36F327F3F3"
             {
             "Name" = "8:Veterinaria"
             "Arguments" = "8:"
@@ -787,10 +803,10 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_FD95785DE8D246FDA3BD5616B3393B91"
+            "Target" = "8:_7AD6AF2D91C749BEAB732BD2DC7F3AB2"
             "Folder" = "8:_72A6162550134E87A3D47BE8CDE59320"
             "WorkingFolder" = "8:_D0F3C9E1BAED4347B0580D5744958287"
-            "Icon" = "8:_32B8B92992194F93BBBDC26445BC54B3"
+            "Icon" = "8:_276907D9636C45D78D466CDB1EC701D2"
             "Feature" = "8:"
             }
         }
@@ -1192,7 +1208,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_FD95785DE8D246FDA3BD5616B3393B91"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_7AD6AF2D91C749BEAB732BD2DC7F3AB2"
             {
             "SourcePath" = "8:..\\VeterinariaElBuenAmigo\\obj\\Debug\\VeterinariaElBuenAmigo.exe"
             "TargetName" = "8:"
