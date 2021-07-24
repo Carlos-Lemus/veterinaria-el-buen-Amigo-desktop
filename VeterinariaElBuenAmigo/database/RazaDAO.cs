@@ -113,13 +113,14 @@ namespace VeterinariaElBuenAmigo.database
 
                 using (SQLiteCommand command = new SQLiteCommand())
                 {
-                    string sql = $"UPDATE {TABLE_RAZA} SET {NOMBRE_RAZA} = @{NOMBRE_RAZA} ";
+                    string sql = $"UPDATE {TABLE_RAZA} SET {NOMBRE_RAZA} = @{NOMBRE_RAZA}, {IDESPECIE} = @{IDESPECIE} ";
                     sql += $"WHERE {IDRAZA} = @{IDRAZA};";
 
                     command.CommandText = sql;
                     command.Connection = Conexion.Conn;
                     command.Parameters.AddWithValue($"@{IDRAZA}", raza.idRaza);
                     command.Parameters.AddWithValue($"@{NOMBRE_RAZA}", raza.nombreRaza);
+                    command.Parameters.AddWithValue($"@{IDESPECIE}", raza.idEspecie);
                     command.ExecuteNonQuery();
 
                     conn.Close();
