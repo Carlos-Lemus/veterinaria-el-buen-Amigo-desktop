@@ -80,7 +80,8 @@ namespace VeterinariaElBuenAmigo.database
                             
                             CREATE TABLE clientes(
                                 idCliente INTEGER PRIMARY KEY AUTOINCREMENT, 
-                                nombreCliente VARCHAR(150),
+                                nombreCliente TEXT,
+                                apellido TEXT,
                                 telefono TEXT,
                                 direccion TEXT,
                                 correo VARCHAR(150));
@@ -92,7 +93,11 @@ namespace VeterinariaElBuenAmigo.database
                             CREATE TABLE razas(
                                 idRaza INTEGER PRIMARY KEY AUTOINCREMENT, 
                                 nombreRaza VARCHAR(100),
-                                descripcion TEXT);
+                                idEspecie INTEGER,
+                                FOREIGN KEY(idEspecie) REFERENCES especies(idEspecie) 
+                                ON DELETE CASCADE 
+                                ON UPDATE CASCADE
+                                );
 
                             CREATE TABLE pacientes(
                                 idPaciente INTEGER PRIMARY KEY AUTOINCREMENT, 
