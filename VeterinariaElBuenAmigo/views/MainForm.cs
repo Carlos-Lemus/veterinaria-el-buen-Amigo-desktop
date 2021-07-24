@@ -42,8 +42,7 @@ namespace VeterinariaElBuenAmigo
 
             openFormInPane(new FormPropietario(clienteDao));
 
-            Size = Screen.PrimaryScreen.WorkingArea.Size;
-            Location = Screen.PrimaryScreen.WorkingArea.Location;
+            WindowState = FormWindowState.Maximized;
         }
 
         private void InitDAOs()
