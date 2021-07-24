@@ -121,7 +121,12 @@ namespace VeterinariaElBuenAmigo.database
 
                 using (SQLiteCommand command = new SQLiteCommand())
                 {
-                    string sql = $"DELETE FROM {TABLE_PACIENTE} WHERE {IDPACIENTE} = @{IDPACIENTE};";
+                    string sql = "";
+
+                    sql += $"DELETE FROM {TABLE_CITA} WHERE {IDPACIENTE} = @{IDPACIENTE}; ";
+                    sql += $"DELETE FROM {TABLA_CONSULTA} WHERE {IDPACIENTE} = @{IDPACIENTE}; "; ;
+                    sql += $"DELETE FROM {TABLA_RECETA} WHERE {IDPACIENTE} = @{IDPACIENTE}; "; ;
+                    sql += $"DELETE FROM {TABLE_PACIENTE} WHERE {IDPACIENTE} = @{IDPACIENTE}; "; ;
 
                     command.CommandText = sql;
                     command.Connection = Conexion.Conn;
@@ -434,7 +439,7 @@ namespace VeterinariaElBuenAmigo.database
 
                 using (SQLiteCommand command = new SQLiteCommand())
                 {
-                    string sql = $"SELECT p.{IDPACIENTE}, p.{NOMBREPACIENTE}, c.{NOMBRECLIENTE}, p.{COLOR}, p.{GENERO} FROM {TABLE_PACIENTE} AS p INNER JOIN {TABLE_CLIENTE} AS c ON p.{IDCLIENTE} = c.{IDCLIENTE}";
+                    string sql = $"SELECT p.{IDPACIENTE}, p.{NOMBREPACIENTE}, c.{NOMBRECLIENTE}, c.{APELLIDO}, p.{COLOR}, p.{GENERO} FROM {TABLE_PACIENTE} AS p INNER JOIN {TABLE_CLIENTE} AS c ON p.{IDCLIENTE} = c.{IDCLIENTE}";
                     command.CommandText = sql;
                     command.Connection = Conexion.Conn;
 
@@ -454,6 +459,7 @@ namespace VeterinariaElBuenAmigo.database
                                 consulta.idPaciente = Convert.ToInt32(result[IDPACIENTE].ToString());
                                 consulta.nombrePaciente = result[NOMBREPACIENTE].ToString();
                                 consulta.nombreCliente = result[NOMBRECLIENTE].ToString();
+                                consulta.apellidoCliente = result[APELLIDO].ToString();
                                 consulta.genero = result[GENERO].ToString();
                                 consulta.color = result[COLOR].ToString();                           
 

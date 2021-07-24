@@ -44,7 +44,7 @@ namespace VeterinariaElBuenAmigo.views
 
             foreach (templateClientePaciente templateCP in listaConsulta)
             {
-                dgvMascotas.Rows.Add(templateCP.idPaciente, templateCP.nombrePaciente, templateCP.nombreCliente ,templateCP.color, templateCP.genero);
+                dgvMascotas.Rows.Add(templateCP.idPaciente, templateCP.nombrePaciente, templateCP.nombreCliente + " " + templateCP.apellidoCliente, templateCP.color, templateCP.genero);
             }
         }       
 
@@ -84,7 +84,7 @@ namespace VeterinariaElBuenAmigo.views
 
             if (rows.Count > 0)
             {
-                DialogResult dialogQuestion = MessageBox.Show("¿Estas seguro de que quieres eliminar los registros?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult dialogQuestion = MessageBox.Show("Se eliminaran todas las citas y consultas de este paciente tambien ¿Estas seguro de eliminar el paciente?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (dialogQuestion == DialogResult.Yes)
                 {

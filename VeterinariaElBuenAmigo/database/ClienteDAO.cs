@@ -216,6 +216,13 @@ namespace VeterinariaElBuenAmigo.database
                     sql += $"    WHERE {TABLE_PACIENTE}.{IDCLIENTE} = @{IDCLIENTE} ";
                     sql += $"); ";
 
+                    sql += $"DELETE FROM {TABLA_RECETA} ";
+                    sql += $"WHERE {IDPACIENTE} IN ( ";
+                    sql += $"    SELECT {TABLE_PACIENTE}.{IDPACIENTE} ";
+                    sql += $"    FROM {TABLE_PACIENTE}";
+                    sql += $"    WHERE {TABLE_PACIENTE}.{IDCLIENTE} = @{IDCLIENTE} ";
+                    sql += $"); ";
+
                     sql += $"DELETE FROM {TABLE_PACIENTE} WHERE {IDCLIENTE} = @{IDCLIENTE}; ";
 
                     sql += $"DELETE FROM {TABLE_CLIENTE} WHERE {IDCLIENTE} = @{IDCLIENTE};";

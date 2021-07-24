@@ -241,7 +241,7 @@ namespace VeterinariaElBuenAmigo.database
                         {
                             while (result.Read())
                             {
-                                Nombre = result[NOMBRECLIENTE].ToString();
+                                Nombre = result[NOMBRECLIENTE].ToString() + " " + result[APELLIDO].ToString();
                             }
                         }
                         else

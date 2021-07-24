@@ -51,7 +51,7 @@ namespace VeterinariaElBuenAmigo.views
 
             if (rows.Count > 0)
             {
-                DialogResult dialogQuestion = MessageBox.Show("¿Estas seguro de que quieres eliminar los registros?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult dialogQuestion = MessageBox.Show("Se eliminaran todos los pacientes y sus citas, consultas que tengan estas razas ¿Estas seguro?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (dialogQuestion == DialogResult.Yes)
                 {
@@ -85,7 +85,7 @@ namespace VeterinariaElBuenAmigo.views
 
             if (rows.Count > 0)
             {
-                DialogResult dialogQuestion = MessageBox.Show("¿Estas seguro de que quieres eliminar los registros?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult dialogQuestion = MessageBox.Show("Se eliminaran todos los pacientes y sus citas, consultas que tengan estas especies ¿Estas seguro?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (dialogQuestion == DialogResult.Yes)
                 {
